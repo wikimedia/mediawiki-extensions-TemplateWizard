@@ -1,0 +1,42 @@
+{
+	"name": "TemplateWizard",
+	"version": "0.1.0",
+	"author": [
+		"Sam Wilson"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:TemplateWizard",
+	"descriptionmsg": "templatewizard-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\TemplateWizard\\Hooks": "includes/Hooks.php"
+	},
+	"Hooks": {
+		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial"
+	},
+	"MessagesDirs": {
+		"TemplateWizard": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.TemplateWizard": {
+			"scripts": [
+				"ext.TemplateWizard.js"
+			],
+			"messages": [],
+			"dependencies": [
+				"jquery.spinner",
+				"oojs-ui-core",
+				"oojs-ui-windows",
+				"mediawiki.widgets",
+				"mediawiki.widgets.UserInputWidget"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "TemplateWizard/resources"
+	},
+	"manifest_version": 2
+}
