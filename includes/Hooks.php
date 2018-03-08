@@ -7,6 +7,7 @@ namespace MediaWiki\Extension\TemplateWizard;
 
 use EditPage;
 use OutputPage;
+use ResourceLoader;
 
 /**
  * Hooks for the TemplateWizard extension.
@@ -26,4 +27,25 @@ class Hooks {
 		$output->addModules( 'ext.TemplateWizard' );
 	}
 
+	/**
+	 * ResourceLoaderTestModules hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
+	 *
+	 * @param array &$testModules The modules array to add to.
+	 * @param ResourceLoader &$resourceLoader The resource loader.
+	 * @return bool
+	 */
+	public static function onResourceLoaderTestModules(
+		array &$testModules, ResourceLoader &$resourceLoader
+	) {
+		$testModules['qunit']['tests.ext.TemplateWizard'] = [
+			'localBasePath' => dirname( __DIR__ ),
+			'remoteExtPath' => 'TemplateWizard',
+			'dependencies' => [ 'ext.TemplateWizard' ],
+			'scripts' => [
+				'tests/qunit/ext.TemplateWizard.test.js',
+			]
+		];
+		return true;
+	}
 }

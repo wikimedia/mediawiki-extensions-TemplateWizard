@@ -8,11 +8,19 @@
 	"descriptionmsg": "templatewizard-desc",
 	"license-name": "MIT",
 	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.31.0",
+		"extensions": {
+			"TemplateData": "*",
+			"WikiEditor": "*"
+		}
+	},
 	"AutoloadClasses": {
 		"MediaWiki\\Extension\\TemplateWizard\\Hooks": "includes/Hooks.php"
 	},
 	"Hooks": {
-		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial"
+		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial",
+		"ResourceLoaderTestModules": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderTestModules"
 	},
 	"MessagesDirs": {
 		"TemplateWizard": [
@@ -26,11 +34,12 @@
 			],
 			"messages": [],
 			"dependencies": [
-				"jquery.spinner",
+				"jquery.textSelection",
 				"oojs-ui-core",
 				"oojs-ui-windows",
 				"mediawiki.widgets",
-				"mediawiki.widgets.UserInputWidget"
+				"mediawiki.widgets.UserInputWidget",
+				"mediawiki.widgets.DateInputWidget"
 			]
 		}
 	},

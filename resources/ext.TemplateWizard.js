@@ -3,46 +3,214 @@
 	/*
 	 * Messages will be moved to JSON files later on.
 	 */
+	mw.messages.set( 'templatewizard', 'TemplateWizard' );
+	mw.messages.set( 'templatewizard-dialog-title', 'Insert a template' );
 	mw.messages.set( 'templatewizard-opens-in-new-tab', 'Opens in new tab' );
 	mw.messages.set( 'templatewizard-help-page', 'help page' );
+	mw.messages.set( 'templatewizard-invalid-title', 'Invalid title' );
 	mw.messages.set( 'templatewizard-template-not-found',
 		'$1 can not be used in the Template Wizard.' +
 		' This may be because it doesn\'t exist or because it doesn\'t have $2 tags.' +
 		' Please fix that and try again.' +
 		' If you think you\'ve found a bug tell us about it on the $3.'
 	);
+	mw.messages.set( 'templatewizard-templatedata', 'TemplateData' );
 	mw.messages.set( 'templatewizard-default', 'Default: $1' );
 	mw.messages.set( 'templatewizard-parameters-required', 'Required parameters' );
 	mw.messages.set( 'templatewizard-parameters-suggested', 'Suggested parameters' );
 	mw.messages.set( 'templatewizard-parameters-optional', 'Optional parameters' );
+	mw.messages.set( 'templatewizard-insert', 'Insert' );
+	mw.messages.set( 'templatewizard-cancel', 'Cancel' );
+	mw.messages.set( 'templatewizard-use', 'Use' );
+	mw.messages.set( 'templatewizard-select-template', 'Select a template:' );
 
-	function TemplateForm() {
-		var $formHtml, $header, title, groupedParams = {},
-			setupHeader, loadTemplateData, processTemplateData, processParameter, addParameterFieldsets,
-			getInputWidgetForParam;
+	/* Extension namespace. */
+	mediaWiki.TemplateWizard = {};
 
-		/**
-		 * Set the template title.
-		 * @param {string} newTitle No leading 'Template:' required.
-		 */
-		this.setTitle = function ( newTitle ) {
-			title = new mw.Title( 'Template:' + newTitle );
-		};
+	/**
+	 * @class
+	 * @constructor
+	 * @param {OO.ui.ProcessDialog} dialog The dialog window.
+	 * @param {string} title No leading 'Template:' required.
+	 * @param {Object} [config] Configuration options
+	 */
+	mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( dialog, title, config ) {
+		OO.ui.Widget.parent.call( this, config );
+		this.dialog = dialog;
+		this.title = mw.Title.newFromText( title, mw.config.get( 'wgNamespaceIds' ).template );
+		if ( !this.title ) {
+			throw new Error( mw.message( 'templatewizard-invalid-title' ) );
+		}
+		this.widgets = {};
+		this.$element.append( this.getHeader() );
+		this.loadTemplateData();
+	};
+	OO.inheritClass( mediaWiki.TemplateWizard.TemplateForm, OO.ui.Widget );
 
-		/**
-		 *
-		 */
-		setupHeader = function () {
-			var link;
-			link = $( '<a>' )
+	mediaWiki.TemplateWizard.TemplateForm.prototype.getTitle = function () {
+		return this.title;
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.getFormat = function () {
+		return this.format;
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
+		var $link;
+		$link = $( '<a>' )
+			.attr( 'target', '_blank' )
+			.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
+			.attr( 'href', this.title.getUrl() )
+			.text( this.title.getMainText() );
+		return $( '<h2>' ).html( $link );
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function ( param, paramDefinition ) {
+		var widget, config = { name: param };
+		if ( paramDefinition.autovalue ) {
+			config.value = paramDefinition.autovalue;
+		}
+		if ( paramDefinition.required ) {
+			config.required = true;
+		}
+		if ( paramDefinition.type === 'number' ) {
+			widget = new OO.ui.NumberInputWidget( config );
+		} else if ( paramDefinition.type === 'date' ) {
+			widget = new mw.widgets.DateInputWidget( config );
+		} else if ( paramDefinition.type === 'wiki-user-name' ) {
+			widget = new mw.widgets.UserInputWidget( config );
+		} else if ( paramDefinition.type === 'wiki-page-name' ) {
+			widget = new mw.widgets.TitleInputWidget( config );
+		} else if ( paramDefinition.type === 'wiki-file-name' ) {
+			config.showImages = true;
+			config.namespace = mw.config.get( 'wgNamespaceIds' ).file;
+			widget = new mw.widgets.TitleInputWidget( config );
+		} else if ( paramDefinition.type === 'wiki-template-name' ) {
+			config.namespace = mw.config.get( 'wgNamespaceIds' ).template;
+			widget = new mw.widgets.TitleInputWidget( config );
+		} else {
+			widget = new OO.ui.TextInputWidget( config );
+		}
+		return widget;
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.getParameterFieldsets = function ( groupedParams ) {
+		var $fieldsets = $( '<div>' ),
+			self = this;
+		$.each( groupedParams, function ( groupName, group ) {
+			// The following messages are used here:
+			// * templatewizard-parameters-required
+			// * templatewizard-parameters-suggested
+			// * templatewizard-parameters-optional
+			var fieldsetLabel = mw.message( 'templatewizard-parameters-' + groupName ).text(),
+				fieldset = new OO.ui.FieldsetLayout( { label: fieldsetLabel } );
+			// @TODO Move this styling into a stylesheet.
+			if ( groupName === 'required' ) {
+				fieldset.$label.css( 'color', '#e04006' );
+			}
+			if ( groupName === 'suggested' ) {
+				fieldset.$label.css( 'color', '#f99d31' );
+			}
+			if ( groupName === 'optional' ) {
+				fieldset.$label.css( 'color', '#78ab46' );
+			}
+			$.each( group, function ( param, details ) {
+				var field, label, description;
+				// Store the widgets for later value-retrieval.
+				self.widgets[ param ] = self.getInputWidgetForParam( param, details );
+				description = '';
+				if ( details.description ) {
+					description = details.description;
+				}
+				if ( details.default ) {
+					description += ' ' + mw.message( 'templatewizard-default', details.default );
+				}
+				label = param;
+				if ( details.label ) {
+					label = details.label;
+				}
+				field = new OO.ui.FieldLayout( self.widgets[ param ], {
+					label: label,
+					help: description
+				} );
+				fieldset.addItems( [ field ] );
+			} );
+			if ( !fieldset.isEmpty() ) {
+				$fieldsets.append( fieldset.$element );
+			}
+		} );
+		return $fieldsets;
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.processTemplateData = function ( apiResponse ) {
+		var id, templateData, description, $templateLink, $templateDataLink, $helpLink, groupedParams;
+		// Get the first page's template data.
+		id = $.map( apiResponse.pages, function ( _value, key ) {
+			return key;
+		} );
+		templateData = apiResponse.pages[ id ];
+
+		// 1. Description.
+		description = '';
+		if ( templateData.description ) {
+			description = templateData.description;
+		} else if ( templateData.missing !== undefined || templateData.params === undefined ) {
+			// Treat non-existant and non-TemplateData templates the same.
+			$templateLink = $( '<a>' )
 				.attr( 'target', '_blank' )
-				.attr( 'title', 'Opens in new tab' )
-				.attr( 'href', title.getUrl() )
-				.text( title.getMainText() );
-			$header = $( '<h2>' ).html( link );
-		};
+				.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
+				.attr( 'href', this.title.getUrl() )
+				.text( '{{' + this.title.getMainText() + '}}' );
+			$templateDataLink = $( '<a>' )
+				.attr( 'target', '_blank' )
+				.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
+				.attr( 'href', 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData' )
+				.text( mw.message( 'templatewizard-templatedata' ) );
+			$helpLink = $( '<a>' )
+				.attr( 'target', '_blank' )
+				.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
+				.attr( 'href', 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard' )
+				.text( mw.message( 'templatewizard-help-page' ) );
+			description = mw.message(
+				'templatewizard-template-not-found',
+				$templateLink[ 0 ].outerHTML,
+				$templateDataLink[ 0 ].outerHTML,
+				$helpLink[ 0 ].outerHTML
+			).plain();
+		}
+		if ( description ) {
+			this.$element.append( $( '<p>' ).append( description ) );
+		}
 
-		processParameter = function ( param, details ) {
+		// 2. Parameters.
+		if ( templateData.params ) {
+			groupedParams = this.processParameters( templateData.params );
+			this.$element.append( this.getParameterFieldsets( groupedParams ) );
+		}
+
+		// 3. Format.
+		this.format = templateData.format || 'inline';
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
+		var params = {};
+		$.each( this.widgets, function ( name, widget ) {
+			// Ignore empty parameters.
+			if ( !widget.getValue() ) {
+				return;
+			}
+			params[ name ] = widget.getValue();
+		} );
+		return params;
+	};
+
+	mediaWiki.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
+		var groupedParams = {
+			required: {},
+			suggested: {},
+			optional: {}
+		};
+		$.each( params, function ( param, details ) {
 			if ( details.deprecated ) {
 				// Don't include even a mention of a deprecated parameter.
 				return;
@@ -54,233 +222,247 @@
 			} else {
 				groupedParams.optional[ param ] = details;
 			}
-		};
+		} );
+		return groupedParams;
+	};
 
-		getInputWidgetForParam = function ( paramDefinition ) {
-			var widget, config = {};
-			if ( paramDefinition.autovalue ) {
-				config.value = paramDefinition.autovalue;
-			}
-			if ( paramDefinition.required ) {
-				config.required = true;
-			}
-			if ( paramDefinition.type === 'number' ) {
-				widget = new OO.ui.NumberInputWidget( config );
-			} else if ( paramDefinition.type === 'date' ) {
-				widget = new mw.widgets.DateInputWidget( config );
-			} else if ( paramDefinition.type === 'wiki-user-name' ) {
-				widget = new mw.widgets.UserInputWidget( config );
-			} else if ( paramDefinition.type === 'wiki-page-name' ) {
-				widget = new mw.widgets.TitleInputWidget( config );
-			} else if ( paramDefinition.type === 'wiki-file-name' ) {
-				widget = new mw.widgets.MediaSearchWidget( config );
-			} else if ( paramDefinition.type === 'wiki-template-name' ) {
-				config.namespace = mw.config.get( 'wgNamespaceIds' ).template;
-				widget = new mw.widgets.TitleInputWidget( config );
-			} else {
-				widget = new OO.ui.TextInputWidget( config );
-			}
-			return widget;
-		};
-
-		addParameterFieldsets = function () {
-			$.each( groupedParams, function ( groupName, group ) {
-				var fieldsetLabel = mw.message( 'templatewizard-parameters-' + groupName ).text(),
-					fieldset = new OO.ui.FieldsetLayout( { label: fieldsetLabel } );
-				if ( groupName === 'required' ) {
-					fieldset.$label.css( 'color', '#e04006' );
-				}
-				if ( groupName === 'suggested' ) {
-					fieldset.$label.css( 'color', '#f99d31' );
-				}
-				if ( groupName === 'optional' ) {
-					fieldset.$label.css( 'color', '#78ab46' );
-				}
-				$.each( group, function ( param, details ) {
-					var widget, field, label, description;
-					widget = getInputWidgetForParam( details );
-					description = '';
-					if ( details.description ) {
-						description = details.description;
-					}
-					if ( details.default ) {
-						description += ' ' + mw.message( 'templatewizard-default', details.default );
-					}
-					label = param;
-					if ( details.label ) {
-						label = details.label;
-					}
-					field = new OO.ui.FieldLayout( widget, {
-						label: label,
-						help: description
-					} );
-					fieldset.addItems( [ field ] );
-				} );
-				if ( !fieldset.isEmpty() ) {
-					$formHtml.append( fieldset.$element );
-				}
-			} );
-		};
-
-		processTemplateData = function ( apiResponse ) {
-			var id, templateData, description, templateLink, templateDataLink, helpLink;
-			// Get the first page's template data.
-			id = $.map( apiResponse.pages, function ( _value, key ) { return key; } );
-			templateData = apiResponse.pages[ id ];
-			description = '';
-			if ( templateData.description ) {
-				description = templateData.description;
-			} else if ( templateData.missing !== undefined || templateData.params === undefined ) {
-				// Treat non-existant and non-TemplateData templates the same.
-				templateLink = $( '<a>' )
-					.attr( 'target', '_blank' )
-					.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
-					.attr( 'href', title.getUrl() )
-					.text( '{{' + title.getMainText() + '}}' );
-				templateDataLink = $( '<a>' )
-					.attr( 'target', '_blank' )
-					.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
-					.attr( 'href', 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData#Structure_of_TemplateData' )
-					.text( 'TemplateData' );
-				helpLink = $( '<a>' )
-					.attr( 'target', '_blank' )
-					.attr( 'title', 'Opens in new tab' )
-					.attr( 'href', 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard' )
-					.text( mw.message( 'templatewizard-help-page' ) );
-				description = mw.message(
-					'templatewizard-template-not-found',
-					templateLink[ 0 ].outerHTML,
-					templateDataLink[ 0 ].outerHTML,
-					helpLink[ 0 ].outerHTML
-				).plain();
-			}
-			if ( description ) {
-				$header.after( $( '<p>' ).addClass( 'description' ).append( description ) );
-			}
-			if ( templateData.params ) {
-				groupedParams = {
-					required: {},
-					suggested: {},
-					optional: {}
-				};
-				$.each( templateData.params, processParameter );
-				addParameterFieldsets();
-			}
-		};
-
-		/**
-		 *
-		 */
-		loadTemplateData = function () {
-			var $spinner = $.createSpinner( { id: 'templateLoad', size: 'large', type: 'block' } );
-			$header.after( $spinner );
-			new mw.Api().get( {
-				action: 'templatedata',
-				titles: title.getPrefixedDb(),
-				redirects: true,
-				doNotIgnoreMissingTitles: true,
-				lang: mw.config.get( 'wgUserLanguage' )
+	/**
+	 *
+	 */
+	mediaWiki.TemplateWizard.TemplateForm.prototype.loadTemplateData = function () {
+		var templateForm = this;
+		templateForm.dialog.pushPending();
+		new mw.Api().get( {
+			action: 'templatedata',
+			titles: this.title.getPrefixedDb(),
+			redirects: true,
+			doNotIgnoreMissingTitles: true,
+			lang: mw.config.get( 'wgUserLanguage' )
+		} )
+			.done( function ( apiResponse ) {
+				var fieldsets = templateForm.processTemplateData( apiResponse );
+				templateForm.$element.append( fieldsets );
 			} )
-				.done( processTemplateData )
-				.fail( /* @TODO */ )
-				.always( function () {
-					$spinner.remove();
-				} );
-		};
-
-		/**
-		 * @returns {jQuery}
-		 */
-		this.getHtml = function () {
-			if ( !title ) {
-				return '';
-			}
-			setupHeader();
-			$formHtml = $( '<div>' ).addClass( 'TemplateForm' );
-			$formHtml.append( $header );
-			loadTemplateData();
-			return $formHtml;
-		};
-	}
-
-	function SearchForm() {
-		this.setDialog = function ( dialog ) {
-			this.dialog = dialog;
-		};
-
-		this.onSearchButtonClick = function () {
-			var form = new TemplateForm();
-			try {
-				form.setTitle( this.titleSearchWidget.value );
-				this.dialog.setResultsPanel( form.getHtml() );
-			} catch ( e ) {
-				this.titleSearchWidget.$input.focus();
-				this.titleSearchWidget.$element.addClass( 'oo-ui-flaggedElement-invalid' );
-				// this.searchField.setErrors( [ e.message ] );
-			}
-		};
-
-		this.onSearchWidgetChange = function () {
-			this.titleSearchWidget.$element.removeClass( 'oo-ui-flaggedElement-invalid' );
-		};
-
-		this.onSearchWidgetEnter = function () {
-			this.searchButton.$button.focus();
-			this.searchButton.emit( 'click' );
-		};
-
-		this.getSearchPanel = function () {
-			var searchPanel;
-			this.titleSearchWidget = new mw.widgets.TitleInputWidget( {
-				validate: true,
-				namespace: mw.config.get( 'wgNamespaceIds' ).template
+			.always( function () {
+				templateForm.dialog.popPending();
 			} );
-			this.titleSearchWidget.connect( this, { change: 'onSearchWidgetChange', enter: 'onSearchWidgetEnter' } );
-			this.searchButton = new OO.ui.ButtonWidget( { label: 'Use', flags: [ 'progressive' ] } );
-			this.searchButton.connect( this, { click: 'onSearchButtonClick' } );
-			this.searchField = new OO.ui.ActionFieldLayout(
-				this.titleSearchWidget,
-				this.searchButton,
-				{ label: 'Select a template:' }
-			);
-			searchPanel = new OO.ui.PanelLayout( { padded: true, expanded: true } );
-			searchPanel.$element.append( this.searchField.$element );
+	};
 
-			return searchPanel;
+	/**
+	 * @class
+	 * @constructor
+	 * @param {OO.ui.ProcessDialog} dialog The dialog to attach the form to.
+	 * @param {Object} [config] Configuration options.
+	 */
+	mediaWiki.TemplateWizard.SearchForm = function mediaWikiTemplateWizardSearchForm( dialog, config ) {
+		mediaWiki.TemplateWizard.SearchForm.super.call( this, $.extend( { padded: true, expanded: true }, config ) );
+		this.dialog = dialog;
+
+		this.titleSearchWidget = new mw.widgets.TitleInputWidget( {
+			validate: true,
+			namespace: mw.config.get( 'wgNamespaceIds' ).template
+		} );
+		this.titleSearchWidget.connect( this, { change: 'onSearchWidgetChange', enter: 'onSearchWidgetEnter' } );
+		this.searchButton = new OO.ui.ButtonWidget( { label: OO.ui.deferMsg( 'templatewizard-use' ), flags: [ 'progressive' ] } );
+		this.searchButton.connect( this, { click: 'onSearchButtonClick' } );
+		this.searchField = new OO.ui.ActionFieldLayout(
+			this.titleSearchWidget,
+			this.searchButton,
+			{ label: OO.ui.deferMsg( 'templatewizard-select-template' ) }
+		);
+		this.titleSearchWidget.emit( 'change' );
+		this.$element.append( this.searchField.$element );
+	};
+	OO.inheritClass( mediaWiki.TemplateWizard.SearchForm, OO.ui.PanelLayout );
+
+	mediaWiki.TemplateWizard.SearchForm.prototype.getTemplateForm = function () {
+		return this.templateForm;
+	};
+
+	mediaWiki.TemplateWizard.SearchForm.prototype.onSearchButtonClick = function () {
+		this.searchField.setErrors( [] );
+		try {
+			this.templateForm = new mw.TemplateWizard.TemplateForm( this.dialog, this.titleSearchWidget.value );
+		} catch ( e ) {
+			this.titleSearchWidget.$input.focus();
+			this.titleSearchWidget.$element.addClass( 'oo-ui-flaggedElement-invalid' );
+			this.dialog.actions.setMode( 'choose' );
+			this.searchField.setErrors( [ e.message ] );
+			return;
+		}
+		this.dialog.setResultsPanel( this.templateForm.$element );
+		this.dialog.actions.setMode( 'insert' );
+	};
+
+	mediaWiki.TemplateWizard.SearchForm.prototype.onSearchWidgetChange = function () {
+		this.titleSearchWidget.$element.removeClass( 'oo-ui-flaggedElement-invalid' );
+		this.searchButton.setDisabled( !this.titleSearchWidget.value );
+	};
+
+	mediaWiki.TemplateWizard.SearchForm.prototype.onSearchWidgetEnter = function () {
+		this.searchButton.$button.focus();
+		this.searchButton.emit( 'click' );
+	};
+
+	/**
+	 * @class
+	 * @constructor
+	 */
+	mediaWiki.TemplateWizard.TemplateFormatter = function mwTemplateWizardTemplateFormatter() {
+		this.name = '';
+		this.format = '';
+		this.params = {};
+	};
+	OO.initClass( mediaWiki.TemplateWizard.TemplateFormatter );
+	mediaWiki.TemplateWizard.TemplateFormatter.static.FORMATSTRING_REGEXP =
+		/^(\n)?(\{\{ *_+)(\n? *\|\n? *_+ *= *)(_+)(\n? *\}\})(\n)?$/;
+	mediaWiki.TemplateWizard.TemplateFormatter.prototype.setTemplateName = function ( newName ) {
+		this.name = newName;
+	};
+	mediaWiki.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params ) {
+		this.params = params;
+	};
+	mediaWiki.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( format ) {
+		var parsedFormat,
+			inlineFormat = '{{_|_=_}}';
+		if ( format === 'inline' ) {
+			format = inlineFormat;
+		}
+		if ( format === 'block' ) {
+			format = '{{_\n| _ = _\n}}';
+		}
+		// Check format string for validity, and fall back to 'inline' if it's not.
+		parsedFormat = format.match( this.constructor.static.FORMATSTRING_REGEXP );
+		if ( !parsedFormat ) {
+			parsedFormat = inlineFormat.match( this.constructor.static.FORMATSTRING_REGEXP );
+		}
+		this.format = {
+			startOfLine: parsedFormat[ 1 ],
+			start: parsedFormat[ 2 ],
+			paramName: parsedFormat[ 3 ],
+			paramValue: parsedFormat[ 4 ],
+			end: parsedFormat[ 5 ],
+			endOfLine: parsedFormat[ 6 ]
 		};
-	}
+	};
+	mediaWiki.TemplateWizard.TemplateFormatter.prototype.getFormat = function () {
+		if ( !this.format ) {
+			this.setFormat( 'inline' );
+		}
+		return this.format;
+	};
+	mediaWiki.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
+		var template,
+			formatter = this,
+			format = this.getFormat();
 
-	function TemplateWizard( config ) {
-		TemplateWizard.super.call( this, config );
-	}
-	OO.inheritClass( TemplateWizard, OO.ui.ProcessDialog );
-	TemplateWizard.static.name = 'templateWizard';
-	TemplateWizard.static.title = 'Template Wizard';
-	TemplateWizard.static.actions = [
-		{ label: 'Insert', flags: [ 'primary', 'progressive' ], action: 'insert' },
-		{ label: 'Cancel', flags: 'safe' }
+		// Start building the template.
+		template = '';
+		if ( format.startOfLine ) {
+			template += '\n';
+		}
+		template += this.constructor.static.formatStringSubst( format.start, this.name );
+
+		// Process the parameters.
+		$.each( formatter.params, function ( key, val ) {
+			template += formatter.constructor.static.formatStringSubst( format.paramName, key ) +
+				formatter.constructor.static.formatStringSubst( format.paramValue, val );
+		} );
+
+		// End and return the template.
+		template += format.end;
+		if ( format.endOfLine && !template.endsWith( '\n' ) ) {
+			template += '\n';
+		}
+		return template;
+	};
+
+	/**
+	 * Format a part of the template, based on the TemplateData format string.
+	 * This method is based on that of the same name in Parsoid:
+	 * https://github.com/wikimedia/parsoid/blob/9c80dd597a8c057d43598303fd53e90cbed4ffdb/lib/html2wt/WikitextSerializer.js#L405
+	 * @param {String} format
+	 * @param {String} value
+	 * @return {String}
+	 */
+	mediaWiki.TemplateWizard.TemplateFormatter.static.formatStringSubst = function ( format, value ) {
+		value = value.trim();
+		return format.replace( /_+/, function ( hole ) {
+			if ( value === '' || hole.length <= value.length ) {
+				return value;
+			}
+			// Right-pad with spaces.
+			while ( value.length < hole.length ) {
+				value += ' ';
+			}
+			return value; // + ( ' '.repeat( hole.length - value.length ) );
+		} );
+	};
+
+	/**
+	 * The main dialog box for the TemplateWizard.
+	 * @class
+	 * @constructor
+	 * @extends OO.ui.ProcessDialog
+	 * @param {object} config
+	 */
+	mediaWiki.TemplateWizard.Dialog = function mediaWikiTemplateWizardDialog( config ) {
+		mediaWiki.TemplateWizard.Dialog.super.call( this, config );
+	};
+	OO.inheritClass( mediaWiki.TemplateWizard.Dialog, OO.ui.ProcessDialog );
+	mediaWiki.TemplateWizard.Dialog.static.name = 'templateWizard';
+	mediaWiki.TemplateWizard.Dialog.static.title = OO.ui.deferMsg( 'templatewizard-dialog-title' );
+	mediaWiki.TemplateWizard.Dialog.static.actions = [
+		{ label: OO.ui.deferMsg( 'templatewizard-insert' ), flags: [ 'primary', 'progressive' ], action: 'insert', modes: 'insert' },
+		{ label: OO.ui.deferMsg( 'templatewizard-cancel' ), flags: 'safe', modes: [ 'choose', 'insert' ] }
 	];
-	TemplateWizard.prototype.getBodyHeight = function () {
+	mediaWiki.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
 		return 400;
 	};
-	TemplateWizard.prototype.initialize = function () {
-		var searchForm, searchPanel;
-		TemplateWizard.super.prototype.initialize.apply( this, arguments );
+	mediaWiki.TemplateWizard.Dialog.prototype.initialize = function () {
+		mediaWiki.TemplateWizard.Dialog.super.prototype.initialize.apply( this, arguments );
 
-		// Set up the search from.
-		searchForm = new SearchForm();
-		searchForm.setDialog( this );
-		searchPanel = searchForm.getSearchPanel();
-
-		// Set up the results area.
+		// Set up the search form and results panel.
+		this.searchForm = new mw.TemplateWizard.SearchForm( this );
 		this.resultsPanel = new OO.ui.PanelLayout( { padded: true, expanded: true } );
 
 		// Put the panels together and add to the dialog body.
-		this.stack = new OO.ui.StackLayout( { items: [ searchPanel, this.resultsPanel ], continuous: true } );
+		this.stack = new OO.ui.StackLayout( { items: [ this.searchForm, this.resultsPanel ], continuous: true } );
 		this.$body.append( this.stack.$element );
 	};
-	TemplateWizard.prototype.setResultsPanel = function ( panelContents ) {
-		this.resultsPanel.$element.html( panelContents );
+	mediaWiki.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
+		return mediaWiki.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
+			.next( function () {
+			}, this );
+	};
+	mediaWiki.TemplateWizard.Dialog.prototype.getReadyProcess = function ( data ) {
+		return mediaWiki.TemplateWizard.Dialog.super.prototype.getReadyProcess.call( this, data )
+			.next( function () {
+				this.actions.setMode( 'choose' );
+				this.searchForm.titleSearchWidget.setValue( '' );
+				this.searchForm.titleSearchWidget.focus();
+			}, this );
+	};
+	mediaWiki.TemplateWizard.Dialog.prototype.getTeardownProcess = function ( data ) {
+		return mediaWiki.TemplateWizard.Dialog.super.prototype.getTeardownProcess.call( this, data )
+			.next( function () {
+				this.setResultsPanel( '' );
+			}, this );
+	};
+	mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
+		var dialog = this, templateFormatter;
+		if ( action === 'insert' ) {
+			templateFormatter = new mw.TemplateWizard.TemplateFormatter();
+			templateFormatter.setTemplateName( this.searchForm.getTemplateForm().getTitle().getMainText() );
+			templateFormatter.setFormat( this.searchForm.getTemplateForm().getFormat() );
+			templateFormatter.setParameters( this.searchForm.getTemplateForm().getParameters() );
+			$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', { post: templateFormatter.getTemplate() } );
+			return new OO.ui.Process( function () {
+				dialog.close( { action: action } );
+			} );
+		}
+		// Fallback to parent handler.
+		return mediaWiki.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action );
 	};
 
 	function addButton() {
@@ -289,17 +471,14 @@
 			group: 'insert',
 			tools: {
 				'template-wizard': {
-					label: 'Insert template',
+					labelMsg: 'templatewizard-dialog-title',
 					type: 'button',
+					/* @TODO Decide on icon and add as local resource. T188325 */
 					icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Edit-metadata.svg/22px-Edit-metadata.svg.png',
 					action: {
 						type: 'callback',
 						execute: function () {
-							var templateWizard = new TemplateWizard(),
-								windowManager = new OO.ui.WindowManager();
-							$( 'body' ).append( windowManager.$element );
-							windowManager.addWindows( [ templateWizard ] );
-							windowManager.openWindow( templateWizard );
+							OO.ui.getWindowManager().openWindow( 'templateWizard' );
 						}
 					}
 				}
@@ -308,6 +487,9 @@
 	}
 
 	function main() {
+
+		// @TODO $( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', addButton );
+
 		var isEditing = $.inArray( mw.config.get( 'wgAction' ), [ 'edit', 'submit' ] ) !== -1;
 		if ( !isEditing ) {
 			return;
@@ -316,15 +498,21 @@
 		mw.loader.using( 'user.options', function () {
 			var dependencies;
 			// This can be the string "0" if the user disabled the preference.
-			if ( mw.user.options.get( 'usebetatoolbar' ) ) {
+			if ( mw.user.options.get( 'usebetatoolbar' ) > 0 ) {
 				dependencies = [
 					'ext.wikiEditor',
-					'jquery.spinner',
+					'jquery.textSelection',
 					'oojs-ui-core',
 					'oojs-ui-windows',
-					'mediawiki.widgets'
+					'mediawiki.widgets',
+					'mediawiki.widgets.UserInputWidget',
+					'mediawiki.widgets.DateInputWidget'
 				];
-				mw.loader.using( dependencies, $.ready ).then( addButton );
+				mw.loader.using( dependencies, $.ready ).then( function () {
+					var templateWizard = new mw.TemplateWizard.Dialog();
+					OO.ui.getWindowManager().addWindows( [ templateWizard ] );
+					addButton();
+				} );
 			}
 		} );
 	}

@@ -6,7 +6,8 @@
 	},
 	"globals": {
 		"mediaWiki": false,
-		"OO": false
+		"OO": false,
+		"QUnit": false
 	},
 	"rules": {
 		"dot-notation": [
