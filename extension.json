@@ -51,6 +51,7 @@
 				"jquery.textSelection",
 				"oojs-ui-core",
 				"oojs-ui-windows",
+				"oojs-ui.styles.icons-editing-advanced",
 				"mediawiki.widgets",
 				"mediawiki.widgets.UserInputWidget",
 				"mediawiki.widgets.DateInputWidget"

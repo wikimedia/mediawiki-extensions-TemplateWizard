@@ -438,9 +438,8 @@
 			tools: {
 				'template-wizard': {
 					labelMsg: 'templatewizard-dialog-title',
+					oouiIcon: 'puzzle',
 					type: 'button',
-					/* @TODO Decide on icon and add as local resource. T188325 */
-					icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Edit-metadata.svg/22px-Edit-metadata.svg.png',
 					action: {
 						type: 'callback',
 						execute: function () {
