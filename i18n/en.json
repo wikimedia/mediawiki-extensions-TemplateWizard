@@ -4,5 +4,18 @@
 			"Sam Wilson"
 		]
 	},
-	"templatewizard-desc": "A WikiEditor add-on that provides a template-insertion wizard"
+	"templatewizard-cancel": "Cancel",
+	"templatewizard-default": "Default: $1",
+	"templatewizard-desc": "A WikiEditor add-on that provides a template-insertion wizard",
+	"templatewizard-dialog-title": "Insert a template",
+	"templatewizard-insert": "Insert",
+	"templatewizard-invalid-title": "Invalid title",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] can not be used in the Template Wizard because <strong>it doesn't have [$2 TemplateData] tags</strong>. Please fix that and try again. If you think you've found a bug tell us about it on the [$3 help page].",
+	"templatewizard-opens-in-new-tab": "Opens in new tab",
+	"templatewizard-parameters-optional": "Optional parameters",
+	"templatewizard-parameters-required": "Required parameters",
+	"templatewizard-parameters-suggested": "Suggested parameters",
+	"templatewizard-select-template": "Select a template:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] can not be used in the Template Wizard because <strong>it doesn't exist</strong>. Please create it (and its [$2 TemplateData]) and try again. If you think you've found a bug tell us about it on the [$3 help page].",
+	"templatewizard-use": "Use"
 }

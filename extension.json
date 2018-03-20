@@ -32,7 +32,21 @@
 			"scripts": [
 				"ext.TemplateWizard.js"
 			],
-			"messages": [],
+			"messages": [
+				"templatewizard-cancel",
+				"templatewizard-default",
+				"templatewizard-dialog-title",
+				"templatewizard-insert",
+				"templatewizard-invalid-title",
+				"templatewizard-no-templatedata",
+				"templatewizard-opens-in-new-tab",
+				"templatewizard-parameters-optional",
+				"templatewizard-parameters-required",
+				"templatewizard-parameters-suggested",
+				"templatewizard-select-template",
+				"templatewizard-template-not-found",
+				"templatewizard-use"
+			],
 			"dependencies": [
 				"jquery.textSelection",
 				"oojs-ui-core",

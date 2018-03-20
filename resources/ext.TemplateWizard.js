@@ -1,29 +1,5 @@
 ( function ( mw, $, OO ) {
 
-	/*
-	 * Messages will be moved to JSON files later on.
-	 */
-	mw.messages.set( 'templatewizard', 'TemplateWizard' );
-	mw.messages.set( 'templatewizard-dialog-title', 'Insert a template' );
-	mw.messages.set( 'templatewizard-opens-in-new-tab', 'Opens in new tab' );
-	mw.messages.set( 'templatewizard-help-page', 'help page' );
-	mw.messages.set( 'templatewizard-invalid-title', 'Invalid title' );
-	mw.messages.set( 'templatewizard-template-not-found',
-		'$1 can not be used in the Template Wizard.' +
-		' This may be because it doesn\'t exist or because it doesn\'t have $2 tags.' +
-		' Please fix that and try again.' +
-		' If you think you\'ve found a bug tell us about it on the $3.'
-	);
-	mw.messages.set( 'templatewizard-templatedata', 'TemplateData' );
-	mw.messages.set( 'templatewizard-default', 'Default: $1' );
-	mw.messages.set( 'templatewizard-parameters-required', 'Required parameters' );
-	mw.messages.set( 'templatewizard-parameters-suggested', 'Suggested parameters' );
-	mw.messages.set( 'templatewizard-parameters-optional', 'Optional parameters' );
-	mw.messages.set( 'templatewizard-insert', 'Insert' );
-	mw.messages.set( 'templatewizard-cancel', 'Cancel' );
-	mw.messages.set( 'templatewizard-use', 'Use' );
-	mw.messages.set( 'templatewizard-select-template', 'Select a template:' );
-
 	/* Extension namespace. */
 	mediaWiki.TemplateWizard = {};
 
@@ -143,7 +119,7 @@
 	};
 
 	mediaWiki.TemplateWizard.TemplateForm.prototype.processTemplateData = function ( apiResponse ) {
-		var id, templateData, description, $templateLink, $templateDataLink, $helpLink, groupedParams;
+		var id, templateData, description, errorMessage, groupedParams;
 		// Get the first page's template data.
 		id = $.map( apiResponse.pages, function ( _value, key ) {
 			return key;
@@ -155,28 +131,15 @@
 		if ( templateData.description ) {
 			description = templateData.description;
 		} else if ( templateData.missing !== undefined || templateData.params === undefined ) {
-			// Treat non-existant and non-TemplateData templates the same.
-			$templateLink = $( '<a>' )
-				.attr( 'target', '_blank' )
-				.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
-				.attr( 'href', this.title.getUrl() )
-				.text( '{{' + this.title.getMainText() + '}}' );
-			$templateDataLink = $( '<a>' )
-				.attr( 'target', '_blank' )
-				.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
-				.attr( 'href', 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData' )
-				.text( mw.message( 'templatewizard-templatedata' ) );
-			$helpLink = $( '<a>' )
-				.attr( 'target', '_blank' )
-				.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
-				.attr( 'href', 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard' )
-				.text( mw.message( 'templatewizard-help-page' ) );
+			// Either the template doesn't exist or doesn't have TemplateData.
+			errorMessage = templateData.missing === undefined ?
+				'templatewizard-no-templatedata' : 'templatewizard-template-not-found';
 			description = mw.message(
-				'templatewizard-template-not-found',
-				$templateLink[ 0 ].outerHTML,
-				$templateDataLink[ 0 ].outerHTML,
-				$helpLink[ 0 ].outerHTML
-			).plain();
+				errorMessage,
+				this.title.getMainText(),
+				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData',
+				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard'
+			).parse();
 		}
 		if ( description ) {
 			this.$element.append( $( '<p>' ).append( description ) );
@@ -429,6 +392,9 @@
 		// Put the panels together and add to the dialog body.
 		this.stack = new OO.ui.StackLayout( { items: [ this.searchForm, this.resultsPanel ], continuous: true } );
 		this.$body.append( this.stack.$element );
+	};
+	mediaWiki.TemplateWizard.Dialog.prototype.setResultsPanel = function ( panelContents ) {
+		this.resultsPanel.$element.html( panelContents );
 	};
 	mediaWiki.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 		return mediaWiki.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
