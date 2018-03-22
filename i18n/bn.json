@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"templatewizard-cancel": "বাতিল",
+	"templatewizard-default": "পূর্বনির্ধারিত: $1",
+	"templatewizard-dialog-title": "একটি টেমপ্লেট যোগ করুন",
+	"templatewizard-insert": "যোগ করুন",
+	"templatewizard-invalid-title": "অবৈধ শিরোনাম",
+	"templatewizard-opens-in-new-tab": "নতুন ট্যাবে খোলে",
+	"templatewizard-select-template": "একটি টেমপ্লেট নির্বাচন করুন:"
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"templatewizard-cancel": "Abbrechen",
+	"templatewizard-default": "Standard: $1",
+	"templatewizard-desc": "Ein Add-on für den WikiEditor, das einen Vorlageneinfügeassistenten zur Verfügung stellt",
+	"templatewizard-dialog-title": "Eine Vorlage einfügen",
+	"templatewizard-insert": "Einfügen",
+	"templatewizard-invalid-title": "Ungültiger Titel",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] kann nicht im Vorlagenassistenten verwendet werden, da <strong>sie keine [$2 Vorlagendaten]-Tags hat</strong>. Bitte korrigiere dies und versuche es erneut. Falls du denkst, dass du einen Softwarefehler gefunden hast, melde ihn bitte auf der [$3 Hilfeseite].",
+	"templatewizard-opens-in-new-tab": "Wird in einer neuen Registerkarte geöffnet",
+	"templatewizard-parameters-optional": "Optionale Parameter",
+	"templatewizard-parameters-required": "Erforderliche Parameter",
+	"templatewizard-parameters-suggested": "Vorgeschlagene Parameter",
+	"templatewizard-select-template": "Eine Vorlage auswählen:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] kann nicht im Vorlagenassistenten verwendet werden, da <strong>sie nicht vorhanden ist</strong>. Erstelle sie bitte (sowie ihre [$2 Vorlagendaten]) und versuche es erneut. Falls du glaubst, dass du einen Softwarefehler gefunden hast, melde ihn bitte auf der [$3 Hilfeseite].",
+	"templatewizard-use": "Verwenden"
+}

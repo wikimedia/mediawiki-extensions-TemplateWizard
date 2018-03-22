@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"templatewizard-cancel": "Откажи",
+	"templatewizard-default": "По основно: $1",
+	"templatewizard-desc": "Додаток на Викиуредникот помага во вметнувањето на шаблони",
+	"templatewizard-dialog-title": "Вметни шаблон",
+	"templatewizard-insert": "Вметни",
+	"templatewizard-invalid-title": "Неважечки наслов",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] не може да се користи за Помошникот за шаблони бидејќи <strong>нема ознаки за [$2 шаблонски податоци]</strong>. Исправете го тоа и обидете се повторно. Ако мислите дека сте наишле на грешка, известете нè на [$3 помошната страница].",
+	"templatewizard-opens-in-new-tab": "Отвори во ново јазиче",
+	"templatewizard-parameters-optional": "Незадолжителни параметри",
+	"templatewizard-parameters-required": "Задолжителни параметри",
+	"templatewizard-parameters-suggested": "Предложени параметри",
+	"templatewizard-select-template": "Изберете шаблон:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] не може да се користи за Помошникот за шаблони бидејќи <strong>не постои</strong>. Создајте го (и неговите [$2 шаблонски податоци]) и обидете се повторно. Ако мислите дека сте наишле на грешка, известете нè на [$3 помошната страница].",
+	"templatewizard-use": "Употреба"
+}

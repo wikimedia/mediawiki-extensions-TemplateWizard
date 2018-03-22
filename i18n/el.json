@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"templatewizard-cancel": "Ακύρωση",
+	"templatewizard-default": "Προεπιλεγμένο: $1",
+	"templatewizard-dialog-title": "Εισαγωγή προτύπου",
+	"templatewizard-insert": "Εισαγωγή",
+	"templatewizard-invalid-title": "Μη έγκυρος τίτλος",
+	"templatewizard-opens-in-new-tab": "Ανοίγει σε νέα καρτέλα",
+	"templatewizard-parameters-optional": "Προαιρετικές παράμετροι",
+	"templatewizard-parameters-required": "Απαιτούμενες παράμετροι",
+	"templatewizard-parameters-suggested": "Προτεινόμενες παράμετροι",
+	"templatewizard-select-template": "Επιλέξτε ένα πρότυπο:",
+	"templatewizard-use": "Χρήση"
+}

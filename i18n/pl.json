@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"templatewizard-cancel": "Anuluj",
+	"templatewizard-default": "Domyślnie: $1",
+	"templatewizard-dialog-title": "Wstaw szablon",
+	"templatewizard-insert": "Wstaw",
+	"templatewizard-invalid-title": "Nieprawidłowy tytuł",
+	"templatewizard-parameters-optional": "Parametry opcjonalne",
+	"templatewizard-parameters-required": "Wymagane parametry",
+	"templatewizard-parameters-suggested": "Sugerowane parametry",
+	"templatewizard-select-template": "Wybierz szablon:",
+	"templatewizard-use": "Użyj"
+}

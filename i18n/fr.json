@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Wladek92"
+		]
+	},
+	"templatewizard-cancel": "Annuler",
+	"templatewizard-default": "Par défaut : $1",
+	"templatewizard-desc": "Un module de WikiEditor qui fournit un assistant d’insertion de modèle",
+	"templatewizard-dialog-title": "Insérer un modèle",
+	"templatewizard-insert": "Insérer",
+	"templatewizard-invalid-title": "Titre non valide",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] ne peut pas être utilisé dans l’assistant de modèle parce qu’<strong>il n’a pas de balises [$2 TemplateData]</strong>. Veuillez corriger cela et réessayer. Si vous pensez avoir trouvé un bogue, dites-le-nous sur la [$3 page d’aide].",
+	"templatewizard-opens-in-new-tab": "Ouvre dans un nouvel onglet",
+	"templatewizard-parameters-optional": "Paramètres optionnels",
+	"templatewizard-parameters-required": "Paramètres obligatoires",
+	"templatewizard-parameters-suggested": "Paramètres suggérés",
+	"templatewizard-select-template": "Sélectionner un modèle :",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] ne peut pas être utilisé dans l’assistant Modèle parce qu’<strong>il n’existe pas</strong>. Veuillez le créer (avec ses [$2 TemplateData]) et réessayer. Si vous pensez avoir trouvé un bogue, dites-le-nous sur la [$3 page d’aide].",
+	"templatewizard-use": "Utiliser"
+}
