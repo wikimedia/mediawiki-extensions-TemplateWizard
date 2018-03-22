@@ -436,8 +436,13 @@
 		return mediaWiki.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action );
 	};
 
-	function addButton() {
-		$( '#wpTextbox1' ).wikiEditor( 'addToToolbar', {
+	$( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', function () {
+		// Set up the TemplateWizard dialog window.
+		var templateWizard = new mediaWiki.TemplateWizard.Dialog();
+		OO.ui.getWindowManager().addWindows( [ templateWizard ] );
+
+		// Add the toolbar button.
+		$( this ).wikiEditor( 'addToToolbar', {
 			section: 'main',
 			group: 'insert',
 			tools: {
@@ -454,38 +459,6 @@
 				}
 			}
 		} );
-	}
+	} );
 
-	function main() {
-
-		// @TODO $( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', addButton );
-
-		var isEditing = $.inArray( mw.config.get( 'wgAction' ), [ 'edit', 'submit' ] ) !== -1;
-		if ( !isEditing ) {
-			return;
-		}
-		// Otherwise, add the toolbar button.
-		mw.loader.using( 'user.options', function () {
-			var dependencies;
-			// This can be the string "0" if the user disabled the preference.
-			if ( mw.user.options.get( 'usebetatoolbar' ) > 0 ) {
-				dependencies = [
-					'ext.wikiEditor',
-					'jquery.textSelection',
-					'oojs-ui-core',
-					'oojs-ui-windows',
-					'mediawiki.widgets',
-					'mediawiki.widgets.UserInputWidget',
-					'mediawiki.widgets.DateInputWidget'
-				];
-				mw.loader.using( dependencies, $.ready ).then( function () {
-					var templateWizard = new mw.TemplateWizard.Dialog();
-					OO.ui.getWindowManager().addWindows( [ templateWizard ] );
-					addButton();
-				} );
-			}
-		} );
-	}
-
-	main();
 }( mediaWiki, jQuery, OO ) );
