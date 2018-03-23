@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"templatewizard-cancel": "취소",
+	"templatewizard-default": "기본값: $1",
+	"templatewizard-desc": "틀 삽입 마법사를 제공하는 위키편집기 추가 기능",
+	"templatewizard-dialog-title": "틀 삽입",
+	"templatewizard-insert": "넣기",
+	"templatewizard-invalid-title": "잘못된 제목",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] 틀은 <strong>[$2 TemplateData] 태그가 존재하기 않기 때문에</strong> 틀 마법사에서 사용할 수 없습니다. 수정한 다음 다시 시도하십시오. 버그를 찾은 것으로 생각되시면 [$3 도움말 문서]에서 저희에게 말씀해 주세요.",
+	"templatewizard-opens-in-new-tab": "새 탭에 엽니다",
+	"templatewizard-parameters-optional": "선택적 변수",
+	"templatewizard-parameters-required": "필요한 변수",
+	"templatewizard-parameters-suggested": "제안된 변수",
+	"templatewizard-select-template": "틀 선택:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] 틀은 <strong>존재하기 않기 때문에</strong> 틀 마법사에서 사용할 수 없습니다. 해당 틀(및 [$2 틀데이터])을 만든 다음 다시 시도하십시오. 버그를 찾은 것으로 생각되시면 [$3 도움말 문서]에서 저희에게 말씀해 주세요.",
+	"templatewizard-use": "사용하기"
+}

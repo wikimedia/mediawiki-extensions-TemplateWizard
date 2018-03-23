@@ -5,7 +5,11 @@
 		]
 	},
 	"templatewizard-cancel": "منسوخ",
+	"templatewizard-default": "پہلے کنوں طے تھیا ہویا:$1",
+	"templatewizard-dialog-title": "سانچہ درج کرو",
 	"templatewizard-insert": "درج کرو",
+	"templatewizard-invalid-title": "غلط عنوان",
+	"templatewizard-opens-in-new-tab": "نویں ٹیب وچ کھولیسی",
 	"templatewizard-select-template": "سانچہ چُݨو:",
 	"templatewizard-use": "ورتݨ"
 }

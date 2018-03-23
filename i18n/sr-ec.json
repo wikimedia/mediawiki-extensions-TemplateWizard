@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog"
+		]
+	},
+	"templatewizard-cancel": "Откажи",
+	"templatewizard-default": "Подразумевано: $1",
+	"templatewizard-dialog-title": "Убацивање шаблона",
+	"templatewizard-insert": "Убаци",
+	"templatewizard-invalid-title": "Неисправан наслов",
+	"templatewizard-opens-in-new-tab": "Отвара се у новој картици",
+	"templatewizard-parameters-optional": "Необавезни параметри",
+	"templatewizard-parameters-required": "Обавезни параметри",
+	"templatewizard-parameters-suggested": "Предложени параметри",
+	"templatewizard-select-template": "Одабери шаблон:",
+	"templatewizard-use": "Употреби"
+}
