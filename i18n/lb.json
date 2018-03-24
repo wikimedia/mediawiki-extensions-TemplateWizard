@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"templatewizard-cancel": "Ofbriechen",
+	"templatewizard-default": "Standard: $1",
+	"templatewizard-dialog-title": "Eng Schabloun drasetzen",
+	"templatewizard-insert": "Drasetzen",
+	"templatewizard-invalid-title": "Net valabelen Titel",
+	"templatewizard-parameters-optional": "Fakultativ Parameteren",
+	"templatewizard-parameters-required": "Obligatoresch Parameteren",
+	"templatewizard-parameters-suggested": "Virgeschloe Parameteren",
+	"templatewizard-select-template": "Sicht eng Schabloun eraus:",
+	"templatewizard-use": "Benotzen"
+}

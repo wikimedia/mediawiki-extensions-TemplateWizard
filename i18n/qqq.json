@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sam Wilson"
+			"Sam Wilson",
+			"Robby"
 		]
 	},
-	"templatewizard-cancel": "Text for the cancel button that closes the dialog window.",
+	"templatewizard-cancel": "Text for the cancel button that closes the dialogue window.\n{{Identical|Cancel}}",
 	"templatewizard-default": "Text appended to a parameter field's help text to show the parameter's default value. Parameter $1 is the default value.",
 	"templatewizard-desc": "{{desc|name=TemplateWizard|url=https://www.mediawiki.org/wiki/Extension:TemplateWizard}}",
 	"templatewizard-dialog-title": "Title of the TemplateWizard dialog window.",
-	"templatewizard-insert": "Text for the main template-insertion button.",
+	"templatewizard-insert": "Text for the main template-insertion button.\n{{Identical|Insert}}",
 	"templatewizard-invalid-title": "Error message shown when an invalid title is entered in the search field.",
 	"templatewizard-no-templatedata": "Error message shown when the requested template exists and does not have TemplateData. Parameters:\n* $1 Template name without 'Template:'.\n* $2 URL of the TemplateData help page on MediaWiki.org.\n* $3 URL of the TemplateWizard help page on MediaWiki.org.",
 	"templatewizard-opens-in-new-tab": "Tooltip shown for the template name link.",
