@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"templatewizard-cancel": "Cancelar",
+	"templatewizard-default": "Predeterminado: $1",
+	"templatewizard-desc": "Un complemento para WikiEditor que brinda un asistente de inserción de plantillas",
+	"templatewizard-dialog-title": "Insertar una plantilla",
+	"templatewizard-insert": "Insertar",
+	"templatewizard-invalid-title": "Título no válido",
+	"templatewizard-opens-in-new-tab": "Se abre en una pestaña nueva",
+	"templatewizard-parameters-optional": "Parámetros opcionales",
+	"templatewizard-parameters-required": "Parámetros obligatorios",
+	"templatewizard-parameters-suggested": "Parámetros sugeridos",
+	"templatewizard-select-template": "Selecciona una plantilla:",
+	"templatewizard-use": "Uso"
+}

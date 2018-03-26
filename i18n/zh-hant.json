@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"templatewizard-cancel": "取消",
+	"templatewizard-default": "預設：$1",
+	"templatewizard-desc": "Wiki 編輯器的提供模板插入精靈套件",
+	"templatewizard-dialog-title": "插入模板",
+	"templatewizard-insert": "插入",
+	"templatewizard-invalid-title": "無效標題",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]]不可用於模板精靈，因為<strong>它並沒有[$2 模板資料]標籤</strong>。請修正後再重試一次。如果您認為您發現了程式錯誤，請在[$3 幫助頁面]讓我們知悉。",
+	"templatewizard-opens-in-new-tab": "在新分頁開啟",
+	"templatewizard-parameters-optional": "選用參數",
+	"templatewizard-parameters-required": "必要參數",
+	"templatewizard-parameters-suggested": "建議參數",
+	"templatewizard-select-template": "選擇模板：",
+	"templatewizard-template-not-found": "[[Template:$1|$1]]不可用於模板精靈，因為<strong>它不存在</strong>。請建立（以及該[$2 模板資料]）後再重試一次。如果您認為您發現了程式錯誤，請在[$3 幫助頁面]讓我們知悉。",
+	"templatewizard-use": "使用"
+}
