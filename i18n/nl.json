@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"templatewizard-cancel": "Annuleren",
+	"templatewizard-default": "Standaard: $1",
+	"templatewizard-dialog-title": "Sjabloon invoegen",
+	"templatewizard-insert": "Invoegen",
+	"templatewizard-invalid-title": "Ongeldige titel",
+	"templatewizard-opens-in-new-tab": "In nieuw tabblad openen",
+	"templatewizard-parameters-optional": "Optionele parameters",
+	"templatewizard-parameters-required": "Verplichte parameters",
+	"templatewizard-select-template": "Selecteer een sjabloon:",
+	"templatewizard-use": "Gebruiken"
+}
