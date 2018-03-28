@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Patio"
 		]
 	},
 	"templatewizard-cancel": "Annuleren",
@@ -9,9 +10,11 @@
 	"templatewizard-dialog-title": "Sjabloon invoegen",
 	"templatewizard-insert": "Invoegen",
 	"templatewizard-invalid-title": "Ongeldige titel",
+	"templatewizard-no-templatedata": "[[Sjabloon:$1|$1]] kan niet worden gebruikt in Template Wizard, omdat het <strong>geen [$2 TemplateData] etiketten</strong> heeft. Repareer dat alstublieft en probeer opnieuw. Als u een bug vermoedt, graag aan ons melden op de [$3 help page].",
 	"templatewizard-opens-in-new-tab": "In nieuw tabblad openen",
 	"templatewizard-parameters-optional": "Optionele parameters",
 	"templatewizard-parameters-required": "Verplichte parameters",
+	"templatewizard-parameters-suggested": "Voorkeursvariabelen",
 	"templatewizard-select-template": "Selecteer een sjabloon:",
 	"templatewizard-use": "Gebruiken"
 }
