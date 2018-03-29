@@ -315,9 +315,14 @@
 		return this.format;
 	};
 	mediaWiki.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
-		var template,
-			formatter = this,
-			format = this.getFormat();
+		var template, format,
+			formatter = this;
+
+		// Before building the template, fall back to inline format if there are no parameters (T190123).
+		if ( $.isEmptyObject( this.params ) ) {
+			this.setFormat( 'inline' );
+		}
+		format = this.getFormat();
 
 		// Start building the template.
 		template = '';
@@ -327,7 +332,7 @@
 		template += this.constructor.static.formatStringSubst( format.start, this.name );
 
 		// Process the parameters.
-		$.each( formatter.params, function ( key, val ) {
+		$.each( this.params, function ( key, val ) {
 			template += formatter.constructor.static.formatStringSubst( format.paramName, key ) +
 				formatter.constructor.static.formatStringSubst( format.paramValue, val );
 		} );
@@ -358,7 +363,7 @@
 			while ( value.length < hole.length ) {
 				value += ' ';
 			}
-			return value; // + ( ' '.repeat( hole.length - value.length ) );
+			return value;
 		} );
 	};
 
