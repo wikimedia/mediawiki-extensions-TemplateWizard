@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"templatewizard-cancel": "Cancelar",
+	"templatewizard-default": "Padrão: $1",
+	"templatewizard-desc": "Um suplemento para o WikiEditor que fornece um assistente de inserção de predefinições",
+	"templatewizard-dialog-title": "Inserir uma predefinição",
+	"templatewizard-insert": "Inserir",
+	"templatewizard-invalid-title": "Título inválido",
+	"templatewizard-no-templatedata": "A predefinição [[Template:$1|$1]] não pode ser usada no assistente de predefinições porque <strong>não tem etiquetas de [$2 dados de predefinição]</strong>. Corrija e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na [$3 página de ajuda].",
+	"templatewizard-opens-in-new-tab": "Abre numa aba nova",
+	"templatewizard-parameters-optional": "Parâmetros opcionais",
+	"templatewizard-parameters-required": "Parâmetros obrigatórios",
+	"templatewizard-parameters-suggested": "Parâmetros sugeridos",
+	"templatewizard-select-template": "Selecionar uma predefinição:",
+	"templatewizard-template-not-found": "A predefinição [[Template:$1|$1]] não pode ser usada no assistente de predefinições porque <strong>não existe</strong>. Crie-a (e os correspondentes [$2 dados de predefinição]) e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na [$3 página de ajuda].",
+	"templatewizard-use": "Usar"
+}
