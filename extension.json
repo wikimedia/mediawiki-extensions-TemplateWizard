@@ -30,7 +30,11 @@
 	"ResourceModules": {
 		"ext.TemplateWizard": {
 			"scripts": [
-				"ext.TemplateWizard.js"
+				"ext.TemplateWizard.js",
+				"ext.TemplateWizard.Dialog.js",
+				"ext.TemplateWizard.SearchForm.js",
+				"ext.TemplateWizard.TemplateForm.js",
+				"ext.TemplateWizard.TemplateFormatter.js"
 			],
 			"messages": [
 				"templatewizard-cancel",
