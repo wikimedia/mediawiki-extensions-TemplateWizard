@@ -339,7 +339,7 @@
 
 		// End and return the template.
 		template += format.end;
-		if ( format.endOfLine && !template.endsWith( '\n' ) ) {
+		if ( format.endOfLine && !template.match( /\n$/ ) ) {
 			template += '\n';
 		}
 		return template;
