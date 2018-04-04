@@ -43,6 +43,8 @@
 				"templatewizard-parameters-optional",
 				"templatewizard-parameters-required",
 				"templatewizard-parameters-suggested",
+				"templatewizard-placeholder-default",
+				"templatewizard-placeholder-example",
 				"templatewizard-select-template",
 				"templatewizard-template-not-found",
 				"templatewizard-use"
