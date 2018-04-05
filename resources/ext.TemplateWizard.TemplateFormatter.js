@@ -14,6 +14,17 @@ mediaWiki.TemplateWizard.TemplateFormatter.prototype.setTemplateName = function 
 	this.name = newName;
 };
 mediaWiki.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params ) {
+	// If any numbered parameters are set, all lower-numbered ones should be set as well (to blank).
+	$.each( params, function ( key ) {
+		var paramNum;
+		if ( $.isNumeric( key ) ) {
+			for ( paramNum = 1; paramNum < key; paramNum++ ) {
+				if ( params[ paramNum ] === undefined ) {
+					params[ paramNum ] = '';
+				}
+			}
+		}
+	} );
 	this.params = params;
 };
 mediaWiki.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( format ) {
@@ -64,8 +75,14 @@ mediaWiki.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
 
 	// Process the parameters.
 	$.each( this.params, function ( key, val ) {
-		template += formatter.constructor.static.formatStringSubst( format.paramName, key ) +
-			formatter.constructor.static.formatStringSubst( format.paramValue, val );
+		if ( $.isNumeric( key ) ) {
+			// Render numeric/unnamed parameters inline, as Parsoid does it.
+			template += formatter.constructor.static.formatStringSubst( '|', '' );
+		} else {
+			// Non-numeric keys are added as normal.
+			template += formatter.constructor.static.formatStringSubst( format.paramName, key );
+		}
+		template += formatter.constructor.static.formatStringSubst( format.paramValue, val );
 	} );
 
 	// End and return the template.
