@@ -17,6 +17,8 @@
 	"templatewizard-parameters-optional": "Fieldset legend for the set of optional template parameters.",
 	"templatewizard-parameters-required": "Fieldset legend for the set of required template parameters.",
 	"templatewizard-parameters-suggested": "Fieldset legend for the set of suggested template parameters.",
+	"templatewizard-placeholder-default": "Form input placeholder text that shows the parameter's default value.",
+	"templatewizard-placeholder-example": "Form input placeholder text that shows an example of a value for the parameter.",
 	"templatewizard-select-template": "Label for the template search field.",
 	"templatewizard-template-not-found": "Error message shown when the requested template does not exist. Parameters:\n* $1 Template name without 'Template:'.\n* $2 URL of the TemplateData help page on MediaWiki.org.\n* $3 URL of the TemplateWizard help page on MediaWiki.org.",
 	"templatewizard-use": "Text for the template search box selection button.\n{{Identical|Use}}"

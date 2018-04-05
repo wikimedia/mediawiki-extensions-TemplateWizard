@@ -15,6 +15,8 @@
 	"templatewizard-parameters-optional": "Optional parameters",
 	"templatewizard-parameters-required": "Required parameters",
 	"templatewizard-parameters-suggested": "Suggested parameters",
+	"templatewizard-placeholder-default": "Default: $1",
+	"templatewizard-placeholder-example": "e.g. $1",
 	"templatewizard-select-template": "Select a template:",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] can not be used in the Template Wizard because <strong>it doesn't exist</strong>. Please create it (and its [$2 TemplateData]) and try again. If you think you've found a bug tell us about it on the [$3 help page].",
 	"templatewizard-use": "Use"

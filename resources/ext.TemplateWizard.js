@@ -49,6 +49,11 @@
 		if ( paramDefinition.required ) {
 			config.required = true;
 		}
+		if ( paramDefinition.default ) {
+			config.placeholder = mw.message( 'templatewizard-placeholder-default', paramDefinition.default );
+		} else if ( paramDefinition.example ) {
+			config.placeholder = mw.message( 'templatewizard-placeholder-example', paramDefinition.example );
+		}
 		if ( paramDefinition.type === 'number' ) {
 			widget = new OO.ui.NumberInputWidget( config );
 		} else if ( paramDefinition.type === 'date' ) {
