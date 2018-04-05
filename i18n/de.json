@@ -15,6 +15,8 @@
 	"templatewizard-parameters-optional": "Optionale Parameter",
 	"templatewizard-parameters-required": "Erforderliche Parameter",
 	"templatewizard-parameters-suggested": "Vorgeschlagene Parameter",
+	"templatewizard-placeholder-default": "Standard: $1",
+	"templatewizard-placeholder-example": "z.&nbsp;B. $1",
 	"templatewizard-select-template": "Eine Vorlage auswählen:",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] kann nicht im Vorlagenassistenten verwendet werden, da <strong>sie nicht vorhanden ist</strong>. Erstelle sie bitte (sowie ihre [$2 Vorlagendaten]) und versuche es erneut. Falls du glaubst, dass du einen Softwarefehler gefunden hast, melde ihn bitte auf der [$3 Hilfeseite].",
 	"templatewizard-use": "Verwenden"

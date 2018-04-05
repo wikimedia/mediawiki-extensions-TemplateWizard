@@ -14,6 +14,8 @@
 	"templatewizard-parameters-optional": "Parámetros opcionales",
 	"templatewizard-parameters-required": "Parámetros obligatorios",
 	"templatewizard-parameters-suggested": "Parámetros sugeridos",
+	"templatewizard-placeholder-default": "Predeterminado: $1",
+	"templatewizard-placeholder-example": "p. ej., $1",
 	"templatewizard-select-template": "Selecciona una plantilla:",
 	"templatewizard-use": "Uso"
 }

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2"
+		]
+	},
+	"templatewizard-placeholder-default": "ברירת המחדל: $1",
+	"templatewizard-placeholder-example": "למשל: $1"
+}
