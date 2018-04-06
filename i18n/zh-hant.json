@@ -15,6 +15,8 @@
 	"templatewizard-parameters-optional": "選用參數",
 	"templatewizard-parameters-required": "必要參數",
 	"templatewizard-parameters-suggested": "建議參數",
+	"templatewizard-placeholder-default": "預設：$1",
+	"templatewizard-placeholder-example": "例如：$1",
 	"templatewizard-select-template": "選擇模板：",
 	"templatewizard-template-not-found": "[[Template:$1|$1]]不可用於模板精靈，因為<strong>它不存在</strong>。請建立（以及該[$2 模板資料]）後再重試一次。如果您認為您發現了程式錯誤，請在[$3 幫助頁面]讓我們知悉。",
 	"templatewizard-use": "使用"

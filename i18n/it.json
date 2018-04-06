@@ -5,5 +5,7 @@
 		]
 	},
 	"templatewizard-cancel": "Annulla",
-	"templatewizard-default": "Predefinito: $1"
+	"templatewizard-default": "Predefinito: $1",
+	"templatewizard-placeholder-default": "Predefinito: $1",
+	"templatewizard-placeholder-example": "Esempio: $1"
 }

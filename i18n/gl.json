@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm",
+			"Navhy"
+		]
+	},
+	"templatewizard-cancel": "Cancelar",
+	"templatewizard-insert": "Inserir",
+	"templatewizard-invalid-title": "Título non válido",
+	"templatewizard-parameters-optional": "Parámetros opcionais",
+	"templatewizard-placeholder-example": "p. ex.: $1",
+	"templatewizard-use": "Empregar"
+}
