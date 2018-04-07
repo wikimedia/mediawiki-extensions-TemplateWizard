@@ -12,6 +12,8 @@
 	"templatewizard-parameters-optional": "Parametry opcjonalne",
 	"templatewizard-parameters-required": "Wymagane parametry",
 	"templatewizard-parameters-suggested": "Sugerowane parametry",
+	"templatewizard-placeholder-default": "Domyślnie: $1",
+	"templatewizard-placeholder-example": "np. $1",
 	"templatewizard-select-template": "Wybierz szablon:",
 	"templatewizard-use": "Użyj"
 }
