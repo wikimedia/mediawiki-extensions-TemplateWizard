@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Patriccck"
+		]
+	},
+	"templatewizard-cancel": "Storno",
+	"templatewizard-default": "Výchozí: $1",
+	"templatewizard-insert": "Vložit",
+	"templatewizard-invalid-title": "Neplatný název",
+	"templatewizard-parameters-optional": "Doplňkové parametry",
+	"templatewizard-parameters-required": "Povinné parametry",
+	"templatewizard-placeholder-default": "Výchozí: $1",
+	"templatewizard-placeholder-example": "např. $1",
+	"templatewizard-use": "Používat"
+}

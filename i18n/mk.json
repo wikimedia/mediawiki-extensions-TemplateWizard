@@ -15,6 +15,8 @@
 	"templatewizard-parameters-optional": "Незадолжителни параметри",
 	"templatewizard-parameters-required": "Задолжителни параметри",
 	"templatewizard-parameters-suggested": "Предложени параметри",
+	"templatewizard-placeholder-default": "По основно: $1",
+	"templatewizard-placeholder-example": "на пр. $1",
 	"templatewizard-select-template": "Изберете шаблон:",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] не може да се користи за Помошникот за шаблони бидејќи <strong>не постои</strong>. Создајте го (и неговите [$2 шаблонски податоци]) и обидете се повторно. Ако мислите дека сте наишле на грешка, известете нè на [$3 помошната страница].",
 	"templatewizard-use": "Употреба"

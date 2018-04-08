@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Happy13241"
+		]
+	},
+	"templatewizard-cancel": "Отмена",
+	"templatewizard-default": "По умолчанию: $1",
+	"templatewizard-desc": "Надстройка WikiEditor, которая предоставляет мастер установки шаблонов",
+	"templatewizard-dialog-title": "Вставить шаблон",
+	"templatewizard-insert": "Вставить",
+	"templatewizard-invalid-title": "Недопустимое название",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] не может использоваться в Мастере Шаблонов, потому что <strong>у него нет тегов [$2 TemplateData]</strong>. Пожалуйста, исправьте это и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на странице справки [$3].",
+	"templatewizard-opens-in-new-tab": "Открыть в новой вкладке",
+	"templatewizard-parameters-optional": "Дополнительные параметры",
+	"templatewizard-parameters-required": "Необходимые параметры",
+	"templatewizard-parameters-suggested": "Предлагаемые параметры",
+	"templatewizard-placeholder-default": "По умолчанию: $1",
+	"templatewizard-placeholder-example": "Например: $1",
+	"templatewizard-select-template": "Выберите шаблон:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] не может использоваться в Мастере Шаблонов, потому что <strong>он не существует</strong>. Создайте его (и его [$2 TemplateData]) и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на странице справки [$3].",
+	"templatewizard-use": "Использовать"
+}
