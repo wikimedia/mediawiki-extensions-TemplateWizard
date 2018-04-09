@@ -27,4 +27,28 @@
 		assert.strictEqual( templateFormatter.getTemplate(), '{{some-tag}}' );
 	} );
 
+	QUnit.test( 'unnamed parameters ', function ( assert ) {
+		var templateFormatter = new mw.TemplateWizard.TemplateFormatter();
+		templateFormatter.setTemplateName( 'tpl' );
+		// Basic.
+		templateFormatter.setParameters( { a: 'a', 1: 'one' } );
+		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl|one|a=a}}' );
+		// Multiple, in the right order.
+		templateFormatter.setParameters( { a: 'a', 2: 'two', 1: 'one' } );
+		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl|one|two|a=a}}' );
+		// Multiple, out of order.
+		templateFormatter.setParameters( { a: 'a', 1: 'one', 2: 'two' } );
+		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl|one|two|a=a}}' );
+		// Missing first unnamed parameter.
+		templateFormatter.setParameters( { a: 'a', 2: 'two' } );
+		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl||two|a=a}}' );
+		// Skip one unnamed parameter.
+		templateFormatter.setParameters( { a: 'a', 1: 'one', 3: 'three', b: 'b' } );
+		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl|one||three|a=a|b=b}}' );
+		// Block format still has the numbered params inline.
+		templateFormatter.setFormat( 'block' );
+		templateFormatter.setParameters( { a: 'a', 2: 'two' } );
+		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl||two\n| a = a\n}}' );
+	} );
+
 }( mediaWiki ) );
