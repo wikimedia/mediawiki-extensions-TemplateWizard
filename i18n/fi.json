@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nike"
+		]
+	},
+	"templatewizard-placeholder-default": "Oletus: $1",
+	"templatewizard-placeholder-example": "Esim. $1"
+}
