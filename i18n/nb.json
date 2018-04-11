@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Imre Eilertsen"
+		]
+	},
+	"templatewizard-placeholder-default": "Standard: $1",
+	"templatewizard-placeholder-example": "f.eks. $1"
+}
