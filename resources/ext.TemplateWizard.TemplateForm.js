@@ -167,6 +167,24 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
 	return params;
 };
 
+/**
+ * Get the first invalid field.
+ * @return {boolean|OO.ui.Widget}
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
+	var firstInvalidWidget = false;
+	$.each( this.widgets, function ( name, widget ) {
+		// Force the widget to validate.
+		widget.blur();
+		// Then check it's validity.
+		if ( widget.hasFlag( 'invalid' ) ) {
+			firstInvalidWidget = widget;
+			return false;
+		}
+	} );
+	return firstInvalidWidget;
+};
+
 mediaWiki.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
 	var groupedParams = {
 		required: {},
@@ -205,6 +223,8 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.loadTemplateData = function () {
 		.done( function ( apiResponse ) {
 			var fieldsets = templateForm.processTemplateData( apiResponse );
 			templateForm.$element.append( fieldsets );
+			// Focus the first field.
+			templateForm.$element.find( ':input:first' ).focus();
 		} )
 		.always( function () {
 			templateForm.dialog.popPending();
