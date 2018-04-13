@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Happy13241"
+			"Happy13241",
+			"Ole Yves"
 		]
 	},
 	"templatewizard-cancel": "Отмена",
@@ -10,14 +11,14 @@
 	"templatewizard-dialog-title": "Вставить шаблон",
 	"templatewizard-insert": "Вставить",
 	"templatewizard-invalid-title": "Недопустимое название",
-	"templatewizard-no-templatedata": "[[Template:$1|$1]] не может использоваться в Мастере Шаблонов, потому что <strong>у него нет тегов [$2 TemplateData]</strong>. Пожалуйста, исправьте это и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на странице справки [$3].",
-	"templatewizard-opens-in-new-tab": "Открыть в новой вкладке",
-	"templatewizard-parameters-optional": "Дополнительные параметры",
-	"templatewizard-parameters-required": "Необходимые параметры",
-	"templatewizard-parameters-suggested": "Предлагаемые параметры",
+	"templatewizard-no-templatedata": "[[Template:$1|$1]] не может использоваться в Мастере шаблонов, потому что <strong>у него нет тегов [$2 TemplateData]</strong>. Пожалуйста, исправьте это и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на [$3 странице справки].",
+	"templatewizard-opens-in-new-tab": "Открывается в новой вкладке",
+	"templatewizard-parameters-optional": "Необязательные параметры",
+	"templatewizard-parameters-required": "Обязательные параметры",
+	"templatewizard-parameters-suggested": "Предложенные параметры",
 	"templatewizard-placeholder-default": "По умолчанию: $1",
 	"templatewizard-placeholder-example": "Например: $1",
 	"templatewizard-select-template": "Выберите шаблон:",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] не может использоваться в Мастере Шаблонов, потому что <strong>он не существует</strong>. Создайте его (и его [$2 TemplateData]) и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на странице справки [$3].",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] не может использоваться в Мастере шаблонов, потому что <strong>он не существует</strong>. Создайте его (и его [$2 TemplateData]) и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на [$3 странице справки].",
 	"templatewizard-use": "Использовать"
 }
