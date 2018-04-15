@@ -15,6 +15,7 @@
 	"templatewizard-parameters-optional": "Valfria parametrar",
 	"templatewizard-parameters-required": "Nödvändiga parametrar",
 	"templatewizard-parameters-suggested": "Förslagna parametrar",
+	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-select-template": "Välj en mall:",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] kan inte användas i Template Wizard eftersom <strong>den inte finns</strong>. Var god skapa den (och dess [$2 TemplateData]) och försök igen. Om du tror att du har hittat en bugg, berätta det för oss på [$3 hjälpsidan].",
 	"templatewizard-use": "Använd"
