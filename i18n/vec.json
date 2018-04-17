@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cusolotto"
+		]
+	},
+	"templatewizard-placeholder-default": "Predefinìo: ($1)",
+	"templatewizard-placeholder-example": "Esenpio: $1"
+}
