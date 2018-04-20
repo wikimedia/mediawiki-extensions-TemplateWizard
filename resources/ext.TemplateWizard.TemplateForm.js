@@ -119,7 +119,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParameterFieldsets = function
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.processTemplateData = function ( apiResponse ) {
-	var id, templateData, description, errorMessage, groupedParams;
+	var id, templateData, description, templateDataUrl, groupedParams;
 	// Get the first page's template data.
 	id = $.map( apiResponse.pages, function ( _value, key ) {
 		return key;
@@ -130,16 +130,22 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.processTemplateData = function (
 	description = '';
 	if ( templateData.description ) {
 		description = templateData.description;
-	} else if ( templateData.missing !== undefined || templateData.params === undefined ) {
+	} else if ( templateData.missing !== undefined || templateData.notemplatedata !== undefined ) {
+		templateDataUrl = 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData';
 		// Either the template doesn't exist or doesn't have TemplateData.
-		errorMessage = templateData.missing === undefined ?
-			'templatewizard-no-templatedata' : 'templatewizard-template-not-found';
-		description = mediaWiki.message(
-			errorMessage,
-			this.title.getMainText(),
-			'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData',
-			'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard'
-		).parse();
+		if ( templateData.missing === undefined ) {
+			description = mediaWiki.message(
+				'templatewizard-no-templatedata',
+				templateDataUrl
+			).parse();
+		} else {
+			description = mediaWiki.message(
+				'templatewizard-template-not-found',
+				this.title.getMainText(),
+				templateDataUrl,
+				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard'
+			).parse();
+		}
 	}
 	if ( description ) {
 		this.$element.append( $( '<p>' ).append( description ) );
@@ -217,7 +223,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.loadTemplateData = function () {
 		action: 'templatedata',
 		titles: this.title.getPrefixedDb(),
 		redirects: true,
-		doNotIgnoreMissingTitles: true,
+		includeMissingTitles: true,
 		lang: mediaWiki.config.get( 'wgUserLanguage' )
 	} )
 		.done( function ( apiResponse ) {

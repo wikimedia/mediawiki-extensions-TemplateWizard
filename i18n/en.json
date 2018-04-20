@@ -13,7 +13,7 @@
 	"templatewizard-invalid-values": "One or more of your inputs don't match the expected format. Do you wish to edit it?",
 	"templatewizard-invalid-values-edit": "Edit template",
 	"templatewizard-invalid-values-insert": "Insert template",
-	"templatewizard-no-templatedata": "[[Template:$1|$1]] can not be used in the Template Wizard because <strong>it doesn't have [$2 TemplateData] tags</strong>. Please fix that and try again. If you think you've found a bug tell us about it on the [$3 help page].",
+	"templatewizard-no-templatedata": "Due to missing [$1 TemplateData], parameters for this template have been auto-generated. Please be aware that they may not be accurate.",
 	"templatewizard-opens-in-new-tab": "Opens in new tab",
 	"templatewizard-parameters-optional": "Optional parameters",
 	"templatewizard-parameters-required": "Required parameters",
