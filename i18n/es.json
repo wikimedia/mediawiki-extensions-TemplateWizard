@@ -10,6 +10,7 @@
 	"templatewizard-dialog-title": "Insertar una plantilla",
 	"templatewizard-insert": "Insertar",
 	"templatewizard-invalid-title": "Título no válido",
+	"templatewizard-no-templatedata": "No se puede utilizar [[Template:$1|$1]] en el asistente de plantillas porque <strong>no incluye etiquetas [$2 TemplateData]</strong>. Corrige el problema e inténtalo de nuevo. Si crees que has encontrado un defecto en el asistente, infórmanos de este en la [$3 página de ayuda].",
 	"templatewizard-opens-in-new-tab": "Se abre en una pestaña nueva",
 	"templatewizard-parameters-optional": "Parámetros opcionales",
 	"templatewizard-parameters-required": "Parámetros obligatorios",
@@ -17,5 +18,6 @@
 	"templatewizard-placeholder-default": "Predeterminado: $1",
 	"templatewizard-placeholder-example": "p. ej., $1",
 	"templatewizard-select-template": "Selecciona una plantilla:",
+	"templatewizard-template-not-found": "No se puede utilizar [[Template:$1|$1]] en el asistente de plantillas porque <strong>no existe</strong>. Créala (y añádele etiquetas [$2 TemplateData]) e inténtalo de nuevo. Si crees que has encontrado un defecto en el asistente, infórmanos de este en la [$3 página de ayuda].",
 	"templatewizard-use": "Uso"
 }
