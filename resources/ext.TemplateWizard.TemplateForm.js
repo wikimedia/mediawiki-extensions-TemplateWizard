@@ -2,20 +2,20 @@
  * @class
  * @constructor
  * @param {OO.ui.ProcessDialog} dialog The dialog window.
- * @param {string} title No leading 'Template:' required.
- * @param {Object} [config] Configuration options
+ * @param {Object} templateData
  */
-mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( dialog, title, config ) {
-	OO.ui.Widget.parent.call( this, config );
+mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( dialog, templateData ) {
+	OO.ui.Widget.parent.call( this );
 	this.dialog = dialog;
-	this.title = mediaWiki.Title.newFromText( title, mediaWiki.config.get( 'wgNamespaceIds' ).template );
+	this.title = mediaWiki.Title.newFromText( templateData.title, mediaWiki.config.get( 'wgNamespaceIds' ).template );
 	if ( !this.title ) {
 		throw new Error( mediaWiki.message( 'templatewizard-invalid-title' ) );
 	}
-	this.widgets = {};
-	this.$element.append( this.getHeader() );
-	this.loadTemplateData();
+	this.format = templateData.format || 'inline';
+	this.fields = {};
+	this.$element.html( this.getForm( templateData ).$element.addClass( 'ext-templatewizard-templateform' ) );
 };
+
 OO.inheritClass( mediaWiki.TemplateWizard.TemplateForm, OO.ui.Widget );
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.getTitle = function () {
@@ -26,6 +26,42 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getFormat = function () {
 	return this.format;
 };
 
+/**
+ * Get the whole template-editing form (both the field-list left menu and the right-hand form panel).
+ * @param {Object} templateData
+ * @return {OO.ui.StackLayout}
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
+	var templateTitleBar, menuLayout, menuContainer, groupedParams, paramsAndFields, fullLayout;
+
+	// Title bar.
+	templateTitleBar = new mediaWiki.TemplateWizard.TemplateTitleBar(
+		this,
+		this.title,
+		templateData
+	);
+
+	// Menu area (two side-by-side panels).
+	menuLayout = new OO.ui.MenuLayout();
+	groupedParams = this.processParameters( templateData.params );
+	paramsAndFields = this.getParamsAndFields( groupedParams );
+	menuLayout.$menu.append( paramsAndFields.menu );
+	menuLayout.$content.append( paramsAndFields.fields );
+	menuContainer = new OO.ui.PanelLayout();
+	menuContainer.$element
+		.addClass( 'ext-templatewizard-menu' )
+		.append( menuLayout.$element );
+
+	// Put the two together.
+	fullLayout = new OO.ui.PanelLayout();
+	fullLayout.$element.append( templateTitleBar.$element, menuContainer.$element );
+	return fullLayout;
+};
+
+mediaWiki.TemplateWizard.TemplateForm.prototype.closeForm = function () {
+	this.dialog.showSearchForm( this.title.getMainText() );
+};
+
 mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
 	var $link;
 	$link = $( '<a>' )
@@ -34,6 +70,89 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
 		.attr( 'href', this.title.getUrl() )
 		.text( this.title.getMainText() );
 	return $( '<h2>' ).html( $link );
+};
+
+mediaWiki.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
+	$.each( this.fields, function ( index, field ) {
+		if ( field.isRequired() ) {
+			return;
+		}
+		field.toggle( show );
+	} );
+};
+
+mediaWiki.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
+	this.fields[ paramName ].toggle( true );
+	this.fields[ paramName ].getField().focus();
+};
+
+mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
+	if ( this.fields[ paramName ].isRequired() ) {
+		// Required fields are not allowed to be hidden.
+		return;
+	}
+	this.fields[ paramName ].toggle( false );
+};
+
+/**
+ * Get the parameter menu and fields list.
+ * @param {Object} groupedParams
+ * @return {{menu: jQuery, fields: jQuery}}
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( groupedParams ) {
+	var templateForm = this,
+		$paramMenu = $( '<div>' ).addClass( 'parameter-list' ),
+		$fields = $( '<div>' ).addClass( 'fields' );
+	$.each( groupedParams, function ( groupName, group ) {
+		var paramGroupTitle,
+			hasParams = false,
+			$paramList = $( '<div>' ).addClass( 'parameter-list-inner' );
+		$.each( group, function ( param, details ) {
+			var button,
+				label = param,
+				description = '';
+			// Description.
+			if ( details.description ) {
+				description = details.description;
+			}
+			if ( details.default ) {
+				description += ' ' + mediaWiki.message( 'templatewizard-default', details.default );
+			}
+			if ( details.label ) {
+				label = details.label;
+			}
+			// Button.
+			button = new mediaWiki.TemplateWizard.ParamButton(
+				{ label: label, title: description, required: details.required },
+				templateForm,
+				param
+			);
+			// Form field.
+			templateForm.fields[ param ] = new mediaWiki.TemplateWizard.ParamField(
+				templateForm.getInputWidgetForParam( param, details ),
+				{ label: label, help: description, required: details.required }
+			);
+
+			$paramList.append( $( '<div>' ).append( button.$element ) );
+			$fields.append( templateForm.fields[ param ].$element );
+			hasParams = true;
+		} );
+		if ( hasParams ) {
+			// The following messages are used here:
+			// * templatewizard-parameters-required
+			// * templatewizard-parameters-suggested
+			// * templatewizard-parameters-optional
+			paramGroupTitle = mediaWiki.message( 'templatewizard-parameters-' + groupName ).text();
+			$paramMenu.append(
+				$( '<span>' ).addClass( 'section-header' ).text( paramGroupTitle ),
+				$paramList
+			);
+		}
+	} );
+	return {
+		menu: $paramMenu,
+		fields: $fields
+	};
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function ( param, paramDefinition ) {
@@ -70,105 +189,14 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = functio
 	return widget;
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.getParameterFieldsets = function ( groupedParams ) {
-	var $fieldsets = $( '<div>' ),
-		self = this;
-	$.each( groupedParams, function ( groupName, group ) {
-		// The following messages are used here:
-		// * templatewizard-parameters-required
-		// * templatewizard-parameters-suggested
-		// * templatewizard-parameters-optional
-		var fieldsetLabel = mediaWiki.message( 'templatewizard-parameters-' + groupName ).text(),
-			fieldset = new OO.ui.FieldsetLayout( { label: fieldsetLabel } );
-		// @TODO Move this styling into a stylesheet.
-		if ( groupName === 'required' ) {
-			fieldset.$label.css( 'color', '#e04006' );
-		}
-		if ( groupName === 'suggested' ) {
-			fieldset.$label.css( 'color', '#f99d31' );
-		}
-		if ( groupName === 'optional' ) {
-			fieldset.$label.css( 'color', '#78ab46' );
-		}
-		$.each( group, function ( param, details ) {
-			var field, label, description;
-			// Store the widgets for later value-retrieval.
-			self.widgets[ param ] = self.getInputWidgetForParam( param, details );
-			description = '';
-			if ( details.description ) {
-				description = details.description;
-			}
-			if ( details.default ) {
-				description += ' ' + mediaWiki.message( 'templatewizard-default', details.default );
-			}
-			label = param;
-			if ( details.label ) {
-				label = details.label;
-			}
-			field = new OO.ui.FieldLayout( self.widgets[ param ], {
-				label: label,
-				help: description
-			} );
-			fieldset.addItems( [ field ] );
-		} );
-		if ( !fieldset.isEmpty() ) {
-			$fieldsets.append( fieldset.$element );
-		}
-	} );
-	return $fieldsets;
-};
-
-mediaWiki.TemplateWizard.TemplateForm.prototype.processTemplateData = function ( apiResponse ) {
-	var id, templateData, description, templateDataUrl, groupedParams;
-	// Get the first page's template data.
-	id = $.map( apiResponse.pages, function ( _value, key ) {
-		return key;
-	} );
-	templateData = apiResponse.pages[ id ];
-
-	// 1. Description.
-	description = '';
-	if ( templateData.description ) {
-		description = templateData.description;
-	} else if ( templateData.missing !== undefined || templateData.notemplatedata !== undefined ) {
-		templateDataUrl = 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData';
-		// Either the template doesn't exist or doesn't have TemplateData.
-		if ( templateData.missing === undefined ) {
-			description = mediaWiki.message(
-				'templatewizard-no-templatedata',
-				templateDataUrl
-			).parse();
-		} else {
-			description = mediaWiki.message(
-				'templatewizard-template-not-found',
-				this.title.getMainText(),
-				templateDataUrl,
-				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard'
-			).parse();
-		}
-	}
-	if ( description ) {
-		this.$element.append( $( '<p>' ).append( description ) );
-	}
-
-	// 2. Parameters.
-	if ( templateData.params ) {
-		groupedParams = this.processParameters( templateData.params );
-		this.$element.append( this.getParameterFieldsets( groupedParams ) );
-	}
-
-	// 3. Format.
-	this.format = templateData.format || 'inline';
-};
-
 mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
 	var params = {};
-	$.each( this.widgets, function ( name, widget ) {
-		// Ignore empty parameters.
-		if ( !widget.getValue() ) {
+	$.each( this.fields, function ( name, field ) {
+		if ( !field.isVisible() ) {
+			// Don't include hidden fields.
 			return;
 		}
-		params[ name ] = widget.getValue();
+		params[ name ] = field.getField().getValue();
 	} );
 	return params;
 };
@@ -179,7 +207,8 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
 	var firstInvalidWidget = false;
-	$.each( this.widgets, function ( name, widget ) {
+	$.each( this.fields, function ( name, field ) {
+		var widget = field.getField();
 		// Force the widget to validate.
 		widget.blur();
 		// Then check it's validity.
@@ -211,28 +240,4 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.processParameters = function ( p
 		}
 	} );
 	return groupedParams;
-};
-
-/**
- *
- */
-mediaWiki.TemplateWizard.TemplateForm.prototype.loadTemplateData = function () {
-	var templateForm = this;
-	templateForm.dialog.pushPending();
-	new mediaWiki.Api().get( {
-		action: 'templatedata',
-		titles: this.title.getPrefixedDb(),
-		redirects: true,
-		includeMissingTitles: true,
-		lang: mediaWiki.config.get( 'wgUserLanguage' )
-	} )
-		.done( function ( apiResponse ) {
-			var fieldsets = templateForm.processTemplateData( apiResponse );
-			templateForm.$element.append( fieldsets );
-			// Focus the first field.
-			templateForm.$element.find( ':input:first' ).focus();
-		} )
-		.always( function () {
-			templateForm.dialog.popPending();
-		} );
 };
