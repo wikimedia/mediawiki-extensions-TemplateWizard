@@ -9,6 +9,8 @@
 	"templatewizard-dialog-title": "Εισαγωγή προτύπου",
 	"templatewizard-insert": "Εισαγωγή",
 	"templatewizard-invalid-title": "Μη έγκυρος τίτλος",
+	"templatewizard-invalid-values-edit": "Επεξεργασία προτύπου",
+	"templatewizard-invalid-values-insert": "Εισαγωγή προτύπου",
 	"templatewizard-opens-in-new-tab": "Ανοίγει σε νέα καρτέλα",
 	"templatewizard-parameters-optional": "Προαιρετικές παράμετροι",
 	"templatewizard-parameters-required": "Απαιτούμενες παράμετροι",

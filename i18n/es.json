@@ -10,6 +10,8 @@
 	"templatewizard-dialog-title": "Insertar una plantilla",
 	"templatewizard-insert": "Insertar",
 	"templatewizard-invalid-title": "Título no válido",
+	"templatewizard-invalid-values-edit": "Editar plantilla",
+	"templatewizard-invalid-values-insert": "Insertar plantilla",
 	"templatewizard-no-templatedata": "No se puede utilizar [[Template:$1|$1]] en el asistente de plantillas porque <strong>no incluye etiquetas [$2 TemplateData]</strong>. Corrige el problema e inténtalo de nuevo. Si crees que has encontrado un defecto en el asistente, infórmanos de este en la [$3 página de ayuda].",
 	"templatewizard-opens-in-new-tab": "Se abre en una pestaña nueva",
 	"templatewizard-parameters-optional": "Parámetros opcionales",
