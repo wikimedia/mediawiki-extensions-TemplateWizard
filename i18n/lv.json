@@ -6,5 +6,7 @@
 	},
 	"templatewizard-cancel": "Atcelt",
 	"templatewizard-insert": "Ievietot",
+	"templatewizard-invalid-values-edit": "Labot veidni",
+	"templatewizard-invalid-values-insert": "Ievietot veidni",
 	"templatewizard-placeholder-default": "Noklusējums: $1"
 }

@@ -1,11 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Sarah Bernabei"
 		]
 	},
 	"templatewizard-cancel": "Annulla",
 	"templatewizard-default": "Predefinito: $1",
+	"templatewizard-invalid-values": "Uno o più dei tuoi valori inseriti non combaciano col formato previsto. Vuoi modificarli?",
+	"templatewizard-invalid-values-edit": "Modifica template",
+	"templatewizard-invalid-values-insert": "Inserisci template",
 	"templatewizard-placeholder-default": "Predefinito: $1",
 	"templatewizard-placeholder-example": "Esempio: $1"
 }

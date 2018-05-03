@@ -6,9 +6,18 @@
 		]
 	},
 	"templatewizard-cancel": "Cancelar",
+	"templatewizard-default": "Por defecto: $1",
+	"templatewizard-dialog-title": "Inserir un modelo",
 	"templatewizard-insert": "Inserir",
 	"templatewizard-invalid-title": "Título non válido",
+	"templatewizard-invalid-values-edit": "Editar modelo",
+	"templatewizard-invalid-values-insert": "Inserir modelo",
+	"templatewizard-opens-in-new-tab": "Ábrese nunha nova lapela",
 	"templatewizard-parameters-optional": "Parámetros opcionais",
+	"templatewizard-parameters-required": "Parámetros requiridos",
+	"templatewizard-parameters-suggested": "Parámetros suxeridos",
+	"templatewizard-placeholder-default": "Por defecto: $1",
 	"templatewizard-placeholder-example": "p. ex.: $1",
+	"templatewizard-select-template": "Seleccione un modelo:",
 	"templatewizard-use": "Empregar"
 }
