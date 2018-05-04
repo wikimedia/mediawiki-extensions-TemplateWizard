@@ -9,6 +9,8 @@
 	"templatewizard-dialog-title": "একটি টেমপ্লেট যোগ করুন",
 	"templatewizard-insert": "যোগ করুন",
 	"templatewizard-invalid-title": "অবৈধ শিরোনাম",
+	"templatewizard-invalid-values-edit": "টেমপ্লেট সম্পাদনা করুন",
+	"templatewizard-invalid-values-insert": "টেমপ্লেট সন্নিবেশ করুন",
 	"templatewizard-opens-in-new-tab": "নতুন ট্যাবে খোলে",
 	"templatewizard-placeholder-default": "পূর্বনির্ধারিত: $1",
 	"templatewizard-placeholder-example": "উদা: $1",
