@@ -7,6 +7,7 @@
 	"templatewizard-invalid-values": "אחד או יותר מהשדות אינם תואמים לתסדיר המצופה. האם ברצונך לערוך אותם?",
 	"templatewizard-invalid-values-edit": "עריכת התבנית",
 	"templatewizard-invalid-values-insert": "הוספת התבנית",
+	"templatewizard-no-templatedata": "מכיוון שאין [$1 נתוני תבנית], הפרמטרים עבור התבנית הזו נוצרו באופן אוטומטי. נא לשים לב לכך שהפרמטרים עשויים להיות לא מדויקים.",
 	"templatewizard-placeholder-default": "ברירת המחדל: $1",
 	"templatewizard-placeholder-example": "למשל: $1"
 }
