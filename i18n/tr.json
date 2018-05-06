@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"templatewizard-cancel": "İptal",
+	"templatewizard-default": "Varsayılan: $1",
+	"templatewizard-desc": "Şablon ekleme sihirbazı sağlayan bir WikiEditor eklentisi",
+	"templatewizard-dialog-title": "Bir şablon ekle",
+	"templatewizard-insert": "Ekle",
+	"templatewizard-invalid-title": "Geçersiz başlık",
+	"templatewizard-invalid-values": "Bir veya daha fazla girişiniz beklenen formatla eşleşmiyor. Düzenlemek ister misiniz?",
+	"templatewizard-invalid-values-edit": "Şablonu düzenle",
+	"templatewizard-invalid-values-insert": "Şablon ekle",
+	"templatewizard-no-templatedata": "[$1 ŞablonVerisi] eksik olduğundan, bu şablon için parametreler otomatik olarak oluşturulmuştur. Bu parametreler doğru olmayabilir.",
+	"templatewizard-opens-in-new-tab": "Yeni sekmede aç",
+	"templatewizard-parameters-optional": "İsteğe bağlı parametreler",
+	"templatewizard-parameters-required": "Zorunlu parametreler",
+	"templatewizard-parameters-suggested": "Önerilen parametreler",
+	"templatewizard-placeholder-default": "Varsayılan: $1",
+	"templatewizard-placeholder-example": "Örnek değer: $1",
+	"templatewizard-select-template": "Bir şablon seçin:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]] <strong>var olmadığı için</strong> Şablon Sihirbazı'nda kullanılamaz. Lütfen bu şablonu (ve [$2 ŞablonVerisini]) tanımlayın ve yeniden deneyin. Bir hata bulduğunuzu düşünüyorsanız [$3 yardım sayfasında] bize bildirin.",
+	"templatewizard-use": "Kullanım"
+}

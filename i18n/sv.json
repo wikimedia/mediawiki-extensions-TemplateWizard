@@ -10,6 +10,8 @@
 	"templatewizard-dialog-title": "Infoga en mall",
 	"templatewizard-insert": "Infoga",
 	"templatewizard-invalid-title": "Ogiltig titel",
+	"templatewizard-invalid-values-edit": "Redigera mall",
+	"templatewizard-invalid-values-insert": "Infoga mall",
 	"templatewizard-no-templatedata": "[[Template:$1|$1]] kan inte användas i Template Wizard eftersom <strong>den inte har [$2 TemplateData]-taggar</strong>. Var god åtgärda det och försök igen. Om du tror att du har hittat en bugg, berätta det för oss på [$3 hjälpsidan].",
 	"templatewizard-opens-in-new-tab": "Öppnas i ny flik",
 	"templatewizard-parameters-optional": "Valfria parametrar",
