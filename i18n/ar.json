@@ -1,8 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"ديفيد"
 		]
 	},
-	"templatewizard-opens-in-new-tab": "يفتح في لسان جديد"
+	"templatewizard-cancel": "إلغاء",
+	"templatewizard-default": "الافتراضي: $1",
+	"templatewizard-desc": "محرر ويكي إضافي يوفر معالج إدخال القالب",
+	"templatewizard-dialog-title": "إدراج قالب",
+	"templatewizard-insert": "إدراج",
+	"templatewizard-invalid-title": "عنوان غير صالح",
+	"templatewizard-invalid-values": "واحدة أو أكثر من مدخلاتك لا تتطابق مع التنسيق المتوقع، هل ترغب في تحريرها؟",
+	"templatewizard-invalid-values-edit": "تحرير القالب",
+	"templatewizard-invalid-values-insert": "إدراج قالب",
+	"templatewizard-no-templatedata": "نظرا لعدم وجود [TemplateData $1]; تم إنشاء وسائط هذا القالب تلقائيا; يُرجَى العلم بأنها قد لا تكون دقيقة.",
+	"templatewizard-opens-in-new-tab": "يفتح في لسان جديد",
+	"templatewizard-parameters-optional": "وسائط اختيارية",
+	"templatewizard-parameters-required": "الوسائط المطلوبة",
+	"templatewizard-parameters-suggested": "الوسائط المقترحة",
+	"templatewizard-placeholder-default": "الافتراضي: $1",
+	"templatewizard-placeholder-example": "على سبيل المثال $1",
+	"templatewizard-select-template": "اختر قالبا:",
+	"templatewizard-template-not-found": "[[Template:$1|$1]]  لا يمكن استخدامه في معالج القوالب لأنه <strong>غير موجود</strong>; يُرجَى إنشاؤه (و [$2 TemplateData]) والمحاولة مرة أخرى، إذا كنت تعتقد أنك عثرت على خطأ، فأخبرنا عنه في [$3 صفحة المساعدة].",
+	"templatewizard-use": "استعمال"
 }
