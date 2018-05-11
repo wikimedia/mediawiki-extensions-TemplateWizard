@@ -13,7 +13,7 @@
 	"templatewizard-invalid-values": "Uma ou mais das suas entradas não correspondem ao formato esperado. Você deseja editá-lo?",
 	"templatewizard-invalid-values-edit": "Editar predefinição",
 	"templatewizard-invalid-values-insert": "Inserir uma predefinição",
-	"templatewizard-no-templatedata": "A predefinição [[Template:$1|$1]] não pode ser usada no assistente de predefinições porque <strong>não tem etiquetas de [$2 dados de predefinição]</strong>. Corrija e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na [$3 página de ajuda].",
+	"templatewizard-no-templatedata": "A predefinição  [$1 TemplateData] não pode ser usada no assistente de predefinições porque <strong>não tem etiquetas de  dados de predefinição. Corrija e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na  página de ajuda.",
 	"templatewizard-opens-in-new-tab": "Abre numa aba nova",
 	"templatewizard-parameters-optional": "Parâmetros opcionais",
 	"templatewizard-parameters-required": "Parâmetros obrigatórios",

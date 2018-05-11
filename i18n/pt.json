@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Athena in Wonderland"
 		]
 	},
 	"templatewizard-cancel": "Cancelar",
@@ -13,7 +14,7 @@
 	"templatewizard-invalid-values": "Pelo menos uma das suas entradas não tem o formato esperado. Quer editá-la?",
 	"templatewizard-invalid-values-edit": "Editar predefinição",
 	"templatewizard-invalid-values-insert": "Inserir predefinição",
-	"templatewizard-no-templatedata": "A predefinição [[Template:$1|$1]] não pode ser usada no assistente de predefinições porque <strong>não tem etiquetas de [$2 dados de predefinição]</strong>. Corrija e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na [$3 página de ajuda].",
+	"templatewizard-no-templatedata": "Devido à ausência de [$1 TemplateData], os parâmetros desta predefinição foram gerados automaticamente. Por favor, esteja ciente que eles podem não ser precisos.",
 	"templatewizard-opens-in-new-tab": "Abre num separador novo",
 	"templatewizard-parameters-optional": "Parâmetros opcionais",
 	"templatewizard-parameters-required": "Parâmetros obrigatórios",
