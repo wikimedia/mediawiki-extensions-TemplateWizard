@@ -3,7 +3,8 @@
 		"authors": [
 			"Happy13241",
 			"Ole Yves",
-			"Okras"
+			"Okras",
+			"AttemptToCallNil"
 		]
 	},
 	"templatewizard-cancel": "Отмена",
@@ -12,7 +13,7 @@
 	"templatewizard-dialog-title": "Вставить шаблон",
 	"templatewizard-insert": "Вставить",
 	"templatewizard-invalid-title": "Недопустимое название",
-	"templatewizard-no-templatedata": "[[Template:$1|$1]] не может использоваться в Мастере шаблонов, потому что <strong>у него нет тегов [$2 TemplateData]</strong>. Пожалуйста, исправьте это и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на [$3 странице справки].",
+	"templatewizard-no-templatedata": "В связи с отсутствием у этого шаблона тегов [$1 TemplateData], таблица параметров для него была сгенерирована автоматически. Пожалуйста, примите во внимание, что информация по параметрам может быть неточной.",
 	"templatewizard-opens-in-new-tab": "Открывается в новой вкладке",
 	"templatewizard-parameters-optional": "Необязательные параметры",
 	"templatewizard-parameters-required": "Обязательные параметры",
