@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tacsipacsi"
+		]
+	},
+	"templatewizard-cancel": "Mégse",
+	"templatewizard-default": "Alapértelmezett: $1",
+	"templatewizard-desc": "Egy sablonbeszúró varázslót kínáló WikiEditor-kiegészítő",
+	"templatewizard-dialog-title": "Sablon beillesztése",
+	"templatewizard-insert": "Beillesztés",
+	"templatewizard-invalid-title": "Érvénytelen cím",
+	"templatewizard-invalid-values": "Az értékek közül egy vagy több nem felel meg az elvárt formátumnak. Szeretnéd javítani őket?",
+	"templatewizard-invalid-values-edit": "Értékek módosítása",
+	"templatewizard-invalid-values-insert": "Beillesztés mindenképpen",
+	"templatewizard-no-templatedata": "A [$1 TemplateData] hiánya miatt a varázsló automatikusan generálta a sablon paramétereinek listáját, így nem biztos, hogy pontos.",
+	"templatewizard-opens-in-new-tab": "Új fülön nyílik meg",
+	"templatewizard-parameters-optional": "Opcionális paraméterek",
+	"templatewizard-parameters-required": "Kötelező paraméterek",
+	"templatewizard-parameters-suggested": "Ajánlott paraméterek",
+	"templatewizard-placeholder-default": "Alapértelmezett: $1",
+	"templatewizard-placeholder-example": "pl. $1",
+	"templatewizard-select-template": "Válassz egy sablont:",
+	"templatewizard-template-not-found": "A(z) [[Template:$1|$1]] sablon nem használható a Sablonvarázslóval, mert <strong>nem létezik</strong>. Hozd létre (a [$2 TemplateData-dokumentációjával] együtt), és próbáld újra. Ha azt gondolod, hogy ez egy hiba eredménye, jelezd a [$3 súgólapon].",
+	"templatewizard-use": "Használat"
+}
