@@ -4,7 +4,8 @@
 			"Happy13241",
 			"Ole Yves",
 			"Okras",
-			"AttemptToCallNil"
+			"AttemptToCallNil",
+			"Abiyoyo"
 		]
 	},
 	"templatewizard-cancel": "Отмена",
@@ -13,6 +14,8 @@
 	"templatewizard-dialog-title": "Вставить шаблон",
 	"templatewizard-insert": "Вставить",
 	"templatewizard-invalid-title": "Недопустимое название",
+	"templatewizard-invalid-values-edit": "Редактировать шаблон",
+	"templatewizard-invalid-values-insert": "Вставить шаблон",
 	"templatewizard-no-templatedata": "В связи с отсутствием у этого шаблона тегов [$1 TemplateData], таблица параметров для него была сгенерирована автоматически. Пожалуйста, примите во внимание, что информация по параметрам может быть неточной.",
 	"templatewizard-opens-in-new-tab": "Открывается в новой вкладке",
 	"templatewizard-parameters-optional": "Необязательные параметры",
