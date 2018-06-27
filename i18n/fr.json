@@ -14,6 +14,7 @@
 	"templatewizard-invalid-values": "Une ou plusieurs de vos entrées ne correspondent pas au format attendu. Voulez-vous le modifier ?",
 	"templatewizard-invalid-values-edit": "Modifier le modèle",
 	"templatewizard-invalid-values-insert": "Insérer un modèle",
+	"templatewizard-no-description": "Aucune description n’existe pour ce modèle.",
 	"templatewizard-no-templatedata": "Parce qu'il manque [$1 TemplateData], les paramètres de ce modèle ont été générés automatiquement. Notez bien qu'ils peuvent ne pas correspondre.",
 	"templatewizard-opens-in-new-tab": "Ouvre dans un nouvel onglet",
 	"templatewizard-parameters-optional": "Paramètres optionnels",
@@ -21,7 +22,7 @@
 	"templatewizard-parameters-suggested": "Paramètres suggérés",
 	"templatewizard-placeholder-default": "Par défaut : $1",
 	"templatewizard-placeholder-example": "par ex. $1",
-	"templatewizard-select-template": "Sélectionner un modèle :",
+	"templatewizard-search-placeholder": "Rechercher un modèle",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] ne peut pas être utilisé dans l’assistant Modèle parce qu’<strong>il n’existe pas</strong>. Veuillez le créer (avec ses [$2 TemplateData]) et réessayer. Si vous pensez avoir trouvé un bogue, dites-le-nous sur la [$3 page d’aide].",
 	"templatewizard-use": "Utiliser"
 }

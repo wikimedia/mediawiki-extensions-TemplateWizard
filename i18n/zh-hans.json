@@ -20,7 +20,6 @@
 	"templatewizard-parameters-suggested": "推荐参数",
 	"templatewizard-placeholder-default": "默认：$1",
 	"templatewizard-placeholder-example": "例如$1",
-	"templatewizard-select-template": "选择模板：",
 	"templatewizard-template-not-found": "[[Template:$1|$1]]不能用于模板向导，因为<strong>它不存在</strong>。请创建它（并添加其[$2 模板数据]）并重试。如果您认为发现了错误，请在[$3 帮助页面]告知详情。",
 	"templatewizard-use": "使用"
 }

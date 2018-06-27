@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"আফতাবুজ্জামান"
 		]
 	},
 	"templatewizard-cancel": "বাতিল",
@@ -13,6 +14,5 @@
 	"templatewizard-invalid-values-insert": "টেমপ্লেট সন্নিবেশ করুন",
 	"templatewizard-opens-in-new-tab": "নতুন ট্যাবে খোলে",
 	"templatewizard-placeholder-default": "পূর্বনির্ধারিত: $1",
-	"templatewizard-placeholder-example": "উদা: $1",
-	"templatewizard-select-template": "একটি টেমপ্লেট নির্বাচন করুন:"
+	"templatewizard-placeholder-example": "উদা: $1"
 }

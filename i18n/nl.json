@@ -3,7 +3,8 @@
 		"authors": [
 			"Mainframe98",
 			"Patio",
-			"Happy13241"
+			"Happy13241",
+			"KlaasZ4usV"
 		]
 	},
 	"templatewizard-cancel": "Annuleren",
@@ -16,6 +17,5 @@
 	"templatewizard-parameters-optional": "Optionele parameters",
 	"templatewizard-parameters-required": "Verplichte parameters",
 	"templatewizard-parameters-suggested": "Voorkeursvariabelen",
-	"templatewizard-select-template": "Selecteer een sjabloon:",
 	"templatewizard-use": "Gebruiken"
 }

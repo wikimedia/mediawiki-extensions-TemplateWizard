@@ -11,12 +11,13 @@
 	"templatewizard-invalid-title": "Net valabelen Titel",
 	"templatewizard-invalid-values-edit": "Schabloun änneren",
 	"templatewizard-invalid-values-insert": "Schabloun drasetzen",
+	"templatewizard-no-description": "Fir dës Schabloun gëtt et keng Beschreiwung.",
 	"templatewizard-opens-in-new-tab": "Geet an engem neien Tab op",
 	"templatewizard-parameters-optional": "Fakultativ Parameteren",
 	"templatewizard-parameters-required": "Obligatoresch Parameteren",
 	"templatewizard-parameters-suggested": "Virgeschloe Parameteren",
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "z. Bsp. $1",
-	"templatewizard-select-template": "Sicht eng Schabloun eraus:",
+	"templatewizard-search-placeholder": "No enger Schabloun sichen",
 	"templatewizard-use": "Benotzen"
 }

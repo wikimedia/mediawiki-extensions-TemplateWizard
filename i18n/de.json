@@ -13,6 +13,7 @@
 	"templatewizard-invalid-values": "Eine oder mehrere deiner Eingaben entsprechen nicht dem erwarteten Format. Möchtest du sie bearbeiten?",
 	"templatewizard-invalid-values-edit": "Vorlage bearbeiten",
 	"templatewizard-invalid-values-insert": "Vorlage einfügen",
+	"templatewizard-no-description": "Für diese Vorlage ist keine Beschreibung vorhanden.",
 	"templatewizard-no-templatedata": "Aufgrund fehlender [$1 Vorlagendaten] wurden Parameter für diese Vorlage automatisch erzeugt. Beachte bitte, dass sie nicht genau sein könnten.",
 	"templatewizard-opens-in-new-tab": "Wird in einer neuen Registerkarte geöffnet",
 	"templatewizard-parameters-optional": "Optionale Parameter",
@@ -20,7 +21,7 @@
 	"templatewizard-parameters-suggested": "Vorgeschlagene Parameter",
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "z.&nbsp;B. $1",
-	"templatewizard-select-template": "Eine Vorlage auswählen:",
+	"templatewizard-search-placeholder": "Nach einer Vorlage suchen",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] kann nicht im Vorlagenassistenten verwendet werden, da <strong>sie nicht vorhanden ist</strong>. Erstelle sie bitte (sowie ihre [$2 Vorlagendaten]) und versuche es erneut. Falls du glaubst, dass du einen Softwarefehler gefunden hast, melde ihn bitte auf der [$3 Hilfeseite].",
 	"templatewizard-use": "Verwenden"
 }
