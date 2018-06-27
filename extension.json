@@ -32,9 +32,17 @@
 			"scripts": [
 				"ext.TemplateWizard.js",
 				"ext.TemplateWizard.Dialog.js",
+				"ext.TemplateWizard.ParamButton.js",
+				"ext.TemplateWizard.ParamField.js",
+				"ext.TemplateWizard.SearchField.js",
 				"ext.TemplateWizard.SearchForm.js",
+				"ext.TemplateWizard.SearchResult.js",
 				"ext.TemplateWizard.TemplateForm.js",
-				"ext.TemplateWizard.TemplateFormatter.js"
+				"ext.TemplateWizard.TemplateFormatter.js",
+				"ext.TemplateWizard.TemplateTitleBar.js"
+			],
+			"styles": [
+				"ext.TemplateWizard.less"
 			],
 			"messages": [
 				"templatewizard-cancel",
@@ -45,6 +53,7 @@
 				"templatewizard-invalid-values",
 				"templatewizard-invalid-values-edit",
 				"templatewizard-invalid-values-insert",
+				"templatewizard-no-description",
 				"templatewizard-no-templatedata",
 				"templatewizard-opens-in-new-tab",
 				"templatewizard-parameters-optional",
@@ -52,15 +61,16 @@
 				"templatewizard-parameters-suggested",
 				"templatewizard-placeholder-default",
 				"templatewizard-placeholder-example",
-				"templatewizard-select-template",
+				"templatewizard-search-placeholder",
 				"templatewizard-template-not-found",
 				"templatewizard-use"
 			],
 			"dependencies": [
 				"jquery.textSelection",
 				"oojs-ui-core",
+				"oojs-ui-widgets",
+				"oojs-ui-toolbars",
 				"oojs-ui-windows",
-				"oojs-ui.styles.icons-editing-advanced",
 				"mediawiki.widgets",
 				"mediawiki.widgets.UserInputWidget",
 				"mediawiki.widgets.DateInputWidget"

@@ -15,6 +15,7 @@
 	"templatewizard-invalid-values": "Error message shown when template-insertion button is clicked but there are invalid fields.\nOptions are to keep editing ({{msg-mw|templatewizard-invalid-values-edit}}) or continue anyway ({{msg-mw|templatewizard-invalid-values-insert}}).",
 	"templatewizard-invalid-values-edit": "Text for button with which to return to editing the template form. Other option is {{msg-mw|templatewizard-invalid-values-insert}}.",
 	"templatewizard-invalid-values-insert": "Text for button with which to ignore invalid fields and insert the template as-is. Other options is {{msg-mw|templatewizard-invalid-values-edit}}.",
+	"templatewizard-no-description": "Text displayed when templatedata exists but with no description.",
 	"templatewizard-no-templatedata": "Information message shown when the requested template exists and does not have TemplateData, and the template's raw parameters are shown. Parameter $1 is the URL of the TemplateData help page on MediaWiki.org.",
 	"templatewizard-opens-in-new-tab": "Tooltip shown for the template name link.",
 	"templatewizard-parameters-optional": "Fieldset legend for the set of optional template parameters.",
@@ -22,7 +23,7 @@
 	"templatewizard-parameters-suggested": "Fieldset legend for the set of suggested template parameters.",
 	"templatewizard-placeholder-default": "Form input placeholder text that shows the parameter's default value.",
 	"templatewizard-placeholder-example": "Form input placeholder text that shows an example of a value for the parameter.",
-	"templatewizard-select-template": "Label for the template search field.",
+	"templatewizard-search-placeholder": "Placeholder text in the template search field.",
 	"templatewizard-template-not-found": "Error message shown when the requested template does not exist. Parameters:\n* $1 Template name without 'Template:'.\n* $2 URL of the TemplateData help page on MediaWiki.org.\n* $3 URL of the TemplateWizard help page on MediaWiki.org.",
 	"templatewizard-use": "Text for the template search box selection button.\n{{Identical|Use}}"
 }

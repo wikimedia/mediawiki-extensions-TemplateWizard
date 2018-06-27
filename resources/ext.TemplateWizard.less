@@ -1,0 +1,108 @@
+@import 'mediawiki.mixins';
+@import 'mediawiki.ui/variables';
+
+@template-titlebar-height: 65px;
+
+.ext-templatewizard-searchform {
+	.description {
+		font-size: smaller;
+		color: @colorGray10;
+	}
+}
+
+.ext-templatewizard-templatetitlebar {
+	background-color: @colorGray15;
+	border-bottom: 1px solid @colorGray12;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: @template-titlebar-height;
+	overflow: hidden;
+	z-index: 4;
+
+	.title-and-buttons {
+		.flex-display();
+		align-items: center;
+
+		.title {
+			.flex(2);
+			font-weight: bold;
+			font-size: 1em;
+			margin: 7px;
+		}
+
+		.buttons {
+			.flex(1);
+			text-align: right;
+		}
+	}
+
+	.description {
+		margin: 0 7px 7px 7px;
+		font-size: 12px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&:hover {
+		height: auto;
+		// Box shadow to match what's done in .oo-ui-menuSelectWidget.
+		box-shadow: 0 0 2px 0 rgba( 0, 0, 0, 0.25 );
+		.description {
+			white-space: normal;
+			overflow: visible;
+		}
+	}
+	.description.no-description,
+	.description.no-templatedata {
+		color: @colorMediumSevere;
+	}
+}
+
+.ext-templatewizard-templateform {
+
+	// Whole menu (left and right columns).
+	.ext-templatewizard-menu {
+		margin-top: @template-titlebar-height;
+	}
+
+	// Both menu columns.
+	.oo-ui-menuLayout-menu .parameter-list,
+	.oo-ui-menuLayout-content .fields {
+		padding: 8px;
+		margin: 0;
+		position: absolute;
+		overflow: auto;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	// Left-side parameter list.
+	.oo-ui-menuLayout-menu {
+		border-right: 1px solid @colorGray12;
+
+		.section-header {
+			font-size: 12px;
+			font-weight: bolder;
+			color: @colorGray7;
+			text-transform: uppercase;
+		}
+
+		.parameter-list-inner {
+			padding-left: 20px;
+		}
+
+		.oo-ui-buttonElement-button,
+		.oo-ui-buttonElement-label {
+			white-space: normal;
+			font-weight: normal;
+		}
+	}
+
+	// Right-side form fields.
+	.oo-ui-menuLayout-content {
+		padding: 16px;
+	}
+}
