@@ -14,5 +14,6 @@
 	"templatewizard-invalid-values-insert": "টেমপ্লেট সন্নিবেশ করুন",
 	"templatewizard-opens-in-new-tab": "নতুন ট্যাবে খোলে",
 	"templatewizard-placeholder-default": "পূর্বনির্ধারিত: $1",
-	"templatewizard-placeholder-example": "উদা: $1"
+	"templatewizard-placeholder-example": "উদা: $1",
+	"templatewizard-search-placeholder": "একটি টেমপ্লেট জন্য অনুসন্ধান করুন"
 }

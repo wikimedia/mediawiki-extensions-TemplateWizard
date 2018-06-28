@@ -11,6 +11,7 @@
 	"templatewizard-invalid-title": "Μη έγκυρος τίτλος",
 	"templatewizard-invalid-values-edit": "Επεξεργασία προτύπου",
 	"templatewizard-invalid-values-insert": "Εισαγωγή προτύπου",
+	"templatewizard-no-description": "Δεν υπάρχει περιγραφή για αυτό το πρότυπο.",
 	"templatewizard-opens-in-new-tab": "Ανοίγει σε νέα καρτέλα",
 	"templatewizard-parameters-optional": "Προαιρετικές παράμετροι",
 	"templatewizard-parameters-required": "Απαιτούμενες παράμετροι",
