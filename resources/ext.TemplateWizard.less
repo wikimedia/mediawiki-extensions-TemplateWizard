@@ -62,6 +62,7 @@
 }
 
 .ext-templatewizard-templateform {
+	overflow: hidden;
 
 	// Both menu columns.
 	.oo-ui-menuLayout-menu .parameter-list,
@@ -96,10 +97,30 @@
 			white-space: normal;
 			font-weight: normal;
 		}
+
+		// Button to add or remove all fields
+		.add-remove-all {
+			border-top: 1px solid @colorGray12;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: @colorBaseInverted;
+		}
+		.add-remove-all span.oo-ui-widget {
+			display: block;
+			margin: 8px;
+		}
+		.add-remove-all a.oo-ui-buttonElement-button {
+			display: block;
+			font-weight: bolder;
+		}
 	}
 
 	// Right-side form fields.
 	.oo-ui-menuLayout-content {
 		padding: 16px;
+		.fields {
+			overflow-x: hidden;
+		}
 	}
 }

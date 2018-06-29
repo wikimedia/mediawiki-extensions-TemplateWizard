@@ -31,7 +31,10 @@
 		"ext.TemplateWizard": {
 			"scripts": [
 				"ext.TemplateWizard.js",
+				"ext.TemplateWizard.AddRemoveAllButton.js",
 				"ext.TemplateWizard.Dialog.js",
+				"ext.TemplateWizard.Model.js",
+				"ext.TemplateWizard.Model/Parameters.js",
 				"ext.TemplateWizard.ParamButton.js",
 				"ext.TemplateWizard.ParamField.js",
 				"ext.TemplateWizard.SearchField.js",
@@ -45,6 +48,7 @@
 				"ext.TemplateWizard.less"
 			],
 			"messages": [
+				"templatewizard-add-all",
 				"templatewizard-cancel",
 				"templatewizard-close-dialog",
 				"templatewizard-close-dialog-body",
@@ -64,6 +68,7 @@
 				"templatewizard-parameters-suggested",
 				"templatewizard-placeholder-default",
 				"templatewizard-placeholder-example",
+				"templatewizard-remove-all",
 				"templatewizard-remove-template",
 				"templatewizard-remove-template-body",
 				"templatewizard-remove-template-retry",

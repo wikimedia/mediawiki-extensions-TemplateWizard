@@ -6,6 +6,7 @@
 			"Liuxinyu970226"
 		]
 	},
+	"templatewizard-add-all": "Label of button that enables all inactive parameters.",
 	"templatewizard-cancel": "Text for the cancel button that closes the dialogue window.\n{{Identical|Cancel}}",
 	"templatewizard-close-dialog": "Title for the warning shown when closing the dialog when there are values in a field.",
 	"templatewizard-close-dialog-body": "Explanatory text shown under {{msg-mw|templatewizard-close-dialog}}.",
@@ -26,6 +27,7 @@
 	"templatewizard-parameters-suggested": "Fieldset legend for the set of suggested template parameters.",
 	"templatewizard-placeholder-default": "Form input placeholder text that shows the parameter's default value.",
 	"templatewizard-placeholder-example": "Form input placeholder text that shows an example of a value for the parameter.",
+	"templatewizard-remove-all": "Label of button that removes all active and non-required parameter fields.",
 	"templatewizard-remove-template": "Title of error message displayed when a template is removed when there's still a value in one of its fields.",
 	"templatewizard-remove-template-body": "Message shown below {{msg-mw|templatewizard-remove-template}}.",
 	"templatewizard-remove-template-retry": "Text for button that closes the remove-template error and closes the template, returning to the search form.",
