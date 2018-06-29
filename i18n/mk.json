@@ -13,13 +13,15 @@
 	"templatewizard-invalid-values": "Едно или повеќе од внесеното не одговараат на очекуваниот формат. Дали би сакале да го измените?",
 	"templatewizard-invalid-values-edit": "Уреди шаблон",
 	"templatewizard-invalid-values-insert": "Вметни шаблон",
-	"templatewizard-no-templatedata": "[[Template:$1|$1]] не може да се користи за Помошникот за шаблони бидејќи <strong>нема ознаки за [$2 шаблонски податоци]</strong>. Исправете го тоа и обидете се повторно. Ако мислите дека сте наишле на грешка, известете нè на [$3 помошната страница].",
+	"templatewizard-no-description": "Не постои опис за овој шаблон.",
+	"templatewizard-no-templatedata": "Параметрите за овој шаблон се автосоздадени поради отсуството на [$1 шаблонски податоци]. Имајте на ум дека овие може да не се точни.",
 	"templatewizard-opens-in-new-tab": "Отвори во ново јазиче",
 	"templatewizard-parameters-optional": "Незадолжителни параметри",
 	"templatewizard-parameters-required": "Задолжителни параметри",
 	"templatewizard-parameters-suggested": "Предложени параметри",
 	"templatewizard-placeholder-default": "По основно: $1",
 	"templatewizard-placeholder-example": "на пр. $1",
+	"templatewizard-search-placeholder": "Пребарај шаблон",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] не може да се користи за Помошникот за шаблони бидејќи <strong>не постои</strong>. Создајте го (и неговите [$2 шаблонски податоци]) и обидете се повторно. Ако мислите дека сте наишле на грешка, известете нè на [$3 помошната страница].",
 	"templatewizard-use": "Употреба"
 }
