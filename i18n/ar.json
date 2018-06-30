@@ -14,6 +14,7 @@
 	"templatewizard-invalid-values": "واحدة أو أكثر من مدخلاتك لا تتطابق مع التنسيق المتوقع، هل ترغب في تحريرها؟",
 	"templatewizard-invalid-values-edit": "تحرير القالب",
 	"templatewizard-invalid-values-insert": "إدراج قالب",
+	"templatewizard-no-description": "لا يوجد وصف لهذا القالب.",
 	"templatewizard-no-templatedata": "نظرا لعدم وجود [TemplateData $1]; تم إنشاء وسائط هذا القالب تلقائيا; يُرجَى العلم بأنها قد لا تكون دقيقة.",
 	"templatewizard-opens-in-new-tab": "يفتح في لسان جديد",
 	"templatewizard-parameters-optional": "وسائط اختيارية",
@@ -21,6 +22,7 @@
 	"templatewizard-parameters-suggested": "الوسائط المقترحة",
 	"templatewizard-placeholder-default": "الافتراضي: $1",
 	"templatewizard-placeholder-example": "على سبيل المثال $1",
+	"templatewizard-search-placeholder": "البحث عن قالب",
 	"templatewizard-template-not-found": "[[Template:$1|$1]]  لا يمكن استخدامه في معالج القوالب لأنه <strong>غير موجود</strong>; يُرجَى إنشاؤه (و [$2 TemplateData]) والمحاولة مرة أخرى، إذا كنت تعتقد أنك عثرت على خطأ، فأخبرنا عنه في [$3 صفحة المساعدة].",
 	"templatewizard-use": "استعمال"
 }
