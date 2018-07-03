@@ -49,7 +49,12 @@ mediaWiki.TemplateWizard.Dialog.prototype.showSearchForm = function () {
  * @param {Object} templateData
  */
 mediaWiki.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
-	this.templateForm = new mediaWiki.TemplateWizard.TemplateForm( this, templateData );
+	if ( this.templateForm ) {
+		this.templateForm.disconnect( this );
+	}
+	this.templateForm = new mediaWiki.TemplateWizard.TemplateForm( templateData );
+	this.templateForm.connect( this, { close: 'showSearchForm' } );
+
 	this.$body.html( this.templateForm.$element );
 	this.templateForm.toggleFields( false );
 	this.actions.get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( false );

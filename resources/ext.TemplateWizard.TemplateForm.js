@@ -1,12 +1,10 @@
 /**
  * @class
  * @constructor
- * @param {OO.ui.ProcessDialog} dialog The dialog window.
  * @param {Object} templateData
  */
-mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( dialog, templateData ) {
-	OO.ui.Widget.parent.call( this );
-	this.dialog = dialog;
+mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( templateData ) {
+	mediaWiki.TemplateWizard.TemplateForm.parent.call( this );
 	this.title = mediaWiki.Title.newFromText( templateData.title, mediaWiki.config.get( 'wgNamespaceIds' ).template );
 	if ( !this.title ) {
 		throw new Error( mediaWiki.message( 'templatewizard-invalid-title' ) );
@@ -59,7 +57,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateDat
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.closeForm = function () {
-	this.dialog.showSearchForm( this.title.getMainText() );
+	this.emit( 'close' );
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
