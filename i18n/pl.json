@@ -18,5 +18,6 @@
 	"templatewizard-parameters-suggested": "Sugerowane parametry",
 	"templatewizard-placeholder-default": "Domyślnie: $1",
 	"templatewizard-placeholder-example": "np. $1",
+	"templatewizard-search-placeholder": "Wyszukaj szablon",
 	"templatewizard-use": "Użyj"
 }
