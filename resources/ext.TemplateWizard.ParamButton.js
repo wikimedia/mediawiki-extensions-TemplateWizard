@@ -5,6 +5,7 @@
  * @param {Object} config
  * @param {mediaWiki.TemplateWizard.TemplateForm} templateForm
  * @param {string} param
+ * @cfg {boolean} [required] Parameter is required
  */
 mediaWiki.TemplateWizard.ParamButton = function mediaWikiTemplateWizardParamButton( config, templateForm, param ) {
 	this.templateForm = templateForm;

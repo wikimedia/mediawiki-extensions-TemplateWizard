@@ -8,6 +8,8 @@
  * @extends OO.ui.FieldLayout
  * @param {OO.ui.Widget} fieldWidget
  * @param {Object} config
+ * @cfg {boolean} [enabled] Field is enabled
+ * @cfg {boolean} [required] Field is required
  */
 mediaWiki.TemplateWizard.ParamField = function mediaWikiTemplateWizardParamField( fieldWidget, config ) {
 	config = $.extend( {

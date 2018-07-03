@@ -2,6 +2,7 @@
  * @class
  * @constructor
  * @param {Object} [config] Configuration options.
+ * @cfg {jQuery|string} [description=''] Search result description
  */
 mediaWiki.TemplateWizard.SearchResult = function mediaWikiTemplateWizardSearchResult( config ) {
 	var $description;
