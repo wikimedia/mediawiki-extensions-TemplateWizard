@@ -62,7 +62,7 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 				$templateTitle,
 				this.buttons.$element
 			),
-			$description
+			$( '<bdi>' ).append( $description )
 		);
 };
 
