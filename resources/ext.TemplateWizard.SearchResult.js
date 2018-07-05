@@ -11,7 +11,7 @@ mediaWiki.TemplateWizard.SearchResult = function mediaWikiTemplateWizardSearchRe
 	// Description.
 	$description = $( '<span>' )
 		.addClass( 'description' )
-		.text( config.description || '' );
+		.append( $( '<bdi>' ).text( config.description || '' ) );
 	this.$element.append( $description );
 };
 

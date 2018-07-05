@@ -7,6 +7,9 @@
  */
 mediaWiki.TemplateWizard.Dialog = function mediaWikiTemplateWizardDialog( config ) {
 	mediaWiki.TemplateWizard.Dialog.super.call( this, config );
+
+	// Instantiate with default value
+	this.contentDir = 'ltr';
 };
 OO.inheritClass( mediaWiki.TemplateWizard.Dialog, OO.ui.ProcessDialog );
 mediaWiki.TemplateWizard.Dialog.static.name = 'templateWizard';
@@ -64,6 +67,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 	var dialog = this;
 	return mediaWiki.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
 		.next( function () {
+			dialog.contentDir = data.contentDir || 'ltr';
 			dialog.showSearchForm();
 		}, this );
 };
