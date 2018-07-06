@@ -2,8 +2,10 @@
  * @class
  * @constructor
  * @param {Object} templateData
+ * @param {OBject} [config] Configuration options
+ * @cfg {jQuery} [$popupOverlay] Overlay for any popups
  */
-mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( templateData ) {
+mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( templateData, config ) {
 	mediaWiki.TemplateWizard.TemplateForm.parent.call( this );
 	this.title = mediaWiki.Title.newFromText( templateData.title, mediaWiki.config.get( 'wgNamespaceIds' ).template );
 	if ( !this.title ) {
@@ -13,6 +15,7 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 	this.fields = {};
 	this.templateTitleBar = null;
 	this.menuContainer = null;
+	this.$popupOverlay = config.$popupOverlay || this.$element;
 	this.$element.html( this.getForm( templateData ).$element.addClass( 'ext-templatewizard-templateform' ) );
 };
 
@@ -164,7 +167,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function ( param, paramDefinition ) {
-	var widget, config = { name: param };
+	var widget, config = { name: param, $overlay: this.$popupOverlay };
 	if ( paramDefinition.autovalue ) {
 		config.value = paramDefinition.autovalue;
 	}
