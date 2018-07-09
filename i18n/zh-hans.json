@@ -13,6 +13,7 @@
 	"templatewizard-invalid-values": "一个或多个您输入的内容不匹配预期格式。您要编辑它么？",
 	"templatewizard-invalid-values-edit": "编辑模板",
 	"templatewizard-invalid-values-insert": "插入模板",
+	"templatewizard-no-description": "不存在此模板的描述。",
 	"templatewizard-no-templatedata": "由于缺少[$1 模板数据]，此模板的参数已被自动生成。请注意其并非准确。",
 	"templatewizard-opens-in-new-tab": "在新标签打开",
 	"templatewizard-parameters-optional": "可选参数",
@@ -20,6 +21,7 @@
 	"templatewizard-parameters-suggested": "推荐参数",
 	"templatewizard-placeholder-default": "默认：$1",
 	"templatewizard-placeholder-example": "例如$1",
+	"templatewizard-search-placeholder": "搜索一个模板",
 	"templatewizard-template-not-found": "[[Template:$1|$1]]不能用于模板向导，因为<strong>它不存在</strong>。请创建它（并添加其[$2 模板数据]）并重试。如果您认为发现了错误，请在[$3 帮助页面]告知详情。",
 	"templatewizard-use": "使用"
 }
