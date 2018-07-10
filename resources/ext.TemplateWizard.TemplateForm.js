@@ -11,6 +11,8 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 	}
 	this.format = templateData.format || 'inline';
 	this.fields = {};
+	this.templateTitleBar = null;
+	this.menuContainer = null;
 	this.$element.html( this.getForm( templateData ).$element.addClass( 'ext-templatewizard-templateform' ) );
 };
 
@@ -30,10 +32,10 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getFormat = function () {
  * @return {OO.ui.StackLayout}
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
-	var templateTitleBar, menuLayout, menuContainer, groupedParams, paramsAndFields, fullLayout;
+	var menuLayout, groupedParams, paramsAndFields, fullLayout;
 
 	// Title bar.
-	templateTitleBar = new mediaWiki.TemplateWizard.TemplateTitleBar(
+	this.templateTitleBar = new mediaWiki.TemplateWizard.TemplateTitleBar(
 		this,
 		this.title,
 		templateData
@@ -45,15 +47,23 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateDat
 	paramsAndFields = this.getParamsAndFields( groupedParams );
 	menuLayout.$menu.append( paramsAndFields.menu );
 	menuLayout.$content.append( paramsAndFields.fields );
-	menuContainer = new OO.ui.PanelLayout();
-	menuContainer.$element
+	this.menuContainer = new OO.ui.PanelLayout();
+	this.menuContainer.$element
 		.addClass( 'ext-templatewizard-menu' )
 		.append( menuLayout.$element );
 
 	// Put the two together.
 	fullLayout = new OO.ui.PanelLayout();
-	fullLayout.$element.append( templateTitleBar.$element, menuContainer.$element );
+	fullLayout.$element.append( this.templateTitleBar.$element, this.menuContainer.$element );
 	return fullLayout;
+};
+
+/**
+ * Called after the TemplateForm has been attached to the DOM.
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
+	var height = this.templateTitleBar.$element.height();
+	this.menuContainer.$element.css( 'margin-top', height + 'px' );
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.closeForm = function () {
