@@ -7,7 +7,7 @@
  */
 mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemplateTitleBar( templateForm, title, templateData ) {
 	var $templateTitle, $description, descriptionMessage, linkButton, trashButton;
-	OO.ui.Widget.parent.call( this );
+	mediaWiki.TemplateWizard.TemplateTitleBar.parent.call( this );
 
 	// Link button.
 	linkButton = new OO.ui.ButtonWidget( {
@@ -62,7 +62,8 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 				$templateTitle,
 				this.buttons.$element
 			),
-			$( '<bdi>' ).append( $description )
+
+			$description.wrapInner( '<bdi>' )
 		);
 };
 

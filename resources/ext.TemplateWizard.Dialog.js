@@ -60,6 +60,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData
 
 	this.$body.html( this.templateForm.$element );
 	this.templateForm.toggleFields( false );
+	this.templateForm.afterAttached();
 	this.actions.get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( false );
 };
 

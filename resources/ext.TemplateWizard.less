@@ -1,8 +1,6 @@
 @import 'mediawiki.mixins';
 @import 'mediawiki.ui/variables';
 
-@template-titlebar-height: 65px;
-
 .ext-templatewizard-searchform {
 	.description {
 		font-size: smaller;
@@ -16,7 +14,6 @@
 	display: block;
 	position: relative;
 	width: 100%;
-	height: @template-titlebar-height;
 	overflow: hidden;
 	z-index: 4;
 
@@ -40,18 +37,8 @@
 	.description {
 		margin: 0 7px 7px 7px;
 		font-size: 12px;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-	&:hover {
-		height: auto;
-		// Box shadow to match what's done in .oo-ui-menuSelectWidget.
-		box-shadow: 0 0 2px 0 rgba( 0, 0, 0, 0.25 );
-		.description {
-			white-space: normal;
-			overflow: visible;
-		}
+		overflow: auto;
+		max-height: 65px;
 	}
 	.description.no-description,
 	.description.no-templatedata {
@@ -60,11 +47,6 @@
 }
 
 .ext-templatewizard-templateform {
-
-	// Whole menu (left and right columns).
-	.ext-templatewizard-menu {
-		margin-top: @template-titlebar-height;
-	}
 
 	// Both menu columns.
 	.oo-ui-menuLayout-menu .parameter-list,
