@@ -6,7 +6,8 @@
  */
 mediaWiki.TemplateWizard.SearchField = function mediaWikiTemplateWizardSearchField( config, searchForm ) {
 	config = $.extend( {
-		placeholder: OO.ui.deferMsg( 'templatewizard-search-placeholder' )
+		placeholder: OO.ui.deferMsg( 'templatewizard-search-placeholder' ),
+		icon: 'search'
 	}, config );
 	mediaWiki.TemplateWizard.SearchField.super.call( this, config );
 	OO.ui.mixin.LookupElement.call( this );

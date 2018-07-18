@@ -6,6 +6,12 @@
 		font-size: smaller;
 		color: @colorGray10;
 	}
+
+	.oo-ui-comboBoxInputWidget .oo-ui-iconElement-icon {
+		// HACK: This should be fixed in OOUI; the icon is behind
+		// the input rather than in front
+		z-index: 1;
+	}
 }
 
 .ext-templatewizard-templatetitlebar {

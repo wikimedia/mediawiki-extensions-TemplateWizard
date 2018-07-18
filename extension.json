@@ -71,6 +71,7 @@
 				"oojs-ui-widgets",
 				"oojs-ui-toolbars",
 				"oojs-ui-windows",
+				"oojs-ui.styles.icons-interactions",
 				"mediawiki.widgets",
 				"mediawiki.widgets.UserInputWidget",
 				"mediawiki.widgets.DateInputWidget"
