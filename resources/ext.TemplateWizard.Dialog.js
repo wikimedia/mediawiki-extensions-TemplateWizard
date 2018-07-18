@@ -100,6 +100,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 		.next( function () {
 			dialog.contentDir = data.contentDir || 'ltr';
 			dialog.showSearchForm();
+			dialog.$element.attr( 'id', 'ext-templatewizard-dialog' );
 		}, this );
 };
 
