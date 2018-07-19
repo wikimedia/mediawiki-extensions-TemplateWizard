@@ -26,6 +26,7 @@
 	"templatewizard-parameters-suggested": "Предложенные параметры",
 	"templatewizard-placeholder-default": "По умолчанию: $1",
 	"templatewizard-placeholder-example": "Например: $1",
+	"templatewizard-search-placeholder": "Искать шаблон",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] не может использоваться в Мастере шаблонов, потому что <strong>он не существует</strong>. Создайте его (и его [$2 TemplateData]) и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на [$3 странице справки].",
 	"templatewizard-use": "Использовать"
 }
