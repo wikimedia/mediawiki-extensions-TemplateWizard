@@ -4,10 +4,13 @@
 	mediaWiki.TemplateWizard = {};
 
 	$( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', function () {
-		// Set up the TemplateWizard dialog window.
-		var templateWizard = new mediaWiki.TemplateWizard.Dialog(),
-			// Take the content direction from the edit textarea
-			contentDir = $( this ).css( 'direction' );
+		// Take the content direction from the edit textarea
+		var contentDir = $( this ).css( 'direction' ),
+			$popupOverlay = $( '<div>' ).addClass( 'ext-templatewizard-popupOverlay' ),
+			// Set up the TemplateWizard dialog window.
+			templateWizard = new mediaWiki.TemplateWizard.Dialog( { $popupOverlay: $popupOverlay } );
+
+		$( 'body' ).append( $popupOverlay );
 		OO.ui.getWindowManager().addWindows( [ templateWizard ] );
 
 		// Add the toolbar button.
@@ -22,7 +25,7 @@
 					action: {
 						type: 'callback',
 						execute: function () {
-							OO.ui.getWindowManager().openWindow( 'templateWizard', { contentDir: contentDir } );
+							OO.ui.getWindowManager().openWindow( 'templateWizard', { contentDir: contentDir, $popupOverlay: $popupOverlay } );
 						}
 					}
 				}

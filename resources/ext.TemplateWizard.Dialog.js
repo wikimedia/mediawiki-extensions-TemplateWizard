@@ -4,12 +4,14 @@
  * @constructor
  * @extends OO.ui.ProcessDialog
  * @param {object} config
+ * @cfg {jQuery} [$popupOverlay] Overlay for popups inside the dialog
  */
 mediaWiki.TemplateWizard.Dialog = function mediaWikiTemplateWizardDialog( config ) {
 	mediaWiki.TemplateWizard.Dialog.super.call( this, config );
 
 	// Instantiate with default value
 	this.contentDir = 'ltr';
+	this.$popupOverlay = config.$popupOverlay || this.$element;
 };
 OO.inheritClass( mediaWiki.TemplateWizard.Dialog, OO.ui.ProcessDialog );
 mediaWiki.TemplateWizard.Dialog.static.name = 'templateWizard';
@@ -55,7 +57,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData
 	if ( this.templateForm ) {
 		this.templateForm.disconnect( this );
 	}
-	this.templateForm = new mediaWiki.TemplateWizard.TemplateForm( templateData );
+	this.templateForm = new mediaWiki.TemplateWizard.TemplateForm( templateData, { $popupOverlay: this.$popupOverlay } );
 	this.templateForm.connect( this, { close: 'showSearchForm' } );
 
 	this.$body.html( this.templateForm.$element );
