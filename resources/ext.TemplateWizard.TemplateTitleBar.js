@@ -21,9 +21,7 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 
 	// Close button.
 	trashButton = new OO.ui.ButtonWidget( { label: '', flags: 'destructive', framed: false, icon: 'trash' } );
-	trashButton.on( 'click', function () {
-		templateForm.closeForm();
-	} );
+	trashButton.connect( templateForm, { click: 'closeForm' } );
 
 	// Button group.
 	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ linkButton, trashButton ] } );

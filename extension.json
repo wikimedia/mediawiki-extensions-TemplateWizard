@@ -46,6 +46,9 @@
 			],
 			"messages": [
 				"templatewizard-cancel",
+				"templatewizard-close-dialog",
+				"templatewizard-close-dialog-body",
+				"templatewizard-close-dialog-retry",
 				"templatewizard-default",
 				"templatewizard-dialog-title",
 				"templatewizard-insert",
@@ -61,6 +64,9 @@
 				"templatewizard-parameters-suggested",
 				"templatewizard-placeholder-default",
 				"templatewizard-placeholder-example",
+				"templatewizard-remove-template",
+				"templatewizard-remove-template-body",
+				"templatewizard-remove-template-retry",
 				"templatewizard-search-placeholder",
 				"templatewizard-template-not-found",
 				"templatewizard-use"

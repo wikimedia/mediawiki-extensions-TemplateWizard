@@ -19,8 +19,24 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 	this.$element.html( this.getForm( templateData ).$element.addClass( 'ext-templatewizard-templateform' ) );
 };
 
+/* Setup */
+
 OO.inheritClass( mediaWiki.TemplateWizard.TemplateForm, OO.ui.Widget );
 
+/* Events */
+
+/**
+ * @event close
+ *
+ * A 'close' event is emitted when closing the template form and returning to the search form.
+ */
+
+/* Methods */
+
+/**
+ * Get the form's current title.
+ * @return {string}
+ */
 mediaWiki.TemplateWizard.TemplateForm.prototype.getTitle = function () {
 	return this.title;
 };
@@ -69,6 +85,10 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
 	this.menuContainer.$element.css( 'margin-top', height + 'px' );
 };
 
+/**
+ * Event handler for the 'click' event of the trashButton in TemplateTitleBar.
+ * This propagates the event upwards as a 'close' event.
+ */
 mediaWiki.TemplateWizard.TemplateForm.prototype.closeForm = function () {
 	this.emit( 'close' );
 };
@@ -197,6 +217,10 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = functio
 	} else {
 		widget = new OO.ui.TextInputWidget( config );
 	}
+	if ( paramDefinition.autovalue ) {
+		// Store the autovalue as data, so we can later tell if the value differs from it.
+		widget.setData( { autovalue: paramDefinition.autovalue } );
+	}
 	return widget;
 };
 
@@ -210,6 +234,27 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
 		params[ name ] = field.getField().getValue();
 	} );
 	return params;
+};
+
+/**
+ * Get the first field with any value.
+ * @return {boolean|OO.ui.Widget}
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
+	var firstValuedField = false;
+	$.each( this.fields, function ( name, field ) {
+		var val = field.getField().getValue(),
+			data = field.getField().getData();
+		// See if it's got a value and whether that value differs from the autovalue.
+		if ( val &&
+			( data === undefined || data.autovalue === undefined || ( data.autovalue && val !== data.autovalue ) )
+		) {
+			firstValuedField = field;
+			// Leave the loop.
+			return false;
+		}
+	} );
+	return firstValuedField;
 };
 
 /**
