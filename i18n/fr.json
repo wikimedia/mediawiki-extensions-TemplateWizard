@@ -6,6 +6,9 @@
 		]
 	},
 	"templatewizard-cancel": "Annuler",
+	"templatewizard-close-dialog": "Quitter l’assistant ?",
+	"templatewizard-close-dialog-body": "Quitter l’assistant entraînera la perte des données que vous avez ajoutées au modèle.",
+	"templatewizard-close-dialog-retry": "Annuler les modifications",
 	"templatewizard-default": "Par défaut : $1",
 	"templatewizard-desc": "Un module de WikiEditor qui fournit un assistant d’insertion de modèle",
 	"templatewizard-dialog-title": "Insérer un modèle",
@@ -22,6 +25,9 @@
 	"templatewizard-parameters-suggested": "Paramètres suggérés",
 	"templatewizard-placeholder-default": "Par défaut : $1",
 	"templatewizard-placeholder-example": "par ex. $1",
+	"templatewizard-remove-template": "Supprimer le modèle ?",
+	"templatewizard-remove-template-body": "Le modèle que vous essayez de supprimer contient des données que vous avez saisies. Supprimer ce modèle supprimera également les informations que vous avez ajouté au modèle. Cette action n’est pas réversible.",
+	"templatewizard-remove-template-retry": "Supprimer le modèle",
 	"templatewizard-search-placeholder": "Rechercher un modèle",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] ne peut pas être utilisé dans l’assistant Modèle parce qu’<strong>il n’existe pas</strong>. Veuillez le créer (avec ses [$2 TemplateData]) et réessayer. Si vous pensez avoir trouvé un bogue, dites-le-nous sur la [$3 page d’aide].",
 	"templatewizard-use": "Utiliser"

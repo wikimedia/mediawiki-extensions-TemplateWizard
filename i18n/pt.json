@@ -6,6 +6,9 @@
 		]
 	},
 	"templatewizard-cancel": "Cancelar",
+	"templatewizard-close-dialog": "Sair do assistente?",
+	"templatewizard-close-dialog-body": "Sair do assistente resultará na perda dos dados que tenha adicionado à predefinição.",
+	"templatewizard-close-dialog-retry": "Descartar alterações",
 	"templatewizard-default": "Valor por omissão: $1",
 	"templatewizard-desc": "Um suplemento para o WikiEditor que fornece um assistente de inserção de predefinições",
 	"templatewizard-dialog-title": "Inserir uma predefinição",
@@ -22,6 +25,9 @@
 	"templatewizard-parameters-suggested": "Parâmetros sugeridos",
 	"templatewizard-placeholder-default": "Valor por omissão: $1",
 	"templatewizard-placeholder-example": "exemplo: $1",
+	"templatewizard-remove-template": "Remover a predefinição?",
+	"templatewizard-remove-template-body": "A predefinição que está a tentar remover contém dados que você introduziu. Remover a predefinição também removerá a informação que adicionou à predefinição. Esta operação é irreversível.",
+	"templatewizard-remove-template-retry": "Remover predefinição",
 	"templatewizard-search-placeholder": "Procurar uma predefinição",
 	"templatewizard-template-not-found": "A predefinição [[Template:$1|$1]] não pode ser usada no assistente de predefinições porque <strong>não existe</strong>. Crie-a (e os correspondentes [$2 dados de predefinição]) e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na [$3 página de ajuda].",
 	"templatewizard-use": "Usar"

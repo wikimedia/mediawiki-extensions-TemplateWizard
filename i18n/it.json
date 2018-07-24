@@ -6,6 +6,7 @@
 		]
 	},
 	"templatewizard-cancel": "Annulla",
+	"templatewizard-close-dialog-retry": "Ignora modifiche",
 	"templatewizard-default": "Predefinito: $1",
 	"templatewizard-invalid-values": "Uno o più dei tuoi valori inseriti non combaciano col formato previsto. Vuoi modificarli?",
 	"templatewizard-invalid-values-edit": "Modifica template",
@@ -13,5 +14,6 @@
 	"templatewizard-no-description": "Non esiste descrizione per questo template.",
 	"templatewizard-placeholder-default": "Predefinito: $1",
 	"templatewizard-placeholder-example": "Esempio: $1",
+	"templatewizard-remove-template-retry": "Rimuovi template",
 	"templatewizard-search-placeholder": "Cerca un template"
 }

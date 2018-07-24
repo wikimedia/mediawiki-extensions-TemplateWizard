@@ -5,6 +5,9 @@
 		]
 	},
 	"templatewizard-cancel": "Abbrechen",
+	"templatewizard-close-dialog": "Assistent verlassen?",
+	"templatewizard-close-dialog-body": "Das Verlassen des Assistenten führt zu einem Verlust aller Daten, die du der Vorlage hinzugefügt hast.",
+	"templatewizard-close-dialog-retry": "Änderungen verwerfen",
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-desc": "Ein Add-on für den WikiEditor, das einen Vorlageneinfügeassistenten zur Verfügung stellt",
 	"templatewizard-dialog-title": "Eine Vorlage einfügen",
@@ -21,6 +24,9 @@
 	"templatewizard-parameters-suggested": "Vorgeschlagene Parameter",
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "z.&nbsp;B. $1",
+	"templatewizard-remove-template": "Vorlage entfernen?",
+	"templatewizard-remove-template-body": "Die Vorlage, die du versuchst zu entfernen, enthält von dir eingegebene Daten. Das Entfernen der Vorlage entfernt auch die von dir hinzugefügten Informationen. Diese Aktion ist unumkehrbar.",
+	"templatewizard-remove-template-retry": "Vorlage entfernen",
 	"templatewizard-search-placeholder": "Nach einer Vorlage suchen",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] kann nicht im Vorlagenassistenten verwendet werden, da <strong>sie nicht vorhanden ist</strong>. Erstelle sie bitte (sowie ihre [$2 Vorlagendaten]) und versuche es erneut. Falls du glaubst, dass du einen Softwarefehler gefunden hast, melde ihn bitte auf der [$3 Hilfeseite].",
 	"templatewizard-use": "Verwenden"

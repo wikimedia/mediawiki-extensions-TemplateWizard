@@ -11,6 +11,7 @@
 		]
 	},
 	"templatewizard-cancel": "Отмена",
+	"templatewizard-close-dialog-retry": "Отменить изменения",
 	"templatewizard-default": "По умолчанию: $1",
 	"templatewizard-desc": "Надстройка WikiEditor, которая предоставляет мастер установки шаблонов",
 	"templatewizard-dialog-title": "Вставить шаблон",
@@ -26,6 +27,9 @@
 	"templatewizard-parameters-suggested": "Предложенные параметры",
 	"templatewizard-placeholder-default": "По умолчанию: $1",
 	"templatewizard-placeholder-example": "Например: $1",
+	"templatewizard-remove-template": "Удалить шаблон?",
+	"templatewizard-remove-template-body": "Шаблон, который вы хотите удалить, содержит введённые вами данные. Удаление шаблона также удалит информацию, которую вы добавили в него. Это действие нельзя будет отменить.",
+	"templatewizard-remove-template-retry": "Удалить шаблон",
 	"templatewizard-search-placeholder": "Искать шаблон",
 	"templatewizard-template-not-found": "[[Template:$1|$1]] не может использоваться в Мастере шаблонов, потому что <strong>он не существует</strong>. Создайте его (и его [$2 TemplateData]) и повторите попытку. Если вы думаете, что обнаружили ошибку, сообщите нам об этом на [$3 странице справки].",
 	"templatewizard-use": "Использовать"

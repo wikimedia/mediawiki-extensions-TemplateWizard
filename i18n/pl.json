@@ -6,6 +6,9 @@
 		]
 	},
 	"templatewizard-cancel": "Anuluj",
+	"templatewizard-close-dialog": "Opuścić kreatora?",
+	"templatewizard-close-dialog-body": "Opuszczenie kreatora spowoduje utratę wszelkich danych dodanych do szablonu.",
+	"templatewizard-close-dialog-retry": "Porzuć zmiany",
 	"templatewizard-default": "Domyślnie: $1",
 	"templatewizard-dialog-title": "Wstaw szablon",
 	"templatewizard-insert": "Wstaw",
@@ -19,6 +22,9 @@
 	"templatewizard-parameters-suggested": "Sugerowane parametry",
 	"templatewizard-placeholder-default": "Domyślnie: $1",
 	"templatewizard-placeholder-example": "np. $1",
+	"templatewizard-remove-template": "Usuń szablon?",
+	"templatewizard-remove-template-body": "Szablon, który próbujesz usunąć, zawiera wprowadzone przez Ciebie dane. Usunięcie szablonu spowoduje również usunięcie informacji dodanych do szablonu. To działanie jest nieodwracalne.",
+	"templatewizard-remove-template-retry": "Usuń szablon",
 	"templatewizard-search-placeholder": "Wyszukaj szablon",
 	"templatewizard-use": "Użyj"
 }
