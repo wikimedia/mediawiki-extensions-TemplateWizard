@@ -24,13 +24,11 @@ mediaWiki.TemplateWizard.Dialog.static.actions = [
 ];
 
 /**
- * Override getBodyHeight to create a tall dialog relative to the screen,
- * to match what TemplateData does for its dialog.
+ * Set the height to a reasonable maximum.
  * @return {number} Body height
  */
 mediaWiki.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
-	// Add the height of the window header because we don't have a footer.
-	return window.innerHeight - 200 + this.$head.outerHeight( true );
+	return 500;
 };
 
 /**
