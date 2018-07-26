@@ -153,7 +153,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function (
 };
 
 mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
-	var dialog = this, templateFormatter;
+	var dialog = this;
 	return mediaWiki.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
 		.next( function () {
 			var msg;
@@ -181,12 +181,18 @@ mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action )
 			}
 		} )
 		.next( function () {
+			var templateFormatter, textSelectionOpts;
 			if ( action === 'insert' ) {
 				templateFormatter = new mediaWiki.TemplateWizard.TemplateFormatter();
 				templateFormatter.setTemplateName( dialog.templateForm.getTitle().getMainText() );
 				templateFormatter.setFormat( dialog.templateForm.getFormat() );
 				templateFormatter.setParameters( dialog.templateForm.getParameters() );
-				$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', { post: templateFormatter.getTemplate() } );
+				textSelectionOpts = {
+					peri: templateFormatter.getTemplate(),
+					replace: true,
+					selectPeri: false
+				};
+				$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
 				dialog.ignoreParamValues = false;
 				dialog.close();
 			}
