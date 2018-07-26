@@ -45,9 +45,7 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 		$description.html(
 			mediaWiki.message(
 				descriptionMessage,
-				title.getMainText(),
-				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData',
-				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard'
+				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData'
 			).parse()
 		);
 	}

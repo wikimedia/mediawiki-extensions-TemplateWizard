@@ -28,6 +28,5 @@
 	"templatewizard-remove-template-body": "The template you are attempting to remove contains data you have input. Removing the template will also remove the information you have added to the template. This action is not reversible.",
 	"templatewizard-remove-template-retry": "Remove template",
 	"templatewizard-search-placeholder": "Search for a template",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] can not be used in the Template Wizard because <strong>it doesn't exist</strong>. Please create it (and its [$2 TemplateData]) and try again. If you think you've found a bug tell us about it on the [$3 help page].",
 	"templatewizard-use": "Use"
 }

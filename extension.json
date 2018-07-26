@@ -68,7 +68,6 @@
 				"templatewizard-remove-template-body",
 				"templatewizard-remove-template-retry",
 				"templatewizard-search-placeholder",
-				"templatewizard-template-not-found",
 				"templatewizard-use"
 			],
 			"dependencies": [
