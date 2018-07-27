@@ -20,6 +20,5 @@
 	"templatewizard-parameters-suggested": "Ajánlott paraméterek",
 	"templatewizard-placeholder-default": "Alapértelmezett: $1",
 	"templatewizard-placeholder-example": "pl. $1",
-	"templatewizard-template-not-found": "A(z) [[Template:$1|$1]] sablon nem használható a Sablonvarázslóval, mert <strong>nem létezik</strong>. Hozd létre (a [$2 TemplateData-dokumentációjával] együtt), és próbáld újra. Ha azt gondolod, hogy ez egy hiba eredménye, jelezd a [$3 súgólapon].",
 	"templatewizard-use": "Használat"
 }

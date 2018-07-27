@@ -29,6 +29,5 @@
 	"templatewizard-remove-template-body": "Le modèle que vous essayez de supprimer contient les données que vous avez saisies. Supprimer ce modèle supprimera également les informations que vous avez ajoutées au modèle. Cette action est irréversible.",
 	"templatewizard-remove-template-retry": "Supprimer le modèle",
 	"templatewizard-search-placeholder": "Rechercher un modèle",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] ne peut pas être utilisé dans l’assistant Modèle parce qu’<strong>il n’existe pas</strong>. Veuillez le créer (avec ses [$2 TemplateData]) et réessayer. Si vous pensez avoir trouvé un bogue, dites-le-nous sur la [$3 page d’aide].",
 	"templatewizard-use": "Utiliser"
 }

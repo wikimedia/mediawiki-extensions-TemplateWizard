@@ -20,6 +20,5 @@
 	"templatewizard-parameters-suggested": "Önerilen parametreler",
 	"templatewizard-placeholder-default": "Varsayılan: $1",
 	"templatewizard-placeholder-example": "Örnek değer: $1",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] <strong>var olmadığı için</strong> Şablon Sihirbazı'nda kullanılamaz. Lütfen bu şablonu (ve [$2 ŞablonVerisini]) tanımlayın ve yeniden deneyin. Bir hata bulduğunuzu düşünüyorsanız [$3 yardım sayfasında] bize bildirin.",
 	"templatewizard-use": "Kullanım"
 }

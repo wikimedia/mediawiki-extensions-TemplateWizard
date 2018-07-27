@@ -28,6 +28,5 @@
 	"templatewizard-remove-template-body": "Die Vorlage, die du versuchst zu entfernen, enthält von dir eingegebene Daten. Das Entfernen der Vorlage entfernt auch die von dir hinzugefügten Informationen. Diese Aktion ist unumkehrbar.",
 	"templatewizard-remove-template-retry": "Vorlage entfernen",
 	"templatewizard-search-placeholder": "Nach einer Vorlage suchen",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] kann nicht im Vorlagenassistenten verwendet werden, da <strong>sie nicht vorhanden ist</strong>. Erstelle sie bitte (sowie ihre [$2 Vorlagendaten]) und versuche es erneut. Falls du glaubst, dass du einen Softwarefehler gefunden hast, melde ihn bitte auf der [$3 Hilfeseite].",
 	"templatewizard-use": "Verwenden"
 }

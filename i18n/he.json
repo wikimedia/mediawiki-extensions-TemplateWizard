@@ -22,6 +22,5 @@
 	"templatewizard-placeholder-default": "ברירת המחדל: $1",
 	"templatewizard-placeholder-example": "למשל: $1",
 	"templatewizard-search-placeholder": "חיפוש תבנית",
-	"templatewizard-template-not-found": "לא ניתן להשתמש בתבנית [[Template:$1|$1]] באשף התבניות משום ש<strong>היא אינה קיימת</strong>. נא ליצור אותה (ואת [$2 נתוני התבנית] שלה) ולאחר מכן לנסות שוב. אם לדעתך מדובר בבאג, נשמח לקבל דיווח עליו ב[$3 דף העזרה].",
 	"templatewizard-use": "שימוש"
 }

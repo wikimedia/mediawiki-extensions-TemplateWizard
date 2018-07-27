@@ -21,6 +21,5 @@
 	"templatewizard-placeholder-default": "Predeterminado: $1",
 	"templatewizard-placeholder-example": "p. ej., $1",
 	"templatewizard-remove-template-retry": "Quitar plantilla",
-	"templatewizard-template-not-found": "No se puede utilizar [[Template:$1|$1]] en el asistente de plantillas porque <strong>no existe</strong>. Créala (y añádele etiquetas [$2 TemplateData]) e inténtalo de nuevo. Si crees que has encontrado un defecto en el asistente, infórmanos de este en la [$3 página de ayuda].",
 	"templatewizard-use": "Uso"
 }
