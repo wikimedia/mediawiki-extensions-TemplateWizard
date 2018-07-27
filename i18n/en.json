@@ -17,6 +17,8 @@
 	"templatewizard-invalid-values-edit": "Edit template",
 	"templatewizard-invalid-values-insert": "Insert template",
 	"templatewizard-no-description": "No description exists for this template.",
+	"templatewizard-no-params-with-td": "There are no parameters defined in this template's [$1 TemplateData] documentation. You may insert the template without parameters.",
+	"templatewizard-no-params-without-td": "No parameters could be determined for this template due to absence of [$1 TemplateData] documentation. You may insert the template without parameters.",
 	"templatewizard-no-templatedata": "Due to missing [$1 TemplateData], parameters for this template have been auto-generated. Please be aware that they may not be accurate.",
 	"templatewizard-opens-in-new-tab": "Opens in new tab",
 	"templatewizard-parameters-optional": "Optional parameters",

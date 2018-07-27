@@ -57,6 +57,8 @@
 				"templatewizard-invalid-values-edit",
 				"templatewizard-invalid-values-insert",
 				"templatewizard-no-description",
+				"templatewizard-no-params-with-td",
+				"templatewizard-no-params-without-td",
 				"templatewizard-no-templatedata",
 				"templatewizard-opens-in-new-tab",
 				"templatewizard-parameters-optional",
