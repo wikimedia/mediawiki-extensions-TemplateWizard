@@ -5,6 +5,9 @@
 		]
 	},
 	"templatewizard-cancel": "Откажи",
+	"templatewizard-close-dialog": "Го напуштате помошникот?",
+	"templatewizard-close-dialog-body": "Напуштајќи го помошникот ќе ги изгубите сите податоци што се ги додале во шаблонот.",
+	"templatewizard-close-dialog-retry": "Отфрли промени",
 	"templatewizard-default": "По основно: $1",
 	"templatewizard-desc": "Додаток на Викиуредникот помага во вметнувањето на шаблони",
 	"templatewizard-dialog-title": "Вметни шаблон",
@@ -21,7 +24,9 @@
 	"templatewizard-parameters-suggested": "Предложени параметри",
 	"templatewizard-placeholder-default": "По основно: $1",
 	"templatewizard-placeholder-example": "на пр. $1",
+	"templatewizard-remove-template": "Да го отстранам шаблонот?",
+	"templatewizard-remove-template-body": "Шаблонот што сакате да го отстраните содржи податоци што сте ги внеле. Отстранувајќи го ќе ги отстраните и нив. Ова дејство е неповратно.",
+	"templatewizard-remove-template-retry": "Отстрани шаблон",
 	"templatewizard-search-placeholder": "Пребарај шаблон",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] не може да се користи за Помошникот за шаблони бидејќи <strong>не постои</strong>. Создајте го (и неговите [$2 шаблонски податоци]) и обидете се повторно. Ако мислите дека сте наишле на грешка, известете нè на [$3 помошната страница].",
 	"templatewizard-use": "Употреба"
 }

@@ -20,6 +20,5 @@
 	"templatewizard-parameters-suggested": "Parámetros suxeríos",
 	"templatewizard-placeholder-default": "Predetermináu: $1",
 	"templatewizard-placeholder-example": "p.ex. $1",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] nun puede usase'n Template Wizard porque <strong>nun existe</strong>. Créala (ya'l so [$2 TemplateData]) y tenta otra vegada. Si crees qu'atopasti un fallu infórmanos del mesmu na [$3 páxina d'ayuda].",
 	"templatewizard-use": "Usar"
 }

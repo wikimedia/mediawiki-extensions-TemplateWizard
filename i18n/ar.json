@@ -23,6 +23,5 @@
 	"templatewizard-placeholder-default": "الافتراضي: $1",
 	"templatewizard-placeholder-example": "على سبيل المثال $1",
 	"templatewizard-search-placeholder": "البحث عن قالب",
-	"templatewizard-template-not-found": "[[Template:$1|$1]]  لا يمكن استخدامه في معالج القوالب لأنه <strong>غير موجود</strong>; يُرجَى إنشاؤه (و [$2 TemplateData]) والمحاولة مرة أخرى، إذا كنت تعتقد أنك عثرت على خطأ، فأخبرنا عنه في [$3 صفحة المساعدة].",
 	"templatewizard-use": "استعمال"
 }

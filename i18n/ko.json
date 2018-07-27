@@ -26,6 +26,5 @@
 	"templatewizard-remove-template": "틀을 제거하시겠습니까?",
 	"templatewizard-remove-template-body": "제거를 시도 중인 틀에 입력한 데이터가 포함되어 있습니다. 이 틀을 제거하면 틀에 추가한 정보도 제거됩니다. 이 작업은 되돌릴 수 없습니다.",
 	"templatewizard-remove-template-retry": "틀 제거",
-	"templatewizard-template-not-found": "[[Template:$1|$1]] 틀은 <strong>존재하기 않기 때문에</strong> 틀 마법사에서 사용할 수 없습니다. 해당 틀(및 [$2 틀데이터])을 만든 다음 다시 시도하십시오. 버그를 찾은 것으로 생각되시면 [$3 도움말 문서]에서 저희에게 말씀해 주세요.",
 	"templatewizard-use": "사용하기"
 }
