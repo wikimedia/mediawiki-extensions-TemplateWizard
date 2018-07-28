@@ -7,6 +7,7 @@
 	"templatewizard-cancel": "Avbryt",
 	"templatewizard-close-dialog": "Lämna guiden?",
 	"templatewizard-close-dialog-body": "Om du lämnar guiden förlorar du all data som du har lagt till i mallen.",
+	"templatewizard-close-dialog-retry": "Ignorera ändringar",
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-desc": "Ett tillägg för WikiEditor som tillhandahåller en guide för att infoga mallar",
 	"templatewizard-dialog-title": "Infoga en mall",
