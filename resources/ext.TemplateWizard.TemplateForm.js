@@ -214,6 +214,8 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = functio
 	} else if ( paramDefinition.type === 'wiki-template-name' ) {
 		config.namespace = mediaWiki.config.get( 'wgNamespaceIds' ).template;
 		widget = new mediaWiki.widgets.TitleInputWidget( config );
+	} else if ( paramDefinition.type === 'content' || paramDefinition.type === 'unbalanced-wikitext' ) {
+		widget = new OO.ui.MultilineTextInputWidget( config );
 	} else {
 		widget = new OO.ui.TextInputWidget( config );
 	}
