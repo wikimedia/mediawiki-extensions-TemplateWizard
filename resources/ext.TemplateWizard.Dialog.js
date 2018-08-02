@@ -156,7 +156,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action )
 	return mediaWiki.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
 		.next( function () {
 			var msg;
-			if ( action === 'closeTemplate' || action === 'closeDialog' ) {
+			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && dialog.templateForm ) {
 				dialog.firstFieldWithValue = dialog.templateForm.getFirstFieldWithValue();
 				if ( dialog.firstFieldWithValue && !this.ignoreParamValues ) {
 					msg = ( action === 'closeTemplate' ) ?
@@ -166,9 +166,10 @@ mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action )
 				}
 				if ( action === 'closeTemplate' ) {
 					dialog.showSearchForm();
-				} else if ( action === 'closeDialog' ) {
-					dialog.close();
 				}
+			}
+			if ( action === 'closeDialog' ) {
+				dialog.close();
 			}
 		} )
 		.next( function () {
