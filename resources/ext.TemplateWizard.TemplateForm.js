@@ -81,8 +81,20 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateDat
  * Called after the TemplateForm has been attached to the DOM.
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
-	var height = this.templateTitleBar.$element.height();
-	this.menuContainer.$element.css( 'margin-top', height + 'px' );
+	var titleBarHeight, addRemoveAllHeight;
+
+	// Set the top margin of the main double-panel area to match the height of the titlebar.
+	titleBarHeight = this.templateTitleBar.$element.height();
+	this.menuContainer.$element.css( 'margin-top', titleBarHeight + 'px' );
+
+	// Hide all (non-required) fields.
+	this.toggleFields( false );
+
+	// Set the bottom margin of the parameter list if there's a button there.
+	if ( this.addRemoveAllButton ) {
+		addRemoveAllHeight = this.addRemoveAllButton.$element.parent().height();
+		this.addRemoveAllButton.$element.parent().prev().css( 'margin-bottom', addRemoveAllHeight + 'px' );
+	}
 };
 
 /**
@@ -133,7 +145,10 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName
 mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( groupedParams ) {
 	var templateForm = this,
 		$paramMenu = $( '<div>' ).addClass( 'parameter-list' ),
-		$fields = $( '<div>' ).addClass( 'fields' );
+		$paramMenuWrapper = $( '<div>' ).addClass( 'parameters' ).append( $paramMenu ),
+		$fields = $( '<div>' ).addClass( 'fields' ),
+		hasSuggestedOrOptional = false,
+		parametersModel = new mediaWiki.TemplateWizard.Model.Parameters( $.extend( {}, groupedParams.suggested, groupedParams.optional ) );
 	$.each( groupedParams, function ( groupName, group ) {
 		var paramGroupTitle,
 			hasParams = false,
@@ -154,9 +169,10 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 			}
 			// Button.
 			button = new mediaWiki.TemplateWizard.ParamButton(
-				{ label: label, title: description, required: details.required },
 				templateForm,
-				param
+				param,
+				parametersModel,
+				{ label: label, title: description, required: details.required }
 			);
 			// Form field.
 			templateForm.fields[ param ] = new mediaWiki.TemplateWizard.ParamField(
@@ -164,6 +180,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 				{ label: label, help: description, required: details.required }
 			);
 
+			hasSuggestedOrOptional = hasSuggestedOrOptional || !details.required;
 			$paramList.append( $( '<div>' ).append( button.$element ) );
 			$fields.append( templateForm.fields[ param ].$element );
 			hasParams = true;
@@ -180,8 +197,13 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 			);
 		}
 	} );
+	// Add the add/remove all fields button.
+	if ( hasSuggestedOrOptional ) {
+		this.addRemoveAllButton = new mediaWiki.TemplateWizard.AddRemoveAllButton( parametersModel );
+		$paramMenuWrapper.append( $( '<div>' ).addClass( 'add-remove-all' ).append( this.addRemoveAllButton.$element ) );
+	}
 	return {
-		menu: $paramMenu,
+		menu: $paramMenuWrapper,
 		fields: $fields
 	};
 };

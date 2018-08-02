@@ -38,12 +38,13 @@ class Hooks {
 	public static function onResourceLoaderTestModules(
 		array &$testModules, ResourceLoader &$resourceLoader
 	) {
-		$testModules['qunit']['tests.ext.TemplateWizard'] = [
+		$testModules['qunit']['tests.ext.TemplateWizard' ] = [
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'TemplateWizard',
 			'dependencies' => [ 'ext.TemplateWizard' ],
 			'scripts' => [
 				'tests/qunit/ext.TemplateWizard.test.js',
+				'tests/qunit/ext.TemplateWizard.Model.Parameters.test.js'
 			]
 		];
 		return true;

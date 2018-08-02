@@ -4,6 +4,7 @@
 			"Sam Wilson"
 		]
 	},
+	"templatewizard-add-all": "Add all parameters",
 	"templatewizard-cancel": "Cancel",
 	"templatewizard-close-dialog": "Leave wizard?",
 	"templatewizard-close-dialog-body": "Leaving the wizard will result in loss of any data that you have added to the template.",
@@ -24,6 +25,7 @@
 	"templatewizard-parameters-suggested": "Suggested parameters",
 	"templatewizard-placeholder-default": "Default: $1",
 	"templatewizard-placeholder-example": "e.g. $1",
+	"templatewizard-remove-all": "Remove all parameters",
 	"templatewizard-remove-template": "Remove template?",
 	"templatewizard-remove-template-body": "The template you are attempting to remove contains data you have input. Removing the template will also remove the information you have added to the template. This action is not reversible.",
 	"templatewizard-remove-template-retry": "Remove template",
