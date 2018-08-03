@@ -129,12 +129,46 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.showField = function ( paramName
 	this.fields[ paramName ].getField().focus();
 };
 
+/**
+ * Hide the form field for the given parameter, and set the focus to the next or previous field if possible.
+ * @param {string} paramName
+ */
 mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
+	var fieldNames, fieldToFocus, thisFieldIndex, f, field;
 	if ( this.fields[ paramName ].isRequired() ) {
 		// Required fields are not allowed to be hidden.
 		return;
 	}
 	this.fields[ paramName ].toggle( false );
+
+	// Set the focus to the next field (either after or before the one being removed).
+	fieldNames = Object.keys( this.fields );
+	fieldToFocus = null;
+	thisFieldIndex = fieldNames.indexOf( paramName );
+	// 1. First loop forwards to try to find the next visible field.
+	for ( f = thisFieldIndex; f < fieldNames.length; f++ ) {
+		field = this.fields[ fieldNames[ f ] ];
+		if ( field.isVisible() ) {
+			fieldToFocus = field;
+			break;
+		}
+	}
+	// 2. If no next field was found, loop backwards to find a visible field.
+	if ( !fieldToFocus ) {
+		for ( f = thisFieldIndex; f >= 0; f-- ) {
+			field = this.fields[ fieldNames[ f ] ];
+			if ( field.isVisible() ) {
+				fieldToFocus = field;
+				break;
+			}
+		}
+	}
+	if ( fieldToFocus ) {
+		// Note that this.fields contains FieldLayouts, so we need to focus the field contained therein.
+		fieldToFocus.getField().focus();
+	} else {
+		// @TODO Focus the add-remove-all button, once T194436 is resolved.
+	}
 };
 
 /**
