@@ -4,6 +4,7 @@
 			"Metalhead64"
 		]
 	},
+	"templatewizard-add-all": "Alle Parameter hinzufügen",
 	"templatewizard-cancel": "Abbrechen",
 	"templatewizard-close-dialog": "Assistent verlassen?",
 	"templatewizard-close-dialog-body": "Das Verlassen des Assistenten führt zu einem Verlust aller Daten, die du der Vorlage hinzugefügt hast.",
@@ -24,6 +25,7 @@
 	"templatewizard-parameters-suggested": "Vorgeschlagene Parameter",
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "z.&nbsp;B. $1",
+	"templatewizard-remove-all": "Alle Parameter entfernen",
 	"templatewizard-remove-template": "Vorlage entfernen?",
 	"templatewizard-remove-template-body": "Die Vorlage, die du versuchst zu entfernen, enthält von dir eingegebene Daten. Das Entfernen der Vorlage entfernt auch die von dir hinzugefügten Informationen. Diese Aktion ist unumkehrbar.",
 	"templatewizard-remove-template-retry": "Vorlage entfernen",

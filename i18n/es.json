@@ -4,7 +4,9 @@
 			"Fitoschido"
 		]
 	},
+	"templatewizard-add-all": "Añadir todos los parámetros",
 	"templatewizard-cancel": "Cancelar",
+	"templatewizard-close-dialog": "¿Quieres abandonar el asistente?",
 	"templatewizard-close-dialog-retry": "Descartar cambios",
 	"templatewizard-default": "Predeterminado: $1",
 	"templatewizard-desc": "Un complemento para WikiEditor que brinda un asistente de inserción de plantillas",
@@ -20,6 +22,8 @@
 	"templatewizard-parameters-suggested": "Parámetros sugeridos",
 	"templatewizard-placeholder-default": "Predeterminado: $1",
 	"templatewizard-placeholder-example": "p. ej., $1",
+	"templatewizard-remove-all": "Quitar todos los parámetros",
+	"templatewizard-remove-template": "¿Quieres quitar la plantilla?",
 	"templatewizard-remove-template-retry": "Quitar plantilla",
 	"templatewizard-use": "Uso"
 }

@@ -4,6 +4,7 @@
 			"Ykhwong"
 		]
 	},
+	"templatewizard-add-all": "모든 변수 추가",
 	"templatewizard-cancel": "취소",
 	"templatewizard-close-dialog": "마법사를 떠나시겠습니까?",
 	"templatewizard-close-dialog-body": "마법사를 떠나면 틀에 추가한 데이터를 잃게 됩니다.",
@@ -23,6 +24,7 @@
 	"templatewizard-parameters-suggested": "제안된 변수",
 	"templatewizard-placeholder-default": "기본값: $1",
 	"templatewizard-placeholder-example": "예: $1",
+	"templatewizard-remove-all": "모든 변수 제거",
 	"templatewizard-remove-template": "틀을 제거하시겠습니까?",
 	"templatewizard-remove-template-body": "제거를 시도 중인 틀에 입력한 데이터가 포함되어 있습니다. 이 틀을 제거하면 틀에 추가한 정보도 제거됩니다. 이 작업은 되돌릴 수 없습니다.",
 	"templatewizard-remove-template-retry": "틀 제거",

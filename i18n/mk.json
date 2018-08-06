@@ -4,6 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
+	"templatewizard-add-all": "Додај ги сите параметри",
 	"templatewizard-cancel": "Откажи",
 	"templatewizard-close-dialog": "Го напуштате помошникот?",
 	"templatewizard-close-dialog-body": "Напуштајќи го помошникот ќе ги изгубите сите податоци што се ги додале во шаблонот.",
@@ -24,6 +25,7 @@
 	"templatewizard-parameters-suggested": "Предложени параметри",
 	"templatewizard-placeholder-default": "По основно: $1",
 	"templatewizard-placeholder-example": "на пр. $1",
+	"templatewizard-remove-all": "Отстрани ги сите параметри",
 	"templatewizard-remove-template": "Да го отстранам шаблонот?",
 	"templatewizard-remove-template-body": "Шаблонот што сакате да го отстраните содржи податоци што сте ги внеле. Отстранувајќи го ќе ги отстраните и нив. Ова дејство е неповратно.",
 	"templatewizard-remove-template-retry": "Отстрани шаблон",

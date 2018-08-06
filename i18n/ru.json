@@ -10,6 +10,7 @@
 			"Vlad5250"
 		]
 	},
+	"templatewizard-add-all": "Добавить все параметры",
 	"templatewizard-cancel": "Отмена",
 	"templatewizard-close-dialog-retry": "Отменить изменения",
 	"templatewizard-default": "По умолчанию: $1",
@@ -27,6 +28,7 @@
 	"templatewizard-parameters-suggested": "Предложенные параметры",
 	"templatewizard-placeholder-default": "По умолчанию: $1",
 	"templatewizard-placeholder-example": "Например: $1",
+	"templatewizard-remove-all": "Убрать все параметры",
 	"templatewizard-remove-template": "Удалить шаблон?",
 	"templatewizard-remove-template-body": "Шаблон, который вы хотите удалить, содержит введённые вами данные. Удаление шаблона также удалит информацию, которую вы добавили в него. Это действие нельзя будет отменить.",
 	"templatewizard-remove-template-retry": "Удалить шаблон",

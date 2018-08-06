@@ -4,6 +4,7 @@
 			"BadDog"
 		]
 	},
+	"templatewizard-add-all": "Додај све параметре",
 	"templatewizard-cancel": "Откажи",
 	"templatewizard-default": "Подразумевано: $1",
 	"templatewizard-dialog-title": "Убацивање шаблона",
@@ -13,5 +14,6 @@
 	"templatewizard-parameters-optional": "Необавезни параметри",
 	"templatewizard-parameters-required": "Обавезни параметри",
 	"templatewizard-parameters-suggested": "Предложени параметри",
+	"templatewizard-remove-all": "Уклони све параметре",
 	"templatewizard-use": "Употреби"
 }

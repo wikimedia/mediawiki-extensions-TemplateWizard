@@ -4,6 +4,7 @@
 			"WikiPhoenix"
 		]
 	},
+	"templatewizard-add-all": "Lägg till alla parametrar",
 	"templatewizard-cancel": "Avbryt",
 	"templatewizard-close-dialog": "Lämna guiden?",
 	"templatewizard-close-dialog-body": "Om du lämnar guiden förlorar du all data som du har lagt till i mallen.",
@@ -24,7 +25,9 @@
 	"templatewizard-parameters-suggested": "Förslagna parametrar",
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "t.ex. $1",
+	"templatewizard-remove-all": "Ta bort alla parametrar",
 	"templatewizard-remove-template": "Ta bort mallen?",
+	"templatewizard-remove-template-body": "Mallen du försöker ta bort innehåller data som du har lagt till. När du tar bort mallen kommer även informationen du lade till i mallen att tas bort. Denna handling kan inte ångras.",
 	"templatewizard-remove-template-retry": "Ta bort mall",
 	"templatewizard-search-placeholder": "Sök efter en mall",
 	"templatewizard-use": "Använd"

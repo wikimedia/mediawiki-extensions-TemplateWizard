@@ -4,7 +4,11 @@
 			"Xuacu"
 		]
 	},
+	"templatewizard-add-all": "Añadir tolos parámetros",
 	"templatewizard-cancel": "Encaboxar",
+	"templatewizard-close-dialog": "¿Abandonar l'asistente?",
+	"templatewizard-close-dialog-body": "Si abandones l'asistente perderáse cualquier datu qu'añadisti a la plantía.",
+	"templatewizard-close-dialog-retry": "Descartar los cambios",
 	"templatewizard-default": "Predetermináu: $1",
 	"templatewizard-desc": "Un complementu pa WikiEditor qu'ufre un asistente d'insertamientu de plantíes",
 	"templatewizard-dialog-title": "Insertar una plantía",
@@ -13,6 +17,7 @@
 	"templatewizard-invalid-values": "Una o más de les tos entraes nun casa col formatu esperáu. ¿Quiés editala?",
 	"templatewizard-invalid-values-edit": "Editar la plantía",
 	"templatewizard-invalid-values-insert": "Inxertar una plantía",
+	"templatewizard-no-description": "Nun hai descripción pa esta plantía.",
 	"templatewizard-no-templatedata": "Por falta de [$1 TemplateData], los parámetros d'esta plantía xeneráronse automáticamente. Ten en cuenta que podríen tener imprecisiones.",
 	"templatewizard-opens-in-new-tab": "Ábrese nuna llingüeta nueva",
 	"templatewizard-parameters-optional": "Parámetros opcionales",
@@ -20,5 +25,10 @@
 	"templatewizard-parameters-suggested": "Parámetros suxeríos",
 	"templatewizard-placeholder-default": "Predetermináu: $1",
 	"templatewizard-placeholder-example": "p.ex. $1",
+	"templatewizard-remove-all": "Quitar tolos parámetros",
+	"templatewizard-remove-template": "¿Desaniciar plantía?",
+	"templatewizard-remove-template-body": "La plantía que tas tentando desaniciar contien datos qu'añadisti. Si desanicies la plantía desaniciaráse tamién la información qu'añadisti a la plantía. Esta aición nun ye reversible.",
+	"templatewizard-remove-template-retry": "Desaniciar plantía",
+	"templatewizard-search-placeholder": "Buscar una plantía",
 	"templatewizard-use": "Usar"
 }

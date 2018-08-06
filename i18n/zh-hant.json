@@ -4,6 +4,7 @@
 			"Kly"
 		]
 	},
+	"templatewizard-add-all": "加入所有參數",
 	"templatewizard-cancel": "取消",
 	"templatewizard-close-dialog": "離開精靈？",
 	"templatewizard-close-dialog-body": "離開精靈會導致遺失您所添加至模板的資料。",
@@ -24,6 +25,7 @@
 	"templatewizard-parameters-suggested": "建議參數",
 	"templatewizard-placeholder-default": "預設：$1",
 	"templatewizard-placeholder-example": "例如：$1",
+	"templatewizard-remove-all": "移除所有參數",
 	"templatewizard-remove-template": "移除模板？",
 	"templatewizard-remove-template-body": "您所嘗試移除的模板，含有您曾輸入過的資料。移除模板將會一同移除您曾添加至模板裡的資訊。另外此項操作不可還原。",
 	"templatewizard-remove-template-retry": "移除模板",

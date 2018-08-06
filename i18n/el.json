@@ -4,7 +4,10 @@
 			"Nikosgranturismogt"
 		]
 	},
+	"templatewizard-add-all": "Προσθήκη όλων των παραμέτρων",
 	"templatewizard-cancel": "Ακύρωση",
+	"templatewizard-close-dialog": "Εγκατάλειψη του οδηγού;",
+	"templatewizard-close-dialog-retry": "Απόρριψη των αλλαγών",
 	"templatewizard-default": "Προεπιλεγμένο: $1",
 	"templatewizard-dialog-title": "Εισαγωγή προτύπου",
 	"templatewizard-insert": "Εισαγωγή",
@@ -18,6 +21,9 @@
 	"templatewizard-parameters-suggested": "Προτεινόμενες παράμετροι",
 	"templatewizard-placeholder-default": "Προεπιλεγμένο: $1",
 	"templatewizard-placeholder-example": "π.χ. $1",
+	"templatewizard-remove-all": "Αφαίρεση όλων των παραμέτρων",
+	"templatewizard-remove-template": "Αφαίρεση προτύπου;",
+	"templatewizard-remove-template-retry": "Αφαίρεση προτύπου",
 	"templatewizard-search-placeholder": "Αναζητήστε για ένα πρότυπο",
 	"templatewizard-use": "Χρήση"
 }

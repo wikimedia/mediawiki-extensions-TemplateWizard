@@ -4,6 +4,7 @@
 			"Eduardo Addad de Oliveira"
 		]
 	},
+	"templatewizard-add-all": "Acrescentar todos os parâmetros",
 	"templatewizard-cancel": "Cancelar",
 	"templatewizard-close-dialog": "Sair do assistente?",
 	"templatewizard-close-dialog-body": "Sair do assistente resultará na perda dos dados que tenha adicionado à predefinição.",
@@ -24,6 +25,7 @@
 	"templatewizard-parameters-suggested": "Parâmetros sugeridos",
 	"templatewizard-placeholder-default": "Padrão: $1",
 	"templatewizard-placeholder-example": "ex.: $1",
+	"templatewizard-remove-all": "Remover todos os parâmetros",
 	"templatewizard-remove-template": "Remover a predefinição?",
 	"templatewizard-remove-template-body": "A predefinição que está tentando remover contém dados que você introduziu. Remover a predefinição também removerá a informação que adicionou à predefinição. Esta operação é irreversível.",
 	"templatewizard-remove-template-retry": "Remover predefinição",

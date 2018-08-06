@@ -4,6 +4,7 @@
 			"Robby"
 		]
 	},
+	"templatewizard-add-all": "All Parameteren derbäisetzen",
 	"templatewizard-cancel": "Ofbriechen",
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-dialog-title": "Eng Schabloun drasetzen",
@@ -18,6 +19,7 @@
 	"templatewizard-parameters-suggested": "Virgeschloe Parameteren",
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "z. Bsp. $1",
+	"templatewizard-remove-all": "All Parameteren ewechhuelen",
 	"templatewizard-remove-template": "Schabloun ewechhuelen?",
 	"templatewizard-remove-template-retry": "Schabloun ewechhuelen",
 	"templatewizard-search-placeholder": "No enger Schabloun sichen",

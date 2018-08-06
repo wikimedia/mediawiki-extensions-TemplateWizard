@@ -5,6 +5,7 @@
 			"Sarah Bernabei"
 		]
 	},
+	"templatewizard-add-all": "Aggiungi tutti i parametri",
 	"templatewizard-cancel": "Annulla",
 	"templatewizard-close-dialog-retry": "Ignora modifiche",
 	"templatewizard-default": "Predefinito: $1",
@@ -14,6 +15,7 @@
 	"templatewizard-no-description": "Non esiste descrizione per questo template.",
 	"templatewizard-placeholder-default": "Predefinito: $1",
 	"templatewizard-placeholder-example": "Esempio: $1",
+	"templatewizard-remove-all": "Rimuovi tutti i parametri",
 	"templatewizard-remove-template-retry": "Rimuovi template",
 	"templatewizard-search-placeholder": "Cerca un template"
 }
