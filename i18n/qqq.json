@@ -14,6 +14,8 @@
 	"templatewizard-default": "Text appended to a parameter field's help text to show the parameter's default value. Parameter $1 is the default value.\n{{Identical|Default}}",
 	"templatewizard-desc": "{{desc|name=TemplateWizard|url=https://www.mediawiki.org/wiki/Extension:TemplateWizard}}",
 	"templatewizard-dialog-title": "Title of the TemplateWizard dialog window.",
+	"templatewizard-help": "Text for the help link in the dialog footer.",
+	"templatewizard-help-title": "Tooltip text for the help link.",
 	"templatewizard-insert": "Text for the main template-insertion button.\n{{Identical|Insert}}",
 	"templatewizard-invalid-title": "Error message shown when an invalid title is entered in the search field.",
 	"templatewizard-invalid-values": "Error message shown when template-insertion button is clicked but there are invalid fields.\nOptions are to keep editing ({{msg-mw|templatewizard-invalid-values-edit}}) or continue anyway ({{msg-mw|templatewizard-invalid-values-insert}}).",
