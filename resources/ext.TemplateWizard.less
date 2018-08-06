@@ -90,6 +90,15 @@
 
 		.parameter-list-inner {
 			padding-left: 20px;
+
+			.oo-ui-buttonElement.oo-ui-buttonElement-frameless.oo-ui-flaggedElement-progressive,
+			.oo-ui-buttonElement.oo-ui-buttonElement-frameless.oo-ui-flaggedElement-destructive {
+				.oo-ui-labelElement-label {
+					// HACK: Override OOUI styles by making only the icon colorful,
+					// and leaving the text of the label black
+					color: @colorText;
+				}
+			}
 		}
 
 		.oo-ui-buttonElement-button,
