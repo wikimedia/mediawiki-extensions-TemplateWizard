@@ -12,6 +12,8 @@
 	"templatewizard-default": "預設：$1",
 	"templatewizard-desc": "Wiki 編輯器的提供模板插入精靈套件",
 	"templatewizard-dialog-title": "插入模板",
+	"templatewizard-help": "了解更多有關 TemplateWizard",
+	"templatewizard-help-title": "在 MediaWiki.org 上閱讀 TemplateWizard 說明頁面",
 	"templatewizard-insert": "插入",
 	"templatewizard-invalid-title": "無效標題",
 	"templatewizard-invalid-values": "您所輸入的一個或多個內容不符合預期格式。您是否要編輯？",

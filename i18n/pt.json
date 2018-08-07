@@ -13,6 +13,8 @@
 	"templatewizard-default": "Valor por omissão: $1",
 	"templatewizard-desc": "Um suplemento para o WikiEditor que fornece um assistente de inserção de predefinições",
 	"templatewizard-dialog-title": "Inserir uma predefinição",
+	"templatewizard-help": "Saiba mais sobre o Assistente de Predefinições",
+	"templatewizard-help-title": "Leia as páginas de ajuda do Assistente de Predefinições em MediaWiki.org",
 	"templatewizard-insert": "Inserir",
 	"templatewizard-invalid-title": "Título inválido",
 	"templatewizard-invalid-values": "Pelo menos uma das suas entradas não tem o formato esperado. Quer editá-la?",

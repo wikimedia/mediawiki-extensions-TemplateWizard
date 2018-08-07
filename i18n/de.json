@@ -12,6 +12,8 @@
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-desc": "Ein Add-on für den WikiEditor, das einen Vorlageneinfügeassistenten zur Verfügung stellt",
 	"templatewizard-dialog-title": "Eine Vorlage einfügen",
+	"templatewizard-help": "Mehr über den Vorlagenassistenten erfahren",
+	"templatewizard-help-title": "Die Hilfeseiten über den Vorlagenassistenten auf MediaWiki.org lesen",
 	"templatewizard-insert": "Einfügen",
 	"templatewizard-invalid-title": "Ungültiger Titel",
 	"templatewizard-invalid-values": "Eine oder mehrere deiner Eingaben entsprechen nicht dem erwarteten Format. Möchtest du sie bearbeiten?",

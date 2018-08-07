@@ -13,6 +13,8 @@
 	"templatewizard-default": "Par défaut : $1",
 	"templatewizard-desc": "Un module de WikiEditor qui fournit un assistant d’insertion de modèle",
 	"templatewizard-dialog-title": "Insérer un modèle",
+	"templatewizard-help": "En savoir plus sur TemplateWizard",
+	"templatewizard-help-title": "Lire les pages d’aide de TemplateWizard sur MediaWiki.org",
 	"templatewizard-insert": "Insérer",
 	"templatewizard-invalid-title": "Titre non valide",
 	"templatewizard-invalid-values": "Une ou plusieurs de vos entrées ne correspondent pas au format attendu. Voulez-vous le modifier ?",

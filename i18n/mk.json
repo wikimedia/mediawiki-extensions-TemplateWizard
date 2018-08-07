@@ -12,6 +12,8 @@
 	"templatewizard-default": "По основно: $1",
 	"templatewizard-desc": "Додаток на Викиуредникот помага во вметнувањето на шаблони",
 	"templatewizard-dialog-title": "Вметни шаблон",
+	"templatewizard-help": "Дознајте повеќе за Помошникот за шаблони",
+	"templatewizard-help-title": "Прочитајте ги помошните страници за Помошникот за шаблони на MediaWiki.org",
 	"templatewizard-insert": "Вметни",
 	"templatewizard-invalid-title": "Неважечки наслов",
 	"templatewizard-invalid-values": "Едно или повеќе од внесеното не одговараат на очекуваниот формат. Дали би сакале да го измените?",
