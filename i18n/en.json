@@ -12,6 +12,8 @@
 	"templatewizard-default": "Default: $1",
 	"templatewizard-desc": "A WikiEditor add-on that provides a template-insertion wizard",
 	"templatewizard-dialog-title": "Insert a template",
+	"templatewizard-help": "Learn more about TemplateWizard",
+	"templatewizard-help-title": "Read the TemplateWizard help pages on MediaWiki.org",
 	"templatewizard-insert": "Insert",
 	"templatewizard-invalid-title": "Invalid title",
 	"templatewizard-invalid-values": "One or more of your inputs don't match the expected format. Do you wish to edit it?",

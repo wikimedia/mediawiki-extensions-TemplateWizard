@@ -8,6 +8,7 @@
  */
 mediaWiki.TemplateWizard.Dialog = function mediaWikiTemplateWizardDialog( config ) {
 	mediaWiki.TemplateWizard.Dialog.super.call( this, config );
+	this.$element.addClass( 'ext-templatewizard-dialog' );
 
 	// Instantiate with default value
 	this.contentDir = 'ltr';
@@ -17,10 +18,21 @@ OO.inheritClass( mediaWiki.TemplateWizard.Dialog, OO.ui.ProcessDialog );
 mediaWiki.TemplateWizard.Dialog.static.name = 'templateWizard';
 mediaWiki.TemplateWizard.Dialog.static.size = 'large';
 mediaWiki.TemplateWizard.Dialog.static.title = OO.ui.deferMsg( 'templatewizard-dialog-title' );
+mediaWiki.TemplateWizard.Dialog.static.helpUrl = 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard';
 mediaWiki.TemplateWizard.Dialog.static.actions = [
 	{ label: OO.ui.deferMsg( 'templatewizard-insert' ), flags: [ 'primary', 'progressive' ], action: 'insert', modes: [ 'choose', 'insert' ] },
 	{ label: OO.ui.deferMsg( 'templatewizard-cancel' ), flags: 'safe', action: 'closeDialog', modes: [ 'choose', 'insert' ] },
-	{ title: OO.ui.deferMsg( 'templatewizard-close-template' ), flags: 'destructive', action: 'closeTemplate', modes: [ 'choose', 'insert' ], framed: false, icon: 'trash' }
+	{ title: OO.ui.deferMsg( 'templatewizard-close-template' ), flags: 'destructive', action: 'closeTemplate', modes: [ 'choose', 'insert' ], framed: false, icon: 'trash' },
+	{
+		action: 'help',
+		label: OO.ui.deferMsg( 'templatewizard-help' ),
+		title: OO.ui.deferMsg( 'templatewizard-help-title' ),
+		flags: [ 'progressive' ],
+		modes: [ 'choose' ],
+		framed: false,
+		icon: 'info',
+		href: mediaWiki.TemplateWizard.Dialog.static.helpUrl
+	}
 ];
 
 /**
@@ -58,6 +70,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.showSearchForm = function () {
  * @param {Object} templateData
  */
 mediaWiki.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
+	this.actions.setMode( 'insert' );
 	if ( this.templateForm ) {
 		this.templateForm.disconnect( this );
 	}
@@ -170,6 +183,9 @@ mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action )
 			}
 			if ( action === 'closeDialog' ) {
 				dialog.close();
+			}
+			if ( action === 'help' ) {
+				window.open( mediaWiki.TemplateWizard.Dialog.static.helpUrl );
 			}
 		} )
 		.next( function () {
