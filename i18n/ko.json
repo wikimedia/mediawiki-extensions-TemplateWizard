@@ -12,6 +12,8 @@
 	"templatewizard-default": "기본값: $1",
 	"templatewizard-desc": "틀 삽입 마법사를 제공하는 위키편집기 추가 기능",
 	"templatewizard-dialog-title": "틀 삽입",
+	"templatewizard-help": "틀마법사에 관해 더 알아보기",
+	"templatewizard-help-title": "MediaWiki.org에서 틀마법사 도움말 문서 읽기",
 	"templatewizard-insert": "넣기",
 	"templatewizard-invalid-title": "잘못된 제목",
 	"templatewizard-invalid-values": "하나 이상의 입력이 예측된 형식과 맞지 않습니다. 편집하시겠습니까?",

@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Imre Eilertsen"
+			"Imre Eilertsen",
+			"Jon Harald Søby"
 		]
 	},
+	"templatewizard-add-all": "Legg til alle parametere",
 	"templatewizard-placeholder-default": "Standard: $1",
-	"templatewizard-placeholder-example": "f.eks. $1"
+	"templatewizard-placeholder-example": "f.eks. $1",
+	"templatewizard-remove-all": "Fjern alle parametere"
 }

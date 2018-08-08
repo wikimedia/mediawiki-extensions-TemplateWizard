@@ -16,6 +16,7 @@
 	"templatewizard-default": "По умолчанию: $1",
 	"templatewizard-desc": "Надстройка WikiEditor, которая предоставляет мастер установки шаблонов",
 	"templatewizard-dialog-title": "Вставить шаблон",
+	"templatewizard-help": "Узнать больше о TemplateWizard",
 	"templatewizard-insert": "Вставить",
 	"templatewizard-invalid-title": "Недопустимое название",
 	"templatewizard-invalid-values-edit": "Редактировать шаблон",
