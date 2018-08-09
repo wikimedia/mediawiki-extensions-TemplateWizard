@@ -17,6 +17,17 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 	this.menuContainer = null;
 	this.$popupOverlay = config.$popupOverlay || this.$element;
 	this.$element.html( this.getForm( templateData ).$element.addClass( 'ext-templatewizard-templateform' ) );
+
+	/**
+	 * Fired on initialization of TemplateForm
+	 *
+	 * Allowing extensions to customize or initalize the template form.
+	 * @event ext_TemplateWizard_TemplateForm_init
+	 * @member mw.hook
+	 * @param {mediaWiki.TemplateWizard.TemplateForm} templateForm the invoking TemplateForm instance
+	 * @param {Object} templateData The TempldateData of the relevant template containing the template metadata
+	 */
+	mediaWiki.hook( 'ext.TemplateWizard.TemplateForm.init' ).fire( this, templateData );
 };
 
 /* Setup */
@@ -208,11 +219,29 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 				parametersModel,
 				{ label: label, title: description, required: details.required }
 			);
+
 			// Form field.
 			templateForm.fields[ param ] = new mediaWiki.TemplateWizard.ParamField(
 				templateForm.getInputWidgetForParam( param, details ),
 				{ label: label, help: description, required: details.required }
 			);
+
+			/**
+			 * Fired on initialization of TemplateForm
+			 *
+			 * This hook is fired just after creation of a parameter's button and field,
+			 * before they have been added to the DOM. Extending modules can modify
+			 * either as required.
+			 *
+			 * @event ext_TemplateWizard_field_create
+			 * @member mw.hook
+			 * @param {string} param name of the parameter
+			 * @param {Object} details The TempldateData of the relevant template containing the template metadata
+			 * @param {mediaWiki.TemplateWizard.ParamButton} button to add the parameter
+			 * @param {mediaWiki.TemplateWizard.ParamField} field to manipulate and set the content of parameter
+			 *   containing the template metadata
+			 */
+			mediaWiki.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.fields[ param ] );
 
 			hasSuggestedOrOptional = hasSuggestedOrOptional || !details.required;
 			$paramList.append( $( '<div>' ).append( button.$element ) );
