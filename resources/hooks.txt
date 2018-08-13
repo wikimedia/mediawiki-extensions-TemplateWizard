@@ -1,0 +1,17 @@
+hooks.txt
+
+This documents TemplateWizard's client-side hooks:
+
+'ext.TemplateWizard.TemplateForm.init': Fired on initialization of TemplateForm, just before
+building the form. Allowing extensions to customize or initalize the template form.
+* templateForm: the invoking TemplateForm instance
+* templateData: the TempldateData of the relevant template containing the template metadata
+
+'ext.TemplateWizard.field.create':  This hook is fired just after creation of a parameter's
+button and field, before they have been added to the DOM. Extending modules can modify
+either as required.
+* param: name of the parameter
+* details: details of the parameter such as label, description or required
+* button: mediaWiki.TemplateWizard.ParamButton to add the parameter
+* field: mediaWiki.TemplateWizard.ParamField to manipulate and set the content of parameter
+
