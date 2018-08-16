@@ -12,6 +12,8 @@
 	"templatewizard-default": "Predetermináu: $1",
 	"templatewizard-desc": "Un complementu pa WikiEditor qu'ufre un asistente d'insertamientu de plantíes",
 	"templatewizard-dialog-title": "Insertar una plantía",
+	"templatewizard-help": "Saber más sobro TemplateWizard",
+	"templatewizard-help-title": "Lleer les páxines d'ayuda de TemplateWizard en MediaWiki.org",
 	"templatewizard-insert": "Insertar",
 	"templatewizard-invalid-title": "Títulu inválidu",
 	"templatewizard-invalid-values": "Una o más de les tos entraes nun casa col formatu esperáu. ¿Quiés editala?",

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Suyama"
+		]
+	},
+	"templatewizard-add-all": "全てのパラメーターを追加",
+	"templatewizard-remove-all": "全てのパラメーターを削除"
+}
