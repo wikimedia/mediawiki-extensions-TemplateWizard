@@ -6,7 +6,7 @@
  * @param {Object} templateData
  */
 mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemplateTitleBar( templateForm, title, templateData ) {
-	var $templateTitle, $description, descriptionMessage, linkButton, trashButton;
+	var $templateTitle, linkButton, trashButton;
 	mediaWiki.TemplateWizard.TemplateTitleBar.parent.call( this );
 
 	// Link button.
@@ -30,26 +30,6 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 	// Template title.
 	$templateTitle = $( '<p>' ).addClass( 'title' ).append( title.getMainText() );
 
-	// Description paragraph.
-	$description = $( '<p>' ).addClass( 'description' );
-	if ( templateData.description ) {
-		$description.text( templateData.description );
-	} else if ( templateData.notemplatedata !== undefined ) {
-		descriptionMessage = 'templatewizard-no-templatedata';
-		$description.addClass( 'no-templatedata' );
-	} else {
-		descriptionMessage = 'templatewizard-no-description';
-		$description.addClass( 'no-description' );
-	}
-	if ( descriptionMessage ) {
-		$description.html(
-			mediaWiki.message(
-				descriptionMessage,
-				'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData'
-			).parse()
-		);
-	}
-
 	// Put them all together.
 	this.$element
 		.addClass( 'ext-templatewizard-templatetitlebar' )
@@ -58,9 +38,57 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 				$templateTitle,
 				this.buttons.$element
 			),
-
-			$description.wrapInner( '<bdi>' )
+			this.getDescriptionElement( templateData )
 		);
 };
 
 OO.inheritClass( mediaWiki.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
+
+/**
+ * Get the description div element, which may contain zero to two paragraphs.
+ * @param {Object} templateData
+ * @return {jQuery}
+ */
+mediaWiki.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( templateData ) {
+	var $description, message, messageClass, hasTemplateData, hasParams;
+
+	// Description div (may contain multiple paragraphs).
+	$description = $( '<div>' ).addClass( 'description' );
+	if ( templateData.description ) {
+		// Normal description, from TemplateData.
+		$description.append( $( '<p>' ).wrapInner( '<bdi>' ).text( templateData.description ) );
+	} else {
+		// No description. This notice may be overruled by one of the messages below.
+		message = 'templatewizard-no-description';
+	}
+
+	// Add notice message where applicable. Note that a template that doesn't have templatedata may still have
+	// parameters because they're being guessed from the template wikitext.
+	messageClass = 'notice';
+	hasTemplateData = ( templateData.notemplatedata === undefined );
+	hasParams = ( templateData.params !== undefined && Object.keys( templateData.params ).length > 0 );
+	if ( !hasTemplateData && !hasParams ) {
+		message = 'templatewizard-no-params-without-td';
+	} else if ( hasTemplateData && !hasParams ) {
+		message = 'templatewizard-no-params-with-td';
+		messageClass = '';
+	} else if ( !hasTemplateData && hasParams ) {
+		message = 'templatewizard-no-templatedata';
+	}
+	// Add the message if required. If no message is defined,
+	// there will have been a template-provided description already appended.
+	if ( message ) {
+		$description.append(
+			$( '<p>' )
+				.addClass( messageClass )
+				.html(
+					mediaWiki.message(
+						message,
+						'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData'
+					).parse()
+				)
+				.wrapInner( '<bdi>' )
+		);
+	}
+	return $description;
+};
