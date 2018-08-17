@@ -1,0 +1,42 @@
+<noinclude>
+<templatedata>
+{
+	"description": "An example template.",
+	"params": {
+		"name": {
+			"label": "Username",
+			"type": "wiki-page-name",
+			"description": "Wiki username of the person."
+		},
+		"photo": {
+			"label": "Photo",
+			"type": "wiki-file-name",
+			"suggested": true
+		},
+		"dob": {
+			"label": "Date of Birth",
+			"description": "When the person was born.",
+			"type": "date",
+			"required": true
+		},
+		"dod": {
+			"label": "Date of Death",
+			"description": "When the person died.",
+			"type": "date",
+			"suggested": true
+		},
+		"citizenship": {
+			"label": "Country of citizenship",
+			"type": "wiki-page-name"
+		}
+	},
+	"paramOrder": [
+		"name",
+		"dob",
+		"dod",
+		"photo",
+		"citizenship"
+	]
+}
+</templatedata>
+<noinclude>
