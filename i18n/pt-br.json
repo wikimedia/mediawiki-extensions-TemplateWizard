@@ -20,6 +20,8 @@
 	"templatewizard-invalid-values-edit": "Editar predefinição",
 	"templatewizard-invalid-values-insert": "Inserir uma predefinição",
 	"templatewizard-no-description": "Não existe nenhuma descrição para esta predefinição.",
+	"templatewizard-no-params-with-td": "Não foi definido nenhum parâmetro na documentação [$1 TemplateData] desta predefinição. Pode inserir a predefinição sem parâmetros.",
+	"templatewizard-no-params-without-td": "Não foi possível determinar se esta predefinição tem parâmetros, devido à ausência de documentação [$1 TemplateData]. Pode inserir a predefinição sem parâmetros.",
 	"templatewizard-no-templatedata": "A predefinição  [$1 TemplateData] não pode ser usada no assistente de predefinições porque <strong>não tem etiquetas de  dados de predefinição. Corrija e tente novamente, por favor. Se acredita que encontrou um defeito, diga-nos na  página de ajuda.",
 	"templatewizard-opens-in-new-tab": "Abre numa aba nova",
 	"templatewizard-parameters-optional": "Parâmetros opcionais",

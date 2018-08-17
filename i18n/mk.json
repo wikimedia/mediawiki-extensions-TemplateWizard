@@ -20,6 +20,8 @@
 	"templatewizard-invalid-values-edit": "Уреди шаблон",
 	"templatewizard-invalid-values-insert": "Вметни шаблон",
 	"templatewizard-no-description": "Не постои опис за овој шаблон.",
+	"templatewizard-no-params-with-td": "Нема параметри во оваа документација на [$1 шаблонските податоци]. Можете да ги вметните шаблоните без параметри.",
+	"templatewizard-no-params-without-td": "Не можев да утврдам параметри за шаблонов поради отсуството на документација за [$1 шаблонските податоци]. Можете да го вметнете шаблонот без параметри.",
 	"templatewizard-no-templatedata": "Параметрите за овој шаблон се автосоздадени поради отсуството на [$1 шаблонски податоци]. Имајте на ум дека овие може да не се точни.",
 	"templatewizard-opens-in-new-tab": "Отвори во ново јазиче",
 	"templatewizard-parameters-optional": "Незадолжителни параметри",

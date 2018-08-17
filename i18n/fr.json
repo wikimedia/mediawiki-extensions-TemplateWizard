@@ -21,6 +21,8 @@
 	"templatewizard-invalid-values-edit": "Modifier le modèle",
 	"templatewizard-invalid-values-insert": "Insérer un modèle",
 	"templatewizard-no-description": "Aucune description n’existe pour ce modèle.",
+	"templatewizard-no-params-with-td": "Il n’y a aucun paramètre défini dans la documentation [$1 TemplateData] de ce modèle. Vous pouvez insérer le modèle sans paramètres.",
+	"templatewizard-no-params-without-td": "Aucun paramètre ne peut être déterminé pour ce modèle, du fait de l’absence de documentation [$1 TemplateData]. Vous pouvez insérer le modèle sans paramètre.",
 	"templatewizard-no-templatedata": "Parce qu'il manque [$1 TemplateData], les paramètres de ce modèle ont été générés automatiquement. Notez bien qu'ils peuvent ne pas correspondre.",
 	"templatewizard-opens-in-new-tab": "Ouvre dans un nouvel onglet",
 	"templatewizard-parameters-optional": "Paramètres optionnels",

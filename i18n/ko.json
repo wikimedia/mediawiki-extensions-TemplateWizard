@@ -19,6 +19,7 @@
 	"templatewizard-invalid-values": "하나 이상의 입력이 예측된 형식과 맞지 않습니다. 편집하시겠습니까?",
 	"templatewizard-invalid-values-edit": "틀 편집",
 	"templatewizard-invalid-values-insert": "틀 삽입",
+	"templatewizard-no-params-with-td": "이 틀의 [$1 틀데이터] 설명문서에 정의된 변수가 없습니다. 변수 없이 틀을 추가해도 됩니다.",
 	"templatewizard-no-templatedata": "[$1 TemplateData]가 존재하지 않기 때문에 이 틀의 변수가 자동으로 생성되었습니다. 정확하지 않을 수도 있음을 숙지해 주십시오.",
 	"templatewizard-opens-in-new-tab": "새 탭에 엽니다",
 	"templatewizard-parameters-optional": "선택적 변수",

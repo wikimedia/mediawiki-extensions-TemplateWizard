@@ -20,6 +20,8 @@
 	"templatewizard-invalid-values-edit": "編輯模板",
 	"templatewizard-invalid-values-insert": "插入模板",
 	"templatewizard-no-description": "已無對於此模板的描述。",
+	"templatewizard-no-params-with-td": "在此模板的 [$1 TemplateData] 說明文件沒有定義任何參數。您可以不帶參數來插入模板。",
+	"templatewizard-no-params-without-td": "因缺少 [$1 TemplateData] 的說明文件緣故，而無法確認此模板的參數。您可以不帶參數來插入模板。",
 	"templatewizard-no-templatedata": "由於缺少[$1 模板資料]，用於此模板的參數已被自動產生。請注意其並非一定準確。",
 	"templatewizard-opens-in-new-tab": "在新分頁開啟",
 	"templatewizard-parameters-optional": "選用參數",
