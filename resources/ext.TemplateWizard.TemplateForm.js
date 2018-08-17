@@ -183,6 +183,18 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName
 };
 
 /**
+ * Set the focus to the top-most empty template field (or does not set any focus if there is no empty field).
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
+	$.each( this.fields, function ( index, field ) {
+		if ( !field.getField().getValue() ) {
+			field.getField().focus();
+			return false;
+		}
+	} );
+};
+
+/**
  * Get the parameter menu and fields list.
  * @param {Object} groupedParams
  * @return {{menu: jQuery, fields: jQuery}}
@@ -194,6 +206,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 		$fields = $( '<div>' ).addClass( 'fields' ),
 		hasSuggestedOrOptional = false,
 		parametersModel = new mediaWiki.TemplateWizard.Model.Parameters( $.extend( {}, groupedParams.suggested, groupedParams.optional ) );
+	parametersModel.connect( templateForm, { afterChangeAll: 'focusTopmostField' } );
 	$.each( groupedParams, function ( groupName, group ) {
 		var paramGroupTitle,
 			hasParams = false,

@@ -30,4 +30,32 @@
 		assert.strictEqual( result, false );
 	} );
 
+	QUnit.test( 'able to do something after changing all', function ( assert ) {
+		var parameters = new mw.TemplateWizard.Model.Parameters(),
+			events = [];
+		// Register event handlers for testing purposes.
+		parameters.on( 'changeAll', function ( newState ) {
+			// Change the result here to something different to below in afterChangeAll,
+			// so we can make sure the latter takes precedence.
+			events.push( 'changeAll: ' + newState );
+		} );
+		parameters.on( 'afterChangeAll', function () {
+			events.push( 'afterChangeAll' );
+		} );
+
+		// Add a bunch of parameters, and enable them.
+		parameters.setOne( 'param1', false );
+		parameters.setOne( 'param2', false );
+		parameters.setOne( 'param3', false );
+		assert.deepEqual( events, [] );
+
+		// Enable one and then all, and ensure our test result is as expected.
+		parameters.setOne( 'param2', true );
+		parameters.setAll( true );
+		assert.deepEqual( events, [
+			'changeAll: true',
+			'afterChangeAll'
+		] );
+	} );
+
 }( mediaWiki ) );

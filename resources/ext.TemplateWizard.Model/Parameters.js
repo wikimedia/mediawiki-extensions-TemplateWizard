@@ -41,6 +41,12 @@ OO.mixinClass( mediaWiki.TemplateWizard.Model.Parameters, OO.EventEmitter );
  * The new value that they're set to.
  */
 
+/**
+ * @event afterChangeAll
+ *
+ * Emitted after all parameters are set to a single value (directly after the 'changeAll' event).
+ */
+
 /* Methods */
 
 /**
@@ -71,4 +77,9 @@ mediaWiki.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState
 		model.parameters[ param ] = newState;
 	} );
 	this.emit( 'changeAll', newState );
+	// HACK: this second event is required so that we can react to the state of all fields *after* they've all been
+	// changed (if we tried to do that with changeAll, we'd not be able to guarantee if any particular event handler was
+	// the last in the queue). See T194436.
+	// @TODO Add this functionality to the model.
+	this.emit( 'afterChangeAll' );
 };
