@@ -18,6 +18,8 @@
 	"templatewizard-invalid-values-edit": "Edytuj szablon",
 	"templatewizard-invalid-values-insert": "Wstaw szablon",
 	"templatewizard-no-description": "Dla tego szablonu nie ma opisu.",
+	"templatewizard-no-params-with-td": "Nie ma żadnych parametrów zdefiniowanych w dokumentacji szablonu [$1 TemplateData]. Możesz wstawić szablon bez parametrów.",
+	"templatewizard-no-params-without-td": "Dla tego szablonu nie można określić parametrów z powodu braku dokumentacji [$1 TemplateData]. Możesz wstawić szablon bez parametrów.",
 	"templatewizard-parameters-optional": "Parametry opcjonalne",
 	"templatewizard-parameters-required": "Wymagane parametry",
 	"templatewizard-parameters-suggested": "Sugerowane parametry",
