@@ -17,12 +17,12 @@ class Hooks {
 	/**
 	 * Add the extension's module.
 	 * @link https://www.mediawiki.org/wiki/Manual:Hooks/EditPage::showEditForm:initial
-	 * @param EditPage &$editPage The current EditPage object.
-	 * @param OutputPage &$output The OutputPage object.
+	 * @param EditPage $editPage The current EditPage object.
+	 * @param OutputPage $output The OutputPage object.
 	 */
 	public static function onEditPageShowEditFormInitial(
-		EditPage &$editPage,
-		OutputPage &$output
+		EditPage $editPage,
+		OutputPage $output
 	) {
 		$output->addModules( 'ext.TemplateWizard' );
 	}
@@ -32,11 +32,11 @@ class Hooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
 	 *
 	 * @param array &$testModules The modules array to add to.
-	 * @param ResourceLoader &$resourceLoader The resource loader.
+	 * @param ResourceLoader $resourceLoader The resource loader.
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules(
-		array &$testModules, ResourceLoader &$resourceLoader
+		array &$testModules, ResourceLoader $resourceLoader
 	) {
 		$testModules['qunit']['tests.ext.TemplateWizard' ] = [
 			'localBasePath' => dirname( __DIR__ ),
