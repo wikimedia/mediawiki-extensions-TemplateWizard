@@ -15,6 +15,7 @@
 			{
 				"allowKeywords": true
 			}
-		]
+		],
+		"max-len": 0
 	}
 }

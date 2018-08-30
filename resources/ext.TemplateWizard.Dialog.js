@@ -3,7 +3,7 @@
  * @class
  * @constructor
  * @extends OO.ui.ProcessDialog
- * @param {object} config
+ * @param {Object} config
  * @cfg {jQuery} [$popupOverlay] Overlay for popups inside the dialog
  */
 mediaWiki.TemplateWizard.Dialog = function mediaWikiTemplateWizardDialog( config ) {

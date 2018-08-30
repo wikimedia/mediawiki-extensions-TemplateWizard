@@ -97,9 +97,9 @@ mediaWiki.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
  * Format a part of the template, based on the TemplateData format string.
  * This method is based on that of the same name in Parsoid:
  * https://github.com/wikimedia/parsoid/blob/9c80dd597a8c057d43598303fd53e90cbed4ffdb/lib/html2wt/WikitextSerializer.js#L405
- * @param {String} format
- * @param {String} value
- * @return {String}
+ * @param {string} format
+ * @param {string} value
+ * @return {string}
  */
 mediaWiki.TemplateWizard.TemplateFormatter.static.formatStringSubst = function ( format, value ) {
 	value = value.trim();

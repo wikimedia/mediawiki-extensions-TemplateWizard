@@ -3,7 +3,7 @@
  * @class
  * @mixins OO.EventEmitter
  * @constructor
- * @param {object} parameters The initial set of parameters.
+ * @param {Object} parameters The initial set of parameters.
  */
 mediaWiki.TemplateWizard.Model.Parameters = function mediaWikiTemplateWizardModelParameters( parameters ) {
 	var model = this;
