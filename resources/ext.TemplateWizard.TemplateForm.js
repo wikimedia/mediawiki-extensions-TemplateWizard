@@ -2,7 +2,7 @@
  * @class
  * @constructor
  * @param {Object} templateData
- * @param {OBject} [config] Configuration options
+ * @param {Object} [config] Configuration options
  * @cfg {jQuery} [$popupOverlay] Overlay for any popups
  */
 mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( templateData, config ) {
@@ -12,7 +12,7 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 		throw new Error( mediaWiki.message( 'templatewizard-invalid-title' ) );
 	}
 	this.format = templateData.format || 'inline';
-	this.fields = {};
+	this.fields = [];
 	this.templateTitleBar = null;
 	this.menuContainer = null;
 	this.$popupOverlay = config.$popupOverlay || this.$element;
@@ -127,17 +127,19 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
-	$.each( this.fields, function ( index, field ) {
+	var i, field;
+	for ( i = 0; i < this.fields.length; i++ ) {
+		field = this.fields[ i ];
 		if ( field.isRequired() ) {
-			return;
+			continue;
 		}
 		field.toggle( show );
-	} );
+	}
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
-	this.fields[ paramName ].toggle( true );
-	this.fields[ paramName ].getField().focus();
+	this.findField( paramName ).toggle( true );
+	this.findField( paramName ).getField().focus();
 };
 
 /**
@@ -145,53 +147,34 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.showField = function ( paramName
  * @param {string} paramName
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
-	var fieldNames, fieldToFocus, thisFieldIndex, f, field;
-	if ( this.fields[ paramName ].isRequired() ) {
+	if ( this.findField( paramName ).isRequired() ) {
 		// Required fields are not allowed to be hidden.
 		return;
 	}
-	this.fields[ paramName ].toggle( false );
+	this.findField( paramName ).toggle( false );
 
-	// Set the focus to the next field (either after or before the one being removed).
-	fieldNames = Object.keys( this.fields );
-	fieldToFocus = null;
-	thisFieldIndex = fieldNames.indexOf( paramName );
-	// 1. First loop forwards to try to find the next visible field.
-	for ( f = thisFieldIndex; f < fieldNames.length; f++ ) {
-		field = this.fields[ fieldNames[ f ] ];
-		if ( field.isVisible() ) {
-			fieldToFocus = field;
-			break;
-		}
-	}
-	// 2. If no next field was found, loop backwards to find a visible field.
-	if ( !fieldToFocus ) {
-		for ( f = thisFieldIndex; f >= 0; f-- ) {
-			field = this.fields[ fieldNames[ f ] ];
-			if ( field.isVisible() ) {
-				fieldToFocus = field;
-				break;
-			}
-		}
-	}
-	if ( fieldToFocus ) {
-		// Note that this.fields contains FieldLayouts, so we need to focus the field contained therein.
-		fieldToFocus.getField().focus();
-	} else {
-		// @TODO Focus the add-remove-all button, once T194436 is resolved.
+	// Move the focus away from the button just clicked.
+	if ( !this.focusTopmostField() ) {
+		this.addRemoveAllButton.focus();
 	}
 };
 
 /**
  * Set the focus to the top-most empty template field (or does not set any focus if there is no empty field).
+ * @return {boolean} True if a field was found to focus, false otherwise.
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
-	$.each( this.fields, function ( index, field ) {
-		if ( !field.getField().getValue() ) {
+	var i, field;
+	// We're not using OO.ui.findFocusable() here because of wanting to limit to empty fields.
+	for ( i = 0; i < this.fields.length; i++ ) {
+		field = this.fields[ i ];
+		// Focus this field if it's visible and empty, and leave the loop.
+		if ( field.isVisible() && !field.getField().getValue() ) {
 			field.getField().focus();
-			return false;
+			return true;
 		}
-	} );
+	}
+	return false;
 };
 
 /**
@@ -234,10 +217,10 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 			);
 
 			// Form field.
-			templateForm.fields[ param ] = new mediaWiki.TemplateWizard.ParamField(
+			templateForm.fields.push( new mediaWiki.TemplateWizard.ParamField(
 				templateForm.getInputWidgetForParam( param, details ),
-				{ label: label, help: description, required: details.required }
-			);
+				{ label: label, help: description, required: details.required, data: { name: param } }
+			) );
 
 			/**
 			 * Fired on initialization of TemplateForm
@@ -254,11 +237,11 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 			 * @param {mediaWiki.TemplateWizard.ParamField} field to manipulate and set the content of parameter
 			 *   containing the template metadata
 			 */
-			mediaWiki.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.fields[ param ] );
+			mediaWiki.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.findField( param ) );
 
 			hasSuggestedOrOptional = hasSuggestedOrOptional || !details.required;
 			$paramList.append( $( '<div>' ).append( button.$element ) );
-			$fields.append( templateForm.fields[ param ].$element );
+			$fields.append( templateForm.findField( param ).$element );
 			hasParams = true;
 		} );
 		if ( hasParams ) {
@@ -327,15 +310,33 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = functio
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
-	var params = {};
-	$.each( this.fields, function ( name, field ) {
+	var i, field, params = {};
+	for ( i = 0; i < this.fields.length; i++ ) {
+		field = this.fields[ i ];
 		if ( !field.isVisible() ) {
 			// Don't include hidden fields.
-			return;
+			continue;
 		}
-		params[ name ] = field.getField().getValue();
-	} );
+		params[ field.getData().name ] = field.getField().getValue();
+	}
 	return params;
+};
+
+/**
+ * Get one of the form's fields.
+ * @param {string} fieldName Name of the field to get.
+ * @return {mediaWiki.TemplateWizard.ParamField|null}
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.findField = function ( fieldName ) {
+	var i, field;
+	for ( i = 0; i < this.fields.length; i++ ) {
+		field = this.fields[ i ];
+		// The 'name' data key is set in TemplateForm.getParamsAndFields().
+		if ( field.getData().name !== undefined && field.getData().name === fieldName ) {
+			return field;
+		}
+	}
+	return null;
 };
 
 /**
@@ -343,20 +344,19 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
  * @return {boolean|OO.ui.Widget}
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
-	var firstValuedField = false;
-	$.each( this.fields, function ( name, field ) {
-		var val = field.getField().getValue(),
-			data = field.getField().getData();
+	var i, field, val, data;
+	for ( i = 0; i < this.fields.length; i++ ) {
+		field = this.fields[ i ];
+		val = field.getField().getValue();
+		data = field.getField().getData();
 		// See if it's got a value and whether that value differs from the autovalue.
 		if ( val &&
 			( data === undefined || data.autovalue === undefined || ( data.autovalue && val !== data.autovalue ) )
 		) {
-			firstValuedField = field;
-			// Leave the loop.
-			return false;
+			return field;
 		}
-	} );
-	return firstValuedField;
+	}
+	return false;
 };
 
 /**
@@ -364,18 +364,18 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = functio
  * @return {boolean|OO.ui.Widget}
  */
 mediaWiki.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
-	var firstInvalidWidget = false;
-	$.each( this.fields, function ( name, field ) {
-		var widget = field.getField();
+	var field, i, widget;
+	for ( i = 0; i < this.fields.length; i++ ) {
+		field = this.fields[ i ];
+		widget = field.getField();
 		// Force the widget to validate.
 		widget.blur();
 		// Then check it's validity.
 		if ( widget.hasFlag( 'invalid' ) ) {
-			firstInvalidWidget = widget;
-			return false;
+			return widget;
 		}
-	} );
-	return firstInvalidWidget;
+	}
+	return false;
 };
 
 mediaWiki.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
