@@ -9,6 +9,11 @@ mediaWiki.TemplateWizard.AddRemoveAllButton = function mediaWikiTemplateAddRemov
 	this.model = model;
 	this.model.connect( this, { changeOne: 'onParametersChangeOne' } );
 	this.setState( false );
+
+	// Listen to any available 'click' event, including 'space' or 'enter'
+	// keydown events that are equivalen to clicking.
+	// The consideration is done in the parent
+	this.connect( this, { click: 'toggleAction' } );
 };
 
 // Inheritance.
@@ -23,13 +28,10 @@ mediaWiki.TemplateWizard.AddRemoveAllButton.prototype.onParametersChangeOne = fu
 };
 
 /**
- * On clicking the button, toggle all parameters on or off and change the button's label.
- * @param {jQuery.Event} e
+ * Toggle all parameters on or off and change the button's label.
  */
-mediaWiki.TemplateWizard.AddRemoveAllButton.prototype.onClick = function ( e ) {
+mediaWiki.TemplateWizard.AddRemoveAllButton.prototype.toggleAction = function () {
 	var newState;
-	// Call parent.
-	mediaWiki.TemplateWizard.AddRemoveAllButton.super.prototype.onClick.apply( this, [ e ] );
 
 	// Change state.
 	newState = !this.allEnabled;
