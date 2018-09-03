@@ -32,6 +32,11 @@ mediaWiki.TemplateWizard.ParamButton = function mediaWikiTemplateWizardParamButt
 		this.isRequired = false;
 		this.isEnabled = false;
 	}
+
+	// Listen to any available 'click' event, including 'space' or 'enter'
+	// keydown events that are equivalen to clicking.
+	// The consideration is done in the parent
+	this.connect( this, { click: 'toggleAction' } );
 };
 
 OO.inheritClass( mediaWiki.TemplateWizard.ParamButton, OO.ui.ButtonWidget );
@@ -44,14 +49,12 @@ mediaWiki.TemplateWizard.ParamButton.prototype.onParametersChangeAll = function 
 };
 
 /**
- * Clicking the button toggles this button, the parameter's field's visibility,
- * and tells the add/remove all button to update itself accordingly.
- * @param {jQuery.Event} e
+ * Toggle the parameter's field's visibility,
+ * and tell the add/remove all button to update itself accordingly.
  */
-mediaWiki.TemplateWizard.ParamButton.prototype.onClick = function ( e ) {
+mediaWiki.TemplateWizard.ParamButton.prototype.toggleAction = function () {
 	var newState;
-	// Call parent.
-	mediaWiki.TemplateWizard.ParamButton.super.prototype.onClick.apply( this, [ e ] );
+
 	// Update the model, this button's state (including the associated field's visibility).
 	newState = !this.isEnabled;
 	this.model.setOne( this.param, newState );
