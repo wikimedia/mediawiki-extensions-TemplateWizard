@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"templatewizard-add-all": "Thêm tất cả các tham số",
+	"templatewizard-cancel": "Hủy bỏ",
+	"templatewizard-close-dialog": "Thoát trình thuật sĩ?",
+	"templatewizard-close-dialog-body": "Nếu thoát trình thuật sĩ, bạn sẽ mất dữ liệu nào đã thêm vào bản mẫu.",
+	"templatewizard-close-dialog-retry": "Hủy thay đổi",
+	"templatewizard-default": "Mặc định: $1",
+	"templatewizard-desc": "Bổ sung trình thuật sĩ chèn bản mẫu vào trình soạn thảo wiki",
+	"templatewizard-dialog-title": "Chèn bản mẫu",
+	"templatewizard-help": "Tìm hiểu thêm về Trình thuật sĩ bản mẫu",
+	"templatewizard-help-title": "Đọc các trang trợ giúp Trình thuật sĩ bản mẫu tại MediaWiki.org",
+	"templatewizard-insert": "Chèn",
+	"templatewizard-invalid-title": "Tựa sai",
+	"templatewizard-invalid-values": "Bạn đã nhập một số thông tin không hợp với định dạng chính xác. Bạn có muốn sửa đổi các tham số?",
+	"templatewizard-invalid-values-edit": "Sửa đổi bản mẫu",
+	"templatewizard-invalid-values-insert": "Chèn bản mẫu",
+	"templatewizard-no-description": "Bản mẫu này thiếu miêu tả.",
+	"templatewizard-no-params-with-td": "[$1 Tài liệu bản mẫu] của bản mẫu này thiếu tham số. Bạn có thể chèn bản mẫu mà không cung cấp tham số nào.",
+	"templatewizard-no-params-without-td": "Bản mẫu này thiếu [$1 tài liệu bản mẫu], nên không thể xác định tham số nào. Bạn có thể chèn bản mẫu mà không cung cấp tham số nào.",
+	"templatewizard-no-templatedata": "Bản mẫu này thiếu [$1 tài liệu bản mẫu] nên các tham số của bản mẫu này được tạo ra tự động. Chú ý rằng các tham số này có thể không chính xác.",
+	"templatewizard-opens-in-new-tab": "Mở trong thẻ mới",
+	"templatewizard-parameters-optional": "Tham số tùy chọn",
+	"templatewizard-parameters-required": "Tham số bắt buộc",
+	"templatewizard-parameters-suggested": "Tham số gợi ý",
+	"templatewizard-placeholder-default": "Mặc định: $1",
+	"templatewizard-placeholder-example": "ví dụ $1",
+	"templatewizard-remove-all": "Xóa tất cả các tham số",
+	"templatewizard-remove-template": "Xóa bản mẫu?",
+	"templatewizard-remove-template-body": "Bản mẫu bạn đang xóa chứa dữ liệu bạn đã nhập. Việc xóa bản mẫu sẽ cũng xóa các thông tin bạn đã nhập vào bản mẫu. Không thể hoàn tác tác vụ này.",
+	"templatewizard-remove-template-retry": "Xóa bản mẫu",
+	"templatewizard-search-placeholder": "Tìm bản mẫu",
+	"templatewizard-use": "Sử dụng"
+}
