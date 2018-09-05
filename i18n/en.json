@@ -37,5 +37,7 @@
 	"templatewizard-parambutton-add-title": "Add the parameter '$1'",
 	"templatewizard-parambutton-remove-title": "Remove the parameter '$1'",
 	"templatewizard-parambutton-required-title": "Required parameter '$1'",
+	"templatewizard-remove-template-title": "Remove template",
+	"templatewizard-link-to-template-title": "View template",
 	"templatewizard-use": "Use"
 }

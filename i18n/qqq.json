@@ -39,5 +39,7 @@
 	"templatewizard-parambutton-add-title": "Tooltip for the button to add a field into the template editor.\n\nParameters:\n* $1 - Parameter name",
 	"templatewizard-parambutton-remove-title": "Tooltip for the button to remove a field from the template editor.\n\nParameters:\n* $1 - Parameter name",
 	"templatewizard-parambutton-required-title": "Tooltip for the title of a required field in the template editor.\n\nParameters:\n* $1 - Parameter name",
+	"templatewizard-remove-template-title": "Tooltip for the button to discard work on the current template and go back to selecting a new template.",
+	"templatewizard-link-to-template-title": "Tooltip for the button that opens the template's page in a new window",
 	"templatewizard-use": "Text for the template search box selection button.\n{{Identical|Use}}"
 }

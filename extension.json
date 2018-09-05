@@ -80,6 +80,8 @@
 				"templatewizard-parambutton-add-title",
 				"templatewizard-parambutton-remove-title",
 				"templatewizard-parambutton-required-title",
+				"templatewizard-remove-template-title",
+				"templatewizard-link-to-template-title",
 				"templatewizard-use"
 			],
 			"dependencies": [

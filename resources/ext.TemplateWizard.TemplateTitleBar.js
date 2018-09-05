@@ -14,6 +14,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	// Link button.
 	linkButton = new OO.ui.ButtonWidget( {
 		label: '',
+		title: mediaWiki.msg( 'templatewizard-link-to-template-title' ),
 		flags: 'progressive',
 		framed: false,
 		icon: 'link',
@@ -22,7 +23,13 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	} );
 
 	// Close button.
-	trashButton = new OO.ui.ButtonWidget( { label: '', flags: 'destructive', framed: false, icon: 'trash' } );
+	trashButton = new OO.ui.ButtonWidget( {
+		label: '',
+		flags: 'destructive',
+		framed: false,
+		icon: 'trash',
+		title: mediaWiki.msg( 'templatewizard-remove-template-title' )
+	} );
 	trashButton.connect( templateForm, { click: 'closeForm' } );
 
 	// Button group.
