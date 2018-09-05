@@ -106,6 +106,11 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
 		addRemoveAllHeight = this.addRemoveAllButton.$element.parent().height();
 		this.addRemoveAllButton.$element.parent().prev().css( 'margin-bottom', addRemoveAllHeight + 'px' );
 	}
+
+	// Set the initial focus on the first focusable, or on the 'add all' button
+	if ( !this.focusTopmostField() ) {
+		this.addRemoveAllButton.focus();
+	}
 };
 
 /**
