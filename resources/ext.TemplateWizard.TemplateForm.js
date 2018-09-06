@@ -108,11 +108,25 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
 	}
 
 	// Set the initial focus on the first focusable, or on the 'add all' button
-	if ( !this.focusTopmostField() ) {
-		this.addRemoveAllButton.focus();
-	}
+	this.attemptFocus();
 };
 
+/**
+ * Attempt to move the focus either to the first existing selected field
+ * or to the select/remove all button, if it exists, or fail gracefully if not.
+ */
+mediaWiki.TemplateWizard.TemplateForm.prototype.attemptFocus = function () {
+	if ( !this.focusTopmostField() ) {
+		// Only focus on add/remove all button if we didn't find a field
+		// And the button is visible at all. It might not be visible
+		// If there are no fields in the template, or if all fields
+		// are required.
+		if ( this.addRemoveAllButton && this.addRemoveAllButton.isVisible() ) {
+			this.addRemoveAllButton.focus();
+		}
+	}
+
+};
 /**
  * Event handler for the 'click' event of the trashButton in TemplateTitleBar.
  * This propagates the event upwards as a 'close' event.
@@ -159,9 +173,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName
 	this.findField( paramName ).toggle( false );
 
 	// Move the focus away from the button just clicked.
-	if ( !this.focusTopmostField() ) {
-		this.addRemoveAllButton.focus();
-	}
+	this.attemptFocus();
 };
 
 /**
@@ -194,7 +206,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 		$fields = $( '<div>' ).addClass( 'fields' ),
 		hasSuggestedOrOptional = false,
 		parametersModel = new mediaWiki.TemplateWizard.Model.Parameters( $.extend( {}, groupedParams.suggested, groupedParams.optional ) );
-	parametersModel.connect( templateForm, { afterChangeAll: 'focusTopmostField' } );
+	parametersModel.connect( templateForm, { afterChangeAll: 'attemptFocus' } );
 	$.each( groupedParams, function ( groupName, group ) {
 		var paramGroupTitle,
 			hasParams = false,
