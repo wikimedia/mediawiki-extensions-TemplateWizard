@@ -77,6 +77,9 @@
 				"templatewizard-remove-template-body",
 				"templatewizard-remove-template-retry",
 				"templatewizard-search-placeholder",
+				"templatewizard-parambutton-add-title",
+				"templatewizard-parambutton-remove-title",
+				"templatewizard-parambutton-required-title",
 				"templatewizard-use"
 			],
 			"dependencies": [

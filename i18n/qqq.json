@@ -36,5 +36,8 @@
 	"templatewizard-remove-template-body": "Message shown below {{msg-mw|templatewizard-remove-template}}.",
 	"templatewizard-remove-template-retry": "Text for button that closes the remove-template error and closes the template, returning to the search form.",
 	"templatewizard-search-placeholder": "Placeholder text in the template search field.",
+	"templatewizard-parambutton-add-title": "Tooltip for the button to add a field into the template editor.\n\nParameters:\n* $1 - Parameter name",
+	"templatewizard-parambutton-remove-title": "Tooltip for the button to remove a field from the template editor.\n\nParameters:\n* $1 - Parameter name",
+	"templatewizard-parambutton-required-title": "Tooltip for the title of a required field in the template editor.\n\nParameters:\n* $1 - Parameter name",
 	"templatewizard-use": "Text for the template search box selection button.\n{{Identical|Use}}"
 }
