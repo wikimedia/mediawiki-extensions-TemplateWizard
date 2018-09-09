@@ -1,26 +1,39 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Amire80"
 		]
 	},
+	"templatewizard-add-all": "הוספת כל הפרמטרים",
 	"templatewizard-cancel": "ביטול",
+	"templatewizard-close-dialog": "לעזוב את האשף?",
+	"templatewizard-close-dialog-body": "עזיבת האשף תוביל לאובדן כל הנותנים שהוספת לתבנית.",
+	"templatewizard-close-dialog-retry": "זריקת שינויים",
 	"templatewizard-default": "ברירת המחדל: $1",
 	"templatewizard-desc": "תוסף להרחבה WikiEditor המספק אשף להוספת תבניות",
 	"templatewizard-dialog-title": "הוספת תבנית",
+	"templatewizard-help": "מידע נוסף על אשף התבניות",
+	"templatewizard-help-title": "לקרוא את דפי העזרה של אשף התבניות באתר mediawiki.org",
 	"templatewizard-insert": "הוספה",
 	"templatewizard-invalid-title": "כותרת בלתי־תקינה",
 	"templatewizard-invalid-values": "אחד או יותר מהשדות אינם תואמים לתסדיר המצופה. האם ברצונך לערוך אותם?",
 	"templatewizard-invalid-values-edit": "עריכת התבנית",
 	"templatewizard-invalid-values-insert": "הוספת התבנית",
 	"templatewizard-no-description": "לא קיים תיאור עבור תבנית זו.",
-	"templatewizard-no-templatedata": "מכיוון שאין [$1 נתוני תבנית], הפרמטרים עבור התבנית הזו נוצרו באופן אוטומטי. נא לשים לב לכך שהפרמטרים עשויים להיות לא מדויקים.",
+	"templatewizard-no-params-with-td": "אין פרמטרים מוגדרים בתיעוד [$1 נתוני התבנית] של התבנית הזאת. באפשרותך להוסיף את התבנית ללא פרמטרים.",
+	"templatewizard-no-params-without-td": "לא היה אפשר להבין מה הפרמטרים של התבנית הזאת בגלל מחסור בתיעוד [$1 נתוני תבנית]. באפשרותך להוסיף את התבנית ללא פרמטרים.",
+	"templatewizard-no-templatedata": "בגלל מחסור ב[$1 נתוני תבנית], הפרמטרים עבור התבנית הזו נוצרו באופן אוטומטי. נא לשים לב לכך שהפרמטרים עשויים להיות לא מדויקים.",
 	"templatewizard-opens-in-new-tab": "ייפתח בלשונית חדשה",
 	"templatewizard-parameters-optional": "פרמטרים אופציונליים",
 	"templatewizard-parameters-required": "פרמטרים נדרשים",
 	"templatewizard-parameters-suggested": "פרמטרים מוצעים",
 	"templatewizard-placeholder-default": "ברירת המחדל: $1",
 	"templatewizard-placeholder-example": "למשל: $1",
+	"templatewizard-remove-all": "הסרת כל הפרמטרים",
+	"templatewizard-remove-template": "להסיר את התבנית?",
+	"templatewizard-remove-template-body": "התבנית שניסית להסיר מכילה נתונים שהזנת. הסרת התבנית תסיר גם את המידע שהוספת לתבנית. הפעולה הזאת בלתי־הפיכה.",
+	"templatewizard-remove-template-retry": "הסרת התבנית",
 	"templatewizard-search-placeholder": "חיפוש תבנית",
 	"templatewizard-use": "שימוש"
 }
