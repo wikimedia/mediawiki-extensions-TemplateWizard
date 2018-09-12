@@ -21,6 +21,8 @@
 	"templatewizard-invalid-values-edit": "تحرير القالب",
 	"templatewizard-invalid-values-insert": "إدراج قالب",
 	"templatewizard-no-description": "لا يوجد وصف لهذا القالب.",
+	"templatewizard-no-params-with-td": "لا توجد وسائط محددة في توثيق [$ 1 بيانات القالب] لقالب، يمكنك إدراج القالب بدون وسائط.",
+	"templatewizard-no-params-without-td": "لا يمكن تحديد أية وسائط بسبب عدم وجود توثيق [$ 1 بيانات القالب] للقالب، يمكنك إدراج القالب بدون وسائط.",
 	"templatewizard-no-templatedata": "نظرا لعدم وجود [TemplateData $1]; تم إنشاء وسائط هذا القالب تلقائيا; يُرجَى العلم بأنها قد لا تكون دقيقة.",
 	"templatewizard-opens-in-new-tab": "يفتح في لسان جديد",
 	"templatewizard-parameters-optional": "وسائط اختيارية",
