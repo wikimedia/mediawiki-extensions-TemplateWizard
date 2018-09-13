@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ladsgroup"
+		]
+	},
+	"templatewizard-cancel": "لغو",
+	"templatewizard-default": "پیش‌فرض: $1",
+	"templatewizard-dialog-title": "افزودن الگو",
+	"templatewizard-help": "درباره جادوگر الگو بیشتر بدانید",
+	"templatewizard-insert": "درج",
+	"templatewizard-invalid-title": "عنوان نامعتبر",
+	"templatewizard-invalid-values-edit": "ویرایش الگو",
+	"templatewizard-invalid-values-insert": "افزودن الگو",
+	"templatewizard-no-description": "توضیحی برای این الگو وجود ندارد.",
+	"templatewizard-opens-in-new-tab": "در برگه جدید باز می‌شود",
+	"templatewizard-parameters-optional": "پارامترهای اختیاری",
+	"templatewizard-parameters-required": "پارامترهای اجباری",
+	"templatewizard-parameters-suggested": "پارامترهای پیشنهادی",
+	"templatewizard-placeholder-default": "پیش‌فرض: $1",
+	"templatewizard-placeholder-example": "مثلا $1",
+	"templatewizard-remove-all": "حذف تمام پارامترها",
+	"templatewizard-remove-template": "حذف الگو؟",
+	"templatewizard-remove-template-retry": "حذف الگو",
+	"templatewizard-search-placeholder": "جستجو برای الگو",
+	"templatewizard-use": "استفاده"
+}
