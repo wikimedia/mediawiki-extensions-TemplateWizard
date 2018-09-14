@@ -34,5 +34,8 @@
 	"templatewizard-remove-template-body": "The template you are attempting to remove contains data you have input. Removing the template will also remove the information you have added to the template. This action is not reversible.",
 	"templatewizard-remove-template-retry": "Remove template",
 	"templatewizard-search-placeholder": "Search for a template",
+	"templatewizard-parambutton-add-title": "Add the parameter '$1'",
+	"templatewizard-parambutton-remove-title": "Remove the parameter '$1'",
+	"templatewizard-parambutton-required-title": "Required parameter '$1'",
 	"templatewizard-use": "Use"
 }
