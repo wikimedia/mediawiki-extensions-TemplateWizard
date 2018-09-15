@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"templatewizard-parambutton-add-title": "Aggiunge 'u parametre '$1'",
+	"templatewizard-parambutton-remove-title": "Live 'u parametre '$1'",
+	"templatewizard-parambutton-required-title": "Parametre richieste '$1'"
+}

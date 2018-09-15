@@ -35,5 +35,8 @@
 	"templatewizard-remove-template-body": "Le modèle que vous essayez de supprimer contient les données que vous avez saisies. Supprimer ce modèle supprimera également les informations que vous avez ajoutées au modèle. Cette action est irréversible.",
 	"templatewizard-remove-template-retry": "Supprimer le modèle",
 	"templatewizard-search-placeholder": "Rechercher un modèle",
+	"templatewizard-parambutton-add-title": "Ajouter le paramètre '$1'",
+	"templatewizard-parambutton-remove-title": "Supprimer le paramètre '$1'",
+	"templatewizard-parambutton-required-title": "Paramètre '$1' obligatoire",
 	"templatewizard-use": "Utiliser"
 }

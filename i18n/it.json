@@ -17,5 +17,8 @@
 	"templatewizard-placeholder-example": "Esempio: $1",
 	"templatewizard-remove-all": "Rimuovi tutti i parametri",
 	"templatewizard-remove-template-retry": "Rimuovi template",
-	"templatewizard-search-placeholder": "Cerca un template"
+	"templatewizard-search-placeholder": "Cerca un template",
+	"templatewizard-parambutton-add-title": "Aggiungi il parametro '$1'",
+	"templatewizard-parambutton-remove-title": "Rimuovi il parametro '$1'",
+	"templatewizard-parambutton-required-title": "Parametro obbligatorio '$1'"
 }

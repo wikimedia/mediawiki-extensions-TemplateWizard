@@ -35,5 +35,8 @@
 	"templatewizard-remove-template-body": "התבנית שניסית להסיר מכילה נתונים שהזנת. הסרת התבנית תסיר גם את המידע שהוספת לתבנית. הפעולה הזאת בלתי־הפיכה.",
 	"templatewizard-remove-template-retry": "הסרת התבנית",
 	"templatewizard-search-placeholder": "חיפוש תבנית",
+	"templatewizard-parambutton-add-title": "הוספת הפרמטר \"$1\"",
+	"templatewizard-parambutton-remove-title": "הסרת הפרמטר \"$1\"",
+	"templatewizard-parambutton-required-title": "פרמטר נדרש \"$1\"",
 	"templatewizard-use": "שימוש"
 }

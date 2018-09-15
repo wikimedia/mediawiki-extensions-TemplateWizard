@@ -34,5 +34,8 @@
 	"templatewizard-remove-template-body": "A predefinição que está tentando remover contém dados que você introduziu. Remover a predefinição também removerá a informação que adicionou à predefinição. Esta operação é irreversível.",
 	"templatewizard-remove-template-retry": "Remover predefinição",
 	"templatewizard-search-placeholder": "Procurar uma predefinição",
+	"templatewizard-parambutton-add-title": "Adicione o parâmetro '$1'",
+	"templatewizard-parambutton-remove-title": "Remova o parâmetro '$1'",
+	"templatewizard-parambutton-required-title": "Parâmetro obrigatório '$1'",
 	"templatewizard-use": "Usar"
 }

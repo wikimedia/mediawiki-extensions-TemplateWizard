@@ -34,5 +34,8 @@
 	"templatewizard-remove-template-body": "Die Vorlage, die du versuchst zu entfernen, enthält von dir eingegebene Daten. Das Entfernen der Vorlage entfernt auch die von dir hinzugefügten Informationen. Diese Aktion ist unumkehrbar.",
 	"templatewizard-remove-template-retry": "Vorlage entfernen",
 	"templatewizard-search-placeholder": "Nach einer Vorlage suchen",
+	"templatewizard-parambutton-add-title": "Den Parameter „$1“ hinzufügen",
+	"templatewizard-parambutton-remove-title": "Den Parameter „$1“ entfernen",
+	"templatewizard-parambutton-required-title": "Erforderlicher Parameter „$1“",
 	"templatewizard-use": "Verwenden"
 }

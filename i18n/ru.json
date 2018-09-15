@@ -36,5 +36,8 @@
 	"templatewizard-remove-template-body": "Шаблон, который вы хотите удалить, содержит введённые вами данные. Удаление шаблона также удалит информацию, которую вы добавили в него. Это действие нельзя будет отменить.",
 	"templatewizard-remove-template-retry": "Удалить шаблон",
 	"templatewizard-search-placeholder": "Искать шаблон",
+	"templatewizard-parambutton-add-title": "Добавить параметр '$1'",
+	"templatewizard-parambutton-remove-title": "Удалить параметр '$1'",
+	"templatewizard-parambutton-required-title": "Требуется параметр '$1'",
 	"templatewizard-use": "Использовать"
 }
