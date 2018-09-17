@@ -20,6 +20,8 @@
 	"templatewizard-invalid-values-edit": "Editar la plantía",
 	"templatewizard-invalid-values-insert": "Inxertar una plantía",
 	"templatewizard-no-description": "Nun hai descripción pa esta plantía.",
+	"templatewizard-no-params-with-td": "Nun hai parámetros definíos en la documentación de [$1 TemplateData] d'esta plantía. Puedes insertar la plantía ensin parámetros.",
+	"templatewizard-no-params-without-td": "Nun pudieron determinase los parámetros d'esta plantía pola ausencia de documentación de [$1 TemplateData]. Puedes insertar la plantía ensin parámetros.",
 	"templatewizard-no-templatedata": "Por falta de [$1 TemplateData], los parámetros d'esta plantía xeneráronse automáticamente. Ten en cuenta que podríen tener imprecisiones.",
 	"templatewizard-opens-in-new-tab": "Ábrese nuna llingüeta nueva",
 	"templatewizard-parameters-optional": "Parámetros opcionales",
@@ -32,5 +34,8 @@
 	"templatewizard-remove-template-body": "La plantía que tas tentando desaniciar contien datos qu'añadisti. Si desanicies la plantía desaniciaráse tamién la información qu'añadisti a la plantía. Esta aición nun ye reversible.",
 	"templatewizard-remove-template-retry": "Desaniciar plantía",
 	"templatewizard-search-placeholder": "Buscar una plantía",
+	"templatewizard-parambutton-add-title": "Añadir el parámetru '$1'",
+	"templatewizard-parambutton-remove-title": "Desaniciar r el parámetru '$1'",
+	"templatewizard-parambutton-required-title": "Parámetru riquíu '$1'",
 	"templatewizard-use": "Usar"
 }

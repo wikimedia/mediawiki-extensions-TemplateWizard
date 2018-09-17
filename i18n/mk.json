@@ -34,5 +34,8 @@
 	"templatewizard-remove-template-body": "Шаблонот што сакате да го отстраните содржи податоци што сте ги внеле. Отстранувајќи го ќе ги отстраните и нив. Ова дејство е неповратно.",
 	"templatewizard-remove-template-retry": "Отстрани шаблон",
 	"templatewizard-search-placeholder": "Пребарај шаблон",
+	"templatewizard-parambutton-add-title": "Додајте го параметарот „$1“",
+	"templatewizard-parambutton-remove-title": "Отстранете го параметарот „$1“",
+	"templatewizard-parambutton-required-title": "Се бара параметарот „$1“",
 	"templatewizard-use": "Употреба"
 }

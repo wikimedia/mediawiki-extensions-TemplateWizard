@@ -23,5 +23,7 @@
 	"templatewizard-remove-template": "Schabloun ewechhuelen?",
 	"templatewizard-remove-template-retry": "Schabloun ewechhuelen",
 	"templatewizard-search-placeholder": "No enger Schabloun sichen",
+	"templatewizard-parambutton-remove-title": "De Parameter '$1' ewechhuelen",
+	"templatewizard-parambutton-required-title": "Obligatoresche Parameter '$1'",
 	"templatewizard-use": "Benotzen"
 }

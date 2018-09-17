@@ -36,5 +36,8 @@
 	"templatewizard-remove-template-body": "يحتوي القالب الذي تحاول إزالته على بيانات أدخلتها، ستؤدي إزالة القالب أيضا إلى إزالة المعلومات التي أضفتها إلى القالب هذا الإجراء غير قابل للعكس.",
 	"templatewizard-remove-template-retry": "إزالة القالب",
 	"templatewizard-search-placeholder": "البحث عن قالب",
+	"templatewizard-parambutton-add-title": "أضف الوسيط \"$1\"",
+	"templatewizard-parambutton-remove-title": "أزل الوسيط \"$1\"",
+	"templatewizard-parambutton-required-title": "الوسيط المطلوب \"$1\"",
 	"templatewizard-use": "استعمال"
 }

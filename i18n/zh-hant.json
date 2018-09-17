@@ -34,5 +34,8 @@
 	"templatewizard-remove-template-body": "您所嘗試移除的模板，含有您曾輸入過的資料。移除模板將會一同移除您曾添加至模板裡的資訊。另外此項操作不可還原。",
 	"templatewizard-remove-template-retry": "移除模板",
 	"templatewizard-search-placeholder": "模板搜尋",
+	"templatewizard-parambutton-add-title": "添加參數「$1」",
+	"templatewizard-parambutton-remove-title": "移除參數「$1」",
+	"templatewizard-parambutton-required-title": "所需參數「$1」",
 	"templatewizard-use": "使用"
 }

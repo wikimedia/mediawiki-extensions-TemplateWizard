@@ -31,5 +31,6 @@
 	"templatewizard-remove-template-body": "Szablon, który próbujesz usunąć, zawiera wprowadzone przez Ciebie dane. Usunięcie szablonu spowoduje również usunięcie informacji dodanych do szablonu. To działanie jest nieodwracalne.",
 	"templatewizard-remove-template-retry": "Usuń szablon",
 	"templatewizard-search-placeholder": "Wyszukaj szablon",
+	"templatewizard-parambutton-required-title": "Wymagany parametr '$1'",
 	"templatewizard-use": "Użyj"
 }
