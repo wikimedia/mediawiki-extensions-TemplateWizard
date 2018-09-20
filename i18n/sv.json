@@ -30,5 +30,8 @@
 	"templatewizard-remove-template-body": "Mallen du försöker ta bort innehåller data som du har lagt till. När du tar bort mallen kommer även informationen du lade till i mallen att tas bort. Denna handling kan inte ångras.",
 	"templatewizard-remove-template-retry": "Ta bort mall",
 	"templatewizard-search-placeholder": "Sök efter en mall",
+	"templatewizard-parambutton-add-title": "Lägg till parametern \"$1\"",
+	"templatewizard-parambutton-remove-title": "Ta bort parametern \"$1\"",
+	"templatewizard-parambutton-required-title": "Parametern \"$1\" är nödvändig",
 	"templatewizard-use": "Använd"
 }
