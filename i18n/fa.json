@@ -23,5 +23,8 @@
 	"templatewizard-remove-template": "حذف الگو؟",
 	"templatewizard-remove-template-retry": "حذف الگو",
 	"templatewizard-search-placeholder": "جستجو برای الگو",
+	"templatewizard-parambutton-add-title": "افزودن پارامتر «$1»",
+	"templatewizard-parambutton-remove-title": "حذف پارامتر «$1»",
+	"templatewizard-parambutton-required-title": "پارامتر اجباری «$1»",
 	"templatewizard-use": "استفاده"
 }
