@@ -73,13 +73,15 @@ mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
  */
 mw.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState ) {
 	var model = this;
-	$.each( this.parameters, function ( param, existingState ) { // eslint-disable-line no-unused-vars
+	// eslint-disable-next-line no-unused-vars
+	$.each( this.parameters, function ( param, existingState ) {
 		model.parameters[ param ] = newState;
 	} );
 	this.emit( 'changeAll', newState );
-	// HACK: this second event is required so that we can react to the state of all fields *after* they've all been
-	// changed (if we tried to do that with changeAll, we'd not be able to guarantee if any particular event handler was
-	// the last in the queue). See T194436.
+	// HACK: this second event is required so that we can react to the
+	// state of all fields *after* they've all been changed
+	// (if we tried to do that with changeAll, we'd not be able to guarantee
+	// if any particular event handler was the last in the queue). See T194436.
 	// @TODO Add this functionality to the model.
 	this.emit( 'afterChangeAll' );
 };

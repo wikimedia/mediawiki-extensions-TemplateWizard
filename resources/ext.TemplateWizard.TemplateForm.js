@@ -25,7 +25,8 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 	 * @event ext_TemplateWizard_TemplateForm_init
 	 * @member mw.hook
 	 * @param {mw.TemplateWizard.TemplateForm} templateForm the invoking TemplateForm instance
-	 * @param {Object} templateData The TempldateData of the relevant template containing the template metadata
+	 * @param {Object} templateData The TempldateData of the relevant template containing
+	 *  the template metadata
 	 */
 	mediaWiki.hook( 'ext.TemplateWizard.TemplateForm.init' ).fire( this, templateData );
 };
@@ -57,7 +58,8 @@ mw.TemplateWizard.TemplateForm.prototype.getFormat = function () {
 };
 
 /**
- * Get the whole template-editing form (both the field-list left menu and the right-hand form panel).
+ * Get the whole template-editing form
+ * (both the field-list left menu and the right-hand form panel).
  * @param {Object} templateData
  * @return {OO.ui.StackLayout}
  */
@@ -162,7 +164,8 @@ mw.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
 };
 
 /**
- * Hide the form field for the given parameter, and set the focus to the next or previous field if possible.
+ * Hide the form field for the given parameter,
+ * and set the focus to the next or previous field if possible.
  * @param {string} paramName
  */
 mw.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
@@ -177,7 +180,8 @@ mw.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
 };
 
 /**
- * Set the focus to the top-most empty template field (or does not set any focus if there is no empty field).
+ * Set the focus to the top-most empty template field
+ * (or does not set any focus if there is no empty field).
  * @return {boolean} True if a field was found to focus, false otherwise.
  */
 mw.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
@@ -205,7 +209,9 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 		$paramMenuWrapper = $( '<div>' ).addClass( 'parameters' ).append( $paramMenu ),
 		$fields = $( '<div>' ).addClass( 'fields' ),
 		hasSuggestedOrOptional = false,
-		parametersModel = new mw.TemplateWizard.Model.Parameters( $.extend( {}, groupedParams.suggested, groupedParams.optional ) );
+		parametersModel = new mw.TemplateWizard.Model.Parameters(
+			$.extend( {}, groupedParams.suggested, groupedParams.optional )
+		);
 	parametersModel.connect( templateForm, { afterChangeAll: 'attemptFocus' } );
 	$.each( groupedParams, function ( groupName, group ) {
 		var paramGroupTitle,
@@ -236,7 +242,12 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 			// Form field.
 			templateForm.fields.push( new mw.TemplateWizard.ParamField(
 				templateForm.getInputWidgetForParam( param, details ),
-				{ label: label, help: description, required: details.required, data: { name: param } }
+				{
+					label: label,
+					help: description,
+					required: details.required,
+					data: { name: param }
+				}
 			) );
 
 			/**
@@ -249,10 +260,11 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 			 * @event ext_TemplateWizard_field_create
 			 * @member mw.hook
 			 * @param {string} param name of the parameter
-			 * @param {Object} details The TempldateData of the relevant template containing the template metadata
+			 * @param {Object} details The TempldateData of the relevant template
+			 *  containing the template metadata
 			 * @param {mw.TemplateWizard.ParamButton} button to add the parameter
-			 * @param {mw.TemplateWizard.ParamField} field to manipulate and set the content of parameter
-			 *   containing the template metadata
+			 * @param {mw.TemplateWizard.ParamField} field to manipulate and set the
+			 *  content of parameter containing the template metadata
 			 */
 			mediaWiki.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.findField( param ) );
 
@@ -284,7 +296,9 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 	};
 };
 
-mw.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function ( param, paramDefinition ) {
+mw.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function (
+	param, paramDefinition
+) {
 	var widget, config = { name: param, $overlay: this.$popupOverlay };
 	if ( paramDefinition.autovalue ) {
 		config.value = paramDefinition.autovalue;
@@ -367,8 +381,12 @@ mw.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
 		val = field.getField().getValue();
 		data = field.getField().getData();
 		// See if it's got a value and whether that value differs from the autovalue.
-		if ( val &&
-			( data === undefined || data.autovalue === undefined || ( data.autovalue && val !== data.autovalue ) )
+		if (
+			val &&
+			(
+				data === undefined || data.autovalue === undefined ||
+				( data.autovalue && val !== data.autovalue )
+			)
 		) {
 			return field;
 		}

@@ -8,7 +8,9 @@
  * @param {Object} config
  * @cfg {boolean} [required] Parameter is required
  */
-mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton( templateForm, param, model, config ) {
+mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton(
+	templateForm, param, model, config
+) {
 	// Config.
 	config = $.extend( {
 		icon: 'add',

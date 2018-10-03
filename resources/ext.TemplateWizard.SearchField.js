@@ -54,7 +54,9 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	this.templateData = response.pages;
 	$.each( this.templateData, function ( pageId, templateData ) {
 		// Store the main text as well, so we don't have to re-do this.
-		templateData.titleMainText = mediaWiki.Title.newFromText( templateData.title ).getMainText();
+		templateData.titleMainText = mediaWiki.Title
+			.newFromText( templateData.title )
+			.getMainText();
 		searchResults.push( {
 			data: templateData,
 			label: templateData.titleMainText,

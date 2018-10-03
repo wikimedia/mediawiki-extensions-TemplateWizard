@@ -49,7 +49,8 @@ mw.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
 mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 	// Prevent template insertion (we know there's only one 'insert' action).
 	this.getActions().get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( true );
-	// @TODO: When OOUI supports hidden actions, this should be made one. Until then, we hide it manually.
+	// @TODO: When OOUI supports hidden actions, this should be made one.
+	// Until then, we hide it manually.
 	this.getActions().get( { actions: [ 'closeTemplate' ] } )[ 0 ].$element.hide();
 
 	// Keep track of whether we're ignoring fields (and closing or inserting the template),
@@ -74,7 +75,9 @@ mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 	if ( this.templateForm ) {
 		this.templateForm.disconnect( this );
 	}
-	this.templateForm = new mw.TemplateWizard.TemplateForm( templateData, { $popupOverlay: this.$popupOverlay } );
+	this.templateForm = new mw.TemplateWizard.TemplateForm(
+		templateData, { $popupOverlay: this.$popupOverlay }
+	);
 	this.templateForm.connect( this, { close: 'closeTemplate' } );
 
 	this.$body.html( this.templateForm.$element );
@@ -136,7 +139,8 @@ mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
  */
 mw.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data ) {
 	if ( this.firstFieldWithValue && this.currentAction === 'closeTemplate' ) {
-		// Change the action here so the parent's onRetryButtonClick won't execute the insert action.
+		// Change the action here so the parent's onRetryButtonClick
+		// won't execute the insert action.
 		this.currentAction = 'search';
 		this.showSearchForm();
 	} else 	if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {

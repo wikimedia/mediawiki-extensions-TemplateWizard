@@ -5,7 +5,9 @@
  * @param {mw.Title} title
  * @param {Object} templateData
  */
-mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar( templateForm, title, templateData ) {
+mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
+	templateForm, title, templateData
+) {
 	var $templateTitle, linkButton, trashButton;
 	mw.TemplateWizard.TemplateTitleBar.parent.call( this );
 
@@ -62,11 +64,15 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 		message = 'templatewizard-no-description';
 	}
 
-	// Add notice message where applicable. Note that a template that doesn't have templatedata may still have
-	// parameters because they're being guessed from the template wikitext.
+	// Add notice message where applicable. Note that a template that
+	// doesn't have templatedata may still have parameters because they're
+	// being guessed from the template wikitext.
 	messageClass = 'notice';
 	hasTemplateData = ( templateData.notemplatedata === undefined );
-	hasParams = ( templateData.params !== undefined && Object.keys( templateData.params ).length > 0 );
+	hasParams = (
+		templateData.params !== undefined &&
+		Object.keys( templateData.params ).length > 0
+	);
 	if ( !hasTemplateData && !hasParams ) {
 		message = 'templatewizard-no-params-without-td';
 	} else if ( hasTemplateData && !hasParams ) {

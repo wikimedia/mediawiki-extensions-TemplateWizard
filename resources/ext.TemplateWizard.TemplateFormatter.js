@@ -60,7 +60,8 @@ mw.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
 	var template, format,
 		formatter = this;
 
-	// Before building the template, fall back to inline format if there are no parameters (T190123).
+	// Before building the template, fall back to inline format
+	// if there are no parameters (T190123).
 	if ( $.isEmptyObject( this.params ) ) {
 		this.setFormat( 'inline' );
 	}
