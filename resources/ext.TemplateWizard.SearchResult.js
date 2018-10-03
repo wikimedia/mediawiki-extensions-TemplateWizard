@@ -4,9 +4,9 @@
  * @param {Object} [config] Configuration options.
  * @cfg {jQuery|string} [description=''] Search result description
  */
-mediaWiki.TemplateWizard.SearchResult = function mediaWikiTemplateWizardSearchResult( config ) {
+mw.TemplateWizard.SearchResult = function MWTemplateWizardSearchResult( config ) {
 	var $description;
-	mediaWiki.TemplateWizard.SearchResult.super.call( this, config );
+	mw.TemplateWizard.SearchResult.super.call( this, config );
 
 	// Description.
 	$description = $( '<span>' )
@@ -15,4 +15,4 @@ mediaWiki.TemplateWizard.SearchResult = function mediaWikiTemplateWizardSearchRe
 	this.$element.append( $description );
 };
 
-OO.inheritClass( mediaWiki.TemplateWizard.SearchResult, OO.ui.MenuOptionWidget );
+OO.inheritClass( mw.TemplateWizard.SearchResult, OO.ui.MenuOptionWidget );

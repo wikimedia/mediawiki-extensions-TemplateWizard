@@ -5,7 +5,7 @@
  * @constructor
  * @param {Object} parameters The initial set of parameters.
  */
-mediaWiki.TemplateWizard.Model.Parameters = function mediaWikiTemplateWizardModelParameters( parameters ) {
+mw.TemplateWizard.Model.Parameters = function MWTemplateWizardModelParameters( parameters ) {
 	var model = this;
 	// Mixin constructor
 	OO.EventEmitter.call( this );
@@ -19,7 +19,7 @@ mediaWiki.TemplateWizard.Model.Parameters = function mediaWikiTemplateWizardMode
 
 /* Set up. */
 
-OO.mixinClass( mediaWiki.TemplateWizard.Model.Parameters, OO.EventEmitter );
+OO.mixinClass( mw.TemplateWizard.Model.Parameters, OO.EventEmitter );
 
 /* Events */
 
@@ -54,7 +54,7 @@ OO.mixinClass( mediaWiki.TemplateWizard.Model.Parameters, OO.EventEmitter );
  * @param {string} name The parameter name.
  * @param {bool} state The state to set it to.
  */
-mediaWiki.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
+mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
 	var allEnabled = true;
 	// Don't do anything if the parameter is already in this state.
 	if ( this.parameters[ name ] === state ) {
@@ -71,7 +71,7 @@ mediaWiki.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, st
  * Set the state of all parameters and emit a changeAll event.
  * @param {bool} newState
  */
-mediaWiki.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState ) {
+mw.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState ) {
 	var model = this;
 	$.each( this.parameters, function ( param, existingState ) { // eslint-disable-line no-unused-vars
 		model.parameters[ param ] = newState;

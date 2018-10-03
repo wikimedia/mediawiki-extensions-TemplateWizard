@@ -5,8 +5,8 @@
  * @param {Object} [config] Configuration options
  * @cfg {jQuery} [$popupOverlay] Overlay for any popups
  */
-mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplateForm( templateData, config ) {
-	mediaWiki.TemplateWizard.TemplateForm.parent.call( this );
+mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( templateData, config ) {
+	mw.TemplateWizard.TemplateForm.parent.call( this );
 	this.title = mediaWiki.Title.newFromText( templateData.title, mediaWiki.config.get( 'wgNamespaceIds' ).template );
 	if ( !this.title ) {
 		throw new Error( mediaWiki.message( 'templatewizard-invalid-title' ) );
@@ -24,7 +24,7 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 	 * Allowing extensions to customize or initalize the template form.
 	 * @event ext_TemplateWizard_TemplateForm_init
 	 * @member mw.hook
-	 * @param {mediaWiki.TemplateWizard.TemplateForm} templateForm the invoking TemplateForm instance
+	 * @param {mw.TemplateWizard.TemplateForm} templateForm the invoking TemplateForm instance
 	 * @param {Object} templateData The TempldateData of the relevant template containing the template metadata
 	 */
 	mediaWiki.hook( 'ext.TemplateWizard.TemplateForm.init' ).fire( this, templateData );
@@ -32,7 +32,7 @@ mediaWiki.TemplateWizard.TemplateForm = function mediaWikiTemplateWizardTemplate
 
 /* Setup */
 
-OO.inheritClass( mediaWiki.TemplateWizard.TemplateForm, OO.ui.Widget );
+OO.inheritClass( mw.TemplateWizard.TemplateForm, OO.ui.Widget );
 
 /* Events */
 
@@ -48,11 +48,11 @@ OO.inheritClass( mediaWiki.TemplateWizard.TemplateForm, OO.ui.Widget );
  * Get the form's current title.
  * @return {string}
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.getTitle = function () {
+mw.TemplateWizard.TemplateForm.prototype.getTitle = function () {
 	return this.title;
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.getFormat = function () {
+mw.TemplateWizard.TemplateForm.prototype.getFormat = function () {
 	return this.format;
 };
 
@@ -61,11 +61,11 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getFormat = function () {
  * @param {Object} templateData
  * @return {OO.ui.StackLayout}
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
+mw.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
 	var menuLayout, groupedParams, paramsAndFields, fullLayout;
 
 	// Title bar.
-	this.templateTitleBar = new mediaWiki.TemplateWizard.TemplateTitleBar(
+	this.templateTitleBar = new mw.TemplateWizard.TemplateTitleBar(
 		this,
 		this.title,
 		templateData
@@ -91,7 +91,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getForm = function ( templateDat
 /**
  * Called after the TemplateForm has been attached to the DOM.
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
+mw.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
 	var titleBarHeight, addRemoveAllHeight;
 
 	// Set the top margin of the main double-panel area to match the height of the titlebar.
@@ -115,7 +115,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.afterAttached = function () {
  * Attempt to move the focus either to the first existing selected field
  * or to the select/remove all button, if it exists, or fail gracefully if not.
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.attemptFocus = function () {
+mw.TemplateWizard.TemplateForm.prototype.attemptFocus = function () {
 	if ( !this.focusTopmostField() ) {
 		// Only focus on add/remove all button if we didn't find a field
 		// And the button is visible at all. It might not be visible
@@ -131,11 +131,11 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.attemptFocus = function () {
  * Event handler for the 'click' event of the trashButton in TemplateTitleBar.
  * This propagates the event upwards as a 'close' event.
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.closeForm = function () {
+mw.TemplateWizard.TemplateForm.prototype.closeForm = function () {
 	this.emit( 'close' );
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
+mw.TemplateWizard.TemplateForm.prototype.getHeader = function () {
 	var $link;
 	$link = $( '<a>' )
 		.attr( 'target', '_blank' )
@@ -145,7 +145,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getHeader = function () {
 	return $( '<h2>' ).html( $link );
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
+mw.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
 	var i, field;
 	for ( i = 0; i < this.fields.length; i++ ) {
 		field = this.fields[ i ];
@@ -156,7 +156,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show )
 	}
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
+mw.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
 	this.findField( paramName ).toggle( true );
 	this.findField( paramName ).getField().focus();
 };
@@ -165,7 +165,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.showField = function ( paramName
  * Hide the form field for the given parameter, and set the focus to the next or previous field if possible.
  * @param {string} paramName
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
+mw.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
 	if ( this.findField( paramName ).isRequired() ) {
 		// Required fields are not allowed to be hidden.
 		return;
@@ -180,7 +180,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName
  * Set the focus to the top-most empty template field (or does not set any focus if there is no empty field).
  * @return {boolean} True if a field was found to focus, false otherwise.
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
+mw.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
 	var i, field;
 	// We're not using OO.ui.findFocusable() here because of wanting to limit to empty fields.
 	for ( i = 0; i < this.fields.length; i++ ) {
@@ -199,13 +199,13 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () 
  * @param {Object} groupedParams
  * @return {{menu: jQuery, fields: jQuery}}
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( groupedParams ) {
+mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( groupedParams ) {
 	var templateForm = this,
 		$paramMenu = $( '<div>' ).addClass( 'parameter-list' ),
 		$paramMenuWrapper = $( '<div>' ).addClass( 'parameters' ).append( $paramMenu ),
 		$fields = $( '<div>' ).addClass( 'fields' ),
 		hasSuggestedOrOptional = false,
-		parametersModel = new mediaWiki.TemplateWizard.Model.Parameters( $.extend( {}, groupedParams.suggested, groupedParams.optional ) );
+		parametersModel = new mw.TemplateWizard.Model.Parameters( $.extend( {}, groupedParams.suggested, groupedParams.optional ) );
 	parametersModel.connect( templateForm, { afterChangeAll: 'attemptFocus' } );
 	$.each( groupedParams, function ( groupName, group ) {
 		var paramGroupTitle,
@@ -226,7 +226,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 				label = details.label;
 			}
 			// Button.
-			button = new mediaWiki.TemplateWizard.ParamButton(
+			button = new mw.TemplateWizard.ParamButton(
 				templateForm,
 				param,
 				parametersModel,
@@ -234,7 +234,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 			);
 
 			// Form field.
-			templateForm.fields.push( new mediaWiki.TemplateWizard.ParamField(
+			templateForm.fields.push( new mw.TemplateWizard.ParamField(
 				templateForm.getInputWidgetForParam( param, details ),
 				{ label: label, help: description, required: details.required, data: { name: param } }
 			) );
@@ -250,8 +250,8 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 			 * @member mw.hook
 			 * @param {string} param name of the parameter
 			 * @param {Object} details The TempldateData of the relevant template containing the template metadata
-			 * @param {mediaWiki.TemplateWizard.ParamButton} button to add the parameter
-			 * @param {mediaWiki.TemplateWizard.ParamField} field to manipulate and set the content of parameter
+			 * @param {mw.TemplateWizard.ParamButton} button to add the parameter
+			 * @param {mw.TemplateWizard.ParamField} field to manipulate and set the content of parameter
 			 *   containing the template metadata
 			 */
 			mediaWiki.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.findField( param ) );
@@ -275,7 +275,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 	} );
 	// Add the add/remove all fields button.
 	if ( hasSuggestedOrOptional ) {
-		this.addRemoveAllButton = new mediaWiki.TemplateWizard.AddRemoveAllButton( parametersModel );
+		this.addRemoveAllButton = new mw.TemplateWizard.AddRemoveAllButton( parametersModel );
 		$paramMenuWrapper.append( $( '<div>' ).addClass( 'add-remove-all' ).append( this.addRemoveAllButton.$element ) );
 	}
 	return {
@@ -284,7 +284,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( 
 	};
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function ( param, paramDefinition ) {
+mw.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function ( param, paramDefinition ) {
 	var widget, config = { name: param, $overlay: this.$popupOverlay };
 	if ( paramDefinition.autovalue ) {
 		config.value = paramDefinition.autovalue;
@@ -326,7 +326,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = functio
 	return widget;
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
+mw.TemplateWizard.TemplateForm.prototype.getParameters = function () {
 	var i, field, params = {};
 	for ( i = 0; i < this.fields.length; i++ ) {
 		field = this.fields[ i ];
@@ -342,9 +342,9 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getParameters = function () {
 /**
  * Get one of the form's fields.
  * @param {string} fieldName Name of the field to get.
- * @return {mediaWiki.TemplateWizard.ParamField|null}
+ * @return {mw.TemplateWizard.ParamField|null}
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.findField = function ( fieldName ) {
+mw.TemplateWizard.TemplateForm.prototype.findField = function ( fieldName ) {
 	var i, field;
 	for ( i = 0; i < this.fields.length; i++ ) {
 		field = this.fields[ i ];
@@ -360,7 +360,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.findField = function ( fieldName
  * Get the first field with any value.
  * @return {boolean|OO.ui.Widget}
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
+mw.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
 	var i, field, val, data;
 	for ( i = 0; i < this.fields.length; i++ ) {
 		field = this.fields[ i ];
@@ -380,7 +380,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = functio
  * Get the first invalid field.
  * @return {boolean|OO.ui.Widget}
  */
-mediaWiki.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
+mw.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
 	var field, i, widget;
 	for ( i = 0; i < this.fields.length; i++ ) {
 		field = this.fields[ i ];
@@ -395,7 +395,7 @@ mediaWiki.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
 	return false;
 };
 
-mediaWiki.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
+mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
 	var groupedParams = {
 		required: {},
 		suggested: {},

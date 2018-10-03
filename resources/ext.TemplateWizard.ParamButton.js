@@ -2,20 +2,20 @@
  * @class
  * @constructor
  * @extends OO.ui.ButtonWidget
- * @param {mediaWiki.TemplateWizard.TemplateForm} templateForm
+ * @param {mw.TemplateWizard.TemplateForm} templateForm
  * @param {string} param
- * @param {mediaWiki.TemplateWizard.Model.Parameters} model
+ * @param {mw.TemplateWizard.Model.Parameters} model
  * @param {Object} config
  * @cfg {boolean} [required] Parameter is required
  */
-mediaWiki.TemplateWizard.ParamButton = function mediaWikiTemplateWizardParamButton( templateForm, param, model, config ) {
+mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton( templateForm, param, model, config ) {
 	// Config.
 	config = $.extend( {
 		icon: 'add',
 		framed: false,
 		flags: 'progressive'
 	}, config );
-	mediaWiki.TemplateWizard.ParamButton.super.call( this, config );
+	mw.TemplateWizard.ParamButton.super.call( this, config );
 
 	this.templateForm = templateForm;
 	this.param = param;
@@ -43,12 +43,12 @@ mediaWiki.TemplateWizard.ParamButton = function mediaWikiTemplateWizardParamButt
 	this.connect( this, { click: 'toggleAction' } );
 };
 
-OO.inheritClass( mediaWiki.TemplateWizard.ParamButton, OO.ui.ButtonWidget );
+OO.inheritClass( mw.TemplateWizard.ParamButton, OO.ui.ButtonWidget );
 
 /**
  * @param {bool} newState
  */
-mediaWiki.TemplateWizard.ParamButton.prototype.onParametersChangeAll = function ( newState ) {
+mw.TemplateWizard.ParamButton.prototype.onParametersChangeAll = function ( newState ) {
 	this.setParamState( newState );
 };
 
@@ -56,7 +56,7 @@ mediaWiki.TemplateWizard.ParamButton.prototype.onParametersChangeAll = function 
  * Toggle the parameter's field's visibility,
  * and tell the add/remove all button to update itself accordingly.
  */
-mediaWiki.TemplateWizard.ParamButton.prototype.toggleAction = function () {
+mw.TemplateWizard.ParamButton.prototype.toggleAction = function () {
 	var newState;
 
 	// Update the model, this button's state (including the associated field's visibility).
@@ -69,7 +69,7 @@ mediaWiki.TemplateWizard.ParamButton.prototype.toggleAction = function () {
  * Set the state of this button (without changing the model).
  * @param {bool} setEnabled
  */
-mediaWiki.TemplateWizard.ParamButton.prototype.setParamState = function ( setEnabled ) {
+mw.TemplateWizard.ParamButton.prototype.setParamState = function ( setEnabled ) {
 	// Don't do anything for required fields, as they can't be toggled.
 	if ( this.isRequired ) {
 		return;
@@ -95,7 +95,7 @@ mediaWiki.TemplateWizard.ParamButton.prototype.setParamState = function ( setEna
 /**
  * Disconnect from the model and remove from the DOM.
  */
-mediaWiki.TemplateWizard.ParamButton.prototype.destroy = function () {
+mw.TemplateWizard.ParamButton.prototype.destroy = function () {
 	this.model.disconnect( this );
 	this.$element.remove();
 };

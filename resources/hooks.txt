@@ -12,6 +12,6 @@ button and field, before they have been added to the DOM. Extending modules can 
 either as required.
 * param: name of the parameter
 * details: details of the parameter such as label, description or required
-* button: mediaWiki.TemplateWizard.ParamButton to add the parameter
-* field: mediaWiki.TemplateWizard.ParamField to manipulate and set the content of parameter
+* button: mw.TemplateWizard.ParamButton to add the parameter
+* field: mw.TemplateWizard.ParamField to manipulate and set the content of parameter
 

@@ -6,20 +6,20 @@
  * @param {Object} config
  * @cfg {jQuery} [$popupOverlay] Overlay for popups inside the dialog
  */
-mediaWiki.TemplateWizard.Dialog = function mediaWikiTemplateWizardDialog( config ) {
-	mediaWiki.TemplateWizard.Dialog.super.call( this, config );
+mw.TemplateWizard.Dialog = function MWTemplateWizardDialog( config ) {
+	mw.TemplateWizard.Dialog.super.call( this, config );
 	this.$element.addClass( 'ext-templatewizard-dialog' );
 
 	// Instantiate with default value
 	this.contentDir = 'ltr';
 	this.$popupOverlay = config.$popupOverlay || this.$element;
 };
-OO.inheritClass( mediaWiki.TemplateWizard.Dialog, OO.ui.ProcessDialog );
-mediaWiki.TemplateWizard.Dialog.static.name = 'templateWizard';
-mediaWiki.TemplateWizard.Dialog.static.size = 'large';
-mediaWiki.TemplateWizard.Dialog.static.title = OO.ui.deferMsg( 'templatewizard-dialog-title' );
-mediaWiki.TemplateWizard.Dialog.static.helpUrl = 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard';
-mediaWiki.TemplateWizard.Dialog.static.actions = [
+OO.inheritClass( mw.TemplateWizard.Dialog, OO.ui.ProcessDialog );
+mw.TemplateWizard.Dialog.static.name = 'templateWizard';
+mw.TemplateWizard.Dialog.static.size = 'large';
+mw.TemplateWizard.Dialog.static.title = OO.ui.deferMsg( 'templatewizard-dialog-title' );
+mw.TemplateWizard.Dialog.static.helpUrl = 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard';
+mw.TemplateWizard.Dialog.static.actions = [
 	{ label: OO.ui.deferMsg( 'templatewizard-insert' ), flags: [ 'primary', 'progressive' ], action: 'insert', modes: [ 'choose', 'insert' ] },
 	{ label: OO.ui.deferMsg( 'templatewizard-cancel' ), flags: 'safe', action: 'closeDialog', modes: [ 'choose', 'insert' ] },
 	{ title: OO.ui.deferMsg( 'templatewizard-close-template' ), flags: 'destructive', action: 'closeTemplate', modes: [ 'choose', 'insert' ], framed: false, icon: 'trash' },
@@ -31,7 +31,7 @@ mediaWiki.TemplateWizard.Dialog.static.actions = [
 		modes: [ 'choose' ],
 		framed: false,
 		icon: 'info',
-		href: mediaWiki.TemplateWizard.Dialog.static.helpUrl
+		href: mw.TemplateWizard.Dialog.static.helpUrl
 	}
 ];
 
@@ -39,14 +39,14 @@ mediaWiki.TemplateWizard.Dialog.static.actions = [
  * Set the height to a reasonable maximum.
  * @return {number} Body height
  */
-mediaWiki.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
+mw.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
 	return 500;
 };
 
 /**
  * Show the search form.
  */
-mediaWiki.TemplateWizard.Dialog.prototype.showSearchForm = function () {
+mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 	// Prevent template insertion (we know there's only one 'insert' action).
 	this.getActions().get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( true );
 	// @TODO: When OOUI supports hidden actions, this should be made one. Until then, we hide it manually.
@@ -59,7 +59,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 	this.firstFieldWithValue = false;
 
 	// Show the search form.
-	this.searchForm = new mediaWiki.TemplateWizard.SearchForm( this );
+	this.searchForm = new mw.TemplateWizard.SearchForm( this );
 	this.actions.setMode( 'choose' );
 	this.$body.html( this.searchForm.$element );
 	this.searchForm.focus();
@@ -69,12 +69,12 @@ mediaWiki.TemplateWizard.Dialog.prototype.showSearchForm = function () {
  * Show the template form for the given templatedata.
  * @param {Object} templateData
  */
-mediaWiki.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
+mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 	this.actions.setMode( 'insert' );
 	if ( this.templateForm ) {
 		this.templateForm.disconnect( this );
 	}
-	this.templateForm = new mediaWiki.TemplateWizard.TemplateForm( templateData, { $popupOverlay: this.$popupOverlay } );
+	this.templateForm = new mw.TemplateWizard.TemplateForm( templateData, { $popupOverlay: this.$popupOverlay } );
 	this.templateForm.connect( this, { close: 'closeTemplate' } );
 
 	this.$body.html( this.templateForm.$element );
@@ -85,7 +85,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData
 /**
  * Event handler for the 'close' event of TemplateForm.
  */
-mediaWiki.TemplateWizard.Dialog.prototype.closeTemplate = function () {
+mw.TemplateWizard.Dialog.prototype.closeTemplate = function () {
 	this.executeAction( 'closeTemplate' );
 };
 
@@ -94,9 +94,9 @@ mediaWiki.TemplateWizard.Dialog.prototype.closeTemplate = function () {
  * @param {Object} data
  * @return {OO.ui.Process}
  */
-mediaWiki.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
+mw.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 	var dialog = this;
-	return mediaWiki.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
+	return mw.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
 		.next( function () {
 			dialog.contentDir = data.contentDir || 'ltr';
 			dialog.showSearchForm();
@@ -104,16 +104,16 @@ mediaWiki.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 		}, this );
 };
 
-mediaWiki.TemplateWizard.Dialog.prototype.getReadyProcess = function ( data ) {
-	return mediaWiki.TemplateWizard.Dialog.super.prototype.getReadyProcess.call( this, data )
+mw.TemplateWizard.Dialog.prototype.getReadyProcess = function ( data ) {
+	return mw.TemplateWizard.Dialog.super.prototype.getReadyProcess.call( this, data )
 		.next( function () {
 			this.actions.setMode( 'choose' );
 			this.searchForm.focus();
 		}, this );
 };
 
-mediaWiki.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
-	mediaWiki.TemplateWizard.Dialog.super.prototype.showErrors.call( this, data );
+mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
+	mw.TemplateWizard.Dialog.super.prototype.showErrors.call( this, data );
 	if ( this.firstFieldWithValue && this.currentAction === 'closeTemplate' ) {
 		this.$errorsTitle.text( mediaWiki.msg( 'templatewizard-remove-template' ) );
 		this.retryButton.setLabel( mediaWiki.msg( 'templatewizard-remove-template-retry' ) );
@@ -134,7 +134,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
  * @param {Object} data
  * @private
  */
-mediaWiki.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data ) {
+mw.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data ) {
 	if ( this.firstFieldWithValue && this.currentAction === 'closeTemplate' ) {
 		// Change the action here so the parent's onRetryButtonClick won't execute the insert action.
 		this.currentAction = 'search';
@@ -142,7 +142,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data )
 	} else 	if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
 		this.close();
 	}
-	mediaWiki.TemplateWizard.Dialog.super.prototype.onRetryButtonClick.call( this, data );
+	mw.TemplateWizard.Dialog.super.prototype.onRetryButtonClick.call( this, data );
 	this.ignoreParamValues = true;
 };
 
@@ -152,8 +152,8 @@ mediaWiki.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data )
  * @param {Object} data
  * @private
  */
-mediaWiki.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function ( data ) {
-	mediaWiki.TemplateWizard.Dialog.super.prototype.onDismissErrorButtonClick.call( this, data );
+mw.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function ( data ) {
+	mw.TemplateWizard.Dialog.super.prototype.onDismissErrorButtonClick.call( this, data );
 	this.ignoreParamValues = false;
 	if ( this.invalidField ) {
 		this.invalidField.focus();
@@ -165,9 +165,9 @@ mediaWiki.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function (
 	}
 };
 
-mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
+mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 	var dialog = this;
-	return mediaWiki.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
+	return mw.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
 		.next( function () {
 			var msg;
 			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && dialog.templateForm ) {
@@ -186,7 +186,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action )
 				dialog.close();
 			}
 			if ( action === 'help' ) {
-				window.open( mediaWiki.TemplateWizard.Dialog.static.helpUrl );
+				window.open( mw.TemplateWizard.Dialog.static.helpUrl );
 			}
 		} )
 		.next( function () {
@@ -200,7 +200,7 @@ mediaWiki.TemplateWizard.Dialog.prototype.getActionProcess = function ( action )
 		.next( function () {
 			var templateFormatter, textSelectionOpts;
 			if ( action === 'insert' ) {
-				templateFormatter = new mediaWiki.TemplateWizard.TemplateFormatter();
+				templateFormatter = new mw.TemplateWizard.TemplateFormatter();
 				templateFormatter.setTemplateName( dialog.templateForm.getTitle().getMainText() );
 				templateFormatter.setFormat( dialog.templateForm.getFormat() );
 				templateFormatter.setParameters( dialog.templateForm.getParameters() );

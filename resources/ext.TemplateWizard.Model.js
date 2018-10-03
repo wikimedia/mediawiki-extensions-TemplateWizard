@@ -1,1 +1,1 @@
-mediaWiki.TemplateWizard.Model = {};
+mw.TemplateWizard.Model = {};

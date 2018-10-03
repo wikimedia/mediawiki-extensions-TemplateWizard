@@ -8,21 +8,21 @@
  * @param {Object} config
  * @cfg {boolean} [required] Field is required
  */
-mediaWiki.TemplateWizard.ParamField = function mediaWikiTemplateWizardParamField( fieldWidget, config ) {
+mw.TemplateWizard.ParamField = function MWTemplateWizardParamField( fieldWidget, config ) {
 	config = $.extend( {
 		align: 'top',
 		required: false
 	}, config );
-	mediaWiki.TemplateWizard.ParamField.super.call( this, fieldWidget, config );
+	mw.TemplateWizard.ParamField.super.call( this, fieldWidget, config );
 	this.required = config.required;
 };
 
-OO.inheritClass( mediaWiki.TemplateWizard.ParamField, OO.ui.FieldLayout );
+OO.inheritClass( mw.TemplateWizard.ParamField, OO.ui.FieldLayout );
 
-mediaWiki.TemplateWizard.ParamField.prototype.setRequired = function ( required ) {
+mw.TemplateWizard.ParamField.prototype.setRequired = function ( required ) {
 	this.required = !!required;
 };
 
-mediaWiki.TemplateWizard.ParamField.prototype.isRequired = function () {
+mw.TemplateWizard.ParamField.prototype.isRequired = function () {
 	return this.required;
 };

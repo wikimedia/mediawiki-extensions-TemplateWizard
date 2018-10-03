@@ -2,18 +2,18 @@
  * @class
  * @constructor
  */
-mediaWiki.TemplateWizard.TemplateFormatter = function mwTemplateWizardTemplateFormatter() {
+mw.TemplateWizard.TemplateFormatter = function mwTemplateWizardTemplateFormatter() {
 	this.name = '';
 	this.format = '';
 	this.params = {};
 };
-OO.initClass( mediaWiki.TemplateWizard.TemplateFormatter );
-mediaWiki.TemplateWizard.TemplateFormatter.static.FORMATSTRING_REGEXP =
+OO.initClass( mw.TemplateWizard.TemplateFormatter );
+mw.TemplateWizard.TemplateFormatter.static.FORMATSTRING_REGEXP =
 	/^(\n)?(\{\{ *_+)(\n? *\|\n? *_+ *= *)(_+)(\n? *\}\})(\n)?$/;
-mediaWiki.TemplateWizard.TemplateFormatter.prototype.setTemplateName = function ( newName ) {
+mw.TemplateWizard.TemplateFormatter.prototype.setTemplateName = function ( newName ) {
 	this.name = newName;
 };
-mediaWiki.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params ) {
+mw.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params ) {
 	// If any numbered parameters are set, all lower-numbered ones should be set as well (to blank).
 	$.each( params, function ( key ) {
 		var paramNum;
@@ -27,7 +27,7 @@ mediaWiki.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( 
 	} );
 	this.params = params;
 };
-mediaWiki.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( format ) {
+mw.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( format ) {
 	var parsedFormat,
 		inlineFormat = '{{_|_=_}}';
 	if ( format === 'inline' ) {
@@ -50,13 +50,13 @@ mediaWiki.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( form
 		endOfLine: parsedFormat[ 6 ]
 	};
 };
-mediaWiki.TemplateWizard.TemplateFormatter.prototype.getFormat = function () {
+mw.TemplateWizard.TemplateFormatter.prototype.getFormat = function () {
 	if ( !this.format ) {
 		this.setFormat( 'inline' );
 	}
 	return this.format;
 };
-mediaWiki.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
+mw.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
 	var template, format,
 		formatter = this;
 
@@ -101,7 +101,7 @@ mediaWiki.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
  * @param {string} value
  * @return {string}
  */
-mediaWiki.TemplateWizard.TemplateFormatter.static.formatStringSubst = function ( format, value ) {
+mw.TemplateWizard.TemplateFormatter.static.formatStringSubst = function ( format, value ) {
 	value = value.trim();
 	return format.replace( /_+/, function ( hole ) {
 		if ( value === '' || hole.length <= value.length ) {

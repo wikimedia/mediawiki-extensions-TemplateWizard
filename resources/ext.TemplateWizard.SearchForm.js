@@ -5,15 +5,15 @@
  * @param {Object} [config] Configuration options.
  * @cfg {string} [dir] The direction of the page content
  */
-mediaWiki.TemplateWizard.SearchForm = function mediaWikiTemplateWizardSearchForm( dialog, config ) {
+mw.TemplateWizard.SearchForm = function MWTemplateWizardSearchForm( dialog, config ) {
 	config = $.extend( {
 		padded: true,
 		expanded: true
 	}, config );
-	mediaWiki.TemplateWizard.SearchForm.super.call( this, config );
+	mw.TemplateWizard.SearchForm.super.call( this, config );
 	this.dialog = dialog;
 
-	this.searchWidget = new mediaWiki.TemplateWizard.SearchField( {}, this );
+	this.searchWidget = new mw.TemplateWizard.SearchField( {}, this );
 
 	// Recent templates menu.
 	this.recentTemplates = new OO.ui.MenuSelectWidget();
@@ -30,13 +30,13 @@ mediaWiki.TemplateWizard.SearchForm = function mediaWikiTemplateWizardSearchForm
 		);
 };
 
-OO.inheritClass( mediaWiki.TemplateWizard.SearchForm, OO.ui.PanelLayout );
+OO.inheritClass( mw.TemplateWizard.SearchForm, OO.ui.PanelLayout );
 
-mediaWiki.TemplateWizard.SearchForm.prototype.showTemplate = function ( templateData ) {
+mw.TemplateWizard.SearchForm.prototype.showTemplate = function ( templateData ) {
 	this.dialog.showTemplate( templateData );
 	// @TODO Add to recent templates.
 };
 
-mediaWiki.TemplateWizard.SearchForm.prototype.focus = function () {
+mw.TemplateWizard.SearchForm.prototype.focus = function () {
 	this.searchWidget.$input.focus();
 };

@@ -1,14 +1,14 @@
 ( function ( mw, $, OO ) {
 
 	/* Extension namespace. */
-	mediaWiki.TemplateWizard = {};
+	mw.TemplateWizard = {};
 
 	$( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', function () {
 		// Take the content direction from the edit textarea
 		var contentDir = $( this ).css( 'direction' ),
 			$popupOverlay = $( '<div>' ).addClass( 'ext-templatewizard-popupOverlay' ),
 			// Set up the TemplateWizard dialog window.
-			templateWizard = new mediaWiki.TemplateWizard.Dialog( { $popupOverlay: $popupOverlay } );
+			templateWizard = new mw.TemplateWizard.Dialog( { $popupOverlay: $popupOverlay } );
 
 		$( 'body' ).append( $popupOverlay );
 		OO.ui.getWindowManager().addWindows( [ templateWizard ] );

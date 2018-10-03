@@ -1,13 +1,13 @@
 /**
  * @class
  * @constructor
- * @param {mediaWiki.TemplateWizard.TemplateForm} templateForm
+ * @param {mw.TemplateWizard.TemplateForm} templateForm
  * @param {mw.Title} title
  * @param {Object} templateData
  */
-mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemplateTitleBar( templateForm, title, templateData ) {
+mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar( templateForm, title, templateData ) {
 	var $templateTitle, linkButton, trashButton;
-	mediaWiki.TemplateWizard.TemplateTitleBar.parent.call( this );
+	mw.TemplateWizard.TemplateTitleBar.parent.call( this );
 
 	// Link button.
 	linkButton = new OO.ui.ButtonWidget( {
@@ -42,14 +42,14 @@ mediaWiki.TemplateWizard.TemplateTitleBar = function mediaWikiTemplateWizardTemp
 		);
 };
 
-OO.inheritClass( mediaWiki.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
+OO.inheritClass( mw.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
 
 /**
  * Get the description div element, which may contain zero to two paragraphs.
  * @param {Object} templateData
  * @return {jQuery}
  */
-mediaWiki.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( templateData ) {
+mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( templateData ) {
 	var $description, message, messageClass, hasTemplateData, hasParams;
 
 	// Description div (may contain multiple paragraphs).

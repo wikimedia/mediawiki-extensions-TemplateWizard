@@ -2,22 +2,22 @@
  * @class
  * @constructor
  * @param {Object} [config] Configuration options.
- * @param {mediaWiki.TemplateWizard.SearchForm} searchForm The form that this field is attached to.
+ * @param {mw.TemplateWizard.SearchForm} searchForm The form that this field is attached to.
  */
-mediaWiki.TemplateWizard.SearchField = function mediaWikiTemplateWizardSearchField( config, searchForm ) {
+mw.TemplateWizard.SearchField = function MWTemplateWizardSearchField( config, searchForm ) {
 	config = $.extend( {
 		placeholder: OO.ui.deferMsg( 'templatewizard-search-placeholder' ),
 		icon: 'search'
 	}, config );
-	mediaWiki.TemplateWizard.SearchField.super.call( this, config );
+	mw.TemplateWizard.SearchField.super.call( this, config );
 	OO.ui.mixin.LookupElement.call( this );
 
 	this.searchForm = searchForm;
 };
 
-OO.inheritClass( mediaWiki.TemplateWizard.SearchField, OO.ui.ComboBoxInputWidget );
+OO.inheritClass( mw.TemplateWizard.SearchField, OO.ui.ComboBoxInputWidget );
 
-OO.mixinClass( mediaWiki.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
+OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
 
 /**
  * Get a new request object of the current lookup query value.
@@ -26,7 +26,7 @@ OO.mixinClass( mediaWiki.TemplateWizard.SearchField, OO.ui.mixin.LookupElement )
  * @method
  * @return {jQuery.Promise} jQuery AJAX object, or promise object with an .abort() method
  */
-mediaWiki.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
+mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
 	return new mediaWiki.Api().get( {
 		action: 'templatedata',
 		generator: 'prefixsearch',
@@ -49,7 +49,7 @@ mediaWiki.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
  * @param {mixed} response Response from server
  * @return {mixed} Cached result data
  */
-mediaWiki.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = function ( response ) {
+mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = function ( response ) {
 	var searchResults = [];
 	this.templateData = response.pages;
 	$.each( this.templateData, function ( pageId, templateData ) {
@@ -73,10 +73,10 @@ mediaWiki.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = 
  * @param {mixed} data Cached result data, usually an array
  * @return {OO.ui.MenuOptionWidget[]} Menu items
  */
-mediaWiki.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function ( data ) {
+mw.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function ( data ) {
 	var menuOptions = [];
 	$.each( data, function ( index, searchResult ) {
-		var option = new mediaWiki.TemplateWizard.SearchResult( searchResult );
+		var option = new mw.TemplateWizard.SearchResult( searchResult );
 		menuOptions.push( option );
 	} );
 	return menuOptions;
@@ -88,7 +88,7 @@ mediaWiki.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = fu
  * @protected
  * @param {OO.ui.MenuOptionWidget} item Selected item
  */
-mediaWiki.TemplateWizard.SearchField.prototype.onLookupMenuItemChoose = function ( item ) {
+mw.TemplateWizard.SearchField.prototype.onLookupMenuItemChoose = function ( item ) {
 	this.setValue( item.getData().titleMainText );
 	this.searchForm.showTemplate( item.getData() );
 };
