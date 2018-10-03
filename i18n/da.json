@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saederup92"
+		]
+	},
+	"templatewizard-cancel": "Annullér",
+	"templatewizard-default": "Standard: $1",
+	"templatewizard-dialog-title": "Indsæt en skabelon",
+	"templatewizard-placeholder-default": "Standard: $1",
+	"templatewizard-remove-template": "Fjern skabelon?",
+	"templatewizard-remove-template-retry": "Fjern skabelon",
+	"templatewizard-use": "Anvend"
+}

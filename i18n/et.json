@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"templatewizard-add-all": "Lisa kõik parameetrid",
+	"templatewizard-cancel": "Loobu",
+	"templatewizard-close-dialog": "Kas lahkud viisardist?",
+	"templatewizard-close-dialog-body": "Viisardist lahkumisel lähevad kaotsi kõik andmed, mille malli lisanud oled.",
+	"templatewizard-close-dialog-retry": "Hülga muudatused",
+	"templatewizard-default": "Vaikimisi: $1",
+	"templatewizard-desc": "Vikitoimeti lisa, millega on kaasas malli lisamise viisard",
+	"templatewizard-dialog-title": "Malli lisamine",
+	"templatewizard-help": "Loe malliviisardi kohta",
+	"templatewizard-help-title": "Loe malliviisardi abilehekülgi saidil MeidaWiki.org",
+	"templatewizard-insert": "Lisa",
+	"templatewizard-invalid-title": "Vigane pealkiri",
+	"templatewizard-invalid-values": "Osa sisestatud andmetest ei ole oodatud vormingus. Kas soovid neid muuta?",
+	"templatewizard-invalid-values-edit": "Muuda malli",
+	"templatewizard-invalid-values-insert": "Sisesta mall",
+	"templatewizard-no-description": "Sellel mallil pole kirjeldust.",
+	"templatewizard-no-params-with-td": "Selle malli dokumentatsioonis pole esitatud parameetreid [$1 malliandmetena]. Võid sisestada malli ilma parameetriteta.",
+	"templatewizard-no-params-without-td": "Parameetreid ei leitud, kuna malli dokumentatsioonis puuduvad [$1 malliandmed]. Võid sisestada malli ilma parameetriteta.",
+	"templatewizard-no-templatedata": "[$1 Malliandmete] puudumise tõttu hangiti selle malli parameetrid automaatselt. Palun pea silmas, et need võivad olla ebatäpsed.",
+	"templatewizard-opens-in-new-tab": "Avaneb uuel kaardil",
+	"templatewizard-parameters-optional": "Valikulised parameetrid",
+	"templatewizard-parameters-required": "Nõutavad parameetrid",
+	"templatewizard-parameters-suggested": "Soovitatavad parameetrid",
+	"templatewizard-placeholder-default": "Vaikimisi: $1",
+	"templatewizard-placeholder-example": "nt $1",
+	"templatewizard-remove-all": "Eemalda kõik parameetrid",
+	"templatewizard-remove-template": "Kas eemaldad malli?",
+	"templatewizard-remove-template-body": "Üritad eemaldada malli, millesse oled andmeid sisestanud. Malli eemaldamisega lähevad kaotsi ka andmed. Seda toimingut ei saa tagasi võtta.",
+	"templatewizard-remove-template-retry": "Eemalda mall",
+	"templatewizard-search-placeholder": "Otsi malli",
+	"templatewizard-parambutton-add-title": "Lisa parameeter \"$1\"",
+	"templatewizard-parambutton-remove-title": "Eemalda parameeter \"$1\"",
+	"templatewizard-parambutton-required-title": "Nõutav parameeter \"$1\"",
+	"templatewizard-use": "Kasuta"
+}
