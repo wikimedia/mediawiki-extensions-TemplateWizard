@@ -20,7 +20,8 @@
 	},
 	"Hooks": {
 		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial",
-		"ResourceLoaderTestModules": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderTestModules"
+		"ResourceLoaderTestModules": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderTestModules",
+		"GetBetaFeaturePreferences": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onGetBetaFeaturePreferences"
 	},
 	"MessagesDirs": {
 		"TemplateWizard": [

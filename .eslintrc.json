@@ -6,6 +6,7 @@
 	},
 	"globals": {
 		"mediaWiki": false,
+		"mw": false,
 		"OO": false,
 		"QUnit": false
 	},

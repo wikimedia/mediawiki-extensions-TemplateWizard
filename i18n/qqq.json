@@ -7,6 +7,8 @@
 		]
 	},
 	"templatewizard-add-all": "Label of button that enables all inactive parameters.",
+	"templatewizard-betafeature-message": "Title for the BetaFeature information/selection area in Special:Preferences.",
+	"templatewizard-betafeature-description": "Description of TemplateWizard for the BetaFeatures page in Special:Preferences.",
 	"templatewizard-cancel": "Text for the cancel button that closes the dialogue window.\n{{Identical|Cancel}}",
 	"templatewizard-close-dialog": "Title for the warning shown when closing the dialog when there are values in a field.",
 	"templatewizard-close-dialog-body": "Explanatory text shown under {{msg-mw|templatewizard-close-dialog}}.",
