@@ -20,5 +20,7 @@
 	"templatewizard-search-placeholder": "Cerca un template",
 	"templatewizard-parambutton-add-title": "Aggiungi il parametro '$1'",
 	"templatewizard-parambutton-remove-title": "Rimuovi il parametro '$1'",
-	"templatewizard-parambutton-required-title": "Parametro obbligatorio '$1'"
+	"templatewizard-parambutton-required-title": "Parametro obbligatorio '$1'",
+	"templatewizard-remove-template-title": "Rimuovi template",
+	"templatewizard-link-to-template-title": "Vedi template"
 }

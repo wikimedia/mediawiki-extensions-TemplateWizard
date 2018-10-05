@@ -34,5 +34,7 @@
 	"templatewizard-parambutton-add-title": "변수 '$1' 추가",
 	"templatewizard-parambutton-remove-title": "변수 '$1' 제거",
 	"templatewizard-parambutton-required-title": "변수 '$1' 필요",
+	"templatewizard-remove-template-title": "틀 제거",
+	"templatewizard-link-to-template-title": "틀 보기",
 	"templatewizard-use": "사용하기"
 }

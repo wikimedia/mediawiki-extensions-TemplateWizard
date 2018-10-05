@@ -37,5 +37,7 @@
 	"templatewizard-parambutton-add-title": "Den Parameter „$1“ hinzufügen",
 	"templatewizard-parambutton-remove-title": "Den Parameter „$1“ entfernen",
 	"templatewizard-parambutton-required-title": "Erforderlicher Parameter „$1“",
+	"templatewizard-remove-template-title": "Vorlage entfernen",
+	"templatewizard-link-to-template-title": "Vorlage ansehen",
 	"templatewizard-use": "Verwenden"
 }

@@ -39,5 +39,7 @@
 	"templatewizard-parambutton-add-title": "Добавить параметр '$1'",
 	"templatewizard-parambutton-remove-title": "Удалить параметр '$1'",
 	"templatewizard-parambutton-required-title": "Требуется параметр '$1'",
+	"templatewizard-remove-template-title": "Удалить шаблон",
+	"templatewizard-link-to-template-title": "Просмотр шаблона",
 	"templatewizard-use": "Использовать"
 }

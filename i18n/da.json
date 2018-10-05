@@ -10,5 +10,7 @@
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-remove-template": "Fjern skabelon?",
 	"templatewizard-remove-template-retry": "Fjern skabelon",
+	"templatewizard-remove-template-title": "Fjern skabelon",
+	"templatewizard-link-to-template-title": "Se skabelon",
 	"templatewizard-use": "Anvend"
 }
