@@ -39,5 +39,7 @@
 	"templatewizard-parambutton-add-title": "أضف الوسيط \"$1\"",
 	"templatewizard-parambutton-remove-title": "أزل الوسيط \"$1\"",
 	"templatewizard-parambutton-required-title": "الوسيط المطلوب \"$1\"",
+	"templatewizard-remove-template-title": "إزالة القالب",
+	"templatewizard-link-to-template-title": "عرض القالب",
 	"templatewizard-use": "استعمال"
 }
