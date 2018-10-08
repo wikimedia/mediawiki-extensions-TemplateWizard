@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
-			"Stojex"
+			"Stojex",
+			"Railfail536"
 		]
 	},
 	"templatewizard-add-all": "Dodaj wszystkie parametry",
@@ -11,8 +12,10 @@
 	"templatewizard-close-dialog-body": "Opuszczenie kreatora spowoduje utratę wszelkich danych dodanych do szablonu.",
 	"templatewizard-close-dialog-retry": "Porzuć zmiany",
 	"templatewizard-default": "Domyślnie: $1",
+	"templatewizard-desc": "Dodatek do rozszerzenia WikiEditor, dodający do niego formularz wstawiania szablonów",
 	"templatewizard-dialog-title": "Wstaw szablon",
 	"templatewizard-help": "Dowiedz się więcej o TemplateWizard",
+	"templatewizard-help-title": "Przeczytaj stronę pomocy o TemplateWizard na MediaWiki.org",
 	"templatewizard-insert": "Wstaw",
 	"templatewizard-invalid-title": "Nieprawidłowy tytuł",
 	"templatewizard-invalid-values": "Co najmniej jedno z pól nie pasuje do oczekiwanego formatu. Czy chcesz go edytować?",
@@ -21,6 +24,8 @@
 	"templatewizard-no-description": "Dla tego szablonu nie ma opisu.",
 	"templatewizard-no-params-with-td": "Nie ma żadnych parametrów zdefiniowanych w dokumentacji szablonu [$1 TemplateData]. Możesz wstawić szablon bez parametrów.",
 	"templatewizard-no-params-without-td": "Dla tego szablonu nie można określić parametrów z powodu braku dokumentacji [$1 TemplateData]. Możesz wstawić szablon bez parametrów.",
+	"templatewizard-no-templatedata": "Z powodu brakującego [$1 TemplateData] parametry dla tego szablonu zostały wygenerowane automatycznie, przez co mogą nie być dokładne.",
+	"templatewizard-opens-in-new-tab": "Otwiera w nowej karcie",
 	"templatewizard-parameters-optional": "Parametry opcjonalne",
 	"templatewizard-parameters-required": "Wymagane parametry",
 	"templatewizard-parameters-suggested": "Sugerowane parametry",
@@ -31,6 +36,10 @@
 	"templatewizard-remove-template-body": "Szablon, który próbujesz usunąć, zawiera wprowadzone przez Ciebie dane. Usunięcie szablonu spowoduje również usunięcie informacji dodanych do szablonu. To działanie jest nieodwracalne.",
 	"templatewizard-remove-template-retry": "Usuń szablon",
 	"templatewizard-search-placeholder": "Wyszukaj szablon",
+	"templatewizard-parambutton-add-title": "Dodaj parametr „$1”",
+	"templatewizard-parambutton-remove-title": "Usuń parametr „$1”",
 	"templatewizard-parambutton-required-title": "Wymagany parametr '$1'",
+	"templatewizard-remove-template-title": "Usuń szablon",
+	"templatewizard-link-to-template-title": "Zobacz szablon",
 	"templatewizard-use": "Użyj"
 }

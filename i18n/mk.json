@@ -37,5 +37,7 @@
 	"templatewizard-parambutton-add-title": "Додајте го параметарот „$1“",
 	"templatewizard-parambutton-remove-title": "Отстранете го параметарот „$1“",
 	"templatewizard-parambutton-required-title": "Се бара параметарот „$1“",
+	"templatewizard-remove-template-title": "Отстрани шаблон",
+	"templatewizard-link-to-template-title": "Преглед на шаблонот",
 	"templatewizard-use": "Употреба"
 }
