@@ -37,5 +37,7 @@
 	"templatewizard-parambutton-add-title": "添加參數「$1」",
 	"templatewizard-parambutton-remove-title": "移除參數「$1」",
 	"templatewizard-parambutton-required-title": "所需參數「$1」",
+	"templatewizard-remove-template-title": "移除模板",
+	"templatewizard-link-to-template-title": "檢視模板",
 	"templatewizard-use": "使用"
 }

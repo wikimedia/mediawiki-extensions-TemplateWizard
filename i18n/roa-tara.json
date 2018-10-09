@@ -7,5 +7,7 @@
 	"templatewizard-parambutton-add-title": "Aggiunge 'u parametre '$1'",
 	"templatewizard-parambutton-remove-title": "Live 'u parametre '$1'",
 	"templatewizard-parambutton-required-title": "Parametre richieste '$1'",
+	"templatewizard-remove-template-title": "Live 'u template",
+	"templatewizard-link-to-template-title": "'Ndruche 'u template",
 	"templatewizard-use": "Ause"
 }
