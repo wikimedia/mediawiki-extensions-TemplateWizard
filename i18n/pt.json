@@ -38,5 +38,7 @@
 	"templatewizard-parambutton-add-title": "Acrescentar o parâmetro '$1'",
 	"templatewizard-parambutton-remove-title": "Remover o parâmetro '$1'",
 	"templatewizard-parambutton-required-title": "Parâmetro obrigatório '$1'",
+	"templatewizard-remove-template-title": "Remover predefinição",
+	"templatewizard-link-to-template-title": "Ver predefinição",
 	"templatewizard-use": "Usar"
 }
