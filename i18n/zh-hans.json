@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"A Chinese Wikipedian"
 		]
 	},
 	"templatewizard-add-all": "添加所有参数",
@@ -37,5 +38,7 @@
 	"templatewizard-parambutton-add-title": "添加参数“$1”",
 	"templatewizard-parambutton-remove-title": "移除参数“$1”",
 	"templatewizard-parambutton-required-title": "需要参数“$1”",
+	"templatewizard-remove-template-title": "删除模板",
+	"templatewizard-link-to-template-title": "查看模板",
 	"templatewizard-use": "使用"
 }
