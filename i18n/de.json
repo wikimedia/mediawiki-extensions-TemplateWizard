@@ -5,6 +5,8 @@
 		]
 	},
 	"templatewizard-add-all": "Alle Parameter hinzufügen",
+	"templatewizard-betafeature-message": "Vorlagenassistent",
+	"templatewizard-betafeature-description": "Der Vorlagenassistent erlaubt dir, vom WikiEditor schnell und einfach Vorlagen zu Wikiseiten hinzuzufügen. Er verwendet Vorlagendaten, um Vorlagen- und Parameterbeschreibungen für Vorlagen anzuzeigen. Er erlaubt auch die Suche nach Wikiseiten und Commons-Bildern für die Vorlageneingabe vom Editor selbst.",
 	"templatewizard-cancel": "Abbrechen",
 	"templatewizard-close-dialog": "Assistent verlassen?",
 	"templatewizard-close-dialog-body": "Das Verlassen des Assistenten führt zu einem Verlust aller Daten, die du der Vorlage hinzugefügt hast.",

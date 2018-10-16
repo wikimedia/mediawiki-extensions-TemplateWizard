@@ -6,6 +6,8 @@
 		]
 	},
 	"templatewizard-add-all": "Ajouter tous les paramètres",
+	"templatewizard-betafeature-message": "Assistant de modèles (TemplateWizard)",
+	"templatewizard-betafeature-description": "TemplateWizard vous permet d'ajouter rapidement et facilement des modèles aux pages wiki à partir de WikiEditor. Il utilise TemplateData pour afficher les descriptions des modèles et des paramètres des modèles. Il permet également de rechercher des pages wiki et des images communes pour l’entrée des modèles à partir de l’éditeur lui-même.",
 	"templatewizard-cancel": "Annuler",
 	"templatewizard-close-dialog": "Quitter l’assistant ?",
 	"templatewizard-close-dialog-body": "Quitter l’assistant entraînera la perte des données que vous avez ajoutées au modèle.",

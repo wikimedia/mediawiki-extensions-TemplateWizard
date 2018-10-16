@@ -5,6 +5,7 @@
 		]
 	},
 	"templatewizard-add-all": "모든 변수 추가",
+	"templatewizard-betafeature-message": "틀마법사",
 	"templatewizard-cancel": "취소",
 	"templatewizard-close-dialog": "마법사를 떠나시겠습니까?",
 	"templatewizard-close-dialog-body": "마법사를 떠나면 틀에 추가한 데이터를 잃게 됩니다.",
