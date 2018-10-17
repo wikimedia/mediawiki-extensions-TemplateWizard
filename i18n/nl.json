@@ -5,7 +5,8 @@
 			"Patio",
 			"Happy13241",
 			"KlaasZ4usV",
-			"SPQRobin"
+			"SPQRobin",
+			"Ndecouck"
 		]
 	},
 	"templatewizard-cancel": "Annuleren",
@@ -20,5 +21,6 @@
 	"templatewizard-parameters-required": "Verplichte parameters",
 	"templatewizard-parameters-suggested": "Voorkeursvariabelen",
 	"templatewizard-search-placeholder": "Zoeken naar een sjabloon",
+	"templatewizard-remove-template-title": "verwijder template",
 	"templatewizard-use": "Gebruiken"
 }
