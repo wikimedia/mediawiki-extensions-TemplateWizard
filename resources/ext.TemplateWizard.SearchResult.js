@@ -10,7 +10,7 @@ mw.TemplateWizard.SearchResult = function MWTemplateWizardSearchResult( config )
 
 	// Description.
 	$description = $( '<span>' )
-		.addClass( 'description' )
+		.addClass( 'ext-templatewizard-description' )
 		.append( $( '<bdi>' ).text( config.description || '' ) );
 	this.$element.append( $description );
 };

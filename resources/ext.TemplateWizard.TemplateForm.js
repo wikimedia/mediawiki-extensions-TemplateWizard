@@ -205,9 +205,9 @@ mw.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
  */
 mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( groupedParams ) {
 	var templateForm = this,
-		$paramMenu = $( '<div>' ).addClass( 'parameter-list' ),
-		$paramMenuWrapper = $( '<div>' ).addClass( 'parameters' ).append( $paramMenu ),
-		$fields = $( '<div>' ).addClass( 'fields' ),
+		$paramMenu = $( '<div>' ).addClass( 'ext-templatewizard-parameter-list' ),
+		$paramMenuWrapper = $( '<div>' ).addClass( 'ext-templatewizard-parameters' ).append( $paramMenu ),
+		$fields = $( '<div>' ).addClass( 'ext-templatewizard-fields' ),
 		hasSuggestedOrOptional = false,
 		parametersModel = new mw.TemplateWizard.Model.Parameters(
 			$.extend( {}, groupedParams.suggested, groupedParams.optional )
@@ -216,7 +216,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 	$.each( groupedParams, function ( groupName, group ) {
 		var paramGroupTitle,
 			hasParams = false,
-			$paramList = $( '<div>' ).addClass( 'parameter-list-inner' );
+			$paramList = $( '<div>' ).addClass( 'ext-templatewizard-parameter-list-inner' );
 		$.each( group, function ( param, details ) {
 			var button,
 				label = param,
@@ -280,7 +280,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 			// * templatewizard-parameters-optional
 			paramGroupTitle = mediaWiki.message( 'templatewizard-parameters-' + groupName ).text();
 			$paramMenu.append(
-				$( '<span>' ).addClass( 'section-header' ).text( paramGroupTitle ),
+				$( '<span>' ).addClass( 'ext-templatewizard-section-header' ).text( paramGroupTitle ),
 				$paramList
 			);
 		}
@@ -288,7 +288,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 	// Add the add/remove all fields button.
 	if ( hasSuggestedOrOptional ) {
 		this.addRemoveAllButton = new mw.TemplateWizard.AddRemoveAllButton( parametersModel );
-		$paramMenuWrapper.append( $( '<div>' ).addClass( 'add-remove-all' ).append( this.addRemoveAllButton.$element ) );
+		$paramMenuWrapper.append( $( '<div>' ).addClass( 'ext-templatewizard-add-remove-all' ).append( this.addRemoveAllButton.$element ) );
 	}
 	return {
 		menu: $paramMenuWrapper,

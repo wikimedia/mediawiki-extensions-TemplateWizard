@@ -32,36 +32,36 @@
 	overflow: hidden;
 	z-index: 4;
 
-	.title-and-buttons {
+	.ext-templatewizard-title-and-buttons {
 		.flex-display();
 		align-items: center;
 
-		.title {
+		.ext-templatewizard-title {
 			.flex(2);
 			font-weight: bold;
 			font-size: 1em;
 			margin: 7px;
 		}
 
-		.buttons {
+		.ext-templatewizard-buttons {
 			.flex(1);
 			text-align: right;
 		}
 	}
 
-	.description {
+	.ext-templatewizard-description {
 		margin: 0 7px 7px 7px;
 		font-size: 12px;
 		overflow: auto;
 		max-height: 65px;
 	}
-	.description p {
+	.ext-templatewizard-description p {
 		margin: 0 0 7px 0;
 	}
-	.description p:last-child {
+	.ext-templatewizard-description p:last-child {
 		margin-bottom: 0;
 	}
-	.description .notice {
+	.ext-templatewizard-description .ext-templatewizard-notice {
 		color: @colorMediumSevere;
 	}
 }
@@ -70,8 +70,8 @@
 	overflow: hidden;
 
 	// Both menu columns.
-	.oo-ui-menuLayout-menu .parameter-list,
-	.oo-ui-menuLayout-content .fields {
+	.oo-ui-menuLayout-menu .ext-templatewizard-parameter-list,
+	.oo-ui-menuLayout-content .ext-templatewizard-fields {
 		padding: 8px;
 		margin: 0;
 		position: absolute;
@@ -86,14 +86,14 @@
 	.oo-ui-menuLayout-menu {
 		border-right: 1px solid @colorGray12;
 
-		.section-header {
+		.ext-templatewizard-section-header {
 			font-size: 12px;
 			font-weight: bolder;
 			color: @colorGray7;
 			text-transform: uppercase;
 		}
 
-		.parameter-list-inner {
+		.ext-templatewizard-parameter-list-inner {
 			padding-left: 20px;
 
 			.oo-ui-buttonElement.oo-ui-buttonElement-frameless.oo-ui-flaggedElement-progressive,
@@ -113,18 +113,18 @@
 		}
 
 		// Button to add or remove all fields
-		.add-remove-all {
+		.ext-templatewizard-add-remove-all {
 			border-top: 1px solid @colorGray12;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
 			background-color: @colorBaseInverted;
 		}
-		.add-remove-all span.oo-ui-widget {
+		.ext-templatewizard-add-remove-all span.oo-ui-widget {
 			display: block;
 			margin: 8px;
 		}
-		.add-remove-all a.oo-ui-buttonElement-button {
+		.ext-templatewizard-add-remove-all a.oo-ui-buttonElement-button {
 			display: block;
 			font-weight: bolder;
 		}
@@ -133,7 +133,7 @@
 	// Right-side form fields.
 	.oo-ui-menuLayout-content {
 		padding: 16px;
-		.fields {
+		.ext-templatewizard-fields {
 			overflow-x: hidden;
 		}
 		// Make the date fields full-width to match all other fields.

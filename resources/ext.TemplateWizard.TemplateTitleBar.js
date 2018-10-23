@@ -34,16 +34,16 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 
 	// Button group.
 	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ linkButton, trashButton ] } );
-	this.buttons.$element.addClass( 'buttons' );
+	this.buttons.$element.addClass( 'ext-templatewizard-buttons' );
 
 	// Template title.
-	$templateTitle = $( '<p>' ).addClass( 'title' ).append( title.getMainText() );
+	$templateTitle = $( '<p>' ).addClass( 'ext-templatewizard-title' ).append( title.getMainText() );
 
 	// Put them all together.
 	this.$element
 		.addClass( 'ext-templatewizard-templatetitlebar' )
 		.append(
-			$( '<div>' ).addClass( 'title-and-buttons' ).append(
+			$( '<div>' ).addClass( 'ext-templatewizard-title-and-buttons' ).append(
 				$templateTitle,
 				this.buttons.$element
 			),
@@ -62,7 +62,7 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 	var $description, message, messageClass, hasTemplateData, hasParams;
 
 	// Description div (may contain multiple paragraphs).
-	$description = $( '<div>' ).addClass( 'description' );
+	$description = $( '<div>' ).addClass( 'ext-templatewizard-description' );
 	if ( templateData.description ) {
 		// Normal description, from TemplateData.
 		$description.append( $( '<p>' ).wrapInner( '<bdi>' ).text( templateData.description ) );
@@ -74,7 +74,7 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 	// Add notice message where applicable. Note that a template that
 	// doesn't have templatedata may still have parameters because they're
 	// being guessed from the template wikitext.
-	messageClass = 'notice';
+	messageClass = 'ext-templatewizard-notice';
 	hasTemplateData = ( templateData.notemplatedata === undefined );
 	hasParams = (
 		templateData.params !== undefined &&
