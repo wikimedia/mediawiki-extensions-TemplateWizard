@@ -6,6 +6,8 @@
 		]
 	},
 	"templatewizard-add-all": "Acrescentar todos os parâmetros",
+	"templatewizard-betafeature-message": "Assistente de predefinições",
+	"templatewizard-betafeature-description": "O assistente de predefinições permite-lhe adicionar predefinições às páginas da wiki de forma rápida e fácil, a partir do WikiEditor. O assistente usa dados TemplateData para mostrar as descrições das predefinições e dos respetivos parâmetros. Também permite procurar páginas da wiki e imagens da wiki Commons que sirvam como entradas para a predefinição, a partir do próprio editor.",
 	"templatewizard-cancel": "Cancelar",
 	"templatewizard-close-dialog": "Sair do assistente?",
 	"templatewizard-close-dialog-body": "Sair do assistente resultará na perda dos dados que tenha adicionado à predefinição.",
