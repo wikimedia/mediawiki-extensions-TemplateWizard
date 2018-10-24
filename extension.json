@@ -23,6 +23,13 @@
 		"ResourceLoaderTestModules": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderTestModules",
 		"GetBetaFeaturePreferences": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onGetBetaFeaturePreferences"
 	},
+	"attributes": {
+		"EventLogging": {
+			"Schemas": {
+				"TemplateWizard": 18374327
+			}
+		}
+	},
 	"MessagesDirs": {
 		"TemplateWizard": [
 			"i18n"

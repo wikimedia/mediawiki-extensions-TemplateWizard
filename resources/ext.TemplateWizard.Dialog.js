@@ -104,6 +104,8 @@ mw.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 			dialog.contentDir = data.contentDir || 'ltr';
 			dialog.showSearchForm();
 			dialog.$element.attr( 'id', 'ext-templatewizard-dialog' );
+			// Log dialog opening.
+			mw.TemplateWizard.logEvent( 'launch', [] );
 		}, this );
 };
 
@@ -183,10 +185,14 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 					return new OO.ui.Error( mediaWiki.msg( msg ) );
 				}
 				if ( action === 'closeTemplate' ) {
+					mw.TemplateWizard.logEvent( 'remove-template', [ dialog.templateForm.getTitle().getMainText() ] );
 					dialog.showSearchForm();
+				} else {
+					mw.TemplateWizard.logEvent( 'cancel-dialog', [ dialog.templateForm.getTitle().getMainText() ] );
 				}
 			}
 			if ( action === 'closeDialog' ) {
+				mw.TemplateWizard.logEvent( 'cancel-dialog', [] );
 				dialog.close();
 			}
 			if ( action === 'help' ) {
@@ -202,10 +208,11 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 			}
 		} )
 		.next( function () {
-			var templateFormatter, textSelectionOpts;
+			var templateFormatter, textSelectionOpts, templateName;
 			if ( action === 'insert' ) {
 				templateFormatter = new mw.TemplateWizard.TemplateFormatter();
-				templateFormatter.setTemplateName( dialog.templateForm.getTitle().getMainText() );
+				templateName = dialog.templateForm.getTitle().getMainText();
+				templateFormatter.setTemplateName( templateName );
 				templateFormatter.setFormat( dialog.templateForm.getFormat() );
 				templateFormatter.setParameters( dialog.templateForm.getParameters() );
 				textSelectionOpts = {
@@ -214,6 +221,11 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 					selectPeri: false
 				};
 				$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
+				// Log this insertion, and store the template name
+				// for future logging when the page is saved.
+				mw.TemplateWizard.logEvent( 'insert-template', [ templateName ] );
+				mw.TemplateWizard.insertedTemplates.push( templateName );
+				// Close dialog.
 				dialog.ignoreParamValues = false;
 				dialog.close();
 			}
