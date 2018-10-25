@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Manvydasz"
+		]
+	},
+	"templatewizard-add-all": "Pridėti visus laukus",
+	"templatewizard-betafeature-message": "Šablonų vedlys",
+	"templatewizard-cancel": "Uždaryti",
+	"templatewizard-close-dialog": "Palikti vedlį?",
+	"templatewizard-close-dialog-retry": "Atsisakyti pakeitimų",
+	"templatewizard-default": "Numatytasis: $1",
+	"templatewizard-dialog-title": "Įterpti šabloną",
+	"templatewizard-help": "Skaityti daugiau apie šablonų vedlį",
+	"templatewizard-help-title": "Skaityti pagalbos puslapius apie šablono vėdlį MediaWiki.org",
+	"templatewizard-insert": "Įterpti",
+	"templatewizard-invalid-title": "Neleistinas pavadinimas",
+	"templatewizard-invalid-values-edit": "Redaguoti šabloną",
+	"templatewizard-invalid-values-insert": "Įterpti šabloną",
+	"templatewizard-no-description": "Nėra šablono aprašymo.",
+	"templatewizard-opens-in-new-tab": "Atsidaro naujame skirtuke",
+	"templatewizard-parameters-optional": "Neprivalomi laukai",
+	"templatewizard-parameters-required": "Privalomi laukai",
+	"templatewizard-parameters-suggested": "Siūlomi laukai",
+	"templatewizard-placeholder-default": "Numatytasis: $1",
+	"templatewizard-placeholder-example": "pvz., $1",
+	"templatewizard-remove-all": "Pašalinti visus laukus",
+	"templatewizard-remove-template": "Pašalinti šabloną?",
+	"templatewizard-remove-template-retry": "Pašalinti šabloną",
+	"templatewizard-search-placeholder": "Ieškoti šablono",
+	"templatewizard-parambutton-add-title": "Pridėti lauką '$1'",
+	"templatewizard-parambutton-remove-title": "Pašalinti lauką '$1'",
+	"templatewizard-parambutton-required-title": "Privalomas laukas '$1'",
+	"templatewizard-remove-template-title": "Pašalinti šabloną",
+	"templatewizard-link-to-template-title": "Rodyti šabloną",
+	"templatewizard-use": "Naudoti"
+}

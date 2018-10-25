@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav"
+		]
+	},
+	"templatewizard-add-all": "Dodaj sve parametre",
+	"templatewizard-betafeature-message": "Čarobnjak za predloške",
+	"templatewizard-betafeature-description": "Čarobnjak za predloške omogućava Vam dodavanje predložaka na wikistranice, brzo i lako iz Wikiuređivača. Ujedno, koristi TemplateData za pokazivanje predložaka i parametarskih opisa u predlošcima. Čarobnjak također omogućava pretraživanje wikistranica i slika na Zajedničkom poslužitelju pri unosu predloška iz samog uređivača.",
+	"templatewizard-cancel": "Otkaži",
+	"templatewizard-close-dialog": "Napuštate čarobnjak?",
+	"templatewizard-close-dialog-body": "Napuštanje čarobnjaka dovest će do gubitka svih podataka koje ste dodali u predložak.",
+	"templatewizard-close-dialog-retry": "Zanemari izmjene",
+	"templatewizard-default": "Predodređeno: $1",
+	"templatewizard-desc": "Dodatak Wikiuređivaču koji omogućava čarobnjak za umetanje predložaka",
+	"templatewizard-dialog-title": "Umetni predložak",
+	"templatewizard-help": "Saznajte više o »Čarobnjaku za predloške«",
+	"templatewizard-help-title": "Pročitajte stranice pomoći »Čarobnjaka za predloške« na MediaWiki.org",
+	"templatewizard-insert": "Umetni",
+	"templatewizard-invalid-title": "Neispravan naslov",
+	"templatewizard-invalid-values": "Jedan ili više Vaših unosa ne podudaraju se s očekivanim formatom. Želite li urediti unos/e?",
+	"templatewizard-invalid-values-edit": "Uredi predložak",
+	"templatewizard-invalid-values-insert": "Umetni predložak",
+	"templatewizard-no-description": "Ne postoji opis za ovaj predložak.",
+	"templatewizard-no-params-with-td": "Nema definiranih parametara u dokumentaciji ovog predloška [$1 TemplateData podatci o predlošku]. Možete umetnuti predložak bez parametara."
+}
