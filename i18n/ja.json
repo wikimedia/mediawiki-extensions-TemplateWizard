@@ -1,9 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"Suyama"
+			"Suyama",
+			"Aefgh39622"
 		]
 	},
 	"templatewizard-add-all": "全てのパラメーターを追加",
-	"templatewizard-remove-all": "全てのパラメーターを削除"
+	"templatewizard-betafeature-message": "TemplateWizard",
+	"templatewizard-cancel": "キャンセル",
+	"templatewizard-close-dialog": "ウィザードを終了しますか?",
+	"templatewizard-close-dialog-retry": "変更内容を破棄",
+	"templatewizard-default": "既定値: $1",
+	"templatewizard-dialog-title": "テンプレートを挿入",
+	"templatewizard-help": "TemplateWizardの詳細を学ぶ",
+	"templatewizard-insert": "挿入",
+	"templatewizard-invalid-values-edit": "テンプレートの編集",
+	"templatewizard-invalid-values-insert": "テンプレートを挿入",
+	"templatewizard-placeholder-default": "既定値: $1",
+	"templatewizard-placeholder-example": "値の例: $1",
+	"templatewizard-remove-all": "全てのパラメーターを削除",
+	"templatewizard-remove-template": "テンプレートを除去しますか?",
+	"templatewizard-remove-template-retry": "テンプレートを除去",
+	"templatewizard-remove-template-title": "テンプレートを除去",
+	"templatewizard-link-to-template-title": "テンプレートを表示",
+	"templatewizard-use": "使用する"
 }

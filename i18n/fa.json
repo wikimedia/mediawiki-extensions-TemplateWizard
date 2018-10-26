@@ -1,18 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ladsgroup"
+			"Ladsgroup",
+			"Reza1615"
 		]
 	},
+	"templatewizard-add-all": "افزودن همهٔ پارامترها",
+	"templatewizard-betafeature-message": "جادوگر الگو",
+	"templatewizard-betafeature-description": "جادوگر الگو به شما اجازه می‌دهد که الگوها را به صفحات ویکی در حالت ویرایش به سرعت بیافزایید. از پارمترهای الگوها برای نمایش الگو استفاده می‌کند همچنین به شما امکان جستجو برای یک صفحهٔ ویکی و تصاویر کامنز برای ورودی یک الگو از ویرایشگر را می‌دهد.",
 	"templatewizard-cancel": "لغو",
+	"templatewizard-close-dialog": "خروج از ابزار؟",
+	"templatewizard-close-dialog-body": "با خروج از ابزار اطلاعاتی را که ثبت کرده‌اید از دست می‌روند.",
+	"templatewizard-close-dialog-retry": "دور ریختن تغییرات",
 	"templatewizard-default": "پیش‌فرض: $1",
+	"templatewizard-desc": "جادوگر الگو ابزاری برای افزودن الگوهاست",
 	"templatewizard-dialog-title": "افزودن الگو",
 	"templatewizard-help": "درباره جادوگر الگو بیشتر بدانید",
+	"templatewizard-help-title": "صفحهٔ راهنمای جادوگر الگو را در MediaWiki.org مطالعه کنید",
 	"templatewizard-insert": "درج",
 	"templatewizard-invalid-title": "عنوان نامعتبر",
+	"templatewizard-invalid-values": "یک یا چند ورودی با ساختار مورد انتظار تطابق ندارد آیا قصد ویرایش آنها را دارید؟",
 	"templatewizard-invalid-values-edit": "ویرایش الگو",
 	"templatewizard-invalid-values-insert": "افزودن الگو",
 	"templatewizard-no-description": "توضیحی برای این الگو وجود ندارد.",
+	"templatewizard-no-params-with-td": "متغییری برای [$1 TemplateData]  تعریف نشده‌است. آیا قصد دارید الگو بدون متغییر تعریف کنید.",
+	"templatewizard-no-params-without-td": "به علت نبود اطلاعات  [$1 TemplateData]  متغییری تعریف نشده‌است. امکان افزودن الگو بدون متغییر وجود دارد",
+	"templatewizard-no-templatedata": "به علت نبود [$1 TemplateData]، پارمترهای الگو به صورت خودکار تولید شده‌اند که ممکن است دقیق نباشد.",
 	"templatewizard-opens-in-new-tab": "در برگه جدید باز می‌شود",
 	"templatewizard-parameters-optional": "پارامترهای اختیاری",
 	"templatewizard-parameters-required": "پارامترهای اجباری",
@@ -21,10 +34,13 @@
 	"templatewizard-placeholder-example": "مثلا $1",
 	"templatewizard-remove-all": "حذف تمام پارامترها",
 	"templatewizard-remove-template": "حذف الگو؟",
+	"templatewizard-remove-template-body": "الگویی که می‌خواهید حذف کنید ممکن است دارای اطلاعاتی باشد که شما افزودید. حذف الگو همچنین باعث می‌شود که اطلاعات افزوده شده توسط شما نیز حذف شوند. این عمل قابل بازگشت نیست.",
 	"templatewizard-remove-template-retry": "حذف الگو",
 	"templatewizard-search-placeholder": "جستجو برای الگو",
 	"templatewizard-parambutton-add-title": "افزودن پارامتر «$1»",
 	"templatewizard-parambutton-remove-title": "حذف پارامتر «$1»",
 	"templatewizard-parambutton-required-title": "پارامتر اجباری «$1»",
+	"templatewizard-remove-template-title": "حذف الگو",
+	"templatewizard-link-to-template-title": "نمایش الگو",
 	"templatewizard-use": "استفاده"
 }
