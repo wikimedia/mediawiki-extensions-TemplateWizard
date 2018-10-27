@@ -7,6 +7,7 @@
 	},
 	"templatewizard-add-all": "הוספת כל הפרמטרים",
 	"templatewizard-betafeature-message": "אשף התבניות",
+	"templatewizard-betafeature-description": "אשף התבניות מאפשר לך להוסיף תבניות לדפי ויקי במהירות ובקלות מתוך WikiEditor. הוא משתמש בנתוני תבנית (TemplateData) כדי להציג תיאורים של התבניות והפרמטרים שלהן. הוא גם מאפשר חיפוש דפי ויקי ותמונות ויקישיתוף עבור קלט לתבנית מתוך העורך עצמו.",
 	"templatewizard-cancel": "ביטול",
 	"templatewizard-close-dialog": "לעזוב את האשף?",
 	"templatewizard-close-dialog-body": "עזיבת האשף תוביל לאובדן כל הנותנים שהוספת לתבנית.",
@@ -39,5 +40,7 @@
 	"templatewizard-parambutton-add-title": "הוספת הפרמטר \"$1\"",
 	"templatewizard-parambutton-remove-title": "הסרת הפרמטר \"$1\"",
 	"templatewizard-parambutton-required-title": "פרמטר נדרש \"$1\"",
+	"templatewizard-remove-template-title": "הסרת תבנית",
+	"templatewizard-link-to-template-title": "צפייה בתבנית",
 	"templatewizard-use": "שימוש"
 }
