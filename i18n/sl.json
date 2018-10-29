@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Janezdrilc"
+		]
+	},
+	"templatewizard-add-all": "Dodaj vse parametre",
+	"templatewizard-betafeature-message": "Čarovnik za predloge",
+	"templatewizard-cancel": "Prekliči",
+	"templatewizard-close-dialog": "Zaprem čarovnik?",
+	"templatewizard-close-dialog-body": "Zaprtje čarovnika bo povzročilo izgubo vseh vnešenih podatkov.",
+	"templatewizard-close-dialog-retry": "Zavrzi spremembe",
+	"templatewizard-default": "Privzeto: $1",
+	"templatewizard-desc": "Dodatek Wikiurejevalnika, pri katerem gre za čarovnika za vstavljanje predlog.",
+	"templatewizard-dialog-title": "Vstavi predlogo",
+	"templatewizard-help": "Več o Čarovniku za predloge",
+	"templatewizard-help-title": "Pojdi na strani za pomoč na MediaWiki.org",
+	"templatewizard-insert": "Vstavi",
+	"templatewizard-invalid-title": "Neveljaven naslov",
+	"templatewizard-invalid-values-edit": "Uredi predlogo",
+	"templatewizard-invalid-values-insert": "Vstavi predlogo",
+	"templatewizard-no-description": "Ni opisa za to predlogo.",
+	"templatewizard-opens-in-new-tab": "Odpre nov zavihek",
+	"templatewizard-parameters-optional": "Dodatni parametri",
+	"templatewizard-parameters-required": "Zahtevani parametri",
+	"templatewizard-parameters-suggested": "Predloženi parametri",
+	"templatewizard-placeholder-default": "Privzeto: $1",
+	"templatewizard-placeholder-example": "npr. $1",
+	"templatewizard-remove-all": "Odstrani vse parametre",
+	"templatewizard-remove-template": "Odstranim predlogo?",
+	"templatewizard-remove-template-retry": "Odstrani predlogo",
+	"templatewizard-search-placeholder": "Išči predlogo",
+	"templatewizard-parambutton-add-title": "Dodaj parameter '$1'",
+	"templatewizard-parambutton-remove-title": "Odstrani parameter '$1'",
+	"templatewizard-parambutton-required-title": "Zahtevani parameter '$1'",
+	"templatewizard-remove-template-title": "Odstrani predlogo",
+	"templatewizard-link-to-template-title": "Prikaži predlogo",
+	"templatewizard-use": "Uporabi"
+}
