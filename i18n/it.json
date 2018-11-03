@@ -2,17 +2,28 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Sarah Bernabei"
+			"Sarah Bernabei",
+			"Sakretsu"
 		]
 	},
 	"templatewizard-add-all": "Aggiungi tutti i parametri",
+	"templatewizard-betafeature-description": "TemplateWizard consente di aggiungere template velocemente e facilmente dal WikiEditor nelle pagine wiki. Sfrutta TemplateData per mostrare le descrizioni dei template e i loro parametri. Inoltre permette di cercare pagine wiki e immagini su Commons nell'input di template dall'editor stesso.",
 	"templatewizard-cancel": "Annulla",
+	"templatewizard-close-dialog-body": "Abbandonando la procedura guidata perderai tutti i dati che hai aggiunto nel template.",
 	"templatewizard-close-dialog-retry": "Ignora modifiche",
 	"templatewizard-default": "Predefinito: $1",
+	"templatewizard-dialog-title": "Inserisci un template",
+	"templatewizard-help": "Scopri di più su TemplateWizard",
+	"templatewizard-insert": "Inserisci",
 	"templatewizard-invalid-values": "Uno o più dei tuoi valori inseriti non combaciano col formato previsto. Vuoi modificarli?",
 	"templatewizard-invalid-values-edit": "Modifica template",
 	"templatewizard-invalid-values-insert": "Inserisci template",
 	"templatewizard-no-description": "Non esiste descrizione per questo template.",
+	"templatewizard-no-params-with-td": "Non ci sono parametri definiti nella documentazione di [$1 TemplateData] di questo template. Puoi inserire il template senza parametri.",
+	"templatewizard-no-params-without-td": "Non è possibile individuare parametri per questo template a causa dell'assenza della documentazione di [$1 TemplateData]. Puoi inserire il template senza parametri.",
+	"templatewizard-no-templatedata": "A causa della mancanza di [$1 TemplateData], i parametri di questo template sono stati generati automaticamente. Per favore, sii consapevole che potrebbero non essere accurati.",
+	"templatewizard-parameters-optional": "Parametri opzionali",
+	"templatewizard-parameters-required": "Parametri obbligatori",
 	"templatewizard-placeholder-default": "Predefinito: $1",
 	"templatewizard-placeholder-example": "Esempio: $1",
 	"templatewizard-remove-all": "Rimuovi tutti i parametri",

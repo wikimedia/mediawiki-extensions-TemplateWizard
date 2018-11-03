@@ -1,16 +1,46 @@
 {
 	"@metadata": {
 		"authors": [
-			"Patriccck"
+			"Patriccck",
+			"YjM"
 		]
 	},
+	"templatewizard-add-all": "Přidat všechny parametry",
+	"templatewizard-betafeature-message": "TemplateWizard",
+	"templatewizard-betafeature-description": "TemplateWizard Vám umožní přidat do wiki stránek šablony pomocí editoru wikitextu rychle a jednoduše. Využívá Data šablony k zobrazení popisů šablon a jejich parametrů. Také umožňuje přímo z editoru šablony vyhledávat wiki stránky a obrázky na Commons.",
 	"templatewizard-cancel": "Storno",
+	"templatewizard-close-dialog": "Zavřít průvodce?",
+	"templatewizard-close-dialog-body": "Zavřením průvodce dojde ke ztrátě všech dat, která jste do šablony vyplnili.",
+	"templatewizard-close-dialog-retry": "Zahodit změny",
 	"templatewizard-default": "Výchozí: $1",
+	"templatewizard-desc": "Doplněk do WikiEditoru, který zprostředkuje průvodce vkládáním šablon",
+	"templatewizard-dialog-title": "Přidat šablonu",
+	"templatewizard-help": "Zjistit více o průvodci TemplateWizard",
+	"templatewizard-help-title": "Navštivte stránku nápovědy TemplateWizard na MediaWiki.org",
 	"templatewizard-insert": "Vložit",
 	"templatewizard-invalid-title": "Neplatný název",
+	"templatewizard-invalid-values": "Jeden nebo více vyplněných parametrů neodpovídá očekávanému formátu. Chcete je upravit?",
+	"templatewizard-invalid-values-edit": "Upravit šablonu",
+	"templatewizard-invalid-values-insert": "Vložit",
+	"templatewizard-no-description": "Tato šablona nemá žádný popis.",
+	"templatewizard-no-params-with-td": "V [$1 Datech šablony] nejsou definovány žádné parametry. Můžete vložit šablonu bez parametrů.",
+	"templatewizard-no-params-without-td": "Kvůli chybějícím [$1 Datům šablony] nelze nalézt parametry této šablony. Můžete vložit šablonu bez parametrů.",
+	"templatewizard-no-templatedata": "Kvůli chybějícím [$1 Datům šablony] byly parametry této šablony automaticky vygenerovány. Mějte prosím na paměti, že mohou být nesprávné.",
+	"templatewizard-opens-in-new-tab": "Otevře se v nové záložce",
 	"templatewizard-parameters-optional": "Doplňkové parametry",
 	"templatewizard-parameters-required": "Povinné parametry",
+	"templatewizard-parameters-suggested": "Doporučené parametry",
 	"templatewizard-placeholder-default": "Výchozí: $1",
 	"templatewizard-placeholder-example": "např. $1",
-	"templatewizard-use": "Používat"
+	"templatewizard-remove-all": "Odebrat všechny parametry",
+	"templatewizard-remove-template": "Odstranit šablonu?",
+	"templatewizard-remove-template-body": "Šablona, kterou se chystáte odstranit, obsahuje vyplněná data. Odstraněním šablony dojte také ke smazání všech informací, které jste do šablony vyplnili. Tuto akci nelze vrátit zpět.",
+	"templatewizard-remove-template-retry": "Odstranit šablonu",
+	"templatewizard-search-placeholder": "Hledat šablonu",
+	"templatewizard-parambutton-add-title": "Přidat parametr „$1”",
+	"templatewizard-parambutton-remove-title": "Odebrat parametr „$1”",
+	"templatewizard-parambutton-required-title": "Povinný parametr „$1“",
+	"templatewizard-remove-template-title": "Odstranit šablonu",
+	"templatewizard-link-to-template-title": "Zobrazit šablonu",
+	"templatewizard-use": "Použít"
 }
