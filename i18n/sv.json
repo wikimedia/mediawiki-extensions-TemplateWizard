@@ -5,6 +5,8 @@
 		]
 	},
 	"templatewizard-add-all": "Lägg till alla parametrar",
+	"templatewizard-betafeature-message": "TemplateWizard",
+	"templatewizard-betafeature-description": "TemplateWizard låter dig lägga till mallar på wikisidor snabbt och enkelt från WikiEditor. Den använder TemplateData för att visa beskrivningar för mallar och dess parametrar. Den tillåter även att söka efter wikisidor och Commons-bilder att infoga mallar från själva redigeraren.",
 	"templatewizard-cancel": "Avbryt",
 	"templatewizard-close-dialog": "Lämna guiden?",
 	"templatewizard-close-dialog-body": "Om du lämnar guiden förlorar du all data som du har lagt till i mallen.",

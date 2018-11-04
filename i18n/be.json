@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Artsiom91"
+		]
+	},
+	"templatewizard-add-all": "Дадаць усе параметры",
+	"templatewizard-betafeature-message": "Майстар шаблонаў",
+	"templatewizard-betafeature-description": "Майстар шаблонаў дазваляе хутка і проста дадаваць шаблоны ў вікістаронкі з Вікірэдактара. Ён выкарыстоўвае TemplateData для паказу шаблонаў і іх параметраў. Ён таксама дазваляе пошук вікістаронак і выяў на Вікісховішчы для ўнясення шаблонаў з самога рэдактара.",
+	"templatewizard-cancel": "Адмена",
+	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
+	"templatewizard-close-dialog-retry": "Адмяніць змяненні",
+	"templatewizard-default": "Па змоўчанні: $1",
+	"templatewizard-desc": "Дадатак WikiEditor, якая прадастаўляе майстар устаўкі шаблонаў",
+	"templatewizard-dialog-title": "Уставіць шаблон",
+	"templatewizard-help": "Даведацца больш пра Майстар шаблонаў",
+	"templatewizard-help-title": "Дапамогу па Майстру шаблонаў можна прачытаць на MediaWiki.org",
+	"templatewizard-insert": "Уставіць",
+	"templatewizard-invalid-title": "Недапушчальная назва",
+	"templatewizard-invalid-values": "Адно ці больш з уведзеных значэнняў не адпавядае чаканаму фармату. Хочаце рэдагаваць яго?",
+	"templatewizard-invalid-values-edit": "Рэдагаваць шаблон",
+	"templatewizard-invalid-values-insert": "Уставіць шаблон",
+	"templatewizard-no-params-with-td": "Няма параметраў у гэтай дакументацыі [$1 TemplateData]. Вы можаце выкарыстоўваць шаблон без параметраў.",
+	"templatewizard-no-params-without-td": "Не атрымалася вызначыць параметры для шаблона, бо адсутнічае дакументацыя [$1 TemplateData]. Вы можаце выкарыстоўваць шаблон без параметраў.",
+	"templatewizard-no-templatedata": "У сувязі з адсутнасцю ў гэтага шаблона тэгаў [$1 TemplateData], табліца параметраў для яго была сгенеравана аўтаматычна. Калі ласка, майце на ўвазе, што інфармацыя пра параметры можа быць недакладнай.",
+	"templatewizard-opens-in-new-tab": "Адкрываецца ў новай укладцы",
+	"templatewizard-parameters-optional": "Неабавязковыя параметры",
+	"templatewizard-parameters-required": "Абавязковыя параметры",
+	"templatewizard-parameters-suggested": "Прапанаваныя параметры",
+	"templatewizard-placeholder-default": "Па змоўчанні: $1",
+	"templatewizard-placeholder-example": "Напрыклад: $1",
+	"templatewizard-remove-all": "Выдаліць усе параметры",
+	"templatewizard-remove-template": "Выдаліць шаблон?",
+	"templatewizard-remove-template-body": "Шаблон, які Вы хочаце выдаліць, змяшчае ўведзеныя Вамі звесткі. Выдаленне шаблона таксама выдаліць інфармацыю, якую Вы дадалі ў яго. Гэта дзеянне нельга будзе адмяніць.",
+	"templatewizard-remove-template-retry": "Выдаліць шаблон",
+	"templatewizard-search-placeholder": "Шукаць шаблон",
+	"templatewizard-parambutton-add-title": "Дадаць параметр '$1'",
+	"templatewizard-parambutton-remove-title": "Выдаліць параметр '$1'",
+	"templatewizard-parambutton-required-title": "Патрабуецца параметр '$1'",
+	"templatewizard-remove-template-title": "Выдаліць шаблон",
+	"templatewizard-link-to-template-title": "Прагляд шаблона",
+	"templatewizard-use": "Ужыць"
+}

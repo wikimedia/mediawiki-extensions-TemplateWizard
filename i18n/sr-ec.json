@@ -23,6 +23,8 @@
 	"templatewizard-invalid-values-insert": "Уметни шаблон",
 	"templatewizard-no-description": "Не постоји опис за овај шаблон.",
 	"templatewizard-no-params-with-td": "Нема дефинисаних параметара у документацији овог шаблона ([$1 подаци о шаблону]). Можете да уметнете шаблон без параметара.",
+	"templatewizard-no-params-without-td": "Параметри овог шаблона не могу да буду утврђени због одсуства документације [$1 података о шаблону].",
+	"templatewizard-no-templatedata": "Због недостатка [$1 података о шаблону], параметри овог шаблона су аутоматски генерисани. Будите свесни да они можда нису тачни.",
 	"templatewizard-opens-in-new-tab": "Отвара се у новој картици",
 	"templatewizard-parameters-optional": "Опционални параметри",
 	"templatewizard-parameters-required": "Неопходни параметри",
@@ -37,7 +39,7 @@
 	"templatewizard-parambutton-add-title": "Додајте параметар „$1”",
 	"templatewizard-parambutton-remove-title": "Уклоните параметар „$1”",
 	"templatewizard-parambutton-required-title": "Неопходан параметар „$1”",
-	"templatewizard-remove-template-title": "Уклањање шаблона",
-	"templatewizard-link-to-template-title": "Приказ шаблона",
+	"templatewizard-remove-template-title": "Уклоните шаблон",
+	"templatewizard-link-to-template-title": "Погледајте шаблон",
 	"templatewizard-use": "Употреби"
 }
