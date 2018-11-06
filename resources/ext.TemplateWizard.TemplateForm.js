@@ -3,7 +3,6 @@
  * @constructor
  * @param {Object} templateData
  * @param {Object} [config] Configuration options
- * @cfg {jQuery} [$popupOverlay] Overlay for any popups
  */
 mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( templateData, config ) {
 	mw.TemplateWizard.TemplateForm.parent.call( this );
@@ -15,7 +14,7 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 	this.fields = [];
 	this.templateTitleBar = null;
 	this.menuContainer = null;
-	this.$popupOverlay = config.$popupOverlay || this.$element;
+	this.$overlay = config.$overlay || OO.ui.getDefaultOverlay();
 	this.$element.html( this.getForm( templateData ).$element.addClass( 'ext-templatewizard-templateform' ) );
 
 	/**
@@ -248,7 +247,8 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 					label: label,
 					help: description,
 					required: details.required,
-					data: { name: param }
+					data: { name: param },
+					$overlay: templateForm.$overlay
 				}
 			) );
 
@@ -301,7 +301,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 mw.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function (
 	param, paramDefinition
 ) {
-	var widget, config = { name: param, $overlay: this.$popupOverlay };
+	var widget, config = { name: param, $overlay: this.$overlay };
 	if ( paramDefinition.autovalue ) {
 		config.value = paramDefinition.autovalue;
 	}

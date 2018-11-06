@@ -4,7 +4,6 @@
  * @constructor
  * @extends OO.ui.ProcessDialog
  * @param {Object} config
- * @cfg {jQuery} [$popupOverlay] Overlay for popups inside the dialog
  */
 mw.TemplateWizard.Dialog = function MWTemplateWizardDialog( config ) {
 	mw.TemplateWizard.Dialog.super.call( this, config );
@@ -12,7 +11,6 @@ mw.TemplateWizard.Dialog = function MWTemplateWizardDialog( config ) {
 
 	// Instantiate with default value
 	this.contentDir = 'ltr';
-	this.$popupOverlay = config.$popupOverlay || this.$element;
 };
 OO.inheritClass( mw.TemplateWizard.Dialog, OO.ui.ProcessDialog );
 mw.TemplateWizard.Dialog.static.name = 'templateWizard';
@@ -76,7 +74,7 @@ mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 		this.templateForm.disconnect( this );
 	}
 	this.templateForm = new mw.TemplateWizard.TemplateForm(
-		templateData, { $popupOverlay: this.$popupOverlay }
+		templateData, { $overlay: this.$overlay }
 	);
 	this.templateForm.connect( this, { close: 'closeTemplate' } );
 
