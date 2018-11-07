@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Épine"
+		]
+	},
+	"templatewizard-add-all": "زیادکردنی ھەموو پارامەترەکان",
+	"templatewizard-betafeature-message": "جادووگەری داڕێژەکان",
+	"templatewizard-betafeature-description": "جادووگەری داڕێژەکان یارمەتی دەدات کە داڕێژەکان بە خێرایی بۆ پەڕەکان زیاد بکەیت بە شێوەیەکی زۆر ئاسان.",
+	"templatewizard-cancel": "ھەڵوەشاندنەوە",
+	"templatewizard-close-dialog": "بەجێھێشتنی جادووگەر؟",
+	"templatewizard-close-dialog-body": "بەجێھێشتنی جادووگەر دەبێتە ھۆی لەدەستدانی ھەموو ئەو زانیارییانەی بۆ جادووگەر زیادت کردوون.",
+	"templatewizard-close-dialog-retry": "ھەڵوەشاندنەوەی گۆڕانکارییەکان",
+	"templatewizard-default": "بنەڕەت: $1",
+	"templatewizard-dialog-title": "تێخستنی داڕێژە",
+	"templatewizard-help": "زیاتر لەبارەی جادووگەری داڕێژە",
+	"templatewizard-help-title": "خوێندنەوەی پەڕەکانی یارمەتیی جادووگەری داڕێژەکان",
+	"templatewizard-insert": "تێخستن",
+	"templatewizard-invalid-title": "ناونیشانی ھەڵە",
+	"templatewizard-invalid-values-edit": "دەستکاریکردنی داڕێژە",
+	"templatewizard-invalid-values-insert": "تێخستنی داڕێژە",
+	"templatewizard-no-description": "ھیچ شیکردنەوەیەک بۆ ئەم داڕێژەیە نەدراوە.",
+	"templatewizard-no-params-with-td": "ھیچ پارامەترێک لە بەڵگەنامەی [$1 زانیارییەکانی داڕێژە]ی ئەم داڕێژەیە نەدراوە. دەتوانیت ئەم داڕێژەیە بەبێ پارامەترەکان زیاد بکەیت.",
+	"templatewizard-no-params-without-td": "ھیچ پارامەترێک لەم داڕێژەیەدا نەدۆزرایەوە بەھۆی نەبوونی [$1 بەڵگەنامەی داڕێژە]. دەتوانیت ئەم داڕێژەیە بەبێ ھیچ پارامەترێک زیاد بکەیت.",
+	"templatewizard-no-templatedata": "لەبەر نەبوونی [$1 بەڵگەنامەی داڕێژە]، پارامەترەکان بۆ ئەم داڕێژەیە خۆکارانە بار کراون. تکایە ئاگادار بە، لەوانەیە دروست نەبن.",
+	"templatewizard-opens-in-new-tab": "لە تابێکی نوێدا دەکرێتەوە",
+	"templatewizard-parameters-optional": "پارامەترە دڵخوازەکان",
+	"templatewizard-parameters-required": "پارامەترە پێویستەکان",
+	"templatewizard-parameters-suggested": "پارامەترە پێشنیارکراوەکان",
+	"templatewizard-placeholder-default": "بنەڕەت: $1",
+	"templatewizard-placeholder-example": "نموونە: $1",
+	"templatewizard-remove-all": "لابردنی ھەموو پارامەترەکان",
+	"templatewizard-remove-template": "داڕێژە لاببرێت؟",
+	"templatewizard-remove-template-body": "ئەو داڕێژەیەی ھەوڵی لابردنی دەدەیت بە زانیاری پڕکراوەتەوە. لابردنی ئەم داڕێژەیە دەبێتە ھۆی نەمانی ئەو زانیارییانەی بۆ داڕێژەکە زیادت کردوون. ئەم کردەوەیە گەڕاندنەوەی نییە.",
+	"templatewizard-remove-template-retry": "لابردنی داڕێژە",
+	"templatewizard-search-placeholder": "گەڕان بەدوای داڕێژەیەک",
+	"templatewizard-parambutton-add-title": "زیادکردنی پارامەتری «$1»",
+	"templatewizard-parambutton-remove-title": "لابردنی پارامەتری «$1»",
+	"templatewizard-parambutton-required-title": "پارامەتری پێویست: «$1»",
+	"templatewizard-remove-template-title": "لابردنی داڕێژە",
+	"templatewizard-link-to-template-title": "بینینی داڕێژە",
+	"templatewizard-use": "بەکارهێنان"
+}

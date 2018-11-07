@@ -2,17 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Suyama",
-			"Aefgh39622"
+			"Aefgh39622",
+			"Omotecho"
 		]
 	},
 	"templatewizard-add-all": "全てのパラメーターを追加",
 	"templatewizard-betafeature-message": "TemplateWizard",
+	"templatewizard-betafeature-description": "テンプレートウィザードはウィキ編集機能からウィキページに簡単に素早くテンプレートを追加します。テンプレートの説明とパラメータは、テンプレートデータを参照します。またテンプレートに入力するウィキページやコモンズの画像を、編集機能から検索できるようにします。",
 	"templatewizard-cancel": "キャンセル",
 	"templatewizard-close-dialog": "ウィザードを終了しますか?",
 	"templatewizard-close-dialog-retry": "変更内容を破棄",
 	"templatewizard-default": "既定値: $1",
+	"templatewizard-desc": "ウィキ編集機能にテンプレート挿入ウィザードを提供するアドオン",
 	"templatewizard-dialog-title": "テンプレートを挿入",
 	"templatewizard-help": "TemplateWizardの詳細を学ぶ",
+	"templatewizard-help-title": "テンプレートウィザードのヘルプはMediaWiki.orgを参照",
 	"templatewizard-insert": "挿入",
 	"templatewizard-invalid-values-edit": "テンプレートの編集",
 	"templatewizard-invalid-values-insert": "テンプレートを挿入",
