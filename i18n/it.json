@@ -3,10 +3,12 @@
 		"authors": [
 			"Beta16",
 			"Sarah Bernabei",
-			"Sakretsu"
+			"Sakretsu",
+			"Valepert"
 		]
 	},
 	"templatewizard-add-all": "Aggiungi tutti i parametri",
+	"templatewizard-betafeature-message": "TemplateWizard",
 	"templatewizard-betafeature-description": "TemplateWizard consente di aggiungere template velocemente e facilmente dal WikiEditor nelle pagine wiki. Sfrutta TemplateData per mostrare le descrizioni dei template e i loro parametri. Inoltre permette di cercare pagine wiki e immagini su Commons nell'input di template dall'editor stesso.",
 	"templatewizard-cancel": "Annulla",
 	"templatewizard-close-dialog-body": "Abbandonando la procedura guidata perderai tutti i dati che hai aggiunto nel template.",
@@ -15,6 +17,7 @@
 	"templatewizard-dialog-title": "Inserisci un template",
 	"templatewizard-help": "Scopri di più su TemplateWizard",
 	"templatewizard-insert": "Inserisci",
+	"templatewizard-invalid-title": "Titolo non valido",
 	"templatewizard-invalid-values": "Uno o più dei tuoi valori inseriti non combaciano col formato previsto. Vuoi modificarli?",
 	"templatewizard-invalid-values-edit": "Modifica template",
 	"templatewizard-invalid-values-insert": "Inserisci template",
@@ -33,5 +36,6 @@
 	"templatewizard-parambutton-remove-title": "Rimuovi il parametro '$1'",
 	"templatewizard-parambutton-required-title": "Parametro obbligatorio '$1'",
 	"templatewizard-remove-template-title": "Rimuovi template",
-	"templatewizard-link-to-template-title": "Vedi template"
+	"templatewizard-link-to-template-title": "Vedi template",
+	"templatewizard-use": "Usa"
 }
