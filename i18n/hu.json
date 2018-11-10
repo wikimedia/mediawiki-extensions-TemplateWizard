@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tacsipacsi"
+			"Tacsipacsi",
+			"Bencemac"
 		]
 	},
 	"templatewizard-add-all": "Összes paraméter hozzáadása",
+	"templatewizard-betafeature-message": "Sablonvarázsló",
 	"templatewizard-cancel": "Mégse",
 	"templatewizard-close-dialog": "Varázsló elhagyása?",
 	"templatewizard-close-dialog-body": "A varázsló elhagyásával a sablonhoz adott összes adat elveszik.",
@@ -34,5 +36,10 @@
 	"templatewizard-remove-template-body": "Az eltávolítandó sablonban vannak általad megadott adatok. A sablon eltávolítása a megadott információkat is eltávolítja. Ez a művelet nem vonható vissza.",
 	"templatewizard-remove-template-retry": "Sablon eltávolítása",
 	"templatewizard-search-placeholder": "Sablon keresése",
+	"templatewizard-parambutton-add-title": "„$1” paraméter hozzáadása",
+	"templatewizard-parambutton-remove-title": "„$1” paraméter törlése",
+	"templatewizard-parambutton-required-title": "„$1” paraméter megadása kötelező",
+	"templatewizard-remove-template-title": "Sablon eltávolítása",
+	"templatewizard-link-to-template-title": "Sablon megtekintése",
 	"templatewizard-use": "Használat"
 }

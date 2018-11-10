@@ -6,7 +6,7 @@
 	},
 	"templatewizard-add-all": "Dodaj sve parametre",
 	"templatewizard-betafeature-message": "Čarobnjak za predloške",
-	"templatewizard-betafeature-description": "Čarobnjak za predloške omogućava Vam dodavanje predložaka na wikistranice, brzo i lako iz Wikiuređivača. Ujedno, koristi TemplateData za pokazivanje predložaka i parametarskih opisa u predlošcima. Čarobnjak također omogućava pretraživanje wikistranica i slika na Zajedničkom poslužitelju pri unosu predloška iz samog uređivača.",
+	"templatewizard-betafeature-description": "Čarobnjak za predloške omogućava Vam brzo i lako dodavanje predložaka iz Wikiuređivača na wikistranice. Ujedno, koristi TemplateData za pokazivanje opisa predložaka i njihovih parametara. Čarobnjak također omogućava pretraživanje wikistranica i slika na Zajedničkom poslužitelju pri unosu predloška iz samog uređivača.",
 	"templatewizard-cancel": "Otkaži",
 	"templatewizard-close-dialog": "Napuštate čarobnjak?",
 	"templatewizard-close-dialog-body": "Napuštanje čarobnjaka dovest će do gubitka svih podataka koje ste dodali u predložak.",
