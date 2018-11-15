@@ -4,13 +4,20 @@
 			"Saederup92"
 		]
 	},
+	"templatewizard-add-all": "Tilføj alle parametre",
 	"templatewizard-betafeature-message": "TemplateWizard",
 	"templatewizard-cancel": "Annullér",
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-dialog-title": "Indsæt en skabelon",
+	"templatewizard-invalid-values-edit": "Rediger skabelon",
+	"templatewizard-invalid-values-insert": "Indsæt skabelon",
+	"templatewizard-no-description": "Der findes ikke nogen beskrivelse til denne skabelon.",
 	"templatewizard-placeholder-default": "Standard: $1",
+	"templatewizard-remove-all": "Fjern alle parametre",
 	"templatewizard-remove-template": "Fjern skabelon?",
 	"templatewizard-remove-template-retry": "Fjern skabelon",
+	"templatewizard-search-placeholder": "Søg efter en skabelon",
+	"templatewizard-parambutton-add-title": "Tilføj parameteren '$1'",
 	"templatewizard-remove-template-title": "Fjern skabelon",
 	"templatewizard-link-to-template-title": "Se skabelon",
 	"templatewizard-use": "Anvend"
