@@ -1,4 +1,4 @@
-( function ( mw ) {
+( function () {
 	QUnit.module( 'TemplateWizard' );
 
 	QUnit.test( 'basic template formatting', function ( assert ) {
@@ -51,4 +51,4 @@
 		assert.strictEqual( templateFormatter.getTemplate(), '{{tpl||two\n| a = a\n}}' );
 	} );
 
-}( mediaWiki ) );
+}() );

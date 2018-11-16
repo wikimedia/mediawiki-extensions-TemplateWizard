@@ -27,14 +27,14 @@ OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
  * @return {jQuery.Promise} jQuery AJAX object, or promise object with an .abort() method
  */
 mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
-	return new mediaWiki.Api().get( {
+	return new mw.Api().get( {
 		action: 'templatedata',
 		generator: 'prefixsearch',
 		gpssearch: this.getValue(),
-		gpsnamespace: mediaWiki.config.get( 'wgNamespaceIds' ).template,
+		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
 		redirects: true,
 		includeMissingTitles: true,
-		lang: mediaWiki.config.get( 'wgUserLanguage' )
+		lang: mw.config.get( 'wgUserLanguage' )
 	} );
 };
 
@@ -54,7 +54,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	this.templateData = response.pages;
 	$.each( this.templateData, function ( pageId, templateData ) {
 		// Store the main text as well, so we don't have to re-do this.
-		templateData.titleMainText = mediaWiki.Title
+		templateData.titleMainText = mw.Title
 			.newFromText( templateData.title )
 			.getMainText();
 		searchResults.push( {

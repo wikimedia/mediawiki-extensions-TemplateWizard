@@ -14,7 +14,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	// Link button.
 	linkButton = new OO.ui.ButtonWidget( {
 		label: '',
-		title: mediaWiki.msg( 'templatewizard-link-to-template-title' ),
+		title: mw.msg( 'templatewizard-link-to-template-title' ),
 		flags: 'progressive',
 		framed: false,
 		icon: 'link',
@@ -28,7 +28,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 		flags: 'destructive',
 		framed: false,
 		icon: 'trash',
-		title: mediaWiki.msg( 'templatewizard-remove-template-title' )
+		title: mw.msg( 'templatewizard-remove-template-title' )
 	} );
 	trashButton.connect( templateForm, { click: 'closeForm' } );
 
@@ -95,7 +95,7 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 			$( '<p>' )
 				.addClass( messageClass )
 				.html(
-					mediaWiki.message(
+					mw.message(
 						message,
 						'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData'
 					).parse()

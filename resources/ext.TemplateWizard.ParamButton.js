@@ -30,13 +30,13 @@ mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton(
 		this.isEnabled = true;
 		this.setDisabled( true );
 		this.setIcon( 'check' );
-		this.setTitle( mediaWiki.msg( 'templatewizard-parambutton-required-title', this.getLabel() ) );
+		this.setTitle( mw.msg( 'templatewizard-parambutton-required-title', this.getLabel() ) );
 	} else {
 		this.isRequired = false;
 		this.isEnabled = false;
 		// For non-required fields, change the title to represent the state of the button
 		// and describe the action it results in, for accessibility
-		this.setTitle( mediaWiki.msg( 'templatewizard-parambutton-add-title', this.getLabel() ) );
+		this.setTitle( mw.msg( 'templatewizard-parambutton-add-title', this.getLabel() ) );
 	}
 
 	// Listen to any available 'click' event, including 'space' or 'enter'
@@ -82,14 +82,14 @@ mw.TemplateWizard.ParamButton.prototype.setParamState = function ( setEnabled ) 
 		this.setIcon( 'subtract' );
 		this.setFlags( { progressive: false, destructive: true } );
 		this.templateForm.showField( this.param );
-		this.setTitle( mediaWiki.msg( 'templatewizard-parambutton-remove-title', this.getLabel() ) );
+		this.setTitle( mw.msg( 'templatewizard-parambutton-remove-title', this.getLabel() ) );
 		this.isEnabled = true;
 	} else {
 		// Remove the field.
 		this.setIcon( 'add' );
 		this.setFlags( { progressive: true, destructive: false } );
 		this.templateForm.hideField( this.param );
-		this.setTitle( mediaWiki.msg( 'templatewizard-parambutton-add-title', this.getLabel() ) );
+		this.setTitle( mw.msg( 'templatewizard-parambutton-add-title', this.getLabel() ) );
 		this.isEnabled = false;
 	}
 };

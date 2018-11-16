@@ -120,17 +120,17 @@ mw.TemplateWizard.Dialog.prototype.getReadyProcess = function ( data ) {
 mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
 	mw.TemplateWizard.Dialog.super.prototype.showErrors.call( this, data );
 	if ( this.firstFieldWithValue && this.currentAction === 'closeTemplate' ) {
-		this.$errorsTitle.text( mediaWiki.msg( 'templatewizard-remove-template' ) );
-		this.retryButton.setLabel( mediaWiki.msg( 'templatewizard-remove-template-retry' ) );
-		this.dismissButton.setLabel( mediaWiki.msg( 'templatewizard-cancel' ) );
+		this.$errorsTitle.text( mw.msg( 'templatewizard-remove-template' ) );
+		this.retryButton.setLabel( mw.msg( 'templatewizard-remove-template-retry' ) );
+		this.dismissButton.setLabel( mw.msg( 'templatewizard-cancel' ) );
 	} else if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
-		this.$errorsTitle.text( mediaWiki.msg( 'templatewizard-close-dialog' ) );
-		this.retryButton.setLabel( mediaWiki.msg( 'templatewizard-close-dialog-retry' ) );
+		this.$errorsTitle.text( mw.msg( 'templatewizard-close-dialog' ) );
+		this.retryButton.setLabel( mw.msg( 'templatewizard-close-dialog-retry' ) );
 		this.retryButton.setFlags( 'destructive' );
-		this.dismissButton.setLabel( mediaWiki.msg( 'templatewizard-cancel' ) );
+		this.dismissButton.setLabel( mw.msg( 'templatewizard-cancel' ) );
 	} else {
-		this.retryButton.setLabel( mediaWiki.msg( 'templatewizard-invalid-values-insert' ) );
-		this.dismissButton.setLabel( mediaWiki.msg( 'templatewizard-invalid-values-edit' ) );
+		this.retryButton.setLabel( mw.msg( 'templatewizard-invalid-values-insert' ) );
+		this.dismissButton.setLabel( mw.msg( 'templatewizard-invalid-values-edit' ) );
 	}
 };
 
@@ -182,7 +182,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 					msg = ( action === 'closeTemplate' ) ?
 						'templatewizard-remove-template-body' :
 						'templatewizard-close-dialog-body';
-					return new OO.ui.Error( mediaWiki.msg( msg ) );
+					return new OO.ui.Error( mw.msg( msg ) );
 				}
 				if ( action === 'closeTemplate' ) {
 					mw.TemplateWizard.logEvent( 'remove-template', [ dialog.templateForm.getTitle().getMainText() ] );
@@ -203,7 +203,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 			if ( action === 'insert' && dialog.templateForm ) {
 				dialog.invalidField = dialog.templateForm.getInvalidField();
 				if ( dialog.invalidField && !dialog.ignoreParamValues ) {
-					return new OO.ui.Error( mediaWiki.msg( 'templatewizard-invalid-values' ) );
+					return new OO.ui.Error( mw.msg( 'templatewizard-invalid-values' ) );
 				}
 			}
 		} )

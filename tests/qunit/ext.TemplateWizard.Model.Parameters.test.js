@@ -1,4 +1,4 @@
-( function ( mw ) {
+( function () {
 	QUnit.module( 'TemplateWizard.Model.Parameters' );
 
 	QUnit.test( 'setting states', function ( assert ) {
@@ -58,4 +58,4 @@
 		] );
 	} );
 
-}( mediaWiki ) );
+}() );

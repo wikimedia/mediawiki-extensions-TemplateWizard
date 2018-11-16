@@ -46,10 +46,10 @@ mw.TemplateWizard.AddRemoveAllButton.prototype.toggleAction = function () {
 mw.TemplateWizard.AddRemoveAllButton.prototype.setState = function ( allEnabled ) {
 	if ( allEnabled ) {
 		this.allEnabled = true;
-		this.setLabel( mediaWiki.message( 'templatewizard-remove-all' ).text() );
+		this.setLabel( mw.message( 'templatewizard-remove-all' ).text() );
 	} else {
 		this.allEnabled = false;
-		this.setLabel( mediaWiki.message( 'templatewizard-add-all' ).text() );
+		this.setLabel( mw.message( 'templatewizard-add-all' ).text() );
 	}
 };
 

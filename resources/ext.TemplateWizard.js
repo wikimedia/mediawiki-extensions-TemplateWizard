@@ -1,4 +1,4 @@
-( function ( mw, $, OO ) {
+( function () {
 
 	/* Extension namespace. */
 	mw.TemplateWizard = {};
@@ -65,4 +65,4 @@
 		mw.TemplateWizard.logEvent( 'save-page', mw.TemplateWizard.insertedTemplates );
 	} );
 
-}( mediaWiki, jQuery, OO ) );
+}() );

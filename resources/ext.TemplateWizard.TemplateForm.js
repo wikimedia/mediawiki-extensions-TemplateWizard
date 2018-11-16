@@ -7,9 +7,9 @@
  */
 mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( templateData, config ) {
 	mw.TemplateWizard.TemplateForm.parent.call( this );
-	this.title = mediaWiki.Title.newFromText( templateData.title, mediaWiki.config.get( 'wgNamespaceIds' ).template );
+	this.title = mw.Title.newFromText( templateData.title, mw.config.get( 'wgNamespaceIds' ).template );
 	if ( !this.title ) {
-		throw new Error( mediaWiki.message( 'templatewizard-invalid-title' ) );
+		throw new Error( mw.message( 'templatewizard-invalid-title' ) );
 	}
 	this.format = templateData.format || 'inline';
 	this.fields = [];
@@ -28,7 +28,7 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 	 * @param {Object} templateData The TempldateData of the relevant template containing
 	 *  the template metadata
 	 */
-	mediaWiki.hook( 'ext.TemplateWizard.TemplateForm.init' ).fire( this, templateData );
+	mw.hook( 'ext.TemplateWizard.TemplateForm.init' ).fire( this, templateData );
 };
 
 /* Setup */
@@ -141,7 +141,7 @@ mw.TemplateWizard.TemplateForm.prototype.getHeader = function () {
 	var $link;
 	$link = $( '<a>' )
 		.attr( 'target', '_blank' )
-		.attr( 'title', mediaWiki.message( 'templatewizard-opens-in-new-tab' ) )
+		.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
 		.attr( 'href', this.title.getUrl() )
 		.text( this.title.getMainText() );
 	return $( '<h2>' ).html( $link );
@@ -226,7 +226,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 				description = details.description;
 			}
 			if ( details.default ) {
-				description += ' ' + mediaWiki.message( 'templatewizard-default', details.default );
+				description += ' ' + mw.message( 'templatewizard-default', details.default );
 			}
 			if ( details.label ) {
 				label = details.label;
@@ -266,7 +266,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 			 * @param {mw.TemplateWizard.ParamField} field to manipulate and set the
 			 *  content of parameter containing the template metadata
 			 */
-			mediaWiki.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.findField( param ) );
+			mw.hook( 'ext.TemplateWizard.field.create' ).fire( param, details, button, templateForm.findField( param ) );
 
 			hasSuggestedOrOptional = hasSuggestedOrOptional || !details.required;
 			$paramList.append( $( '<div>' ).append( button.$element ) );
@@ -278,7 +278,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 			// * templatewizard-parameters-required
 			// * templatewizard-parameters-suggested
 			// * templatewizard-parameters-optional
-			paramGroupTitle = mediaWiki.message( 'templatewizard-parameters-' + groupName ).text();
+			paramGroupTitle = mw.message( 'templatewizard-parameters-' + groupName ).text();
 			$paramMenu.append(
 				$( '<span>' ).addClass( 'ext-templatewizard-section-header' ).text( paramGroupTitle ),
 				$paramList
@@ -307,25 +307,25 @@ mw.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function (
 		config.required = true;
 	}
 	if ( paramDefinition.default ) {
-		config.placeholder = mediaWiki.message( 'templatewizard-placeholder-default', paramDefinition.default );
+		config.placeholder = mw.message( 'templatewizard-placeholder-default', paramDefinition.default );
 	} else if ( paramDefinition.example ) {
-		config.placeholder = mediaWiki.message( 'templatewizard-placeholder-example', paramDefinition.example );
+		config.placeholder = mw.message( 'templatewizard-placeholder-example', paramDefinition.example );
 	}
 	if ( paramDefinition.type === 'number' ) {
 		widget = new OO.ui.NumberInputWidget( config );
 	} else if ( paramDefinition.type === 'date' ) {
-		widget = new mediaWiki.widgets.DateInputWidget( config );
+		widget = new mw.widgets.DateInputWidget( config );
 	} else if ( paramDefinition.type === 'wiki-user-name' ) {
-		widget = new mediaWiki.widgets.UserInputWidget( config );
+		widget = new mw.widgets.UserInputWidget( config );
 	} else if ( paramDefinition.type === 'wiki-page-name' ) {
-		widget = new mediaWiki.widgets.TitleInputWidget( config );
+		widget = new mw.widgets.TitleInputWidget( config );
 	} else if ( paramDefinition.type === 'wiki-file-name' ) {
 		config.showImages = true;
-		config.namespace = mediaWiki.config.get( 'wgNamespaceIds' ).file;
-		widget = new mediaWiki.widgets.TitleInputWidget( config );
+		config.namespace = mw.config.get( 'wgNamespaceIds' ).file;
+		widget = new mw.widgets.TitleInputWidget( config );
 	} else if ( paramDefinition.type === 'wiki-template-name' ) {
-		config.namespace = mediaWiki.config.get( 'wgNamespaceIds' ).template;
-		widget = new mediaWiki.widgets.TitleInputWidget( config );
+		config.namespace = mw.config.get( 'wgNamespaceIds' ).template;
+		widget = new mw.widgets.TitleInputWidget( config );
 	} else if ( paramDefinition.type === 'content' || paramDefinition.type === 'unbalanced-wikitext' ) {
 		config.autosize = true;
 		config.maxRows = 10;
