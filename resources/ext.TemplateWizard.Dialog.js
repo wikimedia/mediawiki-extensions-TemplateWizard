@@ -145,7 +145,7 @@ mw.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data ) {
 		// won't execute the insert action.
 		this.currentAction = 'search';
 		this.showSearchForm();
-	} else 	if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
+	} else if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
 		this.close();
 	}
 	mw.TemplateWizard.Dialog.super.prototype.onRetryButtonClick.call( this, data );

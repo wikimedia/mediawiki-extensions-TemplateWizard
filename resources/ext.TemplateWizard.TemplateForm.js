@@ -213,12 +213,14 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 			$.extend( {}, groupedParams.suggested, groupedParams.optional )
 		);
 	parametersModel.connect( templateForm, { afterChangeAll: 'attemptFocus' } );
-	$.each( groupedParams, function ( groupName, group ) {
+	Object.keys( groupedParams ).forEach( function ( groupName ) {
 		var paramGroupTitle,
 			hasParams = false,
+			group = groupedParams[ groupName ],
 			$paramList = $( '<div>' ).addClass( 'ext-templatewizard-parameter-list-inner' );
-		$.each( group, function ( param, details ) {
+		Object.keys( group ).forEach( function ( param ) {
 			var button,
+				details = group[ param ],
 				label = param,
 				description = '';
 			// Description.
@@ -419,7 +421,8 @@ mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( params )
 		suggested: {},
 		optional: {}
 	};
-	$.each( params, function ( param, details ) {
+	Object.keys( params ).forEach( function ( param ) {
+		var details = params[ param ];
 		if ( details.deprecated ) {
 			// Don't include even a mention of a deprecated parameter.
 			return;

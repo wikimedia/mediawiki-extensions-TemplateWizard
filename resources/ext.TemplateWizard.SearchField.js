@@ -46,22 +46,24 @@ mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
  *
  * @protected
  * @method
- * @param {mixed} response Response from server
- * @return {mixed} Cached result data
+ * @param {Object} response Response from server
+ * @return {Array} Cached result data
  */
 mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = function ( response ) {
-	var searchResults = [];
-	this.templateData = response.pages;
-	$.each( this.templateData, function ( pageId, templateData ) {
-		// Store the main text as well, so we don't have to re-do this.
-		templateData.titleMainText = mw.Title
-			.newFromText( templateData.title )
-			.getMainText();
-		searchResults.push( {
-			data: templateData,
-			label: templateData.titleMainText,
-			description: templateData.description
-		} );
+	var searchResults,
+		templateData = response.pages;
+
+	this.templateData = templateData;
+
+	searchResults = Object.keys( templateData ).map( function ( pageId ) {
+		var page = templateData[ pageId ];
+		// Store the main text as well, so we don't have to re-do this later.
+		page.titleMainText = mw.Title.newFromText( page.title ).getMainText();
+		return {
+			data: page,
+			label: page.titleMainText,
+			description: page.description
+		};
 	} );
 	return searchResults;
 };
@@ -72,16 +74,13 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
  *
  * @protected
  * @method
- * @param {mixed} data Cached result data, usually an array
+ * @param {Array} data Cached result data
  * @return {OO.ui.MenuOptionWidget[]} Menu items
  */
 mw.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function ( data ) {
-	var menuOptions = [];
-	$.each( data, function ( index, searchResult ) {
-		var option = new mw.TemplateWizard.SearchResult( searchResult );
-		menuOptions.push( option );
+	return data.map( function ( result ) {
+		return new mw.TemplateWizard.SearchResult( result );
 	} );
-	return menuOptions;
 };
 
 /**

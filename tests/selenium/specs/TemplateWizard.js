@@ -63,7 +63,8 @@ describe( 'TemplateWizard', function () {
 		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 5 );
 
 		// Add a value for Date of Birth (use 'keys()' because OOUI).
-		// We don't need to click in the field first because it's the only required field and it's already got focus.
+		// We don't need to click in the field first because it's the only
+		// required field and it's already got focus.
 		browser.keys( '2018-08-22' );
 
 		// Remove Username, test that focus is now on Date of Death.

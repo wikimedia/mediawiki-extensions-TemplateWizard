@@ -6,15 +6,15 @@
  * @param {Object} parameters The initial set of parameters.
  */
 mw.TemplateWizard.Model.Parameters = function MWTemplateWizardModelParameters( parameters ) {
-	var model = this;
+	var name;
 	// Mixin constructor
 	OO.EventEmitter.call( this );
 
 	// Attributes (set all to false to start with).
 	this.parameters = parameters || {};
-	$.each( this.parameters, function ( name, val ) { // eslint-disable-line no-unused-vars
-		model.parameters[ name ] = false;
-	} );
+	for ( name in this.parameters ) {
+		this.parameters[ name ] = false;
+	}
 };
 
 /* Set up. */
@@ -55,14 +55,15 @@ OO.mixinClass( mw.TemplateWizard.Model.Parameters, OO.EventEmitter );
  * @param {bool} state The state to set it to.
  */
 mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
-	var allEnabled = true;
+	var allEnabled,
+		parameters = this.parameters;
 	// Don't do anything if the parameter is already in this state.
-	if ( this.parameters[ name ] === state ) {
+	if ( parameters[ name ] === state ) {
 		return;
 	}
-	this.parameters[ name ] = state;
-	$.each( this.parameters, function ( index, paramState ) {
-		allEnabled = allEnabled && paramState;
+	parameters[ name ] = state;
+	allEnabled = Object.keys( parameters ).every( function ( n ) {
+		return parameters[ n ];
 	} );
 	this.emit( 'changeOne', allEnabled );
 };
@@ -72,11 +73,10 @@ mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
  * @param {bool} newState
  */
 mw.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState ) {
-	var model = this;
-	// eslint-disable-next-line no-unused-vars
-	$.each( this.parameters, function ( param, existingState ) {
-		model.parameters[ param ] = newState;
-	} );
+	var name;
+	for ( name in this.parameters ) {
+		this.parameters[ name ] = newState;
+	}
 	this.emit( 'changeAll', newState );
 	// HACK: this second event is required so that we can react to the
 	// state of all fields *after* they've all been changed
