@@ -24,6 +24,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 
 	// Close button.
 	trashButton = new OO.ui.ButtonWidget( {
+		id: 'ext-templatewizard-close-template-button',
 		label: '',
 		flags: 'destructive',
 		framed: false,
