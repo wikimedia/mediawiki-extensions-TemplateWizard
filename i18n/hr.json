@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bugoslav"
+			"Bugoslav",
+			"MaGa"
 		]
 	},
 	"templatewizard-add-all": "Dodaj sve parametre",
@@ -22,5 +23,24 @@
 	"templatewizard-invalid-values-edit": "Uredi predložak",
 	"templatewizard-invalid-values-insert": "Umetni predložak",
 	"templatewizard-no-description": "Ne postoji opis za ovaj predložak.",
-	"templatewizard-no-params-with-td": "Nema definiranih parametara u dokumentaciji ovog predloška [$1 TemplateData podatci o predlošku]. Možete umetnuti predložak bez parametara."
+	"templatewizard-no-params-with-td": "Nema definiranih parametara u dokumentaciji ovog predloška [$1 TemplateData podatci o predlošku]. Možete umetnuti predložak bez parametara.",
+	"templatewizard-no-params-without-td": "Parametri ovog predloška ne mogu biti određeni zbog nedostatka [$1 TemplateData] dokumentacije. Možete unijeti predložak bez parametara.",
+	"templatewizard-no-templatedata": "Zbog nedostajućeg [$1 TemplateData], parametri ovog predloška su automatski generirani. Vodite računa da možda nisu točni.",
+	"templatewizard-opens-in-new-tab": "Otvora se u novoj kartici",
+	"templatewizard-parameters-optional": "Neobvezni parametri",
+	"templatewizard-parameters-required": "Obvezni parametri",
+	"templatewizard-parameters-suggested": "Predloženi parametri",
+	"templatewizard-placeholder-default": "Zadano: $1",
+	"templatewizard-placeholder-example": "npr. $1",
+	"templatewizard-remove-all": "Ukloni sve parametre",
+	"templatewizard-remove-template": "Ukloniti predložak?",
+	"templatewizard-remove-template-body": "Predložak koji pokušavate ukloniti sadrži podatke koje ste unijeli. Uklanjanje predloška uklanja i informacije koje ste dodali predlošku. Ovu radnju nije moguće vratiti.",
+	"templatewizard-remove-template-retry": "Ukloni predložak",
+	"templatewizard-search-placeholder": "Traži predložak",
+	"templatewizard-parambutton-add-title": "Dodaj parametar '$1'",
+	"templatewizard-parambutton-remove-title": "Ukloni parametar '$1'",
+	"templatewizard-parambutton-required-title": "Obvezni parametar '$1'",
+	"templatewizard-remove-template-title": "Ukloni predložak",
+	"templatewizard-link-to-template-title": "Vidi predložak",
+	"templatewizard-use": "Uporaba"
 }
