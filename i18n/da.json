@@ -9,6 +9,7 @@
 	"templatewizard-cancel": "Annullér",
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-dialog-title": "Indsæt en skabelon",
+	"templatewizard-invalid-title": "Ugyldig titel",
 	"templatewizard-invalid-values-edit": "Rediger skabelon",
 	"templatewizard-invalid-values-insert": "Indsæt skabelon",
 	"templatewizard-no-description": "Der findes ikke nogen beskrivelse til denne skabelon.",
