@@ -4,5 +4,16 @@
 			"Умар"
 		]
 	},
-	"templatewizard-cancel": "Юхаяккхар"
+	"templatewizard-add-all": "ТӀетоха ерриге параметраш",
+	"templatewizard-betafeature-message": "Кепийн говзанча",
+	"templatewizard-betafeature-description": "Кепийн говзанча таро хьуйлюту сиха а, атта а Викиредактор чура викиагӀонашка кепаш тӀетоха. Оцо лелош ю TemplateData кепаш а, цуна а параметраш а гойтархьама. Цул совнах оцо таро йо викиагӀонаш а, Викилармера суьрташ а лаха редактор чура кепаш тӀетоха.",
+	"templatewizard-cancel": "Юхаяккхар",
+	"templatewizard-default": "Ӏадйитаран кеп: $1",
+	"templatewizard-insert": "Чуйилла",
+	"templatewizard-invalid-title": "Ца магайо цӀе",
+	"templatewizard-placeholder-default": "Ӏадйитаран кеп: $1",
+	"templatewizard-placeholder-example": "Масала: $1",
+	"templatewizard-remove-all": "ДӀаяха ерриге параметраш",
+	"templatewizard-remove-template": "ДӀаяккха кеп?",
+	"templatewizard-use": "Лелае"
 }
