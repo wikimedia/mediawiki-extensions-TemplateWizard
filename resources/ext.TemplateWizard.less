@@ -45,15 +45,18 @@
 		font-size: 12px;
 		overflow: auto;
 		max-height: 65px;
-	}
-	.ext-templatewizard-description p {
-		margin: 0 0 7px 0;
-	}
-	.ext-templatewizard-description p:last-child {
-		margin-bottom: 0;
-	}
-	.ext-templatewizard-description .ext-templatewizard-notice {
-		color: @colorMediumSevere;
+
+		p {
+			margin: 0 0 7px 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.ext-templatewizard-notice {
+			color: @colorMediumSevere;
+		}
 	}
 }
 
@@ -110,20 +113,23 @@
 			bottom: 0;
 			width: 100%;
 			background-color: @colorBaseInverted;
-		}
-		.ext-templatewizard-add-remove-all span.oo-ui-widget {
-			display: block;
-			margin: 8px;
-		}
-		.ext-templatewizard-add-remove-all a.oo-ui-buttonElement-button {
-			display: block;
-			font-weight: bolder;
+
+			span.oo-ui-widget {
+				display: block;
+				margin: 8px;
+			}
+
+			a.oo-ui-buttonElement-button {
+				display: block;
+				font-weight: bolder;
+			}
 		}
 	}
 
 	// Right-side form fields.
 	.oo-ui-menuLayout-content {
 		padding: 16px;
+
 		.ext-templatewizard-fields {
 			overflow-x: hidden;
 		}
