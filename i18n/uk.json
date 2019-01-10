@@ -1,9 +1,46 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"Piramidion"
 		]
 	},
 	"templatewizard-add-all": "Додати всі параметри",
-	"templatewizard-remove-all": "Прибрати всі параметри"
+	"templatewizard-betafeature-message": "Майстер шаблонів",
+	"templatewizard-betafeature-description": "Майстер шаблонів дає Вам змогу через інтерфейс вікіредактора швидко й легко додавати шаблони на сторінки у вікі. Він використовує TemplateData, щоб показувати описи шаблонів та їхніх параметрів. Він також дає змогу шукати вікісторінки й зображення з Вікісховища для заповнення ними шаблонів, не покидаючи сам редактор.",
+	"templatewizard-cancel": "Скасувати",
+	"templatewizard-close-dialog": "Покинути майстер шаблонів?",
+	"templatewizard-close-dialog-body": "Якщо Ви покинете майстер шаблонів, то втратите будь-які дані, якими Ви вже заповнили цей шаблон.",
+	"templatewizard-close-dialog-retry": "Відхилити зміни",
+	"templatewizard-default": "Стандартно: $1",
+	"templatewizard-desc": "Доповнення до вікіредактора, яке надає кнопку для запуску майстра шаблонів",
+	"templatewizard-dialog-title": "Вставити шаблон",
+	"templatewizard-help": "Дізнатись більше про Майстер шаблонів",
+	"templatewizard-help-title": "Прочитайте сторінки довідки щодо Майстра шаблонів на MediaWiki.org",
+	"templatewizard-insert": "Вставити",
+	"templatewizard-invalid-title": "Недійсна назва",
+	"templatewizard-invalid-values": "Один або більше введених Вами записів не збігається з очікуваним форматом. Чи хочете Ви його відредагувати?",
+	"templatewizard-invalid-values-edit": "Редагувати шаблон",
+	"templatewizard-invalid-values-insert": "Вставити шаблон",
+	"templatewizard-no-description": "Для цього шаблону ще немає опису.",
+	"templatewizard-no-params-with-td": "В документації [$1 TemplateData] цього шаблону немає визначених параметрів. Ви можете вставити шаблон без параметрів.",
+	"templatewizard-no-params-without-td": "Не вдалося визначити параметри цього шаблону через відсутність документації [$1 TemplateData]. Ви можете вставити шаблон без параметрів.",
+	"templatewizard-no-templatedata": "Через відсутність [$1 TemplateData], параметри для цього шаблону згенеровано автоматично. Будь ласка, майте на увазі, що вони можуть бути неточними.",
+	"templatewizard-opens-in-new-tab": "Відкривається в новій вкладці",
+	"templatewizard-parameters-optional": "Необов'язкові параметри",
+	"templatewizard-parameters-required": "Обов'язкові параметри",
+	"templatewizard-parameters-suggested": "Пропоновані параметри",
+	"templatewizard-placeholder-default": "Стандартно: $1",
+	"templatewizard-placeholder-example": "напр., $1",
+	"templatewizard-remove-all": "Прибрати всі параметри",
+	"templatewizard-remove-template": "Вилучити шаблон?",
+	"templatewizard-remove-template-body": "Шаблон, який Ви збираєтесь вилучити, містить дані, які Ви ввели. Вилучення шаблону вилучить також всю інформацію, яку Ви до нього додали. Цю дію скасувати неможливо.",
+	"templatewizard-remove-template-retry": "Вилучити шаблон",
+	"templatewizard-search-placeholder": "Знайти шаблон",
+	"templatewizard-parambutton-add-title": "Додати параметр «$1»",
+	"templatewizard-parambutton-remove-title": "Вилучити параметр «$1»",
+	"templatewizard-parambutton-required-title": "Обов'язковий параметр «$1»",
+	"templatewizard-remove-template-title": "Вилучити шаблон",
+	"templatewizard-link-to-template-title": "Переглянути шаблон",
+	"templatewizard-use": "Використати"
 }
