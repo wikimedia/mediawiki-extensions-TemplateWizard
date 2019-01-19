@@ -1,9 +1,30 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nike"
+			"Nike",
+			"Pyscowicz"
 		]
 	},
+	"templatewizard-add-all": "Lisää kaikki parametrit",
+	"templatewizard-betafeature-message": "Mallinevelho",
+	"templatewizard-cancel": "Peruuta",
+	"templatewizard-close-dialog-retry": "Hylkää muutokset",
+	"templatewizard-default": "Oletus: $1",
+	"templatewizard-dialog-title": "Lisää malline",
+	"templatewizard-help": "Lisätietoja Mallinevelhosta",
+	"templatewizard-insert": "Lisää",
+	"templatewizard-invalid-title": "Virheellinen otsikko",
+	"templatewizard-invalid-values-edit": "Muokkaa mallinetta",
+	"templatewizard-invalid-values-insert": "Lisää malline",
+	"templatewizard-parameters-optional": "Valinnaiset parametrit",
 	"templatewizard-placeholder-default": "Oletus: $1",
-	"templatewizard-placeholder-example": "Esim. $1"
+	"templatewizard-placeholder-example": "Esim. $1",
+	"templatewizard-remove-all": "Poista kaikki parametrit",
+	"templatewizard-remove-template": "Poista malline?",
+	"templatewizard-remove-template-retry": "Poista malline",
+	"templatewizard-parambutton-add-title": "Lisää parametri '$1'",
+	"templatewizard-parambutton-remove-title": "Poista parametri '$1'",
+	"templatewizard-remove-template-title": "Poista malline",
+	"templatewizard-link-to-template-title": "Näytä malline",
+	"templatewizard-use": "Käytä"
 }
