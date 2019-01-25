@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Patriccck",
-			"YjM"
+			"YjM",
+			"Dvorapa"
 		]
 	},
 	"templatewizard-add-all": "Přidat všechny parametry",
@@ -14,7 +15,7 @@
 	"templatewizard-close-dialog-retry": "Zahodit změny",
 	"templatewizard-default": "Výchozí: $1",
 	"templatewizard-desc": "Doplněk do WikiEditoru, který zprostředkuje průvodce vkládáním šablon",
-	"templatewizard-dialog-title": "Přidat šablonu",
+	"templatewizard-dialog-title": "Šablona",
 	"templatewizard-help": "Zjistit více o průvodci TemplateWizard",
 	"templatewizard-help-title": "Navštivte stránku nápovědy TemplateWizard na MediaWiki.org",
 	"templatewizard-insert": "Vložit",
