@@ -27,6 +27,7 @@
 	/*
 	 * Add the TemplateWizard button to the WikiEditor toolbar.
 	 */
+	// eslint-disable-next-line no-jquery/no-global-selector
 	$( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', function () {
 		// Take the content direction from the edit textarea
 		var contentDir = $( this ).css( 'direction' ),
@@ -59,6 +60,7 @@
 	 * Add click handler to the publish button,
 	 * to log the previously-saved list of inserted template names.
 	 */
+	// eslint-disable-next-line no-jquery/no-global-selector
 	$( '#wpSave' ).on( 'click', function () {
 		mw.TemplateWizard.logEvent( 'save-page', mw.TemplateWizard.insertedTemplates );
 	} );

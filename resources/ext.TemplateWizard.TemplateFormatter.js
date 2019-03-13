@@ -17,7 +17,7 @@ mw.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params 
 	// If any numbered parameters are set, all lower-numbered ones should be set as well (to blank).
 	Object.keys( params ).forEach( function ( key ) {
 		var paramNum;
-		if ( $.isNumeric( key ) ) {
+		if ( !isNaN( key ) ) {
 			for ( paramNum = 1; paramNum < key; paramNum++ ) {
 				if ( params[ paramNum ] === undefined ) {
 					params[ paramNum ] = '';
@@ -75,9 +75,9 @@ mw.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
 	template += this.constructor.static.formatStringSubst( format.start, this.name );
 
 	// Process the parameters.
-	// eslint-disable-next-line jquery/no-each-util
+	// eslint-disable-next-line no-jquery/no-each-util
 	$.each( this.params, function ( key, val ) {
-		if ( $.isNumeric( key ) ) {
+		if ( !isNaN( key ) ) {
 			// Render numeric/unnamed parameters inline, as Parsoid does it.
 			template += formatter.constructor.static.formatStringSubst( '|', '' );
 		} else {

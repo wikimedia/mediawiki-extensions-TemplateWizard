@@ -218,6 +218,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 					replace: true,
 					selectPeri: false
 				};
+				// eslint-disable-next-line no-jquery/no-global-selector
 				$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
 				// Log this insertion, and store the template name
 				// for future logging when the page is saved.

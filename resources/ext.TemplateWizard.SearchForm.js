@@ -38,5 +38,5 @@ mw.TemplateWizard.SearchForm.prototype.showTemplate = function ( templateData ) 
 };
 
 mw.TemplateWizard.SearchForm.prototype.focus = function () {
-	this.searchWidget.$input.focus();
+	this.searchWidget.$input.trigger( 'focus' );
 };
