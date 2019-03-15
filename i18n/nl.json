@@ -7,15 +7,19 @@
 			"KlaasZ4usV",
 			"SPQRobin",
 			"Ndecouck",
-			"Elroy"
+			"Elroy",
+			"Jeroen N"
 		]
 	},
 	"templatewizard-add-all": "Alle parameters toevoegen",
+	"templatewizard-betafeature-message": "TemplateWizard",
 	"templatewizard-cancel": "Annuleren",
 	"templatewizard-close-dialog-retry": "Wijzigingen negeren",
 	"templatewizard-default": "Standaard: $1",
 	"templatewizard-desc": "Een invoegtoepassing voor WikiEditor dat helpt met sjablonen invoegen",
 	"templatewizard-dialog-title": "Sjabloon invoegen",
+	"templatewizard-help": "Meer leren over TemplateWizard",
+	"templatewizard-help-title": "Lees de TemplateWizard-hulppagina's op MediaWiki.org",
 	"templatewizard-insert": "Invoegen",
 	"templatewizard-invalid-title": "Ongeldige titel",
 	"templatewizard-invalid-values-edit": "Sjabloon bewerken",
