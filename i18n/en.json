@@ -5,8 +5,6 @@
 		]
 	},
 	"templatewizard-add-all": "Add all parameters",
-	"templatewizard-betafeature-message": "TemplateWizard",
-	"templatewizard-betafeature-description": "TemplateWizard allows you to add templates to wiki pages quickly and easily from WikiEditor. It makes use of TemplateData to show descriptions for templates and their parameters. It also allows for searching for wiki pages and Commons images for template input from the editor itself.",
 	"templatewizard-cancel": "Cancel",
 	"templatewizard-close-dialog": "Leave wizard?",
 	"templatewizard-close-dialog-body": "Leaving the wizard will result in loss of any data that you have added to the template.",
