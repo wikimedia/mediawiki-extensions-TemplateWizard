@@ -3,12 +3,13 @@
 		"authors": [
 			"Patriccck",
 			"YjM",
-			"Dvorapa"
+			"Dvorapa",
+			"Matěj Suchánek"
 		]
 	},
 	"templatewizard-add-all": "Přidat všechny parametry",
-	"templatewizard-betafeature-message": "TemplateWizard",
-	"templatewizard-betafeature-description": "TemplateWizard vám umožní přidat do wiki stránek šablony pomocí editoru wikitextu rychle a jednoduše. Využívá Strojový popis šablony k zobrazení popisů šablon a jejich parametrů. Také umožňuje přímo z editoru šablony vyhledávat wiki stránky a obrázky na Commons.",
+	"templatewizard-betafeature-message": "Šablonový pomocník",
+	"templatewizard-betafeature-description": "Průvodce šablon vám umožní přidat do wiki stránek šablony pomocí editoru wikitextu rychle a jednoduše. Využívá Strojový popis šablony k zobrazení popisů šablon a jejich parametrů. Také umožňuje přímo z editoru šablony vyhledávat wiki stránky a obrázky na Commons.",
 	"templatewizard-cancel": "Storno",
 	"templatewizard-close-dialog": "Zavřít průvodce?",
 	"templatewizard-close-dialog-body": "Zavřením průvodce dojde ke ztrátě všech dat, která jste do šablony vyplnili.",
@@ -16,8 +17,8 @@
 	"templatewizard-default": "Výchozí: $1",
 	"templatewizard-desc": "Doplněk do WikiEditoru, který zprostředkuje průvodce vkládáním šablon",
 	"templatewizard-dialog-title": "Šablona",
-	"templatewizard-help": "Zjistit více o průvodci TemplateWizard",
-	"templatewizard-help-title": "Navštivte stránku nápovědy TemplateWizard na MediaWiki.org",
+	"templatewizard-help": "Zjistit více o Průvodci šablon",
+	"templatewizard-help-title": "Navštivte stránku nápovědy Průvodce šablon na MediaWiki.org",
 	"templatewizard-insert": "Vložit",
 	"templatewizard-invalid-title": "Neplatný název",
 	"templatewizard-invalid-values": "Jeden nebo více vyplněných parametrů neodpovídá očekávanému formátu. Chcete je upravit?",
