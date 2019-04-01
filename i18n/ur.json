@@ -1,11 +1,43 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abdulq"
+			"Abdulq",
+			"BukhariSaeed",
+			"Muhammad Shuaib"
 		]
 	},
+	"templatewizard-add-all": "سارے پیرامیٹر درج کریں",
+	"templatewizard-betafeature-message": "ساحر سانچہ",
+	"templatewizard-betafeature-description": "ساحر سانچہ کے ذریعے آپ بآسانی اور بسرعت ویکی صفحات میں ویکی ایڈیٹر سے سانچے ڈال سکتے ہیں۔ اس سے سانچہ ڈیٹا اور اس کے پیرامیٹر دکھانے کا کام لیا جاتا ہے اور اس سے تلاش ویکی صفحات اور کامنز تصاویر برائے سانچہ ان پٹ ایڈیٹر سے بنفسہ ہی ممکن ہے۔",
+	"templatewizard-cancel": "منسوخ",
+	"templatewizard-close-dialog": "ساحر ترک کریں؟",
+	"templatewizard-close-dialog-body": "ساحر کو ترک کرنے سے آپ کا تمام ڈیٹا جو آپ نے سانچے میں شامل کیا ہے ضائع ہو جائے گا۔",
+	"templatewizard-close-dialog-retry": "تبدیلیاں مسترد کریں",
+	"templatewizard-default": "ابتدائی: $1",
+	"templatewizard-desc": "ویکی خانہ ترمیم کا ایک اضافہ آلہ جو ساحر اندراج سانچہ کی سہولت فراہم کرتا ہے",
+	"templatewizard-dialog-title": "اندراج سانچہ",
+	"templatewizard-help": "ساحر سانچہ کے متعلق مزید تفصیلات",
+	"templatewizard-help-title": "MediaWiki.org پر ساحر سانچہ کے معاون صفحات ملاحظہ فرمائیں",
 	"templatewizard-insert": "شامل کریں",
+	"templatewizard-invalid-title": "غلط عنوان",
+	"templatewizard-invalid-values-edit": "سانچہ میں ترمیم کریں",
+	"templatewizard-invalid-values-insert": "سانچہ درج کریں",
+	"templatewizard-no-description": "اس سانچہ کی کوئی تفصیل موجود نہیں ہے۔",
+	"templatewizard-opens-in-new-tab": "نئے ٹیب میں کھلے گا",
 	"templatewizard-parameters-optional": "اختیاری پیرامیٹر",
-	"templatewizard-parameters-required": "درکار متعین مقدار",
+	"templatewizard-parameters-required": "لازمی پیرامیٹر",
+	"templatewizard-parameters-suggested": "مجوزہ پیرامیٹر",
+	"templatewizard-placeholder-default": "ابتدائی: $1",
+	"templatewizard-placeholder-example": "مثلاً $1",
+	"templatewizard-remove-all": "سارے پیرامیٹر ہٹائیں",
+	"templatewizard-remove-template": "سانچے کو حذف کریں؟",
+	"templatewizard-remove-template-body": "جس سانچہ کو آپ ہٹانا چاہ رہے ہیں اس میں آپ کی درج کردہ معلومات موجود ہیں۔ اگر آپ اس سانچہ کو ہٹا دیں تو وہ معلومات بھی ضائع ہو جائیں گی اور اس اقدام کو واپس پھیرا نہ جا سکے گا۔",
+	"templatewizard-remove-template-retry": "سانچے کو حذف کریں",
+	"templatewizard-search-placeholder": "سانچہ تلاش کریں",
+	"templatewizard-parambutton-add-title": "«$1» نامی پیرامیٹر کو درج کریں",
+	"templatewizard-parambutton-remove-title": "«$1» نامی پیرامیٹر کو ہٹائیں",
+	"templatewizard-parambutton-required-title": "لازمی پیرامیٹر «$1»",
+	"templatewizard-remove-template-title": "سانچے کو حذف کریں",
+	"templatewizard-link-to-template-title": "سانچہ دیکھیں",
 	"templatewizard-use": "استعمال"
 }
