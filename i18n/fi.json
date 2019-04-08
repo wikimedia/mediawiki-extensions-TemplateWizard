@@ -16,7 +16,10 @@
 	"templatewizard-invalid-title": "Virheellinen otsikko",
 	"templatewizard-invalid-values-edit": "Muokkaa mallinetta",
 	"templatewizard-invalid-values-insert": "Lisää malline",
+	"templatewizard-opens-in-new-tab": "Avaa uudessa välilehdessä",
 	"templatewizard-parameters-optional": "Valinnaiset parametrit",
+	"templatewizard-parameters-required": "Tarvittavat parametrit",
+	"templatewizard-parameters-suggested": "Ehdotetut parametrit",
 	"templatewizard-placeholder-default": "Oletus: $1",
 	"templatewizard-placeholder-example": "Esim. $1",
 	"templatewizard-remove-all": "Poista kaikki parametrit",
@@ -24,6 +27,7 @@
 	"templatewizard-remove-template-retry": "Poista malline",
 	"templatewizard-parambutton-add-title": "Lisää parametri '$1'",
 	"templatewizard-parambutton-remove-title": "Poista parametri '$1'",
+	"templatewizard-parambutton-required-title": "Tarvittava parametri '$1'",
 	"templatewizard-remove-template-title": "Poista malline",
 	"templatewizard-link-to-template-title": "Näytä malline",
 	"templatewizard-use": "Käytä"
