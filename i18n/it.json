@@ -8,8 +8,6 @@
 		]
 	},
 	"templatewizard-add-all": "Aggiungi tutti i parametri",
-	"templatewizard-betafeature-message": "TemplateWizard",
-	"templatewizard-betafeature-description": "TemplateWizard consente di aggiungere template velocemente e facilmente dal WikiEditor nelle pagine wiki. Sfrutta TemplateData per mostrare le descrizioni dei template e i loro parametri. Inoltre permette di cercare pagine wiki e immagini su Commons nell'input di template dall'editor stesso.",
 	"templatewizard-cancel": "Annulla",
 	"templatewizard-close-dialog-body": "Abbandonando la procedura guidata perderai tutti i dati che hai aggiunto nel template.",
 	"templatewizard-close-dialog-retry": "Ignora modifiche",

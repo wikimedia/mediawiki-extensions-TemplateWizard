@@ -5,8 +5,6 @@
 		]
 	},
 	"templatewizard-add-all": "Lisa kõik parameetrid",
-	"templatewizard-betafeature-message": "Malliviisard",
-	"templatewizard-betafeature-description": "Malliviisard võimaldab vikitoimeti kaudu kiiresti ja lihtsasti malle lisada. Malli ja parameetrite kirjelduse näitamiseks kasutab see malliandmeid. Samuti võimaldab see otsida malli sisendit viki lehekülgedelt ja Commonsi piltide hulgast.",
 	"templatewizard-cancel": "Loobu",
 	"templatewizard-close-dialog": "Kas lahkud viisardist?",
 	"templatewizard-close-dialog-body": "Viisardist lahkumisel lähevad kaotsi kõik andmed, mille malli lisanud oled.",

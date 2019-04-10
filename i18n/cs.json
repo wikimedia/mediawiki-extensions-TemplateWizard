@@ -8,8 +8,6 @@
 		]
 	},
 	"templatewizard-add-all": "Přidat všechny parametry",
-	"templatewizard-betafeature-message": "Šablonový pomocník",
-	"templatewizard-betafeature-description": "Šablonový pomocník vám umožní přidat do wiki stránek šablony pomocí editoru wikitextu rychle a jednoduše. Využívá Strojový popis šablony k zobrazení popisů šablon a jejich parametrů. Také umožňuje přímo z editoru šablony vyhledávat wiki stránky a obrázky na Commons.",
 	"templatewizard-cancel": "Storno",
 	"templatewizard-close-dialog": "Zavřít průvodce?",
 	"templatewizard-close-dialog-body": "Zavřením průvodce dojde ke ztrátě všech dat, která jste do šablony vyplnili.",

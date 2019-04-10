@@ -7,8 +7,6 @@
 		]
 	},
 	"templatewizard-add-all": "全てのパラメーターを追加",
-	"templatewizard-betafeature-message": "TemplateWizard",
-	"templatewizard-betafeature-description": "テンプレートウィザードはウィキ編集機能からウィキページに簡単に素早くテンプレートを追加します。テンプレートの説明とパラメータは、テンプレートデータを参照します。またテンプレートに入力するウィキページやコモンズの画像を、編集機能から検索できるようにします。",
 	"templatewizard-cancel": "キャンセル",
 	"templatewizard-close-dialog": "ウィザードを終了しますか?",
 	"templatewizard-close-dialog-body": "ウィザードを終了すると、テンプレートに入力したデータも消えてしまいます。",

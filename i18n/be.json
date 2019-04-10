@@ -5,8 +5,6 @@
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
-	"templatewizard-betafeature-message": "Майстар шаблонаў",
-	"templatewizard-betafeature-description": "Майстар шаблонаў дазваляе хутка і проста дадаваць шаблоны ў вікістаронкі з Вікірэдактара. Ён выкарыстоўвае TemplateData для паказу шаблонаў і іх параметраў. Ён таксама дазваляе пошук вікістаронак і выяў на Вікісховішчы для ўнясення шаблонаў з самога рэдактара.",
 	"templatewizard-cancel": "Адмена",
 	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
 	"templatewizard-close-dialog-retry": "Адмяніць змяненні",

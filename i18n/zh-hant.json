@@ -6,8 +6,6 @@
 		]
 	},
 	"templatewizard-add-all": "加入所有參數",
-	"templatewizard-betafeature-message": "模板助手",
-	"templatewizard-betafeature-description": "模板助手允許您從 Wiki 編輯器快速且容易地來添加模板。此工具使用模板數據來顯示模板以及它們的參數描述。這也允許從編輯器本身搜尋用於模板輸入的 wiki 頁面以及共享資源圖片。",
 	"templatewizard-cancel": "取消",
 	"templatewizard-close-dialog": "離開助手？",
 	"templatewizard-close-dialog-body": "離開助手會導致遺失您所添加至模板的資料。",

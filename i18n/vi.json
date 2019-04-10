@@ -6,8 +6,6 @@
 		]
 	},
 	"templatewizard-add-all": "Thêm tất cả các tham số",
-	"templatewizard-betafeature-message": "Trình hỗ trợ bản mẫu",
-	"templatewizard-betafeature-description": "Trình hỗ trợ bản mẫu (TemplateWizard) giúp bạn thêm bản mẫu vào trang wiki một cách nhanh chóng và dễ dàng từ Trình soạn thảo wiki. Nó sử dụng Dữ liệu bản mẫu (TemplateData) để hiện miêu tả bản mẫu và các tham số. Nó cũng giúp tìm bản mẫu dùng trong các trang wiki và trang Commons từ chính trình soạn thảo.",
 	"templatewizard-cancel": "Hủy bỏ",
 	"templatewizard-close-dialog": "Thoát trình trợ giúp?",
 	"templatewizard-close-dialog-body": "Nếu thoát trình trợ giúp, bạn sẽ mất tất cả dữ liệu đã thêm vào bản mẫu.",

@@ -5,8 +5,6 @@
 		]
 	},
 	"templatewizard-add-all": "모든 변수 추가",
-	"templatewizard-betafeature-message": "틀마법사",
-	"templatewizard-betafeature-description": "틀마법사는 틀을 위키편집기로부터 빠르고 쉽게 위키 문서에 추가할 수 있게 합니다. 틀데이터를 이용하여 틀과 틀의 변수에 관한 설명을 표시합니다. 또, 편집기 자체에서 틀 입력을 위해 위키 문서와 공용 이미지를 검색할 수 있게 합니다.",
 	"templatewizard-cancel": "취소",
 	"templatewizard-close-dialog": "마법사를 떠나시겠습니까?",
 	"templatewizard-close-dialog-body": "마법사를 떠나면 틀에 추가한 데이터를 잃게 됩니다.",

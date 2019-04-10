@@ -7,8 +7,6 @@
 		]
 	},
 	"templatewizard-add-all": "添加所有参数",
-	"templatewizard-betafeature-message": "模板助手",
-	"templatewizard-betafeature-description": "模版助手允许您从Wiki编辑器快速且容易地添加模版。此工具使用模版数据来显示模版以及其参数描述。也允许从编辑器本身搜索用于模版输入的wiki页面和共享资源图片。",
 	"templatewizard-cancel": "取消",
 	"templatewizard-close-dialog": "离开助手么？",
 	"templatewizard-close-dialog-body": "离开助手将导致丢失任何您添加到模板的数据。",

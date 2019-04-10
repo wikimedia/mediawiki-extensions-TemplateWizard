@@ -6,7 +6,6 @@
 			"-jem-"
 		]
 	},
-	"templatewizard-betafeature-description": "TemplateWizard permitelle engadir modelos ás páxinas wiki de forma rápida e sinxela a partir do WikiEditor. Usa TemplateData para amosar as descripcións e parámetros dos modelos, e permite buscar páxinas wiki e imaxes da Commons que sirvan como entradas para o modelo no propio editor.",
 	"templatewizard-cancel": "Cancelar",
 	"templatewizard-default": "Por defecto: $1",
 	"templatewizard-dialog-title": "Inserir un modelo",

@@ -8,8 +8,6 @@
 		]
 	},
 	"templatewizard-add-all": "Dodaj wszystkie parametry",
-	"templatewizard-betafeature-message": "Kreator wstawiania szablonów",
-	"templatewizard-betafeature-description": "Kreator wstawiania szablonów pozwala na łatwe i szybkie dodawanie szablonów na stronach wiki prosto z WikiEditora. Wykorzystuje TemplateData do pokazywania opisów szablonów i ich parametrów. Możliwe jest w nim także wyszukiwanie stron wiki i zdjęć w Commons, którymi można uzupełniać parametry szablonu.",
 	"templatewizard-cancel": "Anuluj",
 	"templatewizard-close-dialog": "Opuścić kreatora?",
 	"templatewizard-close-dialog-body": "Opuszczenie kreatora spowoduje utratę wszelkich danych dodanych do szablonu.",

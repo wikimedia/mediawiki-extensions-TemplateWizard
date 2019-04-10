@@ -13,8 +13,6 @@
 		]
 	},
 	"templatewizard-add-all": "Добавить все параметры",
-	"templatewizard-betafeature-message": "Мастер шаблонов",
-	"templatewizard-betafeature-description": "Мастер шаблонов позволяет быстро и просто добавлять шаблоны в викистраницы из Викиредактора. Он использует TemplateData для показа шаблонов и их параметров. Он также позволяет поиск викистраниц и изображений на Викискладе для внесения шаблонов из самого редактора.",
 	"templatewizard-cancel": "Отмена",
 	"templatewizard-close-dialog": "Закрыць майстар шаблонаў?",
 	"templatewizard-close-dialog-retry": "Отменить изменения",

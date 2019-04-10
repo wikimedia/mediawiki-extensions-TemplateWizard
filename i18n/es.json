@@ -6,7 +6,6 @@
 		]
 	},
 	"templatewizard-add-all": "Añadir todos los parámetros",
-	"templatewizard-betafeature-description": "TemplateWizard permite añadir plantillas a las páginas wiki de forma rápida y sencilla desde el WikiEditor. Utiliza TemplateData para mostrar las descripciones y parámetros de las plantillas, y permite buscar páginas wiki e imágenes de Commons para rellenar la plantilla desde el propio editor.",
 	"templatewizard-cancel": "Cancelar",
 	"templatewizard-close-dialog": "¿Quieres abandonar el asistente?",
 	"templatewizard-close-dialog-retry": "Descartar cambios",

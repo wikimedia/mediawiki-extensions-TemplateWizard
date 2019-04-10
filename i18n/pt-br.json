@@ -5,8 +5,6 @@
 		]
 	},
 	"templatewizard-add-all": "Acrescentar todos os parâmetros",
-	"templatewizard-betafeature-message": "Assistente de predefinição",
-	"templatewizard-betafeature-description": "Assistente de Predefinição permite que você adicione modelos a páginas wiki de forma rápida e fácil a partir do WikiEditor. Ele faz uso de TemplateData para mostrar descrições para modelos e seus parâmetros. Ele também permite pesquisar páginas wiki e imagens Commons para entrada de predefinição do próprio editor.",
 	"templatewizard-cancel": "Cancelar",
 	"templatewizard-close-dialog": "Sair do assistente?",
 	"templatewizard-close-dialog-body": "Sair do assistente resultará na perda dos dados que tenha adicionado à predefinição.",

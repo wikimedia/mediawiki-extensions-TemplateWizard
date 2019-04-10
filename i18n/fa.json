@@ -6,8 +6,6 @@
 		]
 	},
 	"templatewizard-add-all": "افزودن همهٔ پارامترها",
-	"templatewizard-betafeature-message": "جادوگر الگو",
-	"templatewizard-betafeature-description": "جادوگر الگو به شما اجازه می‌دهد که الگوها را به صفحات ویکی در حالت ویرایش به سرعت بیافزایید. از پارامترهای الگوها برای نمایش الگو و پارامترهایش استفاده می‌کند همچنین به شما امکان جستجو برای یک صفحهٔ ویکی و تصاویر ویکی‌انبار برای ورودی یک الگو از ویرایشگر را می‌دهد.",
 	"templatewizard-cancel": "لغو",
 	"templatewizard-close-dialog": "خروج از ابزار؟",
 	"templatewizard-close-dialog-body": "با خروج از ابزار اطلاعاتی را که ثبت کرده‌اید از دست می‌روند.",

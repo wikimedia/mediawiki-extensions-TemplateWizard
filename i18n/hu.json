@@ -6,8 +6,6 @@
 		]
 	},
 	"templatewizard-add-all": "Összes paraméter hozzáadása",
-	"templatewizard-betafeature-message": "Sablonvarázsló",
-	"templatewizard-betafeature-description": "A Sablonvarázsló segítségével gyorsan és könnyen szúrhatsz be sablonokat a WikiEditor-ból. Az eszköz TemplateData használatával jeleníti meg a sablonok és paramétereik leírását. Segítségével wikilapokat és Commonsos képek kereshetsz a sablon paramétereihez magában a szerkesztőben.",
 	"templatewizard-cancel": "Mégse",
 	"templatewizard-close-dialog": "Varázsló elhagyása?",
 	"templatewizard-close-dialog-body": "A varázsló elhagyásával a sablonhoz adott összes adat elveszik.",
