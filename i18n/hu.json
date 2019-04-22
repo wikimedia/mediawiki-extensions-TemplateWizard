@@ -37,7 +37,7 @@
 	"templatewizard-search-placeholder": "Sablon keresése",
 	"templatewizard-parambutton-add-title": "„$1” paraméter hozzáadása",
 	"templatewizard-parambutton-remove-title": "„$1” paraméter törlése",
-	"templatewizard-parambutton-required-title": "„$1” paraméter megadása kötelező",
+	"templatewizard-parambutton-required-title": "A(z) „$1” paraméter megadása kötelező",
 	"templatewizard-remove-template-title": "Sablon eltávolítása",
 	"templatewizard-link-to-template-title": "Sablon megtekintése",
 	"templatewizard-use": "Használat"
