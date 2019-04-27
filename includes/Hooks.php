@@ -33,7 +33,6 @@ class Hooks {
 	 *
 	 * @param array &$testModules The modules array to add to.
 	 * @param ResourceLoader $resourceLoader The resource loader.
-	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules(
 		array &$testModules, ResourceLoader $resourceLoader
