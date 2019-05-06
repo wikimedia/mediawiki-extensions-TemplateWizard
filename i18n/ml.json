@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Praveenp"
+		]
+	},
+	"templatewizard-add-all": "എല്ലാ ചരങ്ങളും ചേർക്കുക",
+	"templatewizard-cancel": "റദ്ദാക്കുക",
+	"templatewizard-close-dialog": "സഹായിയിൽ നിന്ന് പോകണോ?",
+	"templatewizard-close-dialog-body": "സഹായിയിൽ നിന്ന് പുറത്ത് കടന്നാൽ താങ്കൾ ഫലകത്തിൽ ഇതുവരെ ചേർത്ത വിവരങ്ങൾ നഷ്ടമാകുന്നതാണ്.",
+	"templatewizard-close-dialog-retry": "മാറ്റങ്ങൾ വേണ്ടെന്നുവെയ്ക്കുക",
+	"templatewizard-default": "സ്വതേ: $1",
+	"templatewizard-desc": "ഫലകം-ഉൾപ്പെടുത്തൽ സഹായം നൽകുന്ന ഒരു വിക്കിഎഡിറ്റർ കൂട്ടിച്ചേർക്കൽ",
+	"templatewizard-dialog-title": "ഫലകം ഉൾപ്പെടുത്തുക",
+	"templatewizard-help": "ഫലകസഹായിയെ കുറിച്ച് കൂടുതൽ അറിയുക",
+	"templatewizard-help-title": "MediaWiki.org വെബ്‌സൈറ്റിലെ ഫലകസഹായി സഹായകതാൾ വായിക്കുക",
+	"templatewizard-insert": "ഉൾപ്പെടുത്തുക",
+	"templatewizard-invalid-title": "അസാധുവായ തലക്കെട്ട്",
+	"templatewizard-invalid-values": "താങ്കൾ ചേർത്തവയിൽ ഒന്നോ അതിലധികമോ എണ്ണം പ്രതീക്ഷിക്കപ്പെട്ട ഫോർമാറ്റിൽ അല്ല. തിരുത്താൻ ആഗ്രഹിക്കുന്നുണ്ടോ?",
+	"templatewizard-invalid-values-edit": "ഫലകം തിരുത്തുക",
+	"templatewizard-invalid-values-insert": "ഫലകം ഉൾപ്പെടുത്തുക",
+	"templatewizard-no-description": "ഈ ഫലകത്തിന് വിവരണം നിലവിലില്ല.",
+	"templatewizard-no-params-with-td": "ഈ ഫലകത്തിന്റെ [$1 ഫലകവിവരങ്ങൾ] വിവരണത്തിനുള്ളിൽ ചരങ്ങൾ ഒന്നും നിർവചിച്ചിട്ടില്ല. ചരങ്ങൾ ഇല്ലാതെ ഫലകം ഉൾപ്പെടുത്താവുന്നതാണ്.",
+	"templatewizard-no-params-without-td": "[$1 ഫലകവിവരങ്ങൾ] വിവരണം ഇല്ലാത്തതിനാൽ ചരങ്ങളൊന്നും നിർണ്ണയിക്കാനാകുന്നില്ല. ചരങ്ങളില്ലാതെ ഫലകം ഉൾപ്പെടുത്താവുന്നതാണ്.",
+	"templatewizard-no-templatedata": "[$1 ഫലകവിവരങ്ങൾ] വിവരണം ഇല്ലാത്തതിനാൽ, ഈ ഫലകത്തിന്റെ ചരങ്ങൾ സൃഷ്ടിച്ചെടുത്തതാണ്. ഇവ കൃത്യമല്ലാത്തവയായേക്കാം എന്ന് അറിഞ്ഞിരിക്കുക.",
+	"templatewizard-opens-in-new-tab": "പുതിയ ടാബിൽ തുറക്കുന്നു",
+	"templatewizard-parameters-optional": "ഐച്ഛിക ചരങ്ങൾ",
+	"templatewizard-parameters-required": "ആവശ്യമുള്ള ചരങ്ങൾ",
+	"templatewizard-parameters-suggested": "നിർദ്ദേശിക്കുന്ന ചരങ്ങൾ",
+	"templatewizard-placeholder-default": "സ്വതേ: $1",
+	"templatewizard-placeholder-example": "ഉദാഹരണം: $1",
+	"templatewizard-remove-all": "എല്ലാ ചരങ്ങളും നീക്കംചെയ്യുക",
+	"templatewizard-remove-template": "ഫലകം നീക്കംചെയ്യണോ?",
+	"templatewizard-remove-template-body": "താങ്കൾ നീക്കംചെയ്യാൻ നോക്കുന്ന ഫലകത്തിൽ താങ്കൾ ചേർത്ത വിവരങ്ങൾ ഉണ്ടായേക്കാം. ഫലകം നീക്കംചെയ്യുമ്പോൾ ഫലകത്തിൽ താങ്കൾ ഉൾപ്പെടുത്തിയ വിവരങ്ങളും നീക്കംചെയ്യപ്പെടും. ഈ പ്രവൃത്തി പിന്നീട് തിരിച്ചാക്കാൻ കഴിയില്ല.",
+	"templatewizard-remove-template-retry": "ഫലകം നീക്കംചെയ്യുക",
+	"templatewizard-search-placeholder": "ഫലകം തിരയുക",
+	"templatewizard-parambutton-add-title": "'$1' എന്ന ചരം ചേർക്കുക",
+	"templatewizard-parambutton-remove-title": "'$1' എന്ന ചരം നീക്കംചെയ്യുക",
+	"templatewizard-parambutton-required-title": "ആവശ്യമുള്ള ചരം '$1'",
+	"templatewizard-remove-template-title": "ഫലകം നീക്കംചെയ്യുക",
+	"templatewizard-link-to-template-title": "ഫലകം കാണുക",
+	"templatewizard-use": "ഉപയോഗിക്കുക"
+}
