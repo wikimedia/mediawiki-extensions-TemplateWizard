@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"templatewizard-add-all": "Aldoni ĉiujn parametrojn",
+	"templatewizard-cancel": "Nuligi",
+	"templatewizard-default": "Implicite: $1",
+	"templatewizard-insert": "Enŝovi",
+	"templatewizard-invalid-values-edit": "Redakti ŝablonon",
+	"templatewizard-invalid-values-insert": "Enŝovi ŝablonon",
+	"templatewizard-placeholder-default": "Implicite: $1",
+	"templatewizard-placeholder-example": "ekz. $1",
+	"templatewizard-remove-template": "Ĉu forigi ŝablonon?",
+	"templatewizard-parambutton-add-title": "Aldoni la parametron '$1'",
+	"templatewizard-parambutton-remove-title": "Forigi la parametron '$1'",
+	"templatewizard-remove-template-title": "Forigi ŝablonon"
+}
