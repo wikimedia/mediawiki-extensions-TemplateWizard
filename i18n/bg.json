@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"StanProg"
+			"StanProg",
+			"ShockD"
 		]
 	},
-	"templatewizard-cancel": "Отказ"
+	"templatewizard-cancel": "Отказ",
+	"templatewizard-help": "Научете повече за Помощника за шаблони",
+	"templatewizard-insert": "Вмъкване",
+	"templatewizard-search-placeholder": "Търсене на шаблон"
 }
