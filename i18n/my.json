@@ -5,5 +5,18 @@
 		]
 	},
 	"templatewizard-cancel": "မလုပ်တော့ပါ",
-	"templatewizard-default": "နဂိုအတိုင်း: $1"
+	"templatewizard-close-dialog-retry": "ပြောင်းလဲမှုများကို မလုပ်တော့ရန်",
+	"templatewizard-default": "နဂိုအတိုင်း: $1",
+	"templatewizard-dialog-title": "တမ်းပလိတ်တစ်ခု ထည့်သွင်းရန်",
+	"templatewizard-help": "တမ်းပလိတ်ဝိဇတ်အကြောင်း ပိုမိုလေ့လာရန်",
+	"templatewizard-insert": "ထည့်သွင်းရန်",
+	"templatewizard-invalid-title": "မဆီလျော်သော ခေါင်းစဉ်",
+	"templatewizard-invalid-values-edit": "တမ်းပလိတ် ပြင်ဆင်ရန်",
+	"templatewizard-invalid-values-insert": "တမ်းပလိတ် ထည့်သွင်းရန်",
+	"templatewizard-no-description": "ဤတမ်းပလိတ်အတွက် ဖော်ပြချက်မရှိပါ။",
+	"templatewizard-remove-template": "တမ်းပလိတ် ဖယ်ရှားမှာလား",
+	"templatewizard-remove-template-retry": "တမ်းပလိတ် ဖယ်ရှားရန်",
+	"templatewizard-remove-template-title": "တမ်းပလိတ် ဖယ်ရှားရန်",
+	"templatewizard-link-to-template-title": "တမ်းပလိတ် ကြည့်ရန်",
+	"templatewizard-use": "သုံးရန်"
 }
