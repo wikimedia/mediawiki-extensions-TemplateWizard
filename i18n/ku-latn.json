@@ -4,5 +4,12 @@
 			"Ghybu"
 		]
 	},
-	"templatewizard-insert": "Tevlî bike"
+	"templatewizard-add-all": "Hemû parametreyan tevlî bike",
+	"templatewizard-cancel": "Betal bike",
+	"templatewizard-dialog-title": "Şablonekê tevlî bike",
+	"templatewizard-insert": "Tevlî bike",
+	"templatewizard-placeholder-example": "w.m. $1",
+	"templatewizard-remove-template": "Şablonê jê bibe?",
+	"templatewizard-search-placeholder": "Şablonekê bigere",
+	"templatewizard-link-to-template-title": "Vê şablonê nîşand bide"
 }
