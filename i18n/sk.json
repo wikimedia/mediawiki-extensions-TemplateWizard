@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robert Važan"
+		]
+	},
+	"templatewizard-cancel": "Zrušiť",
+	"templatewizard-dialog-title": "Šablóna",
+	"templatewizard-help": "Viac o Šablónovom pomocníkovi",
+	"templatewizard-insert": "Vložiť",
+	"templatewizard-invalid-values": "Niektoré zadané hodnoty nezodpovedajú očakávanému formátu. Chcete ich upraviť?",
+	"templatewizard-invalid-values-edit": "Upraviť šablónu",
+	"templatewizard-invalid-values-insert": "Vložiť",
+	"templatewizard-parameters-required": "Povinné parametre",
+	"templatewizard-search-placeholder": "Hľadať šablónu",
+	"templatewizard-remove-template-title": "Odstrániť šablónu",
+	"templatewizard-link-to-template-title": "Zobraziť šablónu"
+}
