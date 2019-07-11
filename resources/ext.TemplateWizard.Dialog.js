@@ -18,9 +18,18 @@ mw.TemplateWizard.Dialog.static.size = 'large';
 mw.TemplateWizard.Dialog.static.title = OO.ui.deferMsg( 'templatewizard-dialog-title' );
 mw.TemplateWizard.Dialog.static.helpUrl = 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:TemplateWizard';
 mw.TemplateWizard.Dialog.static.actions = [
-	{ label: OO.ui.deferMsg( 'templatewizard-insert' ), flags: [ 'primary', 'progressive' ], action: 'insert', modes: [ 'choose', 'insert' ] },
-	{ label: OO.ui.deferMsg( 'templatewizard-cancel' ), flags: 'safe', action: 'closeDialog', modes: [ 'choose', 'insert' ] },
-	{ title: OO.ui.deferMsg( 'templatewizard-close-template' ), flags: 'destructive', action: 'closeTemplate', modes: [ 'choose', 'insert' ], framed: false, icon: 'trash' },
+	{
+		label: OO.ui.deferMsg( 'templatewizard-insert' ),
+		flags: [ 'primary', 'progressive' ],
+		action: 'insert',
+		modes: [ 'choose', 'insert' ]
+	},
+	{
+		label: OO.ui.deferMsg( 'templatewizard-cancel' ),
+		flags: [ 'safe', 'close' ],
+		action: 'closeDialog',
+		modes: [ 'choose', 'insert' ]
+	},
 	{
 		action: 'help',
 		label: OO.ui.deferMsg( 'templatewizard-help' ),
@@ -47,9 +56,6 @@ mw.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
 mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 	// Prevent template insertion (we know there's only one 'insert' action).
 	this.getActions().get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( true );
-	// @TODO: When OOUI supports hidden actions, this should be made one.
-	// Until then, we hide it manually.
-	this.getActions().get( { actions: [ 'closeTemplate' ] } )[ 0 ].$element.hide();
 
 	// Keep track of whether we're ignoring fields (and closing or inserting the template),
 	// along with the first invalid field and first field with any value.
