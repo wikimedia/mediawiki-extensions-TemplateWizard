@@ -62,7 +62,9 @@
 	 */
 	// eslint-disable-next-line no-jquery/no-global-selector
 	$( '#wpSave' ).on( 'click', function () {
-		mw.TemplateWizard.logEvent( 'save-page', mw.TemplateWizard.insertedTemplates );
+		if ( mw.TemplateWizard.insertedTemplates.length ) {
+			mw.TemplateWizard.logEvent( 'save-page', mw.TemplateWizard.insertedTemplates );
+		}
 	} );
 
 }() );
