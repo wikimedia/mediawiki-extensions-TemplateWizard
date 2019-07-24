@@ -116,6 +116,13 @@ mw.TemplateWizard.Dialog.prototype.getReadyProcess = function ( data ) {
 };
 
 mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
+	if ( this.currentAction === 'insert' ) {
+		// This error is being added here rather than being returned by this.getActionProcess()
+		// because of the way that insert errors are raised by failed promises, which means we can't
+		// customize things. What we're doing instead is making it explicit here that any error
+		// raised by insertion is an invalid-value error.
+		data.push( new OO.ui.Error( mw.msg( 'templatewizard-invalid-values' ) ) );
+	}
 	mw.TemplateWizard.Dialog.super.prototype.showErrors.call( this, data );
 	if ( this.firstFieldWithValue && this.currentAction === 'closeTemplate' ) {
 		this.$errorsTitle.text( mw.msg( 'templatewizard-remove-template' ) );
@@ -127,6 +134,7 @@ mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
 		this.retryButton.setFlags( 'destructive' );
 		this.dismissButton.setLabel( mw.msg( 'templatewizard-cancel' ) );
 	} else {
+		this.$errorsTitle.text( mw.msg( 'ooui-dialog-process-error' ) );
 		this.retryButton.setLabel( mw.msg( 'templatewizard-invalid-values-insert' ) );
 		this.dismissButton.setLabel( mw.msg( 'templatewizard-invalid-values-edit' ) );
 	}
@@ -198,11 +206,10 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 			}
 		} )
 		.next( function () {
-			if ( action === 'insert' && dialog.templateForm ) {
-				dialog.invalidField = dialog.templateForm.getInvalidField();
-				if ( dialog.invalidField && !dialog.ignoreParamValues ) {
-					return new OO.ui.Error( mw.msg( 'templatewizard-invalid-values' ) );
-				}
+			if ( action === 'insert' && dialog.templateForm && !dialog.ignoreParamValues ) {
+				return dialog.templateForm.getFieldsValidity().fail( function () {
+					dialog.invalidField = dialog.templateForm.getInvalidField();
+				} );
 			}
 		} )
 		.next( function () {
