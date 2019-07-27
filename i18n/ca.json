@@ -4,6 +4,29 @@
 			"Fitoschido"
 		]
 	},
+	"templatewizard-add-all": "Afegeix tots els paràmetres",
+	"templatewizard-cancel": "Cancel·la",
+	"templatewizard-close-dialog": "Voleu abandonar l’auxiliar?",
+	"templatewizard-close-dialog-body": "Sortir de l’auxiliar causarà que es perdin les dades que hàgiu afegit a la plantilla.",
+	"templatewizard-close-dialog-retry": "Descarta els canvis",
+	"templatewizard-default": "Per defecte: $1",
+	"templatewizard-dialog-title": "Insereix una plantilla",
+	"templatewizard-insert": "Insereix",
+	"templatewizard-invalid-title": "El títol no és vàlid",
 	"templatewizard-invalid-values-edit": "Modifica la plantilla",
-	"templatewizard-invalid-values-insert": "Insereix una plantilla"
+	"templatewizard-invalid-values-insert": "Insereix una plantilla",
+	"templatewizard-no-description": "No existeix cap descripció per a aquesta plantilla.",
+	"templatewizard-parameters-optional": "Paràmetres opcionals",
+	"templatewizard-parameters-required": "Paràmetres obligatoris",
+	"templatewizard-parameters-suggested": "Paràmetres suggerits",
+	"templatewizard-placeholder-default": "Per defecte: $1",
+	"templatewizard-placeholder-example": "p. ex., $1",
+	"templatewizard-remove-template": "Voleu treure la plantilla?",
+	"templatewizard-remove-template-retry": "Treu la plantilla",
+	"templatewizard-search-placeholder": "Cerca una plantilla",
+	"templatewizard-parambutton-add-title": "Afegeix el paràmetre «$1»",
+	"templatewizard-parambutton-remove-title": "Treu el paràmetre «$1»",
+	"templatewizard-remove-template-title": "Treu la plantilla",
+	"templatewizard-link-to-template-title": "Mostra la plantilla",
+	"templatewizard-use": "Utilitza"
 }
