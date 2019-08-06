@@ -12,6 +12,7 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 	}
 	this.format = templateData.format || 'inline';
 	this.fields = [];
+	this.invalidField = null;
 	this.templateTitleBar = null;
 	this.menuContainer = null;
 	this.$overlay = config.$overlay || OO.ui.getDefaultOverlay();
@@ -401,18 +402,29 @@ mw.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
  * @return {boolean|OO.ui.Widget}
  */
 mw.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
-	var field, i, widget;
-	for ( i = 0; i < this.fields.length; i++ ) {
-		field = this.fields[ i ];
-		widget = field.getField();
-		// Force the widget to validate.
-		widget.blur();
-		// Then check it's validity.
-		if ( widget.hasFlag( 'invalid' ) ) {
-			return widget;
-		}
+	return this.invalidField;
+};
+
+/**
+ * Get validity promises for all the fields.
+ * @return {Promise[]}
+ */
+mw.TemplateWizard.TemplateForm.prototype.getFieldsValidity = function () {
+	var i, field, validity,
+		templateForm = this,
+		validityPromises = [],
+		recordInvalidField = function () {
+			// Record this field as being the invalid one.
+			templateForm.invalidField = field;
+		};
+	// Go through the fields from bottom to top.
+	for ( i = templateForm.fields.length - 1; i >= 0; i-- ) {
+		field = templateForm.fields[ i ].getField();
+		validity = field.getValidity();
+		validity.fail( recordInvalidField );
+		validityPromises.push( validity );
 	}
-	return false;
+	return $.when.apply( $, validityPromises );
 };
 
 mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
