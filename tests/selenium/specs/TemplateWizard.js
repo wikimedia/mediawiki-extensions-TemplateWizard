@@ -17,6 +17,10 @@ describe( 'TemplateWizard', function () {
 			return Api.edit( 'Template:' + testTemplateName, templateWikitext );
 		} );
 
+		// Open the template page, to confirm that it's what we expect.
+		browser.url( browser.options.baseUrl + '/index.php?title=Template:' + testTemplateName );
+		browser.waitForExist( '.mw-templatedata-doc-wrap' );
+
 		// Open an edit page.
 		browser.url( browser.options.baseUrl + '/index.php?title=TemplateWizard_test&action=edit' );
 
