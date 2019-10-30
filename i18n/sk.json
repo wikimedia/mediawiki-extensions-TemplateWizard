@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robert Važan"
+			"Robert Važan",
+			"Luky001"
 		]
 	},
 	"templatewizard-cancel": "Zrušiť",
+	"templatewizard-close-dialog-retry": "Zahodiť zmeny",
 	"templatewizard-dialog-title": "Šablóna",
 	"templatewizard-help": "Viac o Šablónovom pomocníkovi",
 	"templatewizard-insert": "Vložiť",
