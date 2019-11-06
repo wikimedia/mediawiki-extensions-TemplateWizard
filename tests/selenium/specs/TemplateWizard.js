@@ -31,16 +31,16 @@ describe( 'TemplateWizard', function () {
 		// Create a test template.
 		testTemplateName = Util.getTestString( 'Example ' );
 		browser.call( function () {
-			var templateWikitext = fs.readFileSync( path.dirname( __dirname ) + '/fixtures/en.Example.wikitext' );
-			return Api.edit( 'Template:' + testTemplateName, templateWikitext );
+			var templateWikitext = fs.readFileSync( `${path.dirname( __dirname )}/fixtures/en.Example.wikitext` );
+			return Api.edit( `Template:${testTemplateName}`, templateWikitext );
 		} );
 
 		// Open the template page, to confirm that it's what we expect.
-		browser.url( browser.options.baseUrl + '/index.php?title=Template:' + testTemplateName );
+		browser.url( `${browser.options.baseUrl}/index.php?title=Template:${testTemplateName}` );
 		browser.waitForExist( '.mw-templatedata-doc-wrap' );
 
 		// Open an edit page.
-		browser.url( browser.options.baseUrl + 'index.php?title=TemplateWizard_test&action=edit' );
+		browser.url( `${browser.options.baseUrl}index.php?title=TemplateWizard_test&action=edit` );
 
 		// Wait for the toolbar to load, then click the TemplateWizard button.
 		twButton = '[rel="template-wizard"] a[role="button"]';
@@ -56,7 +56,7 @@ describe( 'TemplateWizard', function () {
 		browser.waitForVisible( '.oo-ui-lookupElement-menu', 5000 );
 
 		// Select the template.
-		browser.click( '.oo-ui-labelElement-label=' + testTemplateName );
+		browser.click( `.oo-ui-labelElement-label=${testTemplateName}` );
 		browser.isExisting( '.ext-templatewizard-templatetitlebar .title' );
 
 		// Test that there is 1 (required) field already visible.
@@ -88,12 +88,12 @@ describe( 'TemplateWizard', function () {
 		// Cancel that, and insert the template, and test that it was inserted.
 		browser.click( '//div[@class="oo-ui-processDialog-errors"]//*[text()="Cancel"]' );
 		browser.click( '=Insert' );
-		assert.equal( browser.getValue( '#wpTextbox1' ), '{{' + testTemplateName + '|dob=2018-08-22|photo=|dod=|citizenship=}}' );
+		assert.equal( browser.getValue( '#wpTextbox1' ), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 
 		// Clean up (remove text to avoid close confirmation, and delete test template).
 		browser.setValue( '#wpTextbox1', '' );
 		browser.call( function () {
-			Api.delete( 'Template:' + testTemplateName, 'Clean up after test.' );
+			Api.delete( `Template:${testTemplateName}`, 'Clean up after test.' );
 		} );
 	} );
 
