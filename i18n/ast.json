@@ -37,5 +37,7 @@
 	"templatewizard-parambutton-add-title": "Añadir el parámetru '$1'",
 	"templatewizard-parambutton-remove-title": "Desaniciar r el parámetru '$1'",
 	"templatewizard-parambutton-required-title": "Parámetru riquíu '$1'",
+	"templatewizard-remove-template-title": "Desaniciar plantía",
+	"templatewizard-link-to-template-title": "Ver la plantía",
 	"templatewizard-use": "Usar"
 }
