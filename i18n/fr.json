@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Wladek92"
+			"Wladek92",
+			"Thibaut120094"
 		]
 	},
 	"templatewizard-add-all": "Ajouter tous les paramètres",
 	"templatewizard-cancel": "Annuler",
-	"templatewizard-close-dialog": "Quitter l’assistant ?",
+	"templatewizard-close-dialog": "Quitter l’assistant ?",
 	"templatewizard-close-dialog-body": "Quitter l’assistant entraînera la perte des données que vous avez ajoutées au modèle.",
 	"templatewizard-close-dialog-retry": "Annuler les modifications",
 	"templatewizard-default": "Par défaut : $1",
@@ -31,7 +32,7 @@
 	"templatewizard-placeholder-default": "Par défaut : $1",
 	"templatewizard-placeholder-example": "par ex. $1",
 	"templatewizard-remove-all": "Supprimer tous les paramètres",
-	"templatewizard-remove-template": "Supprimer le modèle ?",
+	"templatewizard-remove-template": "Supprimer le modèle ?",
 	"templatewizard-remove-template-body": "Le modèle que vous essayez de supprimer contient les données que vous avez saisies. Supprimer ce modèle supprimera également les informations que vous avez ajoutées au modèle. Cette action est irréversible.",
 	"templatewizard-remove-template-retry": "Supprimer le modèle",
 	"templatewizard-search-placeholder": "Rechercher un modèle",
