@@ -5,6 +5,7 @@
 			"Luky001"
 		]
 	},
+	"templatewizard-add-all": "Pridať všetky parametre",
 	"templatewizard-cancel": "Zrušiť",
 	"templatewizard-close-dialog-retry": "Zahodiť zmeny",
 	"templatewizard-desc": "Doplnok do wikieditoru, ktorý sprostredkuje sprievodcu vkladaním šablón",
@@ -14,6 +15,7 @@
 	"templatewizard-invalid-values": "Niektoré zadané hodnoty nezodpovedajú očakávanému formátu. Chcete ich upraviť?",
 	"templatewizard-invalid-values-edit": "Upraviť šablónu",
 	"templatewizard-invalid-values-insert": "Vložiť",
+	"templatewizard-parameters-optional": "Doplnkové parametre",
 	"templatewizard-parameters-required": "Povinné parametre",
 	"templatewizard-placeholder-example": "napr. $1",
 	"templatewizard-search-placeholder": "Hľadať šablónu",
