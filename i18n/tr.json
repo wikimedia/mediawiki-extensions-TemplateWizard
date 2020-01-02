@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"BaRaN6161 TURK"
 		]
 	},
 	"templatewizard-add-all": "Tüm parametreleri ekle",
-	"templatewizard-cancel": "Vazgeç",
+	"templatewizard-cancel": "İptal",
 	"templatewizard-close-dialog": "Sihirbazdan çıkılsın mı?",
 	"templatewizard-close-dialog-body": "Sihirbazı bırakmak, şablona eklediğiniz verilerin kaybolmasına neden olur.",
 	"templatewizard-close-dialog-retry": "Değişiklikleri çıkar",
