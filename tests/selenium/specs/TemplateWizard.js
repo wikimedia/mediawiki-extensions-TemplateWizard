@@ -40,7 +40,7 @@ describe( 'TemplateWizard', function () {
 		browser.waitForExist( '.mw-templatedata-doc-wrap' );
 
 		// Open an edit page.
-		browser.url( `${browser.options.baseUrl}index.php?title=TemplateWizard_test&action=edit` );
+		browser.url( `${browser.options.baseUrl}/index.php?title=TemplateWizard_test&action=edit` );
 
 		// Wait for the toolbar to load, then click the TemplateWizard button.
 		twButton = '[rel="template-wizard"] a[role="button"]';
@@ -53,7 +53,7 @@ describe( 'TemplateWizard', function () {
 		browser.setValue( '.ext-templatewizard-searchform input', testTemplateName );
 
 		// Wait for the search results to appear.
-		browser.waitForVisible( '.oo-ui-lookupElement-menu', 5000 );
+		browser.waitForVisible( '.oo-ui-lookupElement-menu', 35000 );
 
 		// Select the template.
 		browser.click( `.oo-ui-labelElement-label=${testTemplateName}` );
