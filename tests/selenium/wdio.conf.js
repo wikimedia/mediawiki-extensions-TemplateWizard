@@ -82,7 +82,7 @@ exports.config = {
 		var filePath;
 		if ( !test.passed ) {
 			filePath = saveScreenshot( test.title );
-			console.log( `\n\tScreenshot: ${filePath}\n` ); // eslint-disable-line no-console
+			console.log( `\n\tScreenshot: ${filePath}\n` );
 		}
 	}
 };
