@@ -1,5 +1,3 @@
-'use strict';
-
 var Api = require( 'wdio-mediawiki/Api' ),
 	Util = require( 'wdio-mediawiki/Util' ),
 	fs = require( 'fs' ),
@@ -98,12 +96,6 @@ describe( 'TemplateWizard', function () {
 		browser.click( '//div[@class="oo-ui-processDialog-errors"]//*[text()="Cancel"]' );
 		browser.click( '=Insert' );
 		assert.equal( browser.getValue( '#wpTextbox1' ), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
-
-		// Clean up (remove text to avoid close confirmation, and delete test template).
-		browser.setValue( '#wpTextbox1', '' );
-		browser.call( function () {
-			Api.delete( `Template:${testTemplateName}`, 'Clean up after test.' );
-		} );
 	} );
 
 } );
