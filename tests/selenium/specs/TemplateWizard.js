@@ -24,10 +24,9 @@ function assertVisibleElementCount( selector, count ) {
 }
 
 describe( 'TemplateWizard', function () {
+	var twButton, testTemplateName;
 
-	it( 'basic use of TemplateWizard', function () {
-		var twButton, testTemplateName;
-
+	beforeEach( function () {
 		// Create a test template.
 		testTemplateName = Util.getTestString( 'Example ' );
 		browser.call( function () {
@@ -58,13 +57,23 @@ describe( 'TemplateWizard', function () {
 		// Select the template.
 		browser.click( `.oo-ui-labelElement-label=${testTemplateName}` );
 		browser.isExisting( '.ext-templatewizard-templatetitlebar .title' );
+	} );
 
+	it( 'has 1 (required) field visible', function () {
 		// Test that there is 1 (required) field already visible.
 		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 1 );
+	} );
 
+	it( 'has 5 fields visible', function () {
 		// Click "Add all fields", test that there are now 5 fields visible.
 		browser.click( '.ext-templatewizard-add-remove-all a' );
+
 		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 5 );
+	} );
+
+	it( 'template is inserted', function () {
+		// Click "Add all fields", test that there are now 5 fields visible.
+		browser.click( '.ext-templatewizard-add-remove-all a' );
 
 		// Add a value for Date of Birth (use 'keys()' because OOUI).
 		// We don't need to click in the field first because it's the only
