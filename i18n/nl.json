@@ -35,6 +35,8 @@
 	"templatewizard-remove-template": "Sjabloon verwijderen?",
 	"templatewizard-remove-template-retry": "Sjabloon verwijderen",
 	"templatewizard-search-placeholder": "Zoeken naar een sjabloon",
+	"templatewizard-parambutton-add-title": "De parameter '$1' toevoegen",
+	"templatewizard-parambutton-remove-title": "De parameter '$1' verwijderen",
 	"templatewizard-remove-template-title": "verwijder template",
 	"templatewizard-link-to-template-title": "Sjabloon bekijken",
 	"templatewizard-use": "Gebruiken"
