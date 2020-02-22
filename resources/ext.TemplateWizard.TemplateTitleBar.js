@@ -96,6 +96,10 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 			$( '<p>' )
 				.addClass( messageClass )
 				.html(
+					// The following messages are used here:
+					// * templatewizard-no-params-without-td
+					// * templatewizard-no-params-with-td
+					// * templatewizard-no-templatedata
 					mw.message(
 						message,
 						'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:TemplateData'

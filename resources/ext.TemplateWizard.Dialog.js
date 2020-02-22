@@ -187,14 +187,14 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 	var dialog = this;
 	return mw.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
 		.next( function () {
-			var msg;
 			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && dialog.templateForm ) {
 				dialog.firstFieldWithValue = dialog.templateForm.getFirstFieldWithValue();
 				if ( dialog.firstFieldWithValue && !this.ignoreParamValues ) {
-					msg = ( action === 'closeTemplate' ) ?
-						'templatewizard-remove-template-body' :
-						'templatewizard-close-dialog-body';
-					return new OO.ui.Error( mw.msg( msg ) );
+					return new OO.ui.Error( mw.msg(
+						action === 'closeTemplate' ?
+							'templatewizard-remove-template-body' :
+							'templatewizard-close-dialog-body'
+					) );
 				}
 				if ( action === 'closeTemplate' ) {
 					mw.TemplateWizard.logEvent( 'remove-template', [ dialog.templateForm.getTitle().getMainText() ] );
