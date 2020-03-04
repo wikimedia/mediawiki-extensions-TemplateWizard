@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"पर्वत सुबेदी"
+		]
+	},
+	"templatewizard-cancel": "रद्द गर्नुहोस्",
+	"templatewizard-close-dialog-retry": "परिवर्तन रद्द गर्नुहाेस्?",
+	"templatewizard-default": "पुनर्निधारित: $1",
+	"templatewizard-dialog-title": "ढाँचा घुसाउनुहाेस्",
+	"templatewizard-help": "ढाँचा सहयाेग विशेषताकाे बारेमा थप पढ्नुहाेस्",
+	"templatewizard-insert": "घुसाउनुहोस्",
+	"templatewizard-invalid-title": "अमान्य शीर्षक",
+	"templatewizard-invalid-values-edit": "ढाँचा सम्पादन गर्नुहोस्",
+	"templatewizard-invalid-values-insert": "ढाँचा घुसाउनुहाेस्",
+	"templatewizard-opens-in-new-tab": "नयाँ ट्याबमा खोल्नुहोस्",
+	"templatewizard-placeholder-default": "पुनर्निधारित: $1",
+	"templatewizard-placeholder-example": "उदाहरण $1",
+	"templatewizard-remove-template": "ढाँचा हटाउनुहाेस्",
+	"templatewizard-remove-template-retry": "ढाँचा हटाउनुहाेस्",
+	"templatewizard-search-placeholder": "ढाँचाका लागि खाेज्नुहाेस्",
+	"templatewizard-remove-template-title": "ढाँचा हटाउनुहाेस्",
+	"templatewizard-link-to-template-title": "ढाँचा हेर्नुहोस्",
+	"templatewizard-use": "प्रयोग"
+}
