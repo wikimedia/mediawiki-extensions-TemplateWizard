@@ -1,23 +1,41 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saederup92"
+			"Saederup92",
+			"Weblars"
 		]
 	},
 	"templatewizard-add-all": "Tilføj alle parametre",
 	"templatewizard-cancel": "Annullér",
+	"templatewizard-close-dialog": "Forlad guiden?",
+	"templatewizard-close-dialog-body": "Hvis du forlader guiden vil dine indlagte data i skabelonen forsvinde.",
+	"templatewizard-close-dialog-retry": "Forkast ændringer",
 	"templatewizard-default": "Standard: $1",
+	"templatewizard-desc": "Et tilføjelse til WikiEditor som gør det nemmere at indsætte skabeloner",
 	"templatewizard-dialog-title": "Indsæt en skabelon",
+	"templatewizard-help": "Læs mere om TemplateWizard",
+	"templatewizard-help-title": "Læs hjælpesiderne for TemplateWizard på MediaWiki.org",
+	"templatewizard-insert": "Indsæt",
 	"templatewizard-invalid-title": "Ugyldig titel",
+	"templatewizard-invalid-values": "En eller flere af dine indtastninger passer ikke med det forventede format. Ønsker du at redigere dem?",
 	"templatewizard-invalid-values-edit": "Rediger skabelon",
 	"templatewizard-invalid-values-insert": "Indsæt skabelon",
 	"templatewizard-no-description": "Der findes ikke nogen beskrivelse til denne skabelon.",
+	"templatewizard-no-params-with-td": "Det er ingen parametre defineret i denne skabelons [$1 TemplateData]-dokumentation. Du kan indsætte skabelonen uden parametre.",
+	"templatewizard-no-params-without-td": "Ingen parametre blev fundet for denne skabelon på grund af manglende [$1 TemplateData]-dokumentation. Du kan indsætte skabelonen uden parametre.",
+	"templatewizard-opens-in-new-tab": "Åbnes i en ny fane",
+	"templatewizard-parameters-optional": "Valgfri parametre",
+	"templatewizard-parameters-suggested": "Foreslåede parametre",
 	"templatewizard-placeholder-default": "Standard: $1",
+	"templatewizard-placeholder-example": "f.eks. $1",
 	"templatewizard-remove-all": "Fjern alle parametre",
 	"templatewizard-remove-template": "Fjern skabelon?",
+	"templatewizard-remove-template-body": "Skabelonen du prøver at fjerne har data du har lagt ind. Ved at fjerne skabelonen vil du også fjerne informationen du har tilføjet. Denne handling kan ikke fortrydes.",
 	"templatewizard-remove-template-retry": "Fjern skabelon",
 	"templatewizard-search-placeholder": "Søg efter en skabelon",
 	"templatewizard-parambutton-add-title": "Tilføj parameteren '$1'",
+	"templatewizard-parambutton-remove-title": "Fjern parameteren '$1'",
+	"templatewizard-parambutton-required-title": "Påkrævet parameter '$1'",
 	"templatewizard-remove-template-title": "Fjern skabelon",
 	"templatewizard-link-to-template-title": "Se skabelon",
 	"templatewizard-use": "Anvend"
