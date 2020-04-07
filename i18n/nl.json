@@ -1,15 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98",
-			"Patio",
-			"Happy13241",
-			"KlaasZ4usV",
-			"SPQRobin",
-			"Ndecouck",
 			"Elroy",
+			"Happy13241",
 			"Jeroen N",
-			"Klaas van Buiten"
+			"Klaas van Buiten",
+			"KlaasZ4usV",
+			"Mainframe98",
+			"Ndecouck",
+			"Patio",
+			"SPQRobin"
 		]
 	},
 	"templatewizard-add-all": "Alle parameters toevoegen",

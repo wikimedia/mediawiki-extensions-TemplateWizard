@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Patriccck",
-			"YjM",
 			"Dvorapa",
-			"Matěj Suchánek"
+			"Matěj Suchánek",
+			"Patriccck",
+			"YjM"
 		]
 	},
 	"templatewizard-add-all": "Přidat všechny parametry",
