@@ -2,7 +2,8 @@ var Api = require( 'wdio-mediawiki/Api' ),
 	Util = require( 'wdio-mediawiki/Util' ),
 	fs = require( 'fs' ),
 	path = require( 'path' ),
-	assert = require( 'assert' );
+	assert = require( 'assert' ),
+	UseTemplatePage = require( '../pageobjects/UseTemplatePage.page' );
 
 /**
  * Assert that a given selector has x visible elements.
@@ -22,7 +23,7 @@ function assertVisibleElementCount( selector, count ) {
 }
 
 describe( 'TemplateWizard', function () {
-	var twButton, testTemplateName;
+	var testTemplateName;
 
 	beforeEach( function () {
 		// Create a test template.
@@ -37,24 +38,21 @@ describe( 'TemplateWizard', function () {
 		browser.waitForExist( '.mw-templatedata-doc-wrap' );
 
 		// Open an edit page.
-		browser.url( `${browser.options.baseUrl}/index.php?title=TemplateWizard_test&action=edit` );
-
+		UseTemplatePage.openEdit();
 		// Wait for the toolbar to load, then click the TemplateWizard button.
-		twButton = '[rel="template-wizard"] a[role="button"]';
-		browser.waitForVisible( twButton, 10000 );
-		browser.click( twButton );
+		UseTemplatePage.twButton.waitForVisible();
+		UseTemplatePage.twButton.click();
 
 		// Wait for the dialog to open, and enter a search term.
-		browser.waitForVisible( '#ext-templatewizard-dialog' );
-		browser.click( '.ext-templatewizard-searchform input' );
+		UseTemplatePage.dialog.waitForVisible();
+		UseTemplatePage.searchInput.click();
 		browser.setValue( '.ext-templatewizard-searchform input', testTemplateName );
-
 		// Wait for the search results to appear.
-		browser.waitForVisible( '.oo-ui-lookupElement-menu', 35000 );
+		UseTemplatePage.searchResultMenu.waitForVisible( 35000 );
 
 		// Select the template.
 		browser.click( `.oo-ui-labelElement-label=${testTemplateName}` );
-		browser.isExisting( '.ext-templatewizard-templatetitlebar .title' );
+		UseTemplatePage.testTemplateTitle.isExisting();
 	} );
 
 	it( 'has 1 (required) field visible', function () {
@@ -64,14 +62,14 @@ describe( 'TemplateWizard', function () {
 
 	it( 'has 5 fields visible', function () {
 		// Click "Add all fields", test that there are now 5 fields visible.
-		browser.click( '.ext-templatewizard-add-remove-all a' );
+		UseTemplatePage.addAllFields.click();
 
 		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 5 );
 	} );
 
 	it( 'template is inserted', function () {
-		// Click "Add all fields", test that there are now 5 fields visible.
-		browser.click( '.ext-templatewizard-add-remove-all a' );
+
+		UseTemplatePage.addAllFields.click();
 
 		// Add a value for Date of Birth (use 'keys()' because OOUI).
 		// We don't need to click in the field first because it's the only
@@ -79,22 +77,21 @@ describe( 'TemplateWizard', function () {
 		browser.keys( '2018-08-22' );
 
 		// Remove Username, test that focus is now on Date of Death.
-		browser.click( '=Username' );
-		browser.hasFocus( '.ext-templatewizard-templateform .ext-templatewizard-fields .mw-widget-dateInputWidget' );
-
+		UseTemplatePage.usernameField.click();
+		UseTemplatePage.deathDate.hasFocus();
 		// Try to close the dialog, test that an error is shown.
-		browser.click( '=Cancel' );
-		browser.waitForVisible( '.oo-ui-processDialog-errors-title' );
+		UseTemplatePage.cancelField.click();
+		UseTemplatePage.dialogError.waitForVisible();
 
 		// Cancel that, and try to close the template, and test that an error is shown.
-		browser.click( '//div[@class="oo-ui-processDialog-errors"]//*[text()="Cancel"]' );
-		browser.waitForVisible( '#ext-templatewizard-close-template-button' );
-		browser.click( '#ext-templatewizard-close-template-button' );
-		browser.waitForVisible( '.oo-ui-processDialog-errors-title' );
+		UseTemplatePage.dialogErrorCancelButton.click();
+		UseTemplatePage.closeTemplateButton.waitForVisible();
+		UseTemplatePage.closeTemplateButton.click();
+		UseTemplatePage.dialogError.waitForVisible();
 
 		// Cancel that, and insert the template, and test that it was inserted.
-		browser.click( '//div[@class="oo-ui-processDialog-errors"]//*[text()="Cancel"]' );
-		browser.click( '=Insert' );
+		UseTemplatePage.dialogErrorCancelButton.click();
+		UseTemplatePage.insertField.click();
 		assert.equal( browser.getValue( '#wpTextbox1' ), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 
