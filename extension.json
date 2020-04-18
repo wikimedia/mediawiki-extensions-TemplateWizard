@@ -9,14 +9,14 @@
 	"license-name": "MIT",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.29.0",
+		"MediaWiki": ">= 1.31.0",
 		"extensions": {
 			"TemplateData": "*",
 			"WikiEditor": "*"
 		}
 	},
-	"AutoloadClasses": {
-		"MediaWiki\\Extension\\TemplateWizard\\Hooks": "includes/Hooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\TemplateWizard\\": "includes/"
 	},
 	"Hooks": {
 		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial",
