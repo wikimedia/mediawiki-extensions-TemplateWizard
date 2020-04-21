@@ -1,4 +1,4 @@
-( function () {
+$( function () {
 
 	/* Extension namespace. */
 	mw.TemplateWizard = {};
