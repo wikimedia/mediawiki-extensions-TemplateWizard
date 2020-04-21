@@ -3,17 +3,16 @@ $( function () {
 	/*
 	 * Add the TemplateWizard button to the WikiEditor toolbar.
 	 */
-	// eslint-disable-next-line no-jquery/no-global-selector
-	$( '#wpTextbox1' ).on( 'wikiEditor-toolbar-doneInitialSections', function () {
+	mw.hook( 'wikiEditor.toolbarReady' ).add( function ( $textarea ) {
 		// Take the content direction from the edit textarea
-		var contentDir = $( this ).css( 'direction' ),
+		var contentDir = $textarea.css( 'direction' ),
 			// Set up the TemplateWizard dialog window.
 			templateWizard = new mw.TemplateWizard.Dialog();
 
 		OO.ui.getWindowManager().addWindows( [ templateWizard ] );
 
 		// Add the toolbar button.
-		$( this ).wikiEditor( 'addToToolbar', {
+		$textarea.wikiEditor( 'addToToolbar', {
 			section: 'main',
 			group: 'insert',
 			tools: {

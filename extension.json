@@ -12,7 +12,7 @@
 		"MediaWiki": ">= 1.31.0",
 		"extensions": {
 			"TemplateData": "*",
-			"WikiEditor": "*"
+			"WikiEditor": ">= 0.5.3"
 		}
 	},
 	"AutoloadNamespaces": {
