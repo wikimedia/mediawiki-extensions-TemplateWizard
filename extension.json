@@ -49,7 +49,8 @@
 				"ext.TemplateWizard.SearchResult.js",
 				"ext.TemplateWizard.TemplateForm.js",
 				"ext.TemplateWizard.TemplateFormatter.js",
-				"ext.TemplateWizard.TemplateTitleBar.js"
+				"ext.TemplateWizard.TemplateTitleBar.js",
+				"ext.TemplateWizard.init.js"
 			],
 			"styles": [
 				"ext.TemplateWizard.less"
