@@ -14,13 +14,13 @@ $( function () {
 	 */
 	mw.TemplateWizard.logEvent = function ( event, templateNames ) {
 		mw.track( 'event.TemplateWizard', {
+			/* eslint-disable camelcase */
 			action: event,
-			/* eslint-disable */
 			namespace_id: mw.config.get( 'wgNamespaceNumber' ),
 			page_title: mw.config.get( 'wgTitle' ),
 			revision_id: mw.config.get( 'wgCurRevisionId' ),
 			template_names: templateNames
-			/* eslint-enable */
+			/* eslint-enable camelcase */
 		} );
 	};
 
