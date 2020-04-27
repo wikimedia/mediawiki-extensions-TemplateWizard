@@ -8,13 +8,14 @@
 			"Link2xt",
 			"Okras",
 			"Ole Yves",
+			"Soul Train",
 			"Stjn",
 			"Vlad5250"
 		]
 	},
 	"templatewizard-add-all": "Добавить все параметры",
 	"templatewizard-cancel": "Отмена",
-	"templatewizard-close-dialog": "Закрыць майстар шаблонаў?",
+	"templatewizard-close-dialog": "Закрыть мастер шаблонов?",
 	"templatewizard-close-dialog-retry": "Отменить изменения",
 	"templatewizard-default": "По умолчанию: $1",
 	"templatewizard-desc": "Надстройка WikiEditor, которая предоставляет мастер установки шаблонов",
