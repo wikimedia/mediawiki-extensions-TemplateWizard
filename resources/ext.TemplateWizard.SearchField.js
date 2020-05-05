@@ -89,7 +89,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function 
  * @protected
  * @param {OO.ui.MenuOptionWidget} item Selected item
  */
-mw.TemplateWizard.SearchField.prototype.onLookupMenuItemChoose = function ( item ) {
+mw.TemplateWizard.SearchField.prototype.onLookupMenuChoose = function ( item ) {
 	this.setValue( item.getData().titleMainText );
 	this.searchForm.showTemplate( item.getData() );
 };
