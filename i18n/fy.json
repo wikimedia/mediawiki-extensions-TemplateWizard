@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"PiefPafPier"
+		]
+	},
+	"templatewizard-add-all": "Alle parameters tafoegje",
+	"templatewizard-cancel": "Annulearje",
+	"templatewizard-close-dialog": "Assistint ferlitte?",
+	"templatewizard-close-dialog-body": "De assistint ferlitten liedt ta ferlies fan 'e gegevens dy't jo oan 't berjocht tafoege hawwe.",
+	"templatewizard-close-dialog-retry": "Wizigings fuortsmite",
+	"templatewizard-default": "Standert: $1",
+	"templatewizard-desc": "In WikiBewurker-útwreiding dy't in ynfoechassistint foar berjochten tafoeget",
+	"templatewizard-dialog-title": "In berjocht ynfoegje",
+	"templatewizard-help": "Mear witte oer de BerjochtAssistint",
+	"templatewizard-help-title": "De BerjochtAssistint-helpsiden op MediaWiki.org lêze",
+	"templatewizard-insert": "Ynfoegje",
+	"templatewizard-invalid-title": "Unjildige titel",
+	"templatewizard-invalid-values": "Ien as mear fan jo ynfierwearden hawwe net de ferwachte foarm. Wolle jo se bewurkje?",
+	"templatewizard-invalid-values-edit": "Berjocht bewurkje",
+	"templatewizard-invalid-values-insert": "Berjocht ynfoegje",
+	"templatewizard-no-description": "Der is gjin beskriuwing foar dit berjocht.",
+	"templatewizard-no-params-with-td": "Der binne gjin parameters definiearre yn 'e [$1 BerjochtData]-dokumintaasje fan dit berjocht. Jo kinne it berjocht sûnder parameters ynfoegje.",
+	"templatewizard-no-params-without-td": "Der koene gjin parameters foar dit berjocht fêststeld wurde troch de ôfwêzigens fan [$1 BerjochtData]-dokumintaasje. Jo kinne it berjocht sûnder parameters ynfoegje.",
+	"templatewizard-no-templatedata": "Troch ûntbrekkende [$1 BerjochtData], binne de parameters foar dit berjocht automatysk generearre. Hâld der rekken mei dat se faaks net sûnder flaters binne.",
+	"templatewizard-opens-in-new-tab": "Iepenet in nij tabblêd",
+	"templatewizard-parameters-optional": "Fakultative parameters",
+	"templatewizard-parameters-required": "Ferplichte parameters",
+	"templatewizard-parameters-suggested": "Parametersuggestjes",
+	"templatewizard-placeholder-default": "Standert: $1",
+	"templatewizard-placeholder-example": "bgl. $1",
+	"templatewizard-remove-all": "Alle parameters wiskje",
+	"templatewizard-remove-template": "Berjocht wiskje?",
+	"templatewizard-remove-template-retry": "Berjocht wiskje",
+	"templatewizard-search-placeholder": "Berjocht sykje",
+	"templatewizard-parambutton-add-title": "Parameter '$1' tafoegje",
+	"templatewizard-parambutton-remove-title": "Parameter '$1' wiskje",
+	"templatewizard-parambutton-required-title": "Ferplichte parameter '$1'",
+	"templatewizard-remove-template-title": "Berjocht wiskje",
+	"templatewizard-link-to-template-title": "Berjocht besjen",
+	"templatewizard-use": "Brûke"
+}
