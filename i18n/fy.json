@@ -31,6 +31,7 @@
 	"templatewizard-placeholder-example": "bgl. $1",
 	"templatewizard-remove-all": "Alle parameters wiskje",
 	"templatewizard-remove-template": "Berjocht wiskje?",
+	"templatewizard-remove-template-body": "It berjocht dat jo besykje te wiskjen, befettet gegevens dy't jo ynfierd hawwe. Mei it wiskjen fan 't berjocht, wurdt ek de ynformaasje wiske dy't jo oan 't berjocht tafoege hawwe. Dizze hanneling is net omkearber.",
 	"templatewizard-remove-template-retry": "Berjocht wiskje",
 	"templatewizard-search-placeholder": "Berjocht sykje",
 	"templatewizard-parambutton-add-title": "Parameter '$1' tafoegje",
