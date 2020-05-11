@@ -19,8 +19,7 @@
 		"MediaWiki\\Extension\\TemplateWizard\\": "includes/"
 	},
 	"Hooks": {
-		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial",
-		"ResourceLoaderTestModules": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderTestModules"
+		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial"
 	},
 	"attributes": {
 		"EventLogging": {
@@ -108,6 +107,17 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
 		"remoteExtPath": "TemplateWizard/resources"
+	},
+	"QUnitTestModule": {
+		"localBasePath": "tests/qunit",
+		"remoteExtPath": "TemplateWizard/tests/qunit",
+		"scripts": [
+			"ext.TemplateWizard.test.js",
+			"ext.TemplateWizard.Model.Parameters.test.js"
+		],
+		"dependencies": [
+			"ext.TemplateWizard"
+		]
 	},
 	"manifest_version": 2
 }
