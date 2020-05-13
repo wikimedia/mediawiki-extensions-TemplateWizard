@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Huji",
 			"Ladsgroup",
 			"Reza1615"
 		]
@@ -21,8 +22,8 @@
 	"templatewizard-invalid-values-edit": "ویرایش الگو",
 	"templatewizard-invalid-values-insert": "افزودن الگو",
 	"templatewizard-no-description": "توضیحی برای این الگو وجود ندارد.",
-	"templatewizard-no-params-with-td": "متغییری برای [$1 TemplateData]  تعریف نشده‌است. آیا قصد دارید الگو بدون متغییر تعریف کنید.",
-	"templatewizard-no-params-without-td": "به علت نبود اطلاعات  [$1 TemplateData]  متغییری تعریف نشده‌است. امکان افزودن الگو بدون متغییر وجود دارد",
+	"templatewizard-no-params-with-td": "متغیری برای [$1 TemplateData]  تعریف نشده‌است. آیا قصد دارید الگو بدون متغیر تعریف کنید.",
+	"templatewizard-no-params-without-td": "به علت نبود اطلاعات  [$1 TemplateData]  متغیری تعریف نشده‌است. امکان افزودن الگو بدون متغیر وجود دارد",
 	"templatewizard-no-templatedata": "به علت نبود [$1 TemplateData]، پارمترهای الگو به صورت خودکار تولید شده‌اند که ممکن است دقیق نباشد.",
 	"templatewizard-opens-in-new-tab": "در برگه جدید باز می‌شود",
 	"templatewizard-parameters-optional": "پارامترهای اختیاری",
