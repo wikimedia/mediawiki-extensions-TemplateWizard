@@ -19,6 +19,17 @@ class UseTemplatePage extends Page {
 	openEdit() {
 		super.openTitle( 'TemplateWizard_test', { action: 'edit' } );
 	}
+	visibleElementCount( selector ) {
+		var i,
+			elements = browser.elements( selector ),
+			visibleElementCount = 0;
+		for ( i = 0; i < elements.value.length; i++ ) {
+			if ( elements.value[ i ].isVisible() ) {
+				visibleElementCount++;
+			}
+		}
+		return visibleElementCount;
+	}
 }
 
 module.exports = new UseTemplatePage();

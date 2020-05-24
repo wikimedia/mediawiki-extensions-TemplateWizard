@@ -3,23 +3,6 @@ var assert = require( 'assert' ),
 	CreateTemplate = require( '../pageobjects/CreateTemplate.page' ),
 	UseTemplatePage = require( '../pageobjects/UseTemplatePage.page' );
 
-/**
- * Assert that a given selector has x visible elements.
- * @param {string} selector
- * @param {int} count
- */
-function assertVisibleElementCount( selector, count ) {
-	var i,
-		elements = browser.elements( selector ),
-		visibleElementCount = 0;
-	for ( i = 0; i < elements.value.length; i++ ) {
-		if ( elements.value[ i ].isVisible() ) {
-			visibleElementCount++;
-		}
-	}
-	assert.equal( count, visibleElementCount );
-}
-
 describe( 'TemplateWizard', function () {
 	var testTemplateName;
 
@@ -50,14 +33,13 @@ describe( 'TemplateWizard', function () {
 
 	it( 'has 1 (required) field visible', function () {
 		// Test that there is 1 (required) field already visible.
-		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 1 );
+		assert.strictEqual( UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 1 );
 	} );
 
 	it( 'has 5 fields visible', function () {
 		// Click "Add all fields", test that there are now 5 fields visible.
 		UseTemplatePage.addAllFields.click();
-
-		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 5 );
+		assert.strictEqual( UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 5 );
 	} );
 
 	it( 'has template inserted', function () {
