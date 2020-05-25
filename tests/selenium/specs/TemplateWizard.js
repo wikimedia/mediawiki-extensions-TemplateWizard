@@ -1,8 +1,6 @@
-var Api = require( 'wdio-mediawiki/Api' ),
+var assert = require( 'assert' ),
 	Util = require( 'wdio-mediawiki/Util' ),
-	fs = require( 'fs' ),
-	path = require( 'path' ),
-	assert = require( 'assert' ),
+	CreateTemplate = require( '../pageobjects/CreateTemplate.page' ),
 	UseTemplatePage = require( '../pageobjects/UseTemplatePage.page' );
 
 /**
@@ -26,16 +24,11 @@ describe( 'TemplateWizard', function () {
 	var testTemplateName;
 
 	beforeEach( function () {
-		// Create a test template.
+		// Create a test template
 		testTemplateName = Util.getTestString( 'Example ' );
-		browser.call( function () {
-			var templateWikitext = fs.readFileSync( `${path.dirname( __dirname )}/fixtures/en.Example.wikitext` );
-			return Api.edit( `Template:${testTemplateName}`, templateWikitext );
-		} );
-
+		CreateTemplate.create( testTemplateName );
 		// Open the template page, to confirm that it's what we expect.
-		browser.url( `${browser.options.baseUrl}/index.php?title=Template:${testTemplateName}` );
-		browser.waitForExist( '.mw-templatedata-doc-wrap' );
+		CreateTemplate.open( testTemplateName );
 
 		// Open an edit page.
 		UseTemplatePage.openEdit();
@@ -67,7 +60,7 @@ describe( 'TemplateWizard', function () {
 		assertVisibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout', 5 );
 	} );
 
-	it( 'template is inserted', function () {
+	it( 'has template inserted', function () {
 
 		UseTemplatePage.addAllFields.click();
 
