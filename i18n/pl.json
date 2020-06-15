@@ -10,7 +10,7 @@
 	},
 	"templatewizard-add-all": "Dodaj wszystkie parametry",
 	"templatewizard-cancel": "Anuluj",
-	"templatewizard-close-dialog": "Opuścić kreatora?",
+	"templatewizard-close-dialog": "Opuścić kreator?",
 	"templatewizard-close-dialog-body": "Opuszczenie kreatora spowoduje utratę wszelkich danych dodanych do szablonu.",
 	"templatewizard-close-dialog-retry": "Porzuć zmiany",
 	"templatewizard-default": "Domyślnie: $1",
@@ -40,7 +40,7 @@
 	"templatewizard-search-placeholder": "Wyszukaj szablon",
 	"templatewizard-parambutton-add-title": "Dodaj parametr „$1”",
 	"templatewizard-parambutton-remove-title": "Usuń parametr „$1”",
-	"templatewizard-parambutton-required-title": "Wymagany parametr '$1'",
+	"templatewizard-parambutton-required-title": "Wymagany parametr „$1”",
 	"templatewizard-remove-template-title": "Usuń szablon",
 	"templatewizard-link-to-template-title": "Zobacz szablon",
 	"templatewizard-use": "Użyj"
