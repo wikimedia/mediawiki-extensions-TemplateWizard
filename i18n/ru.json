@@ -26,6 +26,7 @@
 	"templatewizard-help-title": "Прочитайте справочные страницы TemplateWizard на MediaWiki.org",
 	"templatewizard-insert": "Вставить",
 	"templatewizard-invalid-title": "Недопустимое название",
+	"templatewizard-invalid-values": "Один или несколько полей не соответствуют ожидаемому формату. Вы хотите отредактировать их?",
 	"templatewizard-invalid-values-edit": "Редактировать шаблон",
 	"templatewizard-invalid-values-insert": "Вставить шаблон",
 	"templatewizard-no-description": "Для этого шаблона нет описания.",
