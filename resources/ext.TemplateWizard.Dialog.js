@@ -1,5 +1,6 @@
 /**
  * The main dialog box for the TemplateWizard.
+ *
  * @class
  * @constructor
  * @extends OO.ui.ProcessDialog
@@ -44,6 +45,7 @@ mw.TemplateWizard.Dialog.static.actions = [
 
 /**
  * Set the height to a reasonable maximum.
+ *
  * @return {number} Body height
  */
 mw.TemplateWizard.Dialog.prototype.getBodyHeight = function () {
@@ -72,6 +74,7 @@ mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 
 /**
  * Show the template form for the given templatedata.
+ *
  * @param {Object} templateData
  */
 mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
@@ -98,6 +101,7 @@ mw.TemplateWizard.Dialog.prototype.closeTemplate = function () {
 
 /**
  * Dialog set-up.
+ *
  * @param {Object} data
  * @return {OO.ui.Process}
  */
@@ -148,6 +152,7 @@ mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
 
 /**
  * Handle retry button click events. Ignores invalid fields and inserts the template anyway.
+ *
  * @param {Object} data
  * @private
  */
@@ -167,6 +172,7 @@ mw.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data ) {
 /**
  * Handle dismiss button click events.
  * Returns to editing the template, and focuses the first invalid field if there is one.
+ *
  * @param {Object} data
  * @private
  */

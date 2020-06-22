@@ -1,5 +1,6 @@
 /**
  * A set of TemplateWizard parameters, each enabled or disabled.
+ *
  * @class
  * @mixins OO.EventEmitter
  * @constructor
@@ -28,7 +29,7 @@ OO.mixinClass( mw.TemplateWizard.Model.Parameters, OO.EventEmitter );
  *
  * Emitted every time a parameter changes.
  *
- * @param {bool} allEnabled
+ * @param {boolean} allEnabled
  * True if all parameters are enabled, false otherwise (including if all are disabled).
  */
 
@@ -37,7 +38,7 @@ OO.mixinClass( mw.TemplateWizard.Model.Parameters, OO.EventEmitter );
  *
  * Emitted every time all parameters are set to a single value.
  *
- * @param {bool} newState
+ * @param {boolean} newState
  * The new value that they're set to.
  */
 
@@ -51,8 +52,9 @@ OO.mixinClass( mw.TemplateWizard.Model.Parameters, OO.EventEmitter );
 
 /**
  * Set the enabled state of a parameter.
+ *
  * @param {string} name The parameter name.
- * @param {bool} state The state to set it to.
+ * @param {boolean} state The state to set it to.
  */
 mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
 	var allEnabled,
@@ -70,7 +72,8 @@ mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
 
 /**
  * Set the state of all parameters and emit a changeAll event.
- * @param {bool} newState
+ *
+ * @param {boolean} newState
  */
 mw.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState ) {
 	var name;

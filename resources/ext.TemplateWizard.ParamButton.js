@@ -48,7 +48,7 @@ mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton(
 OO.inheritClass( mw.TemplateWizard.ParamButton, OO.ui.ButtonWidget );
 
 /**
- * @param {bool} newState
+ * @param {boolean} newState
  */
 mw.TemplateWizard.ParamButton.prototype.onParametersChangeAll = function ( newState ) {
 	this.setParamState( newState );
@@ -69,7 +69,8 @@ mw.TemplateWizard.ParamButton.prototype.toggleAction = function () {
 
 /**
  * Set the state of this button (without changing the model).
- * @param {bool} setEnabled
+ *
+ * @param {boolean} setEnabled
  */
 mw.TemplateWizard.ParamButton.prototype.setParamState = function ( setEnabled ) {
 	// Don't do anything for required fields, as they can't be toggled.

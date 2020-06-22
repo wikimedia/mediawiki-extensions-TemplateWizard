@@ -56,6 +56,7 @@ OO.inheritClass( mw.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
 
 /**
  * Get the description div element, which may contain zero to two paragraphs.
+ *
  * @param {Object} templateData
  * @return {jQuery}
  */

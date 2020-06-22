@@ -1,10 +1,12 @@
-var assert = require( 'assert' ),
+'use strict';
+
+const assert = require( 'assert' ),
 	Util = require( 'wdio-mediawiki/Util' ),
 	CreateTemplate = require( '../pageobjects/CreateTemplate.page' ),
 	UseTemplatePage = require( '../pageobjects/UseTemplatePage.page' );
 
 describe( 'TemplateWizard', function () {
-	var testTemplateName;
+	let testTemplateName;
 
 	beforeEach( function () {
 		// Create a test template

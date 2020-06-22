@@ -22,6 +22,7 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 	 * Fired on initialization of TemplateForm
 	 *
 	 * Allowing extensions to customize or initalize the template form.
+	 *
 	 * @event ext_TemplateWizard_TemplateForm_init
 	 * @member mw.hook
 	 * @param {mw.TemplateWizard.TemplateForm} templateForm the invoking TemplateForm instance
@@ -47,6 +48,7 @@ OO.inheritClass( mw.TemplateWizard.TemplateForm, OO.ui.Widget );
 
 /**
  * Get the form's current title.
+ *
  * @return {string}
  */
 mw.TemplateWizard.TemplateForm.prototype.getTitle = function () {
@@ -60,6 +62,7 @@ mw.TemplateWizard.TemplateForm.prototype.getFormat = function () {
 /**
  * Get the whole template-editing form
  * (both the field-list left menu and the right-hand form panel).
+ *
  * @param {Object} templateData
  * @return {OO.ui.StackLayout}
  */
@@ -166,6 +169,7 @@ mw.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
 /**
  * Hide the form field for the given parameter,
  * and set the focus to the next or previous field if possible.
+ *
  * @param {string} paramName
  */
 mw.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
@@ -182,6 +186,7 @@ mw.TemplateWizard.TemplateForm.prototype.hideField = function ( paramName ) {
 /**
  * Set the focus to the top-most empty template field
  * (or does not set any focus if there is no empty field).
+ *
  * @return {boolean} True if a field was found to focus, false otherwise.
  */
 mw.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
@@ -200,6 +205,7 @@ mw.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
 
 /**
  * Get the parameter menu and fields list.
+ *
  * @param {Object} groupedParams
  * @return {{menu: jQuery, fields: jQuery}}
  */
@@ -358,6 +364,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParameters = function () {
 
 /**
  * Get one of the form's fields.
+ *
  * @param {string} fieldName Name of the field to get.
  * @return {mw.TemplateWizard.ParamField|null}
  */
@@ -375,6 +382,7 @@ mw.TemplateWizard.TemplateForm.prototype.findField = function ( fieldName ) {
 
 /**
  * Get the first field with any value.
+ *
  * @return {boolean|OO.ui.Widget}
  */
 mw.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
@@ -399,6 +407,7 @@ mw.TemplateWizard.TemplateForm.prototype.getFirstFieldWithValue = function () {
 
 /**
  * Get the first invalid field.
+ *
  * @return {boolean|OO.ui.Widget}
  */
 mw.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
@@ -407,7 +416,8 @@ mw.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
 
 /**
  * Get validity promises for all the fields.
- * @return {Promise[]}
+ *
+ * @return {jQuery.Promise[]}
  */
 mw.TemplateWizard.TemplateForm.prototype.getFieldsValidity = function () {
 	var i, field, validity,

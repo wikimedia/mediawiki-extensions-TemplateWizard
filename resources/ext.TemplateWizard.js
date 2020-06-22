@@ -1,11 +1,12 @@
 /* Extension namespace. */
 mw.TemplateWizard = {};
 
-/** @var {string[]} List of templates that have been inserted into the page edit textarea. */
+/** @member {string[]} List of templates that have been inserted into the page edit textarea. */
 mw.TemplateWizard.insertedTemplates = [];
 
 /**
  * Convenience wrapper for mw.track(), to log an event with EventLogging.
+ *
  * @param {string} event One of "launch", "remove-template", "use-recent", "insert-template",
  * "cancel-dialog", or "save-page".
  * @param {string[]} templateNames Array of template names (without 'Template:' prefix).

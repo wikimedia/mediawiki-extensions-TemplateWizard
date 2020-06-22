@@ -1,3 +1,5 @@
+'use strict';
+
 const Page = require( 'wdio-mediawiki/Page' ),
 	Api = require( 'wdio-mediawiki/Api' ),
 	fs = require( 'fs' ),
@@ -9,7 +11,7 @@ class CreateTemplate extends Page {
 
 	create( testTemplateName ) {
 		browser.call( function () {
-			var templateWikitext = fs.readFileSync( `${path.dirname( __dirname )}/fixtures/en.Example.wikitext` );
+			const templateWikitext = fs.readFileSync( `${path.dirname( __dirname )}/fixtures/en.Example.wikitext` );
 			return Api.edit( `Template:${testTemplateName}`, templateWikitext );
 		} );
 	}

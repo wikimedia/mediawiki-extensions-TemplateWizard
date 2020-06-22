@@ -2,6 +2,7 @@
  * @class
  * @constructor
  * @extends OO.ui.ButtonWidget
+ *
  * @param {mw.TemplateWizard.Model.Parameters} model
  */
 mw.TemplateWizard.AddRemoveAllButton = function mediaWikiTemplateAddRemoveAllButton( model ) {
@@ -21,7 +22,8 @@ OO.inheritClass( mw.TemplateWizard.AddRemoveAllButton, OO.ui.ButtonWidget );
 
 /**
  * When a single parameter's enabled state is changed, see if we need to change this button.
- * @param {bool} allEnabled
+ *
+ * @param {boolean} allEnabled
  */
 mw.TemplateWizard.AddRemoveAllButton.prototype.onParametersChangeOne = function ( allEnabled ) {
 	this.setState( allEnabled );
@@ -41,7 +43,8 @@ mw.TemplateWizard.AddRemoveAllButton.prototype.toggleAction = function () {
 
 /**
  * Set the show/hide state of this button (without changing any other widget's state).
- * @param {bool} allEnabled
+ *
+ * @param {boolean} allEnabled
  */
 mw.TemplateWizard.AddRemoveAllButton.prototype.setState = function ( allEnabled ) {
 	if ( allEnabled ) {
