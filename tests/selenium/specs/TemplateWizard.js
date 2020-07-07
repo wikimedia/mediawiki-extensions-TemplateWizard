@@ -18,18 +18,18 @@ describe( 'TemplateWizard', function () {
 		// Open an edit page.
 		UseTemplatePage.openEdit();
 		// Wait for the toolbar to load, then click the TemplateWizard button.
-		UseTemplatePage.twButton.waitForVisible();
+		UseTemplatePage.twButton.waitForDisplayed();
 		UseTemplatePage.twButton.click();
 
 		// Wait for the dialog to open, and enter a search term.
-		UseTemplatePage.dialog.waitForVisible();
+		UseTemplatePage.dialog.waitForDisplayed();
 		UseTemplatePage.searchInput.click();
-		browser.setValue( '.ext-templatewizard-searchform input', testTemplateName );
+		$( '.ext-templatewizard-searchform input' ).setValue( testTemplateName );
 		// Wait for the search results to appear.
-		UseTemplatePage.searchResultMenu.waitForVisible( 35000 );
+		UseTemplatePage.searchResultMenu.waitForDisplayed( 35000 );
 
 		// Select the template.
-		browser.click( `.oo-ui-labelElement-label=${testTemplateName}` );
+		$( `.oo-ui-labelElement-label=${testTemplateName}` ).click();
 		UseTemplatePage.testTemplateTitle.isExisting();
 	} );
 
@@ -55,21 +55,21 @@ describe( 'TemplateWizard', function () {
 
 		// Remove Username, test that focus is now on Date of Death.
 		UseTemplatePage.usernameField.click();
-		UseTemplatePage.deathDate.hasFocus();
+		UseTemplatePage.deathDate.isFocused();
 		// Try to close the dialog, test that an error is shown.
 		UseTemplatePage.cancelField.click();
-		UseTemplatePage.dialogError.waitForVisible();
+		UseTemplatePage.dialogError.waitForDisplayed();
 
 		// Cancel that, and try to close the template, and test that an error is shown.
 		UseTemplatePage.dialogErrorCancelButton.click();
-		UseTemplatePage.closeTemplateButton.waitForVisible();
+		UseTemplatePage.closeTemplateButton.waitForDisplayed();
 		UseTemplatePage.closeTemplateButton.click();
-		UseTemplatePage.dialogError.waitForVisible();
+		UseTemplatePage.dialogError.waitForDisplayed();
 
 		// Cancel that, and insert the template, and test that it was inserted.
 		UseTemplatePage.dialogErrorCancelButton.click();
 		UseTemplatePage.insertField.click();
-		assert.equal( browser.getValue( '#wpTextbox1' ), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
+		assert.equal( $( '#wpTextbox1' ).getValue(), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 
 } );

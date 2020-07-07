@@ -22,8 +22,8 @@ class UseTemplatePage extends Page {
 		super.openTitle( 'TemplateWizard_test', { action: 'edit' } );
 	}
 	visibleElementCount( selector ) {
-		const elements = browser.elements( selector ),
-			visibleElements = elements.value.filter( ( elements ) => elements.isVisible() );
+		const elements = $$( selector ),
+			visibleElements = elements.filter( ( elements ) => elements.isDisplayed() );
 		return visibleElements.length;
 	}
 
