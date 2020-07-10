@@ -5,5 +5,7 @@
 		]
 	},
 	"templatewizard-dialog-title": "Mal invogen",
-	"templatewizard-invalid-values-insert": "Mal invogen"
+	"templatewizard-help": "Meyr te weaten kommen oaver TemplateWizard",
+	"templatewizard-invalid-values-insert": "Mal invogen",
+	"templatewizard-search-placeholder": "Söken nå en mal"
 }
