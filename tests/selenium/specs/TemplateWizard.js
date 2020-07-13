@@ -69,6 +69,7 @@ describe( 'TemplateWizard', function () {
 		// Cancel that, and insert the template, and test that it was inserted.
 		UseTemplatePage.dialogErrorCancelButton.click();
 		UseTemplatePage.insertField.click();
+		$( '#wpTextbox1' ).waitForDisplayed();
 		assert.equal( $( '#wpTextbox1' ).getValue(), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 
