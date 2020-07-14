@@ -3,8 +3,8 @@
 
 .ext-templatewizard-searchform {
 	.ext-templatewizard-description {
+		color: @color-base--subtle;
 		font-size: smaller;
-		color: @colorGray7;
 	}
 
 	.oo-ui-comboBoxInputWidget .oo-ui-iconElement-icon {
@@ -81,9 +81,9 @@
 		border-right: 1px solid @colorGray12;
 
 		.ext-templatewizard-section-header {
+			color: @color-base--subtle;
 			font-size: 12px;
 			font-weight: bolder;
-			color: @colorGray7;
 			text-transform: uppercase;
 		}
 
@@ -94,8 +94,8 @@
 			.oo-ui-buttonElement.oo-ui-buttonElement-frameless.oo-ui-flaggedElement-destructive {
 				.oo-ui-labelElement-label {
 					// HACK: Override OOUI styles by making only the icon colorful,
-					// and leaving the text of the label black
-					color: @colorText;
+					// and leaving the text of the label in base grey.
+					color: @color-base;
 				}
 			}
 		}
@@ -108,11 +108,11 @@
 
 		// Button to add or remove all fields
 		.ext-templatewizard-add-remove-all {
+			background-color: @background-color-base;
 			border-top: 1px solid @colorGray12;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			background-color: @colorBaseInverted;
 
 			span.oo-ui-widget {
 				display: block;
