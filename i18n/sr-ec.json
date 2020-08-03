@@ -24,7 +24,7 @@
 	"templatewizard-no-params-without-td": "Параметри овог шаблона не могу да буду утврђени због одсуства документације [$1 података о шаблону].",
 	"templatewizard-no-templatedata": "Због недостатка [$1 података о шаблону], параметри овог шаблона су аутоматски генерисани. Имајте у виду да они можда нису тачни.",
 	"templatewizard-opens-in-new-tab": "Отвара се у новој картици",
-	"templatewizard-parameters-optional": "Опционални параметри",
+	"templatewizard-parameters-optional": "Необавезни параметри",
 	"templatewizard-parameters-required": "Неопходни параметри",
 	"templatewizard-parameters-suggested": "Предложени параметри",
 	"templatewizard-placeholder-default": "Подразумевано: $1",
