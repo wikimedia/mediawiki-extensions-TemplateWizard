@@ -23,7 +23,7 @@
 	"templatewizard-no-params-with-td": "Der binne gjin parameters definiearre yn 'e [$1 Berjochtdata]-dokumintaasje fan dit berjocht. Jo kinne it berjocht sûnder parameters ynfoegje.",
 	"templatewizard-no-params-without-td": "Der koene gjin parameters foar dit berjocht fêststeld wurde troch de ôfwêzigens fan [$1 Berjochtdata]-dokumintaasje. Jo kinne it berjocht sûnder parameters ynfoegje.",
 	"templatewizard-no-templatedata": "Troch ûntbrekkende [$1 Berjochtdata], binne de parameters foar dit berjocht automatysk generearre. Hâld der rekken mei dat se faaks net sûnder flaters binne.",
-	"templatewizard-opens-in-new-tab": "Iepenet in nij tabblêd",
+	"templatewizard-opens-in-new-tab": "Iepenet yn in nij tabblêd",
 	"templatewizard-parameters-optional": "Opsjonele parameters",
 	"templatewizard-parameters-required": "Ferplichte parameters",
 	"templatewizard-parameters-suggested": "Parametersuggestjes",
