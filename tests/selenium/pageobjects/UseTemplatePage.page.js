@@ -23,7 +23,7 @@ class UseTemplatePage extends Page {
 	}
 	visibleElementCount( selector ) {
 		const elements = $$( selector ),
-			visibleElements = elements.filter( ( elements ) => elements.isDisplayed() );
+			visibleElements = elements.filter( ( element ) => element.isDisplayed() );
 		return visibleElements.length;
 	}
 
