@@ -2,7 +2,7 @@
  * A set of TemplateWizard parameters, each enabled or disabled.
  *
  * @class
- * @mixins OO.EventEmitter
+ * @mixes OO.EventEmitter
  * @constructor
  * @param {Object} parameters The initial set of parameters.
  */
