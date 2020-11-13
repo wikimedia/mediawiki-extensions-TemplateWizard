@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Balyozxane",
 			"Ghybu"
 		]
 	},
@@ -8,8 +9,10 @@
 	"templatewizard-cancel": "Betal bike",
 	"templatewizard-dialog-title": "Şablonekê tevlî bike",
 	"templatewizard-insert": "Tevlî bike",
+	"templatewizard-no-description": "Ji bo vê şablonê danasîn tune ye.",
 	"templatewizard-placeholder-example": "w.m. $1",
 	"templatewizard-remove-template": "Şablonê jê bibe?",
 	"templatewizard-search-placeholder": "Şablonekê bigere",
+	"templatewizard-parambutton-add-title": "Daneya '$1' lê zêde bike",
 	"templatewizard-link-to-template-title": "Vê şablonê nîşand bide"
 }
