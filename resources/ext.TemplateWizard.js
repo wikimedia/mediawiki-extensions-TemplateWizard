@@ -18,6 +18,8 @@ mw.TemplateWizard.logEvent = function ( event, templateNames ) {
 		namespace_id: mw.config.get( 'wgNamespaceNumber' ),
 		page_title: mw.config.get( 'wgTitle' ),
 		revision_id: mw.config.get( 'wgCurRevisionId' ),
+		user_id: mw.user.getId(),
+		user_edit_count: mw.config.get( 'wgUserEditCount', 0 ),
 		template_names: templateNames
 		/* eslint-enable camelcase */
 	} );
