@@ -10,6 +10,7 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 	if ( !this.title ) {
 		throw new Error( mw.message( 'templatewizard-invalid-title' ) );
 	}
+	this.hasTemplateData = ( templateData.notemplatedata === undefined );
 	this.format = templateData.format || 'inline';
 	this.fields = [];
 	this.invalidField = null;
@@ -57,6 +58,10 @@ mw.TemplateWizard.TemplateForm.prototype.getTitle = function () {
 
 mw.TemplateWizard.TemplateForm.prototype.getFormat = function () {
 	return this.format;
+};
+
+mw.TemplateWizard.TemplateForm.prototype.usesTemplateData = function () {
+	return this.hasTemplateData;
 };
 
 /**
