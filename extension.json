@@ -24,7 +24,7 @@
 	"attributes": {
 		"EventLogging": {
 			"Schemas": {
-				"TemplateWizard": 20731534
+				"TemplateWizard": "/analytics/legacy/templatewizard/1.0.0"
 			}
 		}
 	},
