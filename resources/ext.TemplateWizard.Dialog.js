@@ -87,12 +87,6 @@ mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 	);
 	this.templateForm.connect( this, { close: 'closeTemplate' } );
 
-	mw.TemplateWizard.logEvent(
-		'load-template',
-		[ this.templateForm.getTitle().getMainText() ],
-		this.templateForm.usesTemplateData()
-	);
-
 	this.$body.html( this.templateForm.$element );
 	this.templateForm.afterAttached();
 	this.actions.get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( false );
@@ -247,11 +241,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
 				// Log this insertion, and store the template name
 				// for future logging when the page is saved.
-				mw.TemplateWizard.logEvent(
-					'insert-template',
-					[ templateName ],
-					dialog.templateForm.usesTemplateData()
-				);
+				mw.TemplateWizard.logEvent( 'insert-template', [ templateName ] );
 				mw.TemplateWizard.insertedTemplates.push( templateName );
 				// Close dialog.
 				dialog.ignoreParamValues = false;
