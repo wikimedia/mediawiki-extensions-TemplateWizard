@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Nike",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Stryn"
 		]
 	},
 	"templatewizard-add-all": "Lisää kaikki parametrit",
@@ -24,6 +25,7 @@
 	"templatewizard-remove-all": "Poista kaikki parametrit",
 	"templatewizard-remove-template": "Poista malline?",
 	"templatewizard-remove-template-retry": "Poista malline",
+	"templatewizard-search-placeholder": "Hae mallinetta",
 	"templatewizard-parambutton-add-title": "Lisää parametri '$1'",
 	"templatewizard-parambutton-remove-title": "Poista parametri '$1'",
 	"templatewizard-parambutton-required-title": "Tarvittava parametri '$1'",
