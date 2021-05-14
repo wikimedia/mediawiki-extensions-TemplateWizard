@@ -4,7 +4,7 @@
 			"Умар"
 		]
 	},
-	"templatewizard-add-all": "ТӀетоха ерриге параметраш",
+	"templatewizard-add-all": "ТӀетоха йерриге параметраш",
 	"templatewizard-cancel": "Йухайаккхар",
 	"templatewizard-close-dialog": "ДӀачӀагӀа кепийн говзанча",
 	"templatewizard-close-dialog-retry": "Йухабаха хийцамаш",
@@ -22,7 +22,7 @@
 	"templatewizard-parameters-suggested": "Кховдийна параметраш",
 	"templatewizard-placeholder-default": "Ӏадйитаран кеп: $1",
 	"templatewizard-placeholder-example": "Масала: $1",
-	"templatewizard-remove-all": "ДӀаяха ерриге параметраш",
+	"templatewizard-remove-all": "ДӀайаха йерриге параметраш",
 	"templatewizard-remove-template": "ДӀайаккха кеп?",
 	"templatewizard-remove-template-retry": "ДӀайаккха кеп",
 	"templatewizard-search-placeholder": "Лаха кеп",
