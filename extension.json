@@ -15,11 +15,21 @@
 			"WikiEditor": ">= 0.5.3"
 		}
 	},
+	"config": {
+		"TemplateWizardTemplateSearchImprovements": {
+			"description": "Temporary feature flag to enable various changes around searching for template names. (T271802)",
+			"value": false
+		}
+	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\TemplateWizard\\": "includes/"
 	},
 	"Hooks": {
-		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial"
+		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial",
+		"ResourceLoaderGetConfigVars": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderGetConfigVars"
+	},
+	"ConfigRegistry": {
+		"templatewizard": "GlobalVarConfig::newInstance"
 	},
 	"attributes": {
 		"EventLogging": {
@@ -113,7 +123,8 @@
 		"remoteExtPath": "TemplateWizard/tests/qunit",
 		"scripts": [
 			"ext.TemplateWizard.test.js",
-			"ext.TemplateWizard.Model.Parameters.test.js"
+			"ext.TemplateWizard.Model.Parameters.test.js",
+			"ext.TemplateWizard.SearchField.test.js"
 		],
 		"dependencies": [
 			"ext.TemplateWizard"

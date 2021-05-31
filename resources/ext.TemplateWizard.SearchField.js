@@ -31,7 +31,7 @@ OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
  * @return {Object} Parameters for the MediaWiki action API
  */
 mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
-	return {
+	var params = {
 		action: 'templatedata',
 		generator: 'prefixsearch',
 		gpssearch: query,
@@ -41,6 +41,28 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 		includeMissingTitles: 1,
 		lang: mw.config.get( 'wgUserLanguage' )
 	};
+
+	if ( mw.config.get( 'wgTemplateWizardConfig' ).cirrusSearchLookup ) {
+		$.extend( params, {
+			generator: 'search',
+			gsrsearch: params.gpssearch,
+			gsrnamespace: params.gpsnamespace,
+			gsrlimit: params.gpslimit
+		} );
+
+		// Searching for "foo *" is pointless. Don't normalize it to "foo*" either but leave it
+		// unchanged. This makes the word "foo" behave the same in "foo " and "foo bar". In both
+		// cases it's not considered a prefix any more.
+		if ( !/\s$/.test( params.gsrsearch ) ) {
+			params.gsrsearch += '*';
+		}
+
+		delete params.gpssearch;
+		delete params.gpsnamespace;
+		delete params.gpslimit;
+	}
+
+	return params;
 };
 
 /**
