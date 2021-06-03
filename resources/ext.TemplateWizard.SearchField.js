@@ -2,6 +2,7 @@
  * @class
  * @constructor
  * @param {Object} [config] Configuration options.
+ * @cfg {mw.Api} [api] Optional MediaWiki API, for testing
  * @param {mw.TemplateWizard.SearchForm} searchForm The form that this field is attached to.
  */
 mw.TemplateWizard.SearchField = function MWTemplateWizardSearchField( config, searchForm ) {
@@ -12,12 +13,33 @@ mw.TemplateWizard.SearchField = function MWTemplateWizardSearchField( config, se
 	mw.TemplateWizard.SearchField.super.call( this, config );
 	OO.ui.mixin.LookupElement.call( this );
 
+	this.api = config.api || new mw.Api();
 	this.searchForm = searchForm;
 };
 
 OO.inheritClass( mw.TemplateWizard.SearchField, OO.ui.ComboBoxInputWidget );
 
 OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
+
+/**
+ * This helper method is modeled after mw.widgets.TitleWidget, even if this is *not* a TitleWidget.
+ *
+ * @private
+ * @method
+ * @param {string} query What the user typed
+ * @return {Object} Parameters for the MediaWiki action API
+ */
+mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
+	return {
+		action: 'templatedata',
+		generator: 'prefixsearch',
+		gpssearch: query,
+		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
+		redirects: true,
+		includeMissingTitles: true,
+		lang: mw.config.get( 'wgUserLanguage' )
+	};
+};
 
 /**
  * Get a new request object of the current lookup query value.
@@ -27,15 +49,7 @@ OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
  * @return {jQuery.Promise} jQuery AJAX object, or promise object with an .abort() method
  */
 mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
-	return new mw.Api().get( {
-		action: 'templatedata',
-		generator: 'prefixsearch',
-		gpssearch: this.getValue(),
-		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
-		redirects: true,
-		includeMissingTitles: true,
-		lang: mw.config.get( 'wgUserLanguage' )
-	} );
+	return this.api.get( this.getApiParams( this.getValue() ) );
 };
 
 /**
