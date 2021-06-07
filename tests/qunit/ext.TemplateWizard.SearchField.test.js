@@ -44,6 +44,7 @@
 			gsrsearch: 'a*',
 			gsrnamespace: 10,
 			gsrlimit: 10,
+			gsrprop: [ 'redirecttitle' ],
 			redirects: 1,
 			includeMissingTitles: 1,
 			lang: 'qqx'

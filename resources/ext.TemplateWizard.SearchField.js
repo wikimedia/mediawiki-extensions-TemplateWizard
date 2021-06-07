@@ -47,9 +47,8 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 			generator: 'search',
 			gsrsearch: params.gpssearch,
 			gsrnamespace: params.gpsnamespace,
-			gsrlimit: params.gpslimit
-			// TODO: Display redirects
-			// gsrprop: [ 'redirecttitle' ]
+			gsrlimit: params.gpslimit,
+			gsrprop: [ 'redirecttitle' ]
 		} );
 		// Searching for "foo *" is pointless. Don't normalize it to "foo*" either but leave it
 		// unchanged. This makes the word "foo" behave the same in "foo " and "foo bar". In both
@@ -143,10 +142,25 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	var searchResults,
 		templateData = response.pages;
 
+	// Prepare the separate "redirects" structure to be converted to the CirrusSearch
+	// "redirecttitle" field
+	var redirectedFrom = {};
+	if ( response.redirects ) {
+		response.redirects.forEach( function ( redirect ) {
+			redirectedFrom[ redirect.to ] = redirect.from;
+		} );
+	}
+
 	searchResults = Object.keys( templateData ).map( function ( pageId ) {
 		var page = templateData[ pageId ];
+
 		// Store the main text as well, so we don't have to re-do this later.
 		page.titleMainText = mw.Title.newFromText( page.title ).getMainText();
+
+		if ( !page.redirecttitle && page.title in redirectedFrom ) {
+			page.redirecttitle = redirectedFrom[ page.title ];
+		}
+
 		return {
 			data: page,
 			label: page.titleMainText,
@@ -164,6 +178,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	if ( searchResults.length > this.limit ) {
 		searchResults = searchResults.slice( 0, this.limit );
 	}
+
 	return searchResults;
 };
 
