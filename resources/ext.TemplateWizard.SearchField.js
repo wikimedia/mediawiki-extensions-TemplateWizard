@@ -48,8 +48,9 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 			gsrsearch: params.gpssearch,
 			gsrnamespace: params.gpsnamespace,
 			gsrlimit: params.gpslimit
+			// TODO: Display redirects
+			// gsrprop: [ 'redirecttitle' ]
 		} );
-
 		// Searching for "foo *" is pointless. Don't normalize it to "foo*" either but leave it
 		// unchanged. This makes the word "foo" behave the same in "foo " and "foo bar". In both
 		// cases it's not considered a prefix any more.
@@ -73,7 +74,58 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
  * @return {jQuery.Promise} jQuery AJAX object, or promise object with an .abort() method
  */
 mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
-	return this.api.get( this.getApiParams( this.getValue() ) );
+	var query = this.getValue(),
+		params = this.getApiParams( query ),
+		promise = this.api.get( params );
+
+	// No point in running prefix search a second time
+	if ( params.generator !== 'prefixsearch' ) {
+		promise = promise
+			.then( this.addExactMatch.bind( this ) )
+			.promise( { abort: function () {} } );
+	}
+
+	return promise;
+};
+
+/**
+ * @private
+ * @method
+ * @param {Object} response Action API response from server
+ * @return {Object} Modified response
+ */
+mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
+	var query = this.getValue(),
+		lowerQuery = query.trim().toLowerCase();
+
+	var containsExactMatch = Object.keys( response.pages ).some( function ( pageId ) {
+		var page = response.pages[ pageId ],
+			title = mw.Title.newFromText( page.title );
+		return title.getMainText().toLowerCase() === lowerQuery;
+	} );
+	if ( containsExactMatch ) {
+		return response;
+	}
+
+	return this.api.get( {
+		action: 'templatedata',
+		includeMissingTitles: 1,
+		lang: mw.config.get( 'wgUserLanguage' ),
+		generator: 'prefixsearch',
+		gpssearch: query,
+		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
+		gpslimit: 1
+	} ).then( function ( exactMatch ) {
+		var pageId = ( Object.keys( exactMatch.pages ) )[ 0 ];
+		if ( pageId && !( pageId in response.pages ) ) {
+			response.pages[ pageId ] = exactMatch.pages[ pageId ];
+		}
+		return response;
+	}, function () {
+		// Proceed with the unmodified response in case the additional API request failed
+		return response;
+	} )
+		.promise( { abort: function () {} } );
 };
 
 /**
@@ -101,6 +153,17 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 			description: page.description
 		};
 	} );
+
+	// Force exact matches to be at the top
+	var lowerQuery = this.getValue().trim().toLowerCase();
+	searchResults.sort( function ( a ) {
+		return a.label.toLowerCase() === lowerQuery ? -1 : 0;
+	} );
+
+	// Might be to many results because of the additional exact match search above
+	if ( searchResults.length > this.limit ) {
+		searchResults = searchResults.slice( 0, this.limit );
+	}
 	return searchResults;
 };
 
