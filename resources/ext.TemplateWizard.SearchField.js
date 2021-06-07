@@ -13,6 +13,7 @@ mw.TemplateWizard.SearchField = function MWTemplateWizardSearchField( config, se
 	mw.TemplateWizard.SearchField.super.call( this, config );
 	OO.ui.mixin.LookupElement.call( this );
 
+	this.limit = config.limit || 10;
 	this.api = config.api || new mw.Api();
 	this.searchForm = searchForm;
 };
@@ -35,8 +36,9 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 		generator: 'prefixsearch',
 		gpssearch: query,
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
-		redirects: true,
-		includeMissingTitles: true,
+		gpslimit: this.limit,
+		redirects: 1,
+		includeMissingTitles: 1,
 		lang: mw.config.get( 'wgUserLanguage' )
 	};
 };
