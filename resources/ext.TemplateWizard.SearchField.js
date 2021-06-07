@@ -53,8 +53,6 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	var searchResults,
 		templateData = response.pages;
 
-	this.templateData = templateData;
-
 	searchResults = Object.keys( templateData ).map( function ( pageId ) {
 		var page = templateData[ pageId ];
 		// Store the main text as well, so we don't have to re-do this later.

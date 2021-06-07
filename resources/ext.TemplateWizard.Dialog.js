@@ -4,7 +4,7 @@
  * @class
  * @constructor
  * @extends OO.ui.ProcessDialog
- * @param {Object} config
+ * @param {Object} [config]
  */
 mw.TemplateWizard.Dialog = function MWTemplateWizardDialog( config ) {
 	mw.TemplateWizard.Dialog.super.call( this, config );
