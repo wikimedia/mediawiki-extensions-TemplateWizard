@@ -38,13 +38,12 @@ class Hooks {
 			->makeConfig( 'templatewizard' );
 		$extensionRegistry = ExtensionRegistry::getInstance();
 
-		// TODO: Remove the temporary templateSearchImprovements feature flag, but keep the
-		//  cirrusSearchLookup flag (T274907).
+		// TODO: Remove the temporary feature flag, but keep the ExtensionRegistry check for
+		//  installations without CirrusSearch (T274907).
 		$enableImprovements = $config->get( 'TemplateWizardTemplateSearchImprovements' );
 		$vars['wgTemplateWizardConfig'] = [
 			'cirrusSearchLookup' => $enableImprovements &&
 				$extensionRegistry->isLoaded( 'CirrusSearch' ),
-			'templateSearchImprovements' => $enableImprovements,
 		];
 	}
 }

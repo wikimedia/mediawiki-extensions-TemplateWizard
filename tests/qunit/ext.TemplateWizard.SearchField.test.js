@@ -60,6 +60,10 @@
 				expected: 'a*'
 			},
 			{
+				query: 'a ',
+				expected: 'a '
+			},
+			{
 				query: 'ü',
 				expected: 'ü*'
 			},
