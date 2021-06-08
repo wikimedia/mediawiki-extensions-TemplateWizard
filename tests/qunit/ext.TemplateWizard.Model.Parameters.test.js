@@ -2,8 +2,8 @@
 	QUnit.module( 'TemplateWizard.Model.Parameters' );
 
 	QUnit.test( 'setting states', function ( assert ) {
-		var parameters = new mw.TemplateWizard.Model.Parameters(),
-			result = null;
+		const parameters = new mw.TemplateWizard.Model.Parameters();
+		let result = null;
 		// Register event handler for testing purposes.
 		parameters.on( 'changeOne', function ( allEnabled ) {
 			result = allEnabled;
@@ -31,7 +31,7 @@
 	} );
 
 	QUnit.test( 'able to do something after changing all', function ( assert ) {
-		var parameters = new mw.TemplateWizard.Model.Parameters(),
+		const parameters = new mw.TemplateWizard.Model.Parameters(),
 			events = [];
 		// Register event handlers for testing purposes.
 		parameters.on( 'changeAll', function ( newState ) {

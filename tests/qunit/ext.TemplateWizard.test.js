@@ -2,7 +2,7 @@
 	QUnit.module( 'TemplateWizard' );
 
 	QUnit.test( 'basic template formatting', function ( assert ) {
-		var templateFormatter = new mw.TemplateWizard.TemplateFormatter();
+		const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
 
 		templateFormatter.setTemplateName( 'tl' );
 		assert.strictEqual( templateFormatter.getTemplate(), '{{tl}}' );
@@ -21,14 +21,14 @@
 	} );
 
 	QUnit.test( 'block templates without parameters are rendered inline', function ( assert ) {
-		var templateFormatter = new mw.TemplateWizard.TemplateFormatter();
+		const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
 		templateFormatter.setTemplateName( 'some-tag' );
 		templateFormatter.setFormat( 'block' );
 		assert.strictEqual( templateFormatter.getTemplate(), '{{some-tag}}' );
 	} );
 
 	QUnit.test( 'unnamed parameters ', function ( assert ) {
-		var templateFormatter = new mw.TemplateWizard.TemplateFormatter();
+		const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
 		templateFormatter.setTemplateName( 'tpl' );
 		// Basic.
 		templateFormatter.setParameters( { a: 'a', 1: 'one' } );

@@ -1,7 +1,7 @@
 ( function () {
 
 	function enableCirrusSearchLookup( enabled ) {
-		var config = mw.config.get( 'wgTemplateWizardConfig' );
+		const config = mw.config.get( 'wgTemplateWizardConfig' );
 		config.cirrusSearchLookup = enabled;
 		mw.config.set( 'wgTemplateWizardConfig', config );
 	}
@@ -16,7 +16,7 @@
 	} );
 
 	QUnit.test( 'default prefixsearch', function ( assert ) {
-		var widget = new mw.TemplateWizard.SearchField(),
+		const widget = new mw.TemplateWizard.SearchField(),
 			query = 'a',
 			apiParams = widget.getApiParams( query );
 
@@ -34,7 +34,7 @@
 
 	QUnit.test( 'CirrusSearch: all API parameters', function ( assert ) {
 		enableCirrusSearchLookup( true );
-		var widget = new mw.TemplateWizard.SearchField(),
+		const widget = new mw.TemplateWizard.SearchField(),
 			query = 'a',
 			apiParams = widget.getApiParams( query );
 
@@ -52,7 +52,7 @@
 
 	QUnit.test( 'CirrusSearch: prefixsearch behavior', function ( assert ) {
 		enableCirrusSearchLookup( true );
-		var widget = new mw.TemplateWizard.SearchField();
+		const widget = new mw.TemplateWizard.SearchField();
 
 		[
 			{
@@ -72,7 +72,7 @@
 				expected: '!!*'
 			}
 		].forEach( function ( data ) {
-			var apiParams = widget.getApiParams( data.query );
+			const apiParams = widget.getApiParams( data.query );
 
 			assert.strictEqual(
 				apiParams.gsrsearch,
