@@ -86,4 +86,95 @@
 		} );
 	} );
 
+	QUnit.test( 'getLookupRequest() when CirrusSearch is not available', ( assert ) => {
+		let callCount = 0;
+		const api = {
+				get: () => {
+					callCount++;
+				}
+			},
+			widget = new mw.TemplateWizard.SearchField( { api } );
+		widget.getLookupRequest();
+		assert.strictEqual( 1, callCount );
+	} );
+
+	QUnit.test( 'getLookupRequest() when exact match was already found', ( assert ) => {
+		enableCirrusSearchLookup( true );
+		let callCount = 0;
+		const api = {
+				get: () => {
+					callCount++;
+					return {
+						then: ( callback ) => {
+							callback( { pages: {
+								1: { title: 'DE' }
+							} } );
+							return {
+								promise: () => undefined
+							};
+						}
+					};
+				}
+			},
+			widget = new mw.TemplateWizard.SearchField( { api } );
+
+		widget.setValue( 'de' );
+		widget.getLookupRequest();
+
+		assert.strictEqual( 1, callCount );
+	} );
+
+	QUnit.test( 'getLookupCacheDataFromResponse() API result conversion', ( assert ) => {
+		const widget = new mw.TemplateWizard.SearchField(),
+			apiResult = {
+				pages: {
+					2: {
+						title: 'Template:Foo',
+						description: 'Just a test',
+						otherTemplateDataInfo: {}
+					}
+				}
+			},
+			searchResults = widget.getLookupCacheDataFromResponse( apiResult );
+
+		assert.deepEqual( searchResults, [
+			{
+				data: {
+					description: 'Just a test',
+					otherTemplateDataInfo: {},
+					title: 'Template:Foo',
+					titleMainText: 'Foo'
+				},
+				description: 'Just a test',
+				label: 'Foo'
+			}
+		] );
+	} );
+
+	QUnit.test( 'getLookupCacheDataFromResponse() limit', ( assert ) => {
+		const widget = new mw.TemplateWizard.SearchField(),
+			apiResult = { pages: {} };
+
+		for ( let i = 0; i < 15; i++ ) {
+			apiResult.pages[ i ] = { title: i.toString() };
+		}
+
+		const searchResult = widget.getLookupCacheDataFromResponse( apiResult );
+
+		assert.strictEqual( 10, searchResult.length );
+	} );
+
+	QUnit.test( 'getLookupCacheDataFromResponse() exact match first', ( assert ) => {
+		const widget = new mw.TemplateWizard.SearchField(),
+			apiResult = { pages: {
+				1: { title: 'Deutschland' },
+				2: { title: 'DE' }
+			} };
+
+		widget.setValue( 'de' );
+		const searchResult = widget.getLookupCacheDataFromResponse( apiResult );
+
+		assert.strictEqual( 'DE', searchResult[ 0 ].label );
+	} );
+
 }() );
