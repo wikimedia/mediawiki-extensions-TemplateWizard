@@ -65,6 +65,7 @@
 				"ext.TemplateWizard.less"
 			],
 			"messages": [
+				"redirectedfrom",
 				"templatewizard-add-all",
 				"templatewizard-cancel",
 				"templatewizard-close-dialog",
