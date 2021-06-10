@@ -143,8 +143,7 @@
 				data: {
 					description: 'Just a test',
 					otherTemplateDataInfo: {},
-					title: 'Template:Foo',
-					titleMainText: 'Foo'
+					title: 'Template:Foo'
 				},
 				description: 'Just a test',
 				label: 'Foo'

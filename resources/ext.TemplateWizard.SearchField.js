@@ -128,7 +128,7 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 };
 
 /**
- * Pre-process data returned by the request from #getLookupRequest.
+ * Pre-process data returned by the request from {@see getLookupRequest}.
  *
  * The return value of this function will be cached, and any further queries for the given value
  * will use the cache rather than doing API requests.
@@ -136,7 +136,7 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
  * @protected
  * @method
  * @param {Object} response Response from server
- * @return {Array} Cached result data
+ * @return {Object[]} Config for {@see mw.TemplateWizard.SearchResult} widgets
  */
 mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = function ( response ) {
 	var searchResults,
@@ -154,16 +154,19 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	searchResults = Object.keys( templateData ).map( function ( pageId ) {
 		var page = templateData[ pageId ];
 
-		// Store the main text as well, so we don't have to re-do this later.
-		page.titleMainText = mw.Title.newFromText( page.title ).getMainText();
-
 		if ( !page.redirecttitle && page.title in redirectedFrom ) {
 			page.redirecttitle = redirectedFrom[ page.title ];
 		}
 
+		/**
+		 * Config for the {@see mw.TemplateWizard.SearchResult} widget:
+		 * - data: {@see OO.ui.Element} and getData()
+		 * - label: {@see OO.ui.mixin.LabelElement} and getLabel()
+		 * - description: {@see mw.TemplateWizard.SearchResult}
+		 */
 		return {
 			data: page,
-			label: page.titleMainText,
+			label: mw.Title.newFromText( page.title ).getMainText(),
 			description: page.description
 		};
 	} );
@@ -184,16 +187,16 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 
 /**
  * Get a list of menu option widgets from the (possibly cached) data returned by
- * #getLookupCacheDataFromResponse.
+ * {@see getLookupCacheDataFromResponse}.
  *
  * @protected
  * @method
- * @param {Array} data Cached result data
- * @return {OO.ui.MenuOptionWidget[]} Menu items
+ * @param {Object[]} data Search results from {@see getLookupCacheDataFromResponse}
+ * @return {OO.ui.MenuOptionWidget[]}
  */
 mw.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function ( data ) {
-	return data.map( function ( result ) {
-		return new mw.TemplateWizard.SearchResult( result );
+	return data.map( function ( config ) {
+		return new mw.TemplateWizard.SearchResult( config );
 	} );
 };
 
@@ -204,6 +207,6 @@ mw.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function 
  * @param {OO.ui.MenuOptionWidget} item Selected item
  */
 mw.TemplateWizard.SearchField.prototype.onLookupMenuChoose = function ( item ) {
-	this.setValue( item.getData().titleMainText );
+	this.setValue( item.getLabel() );
 	this.searchForm.showTemplate( item.getData() );
 };
