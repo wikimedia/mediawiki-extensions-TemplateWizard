@@ -49,6 +49,7 @@
 				"ext.TemplateWizard.js",
 				"ext.TemplateWizard.AddRemoveAllButton.js",
 				"ext.TemplateWizard.Dialog.js",
+				"ext.TemplateWizard.DismissibleMessageWidget.js",
 				"ext.TemplateWizard.Model.js",
 				"ext.TemplateWizard.Model/Parameters.js",
 				"ext.TemplateWizard.ParamButton.js",
