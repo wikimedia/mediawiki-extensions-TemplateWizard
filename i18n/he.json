@@ -35,6 +35,7 @@
 	"templatewizard-remove-template-body": "התבנית שניסית להסיר מכילה נתונים שהזנת. הסרת התבנית תסיר גם את המידע שהוספת לתבנית. הפעולה הזאת בלתי־הפיכה.",
 	"templatewizard-remove-template-retry": "הסרת התבנית",
 	"templatewizard-search-placeholder": "חיפוש תבנית",
+	"templatewizard-search-feedback-message": "לאחרונה הושלמה עבודה לשיפור תוצאות חיפוש תבניות. למידע נוסף על שינויים או שליחת משוב, ר' את [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates דף המיזם].",
 	"templatewizard-parambutton-add-title": "הוספת הפרמטר \"$1\"",
 	"templatewizard-parambutton-remove-title": "הסרת הפרמטר \"$1\"",
 	"templatewizard-parambutton-required-title": "פרמטר נדרש \"$1\"",
