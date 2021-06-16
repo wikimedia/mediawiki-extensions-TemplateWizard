@@ -1,7 +1,22 @@
 @import 'mediawiki.mixins';
 @import 'mediawiki.ui/variables';
 
+.ext-templatewizard-dismissibleMessageWidget {
+	&.oo-ui-messageWidget-block {
+		padding-right: 48px;
+	}
+
+	.oo-ui-buttonElement {
+		margin-right: 0;
+		// Position relative to the surrounding .oo-ui-messageWidget
+		position: absolute;
+		right: 2px;
+		top: 2px;
+	}
+}
+
 .ext-templatewizard-feedback-message {
+	// Same as the padding in the surrounding .oo-ui-panelLayout-padded
 	margin-bottom: 12px;
 }
 
