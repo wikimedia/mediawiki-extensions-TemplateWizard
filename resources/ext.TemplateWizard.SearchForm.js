@@ -32,12 +32,12 @@ mw.TemplateWizard.SearchForm = function MWTemplateWizardSearchForm( dialog, conf
 	// Temporary feedback message when templateSearchImprovements is true T284560
 	// TODO: remove when templateSearchImprovements are out of beta
 	if ( mw.config.get( 'wgTemplateWizardConfig' ).cirrusSearchLookup ) {
-		this.$element.prepend(
-			new mw.TemplateWizard.DismissibleMessageWidget( {
-				message: mw.message( 'templatewizard-search-feedback-message' ),
-				classes: [ 'ext-templatewizard-feedback-message' ]
-			} ).$element
-		);
+		new mw.TemplateWizard.DismissibleMessageWidget( {
+			message: mw.message( 'templatewizard-search-feedback-message' ),
+			classes: [ 'ext-templatewizard-feedback-message' ]
+		} )
+			.connect( this, { close: 'focus' } )
+			.$element.prependTo( this.$element );
 	}
 };
 

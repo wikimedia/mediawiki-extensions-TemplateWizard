@@ -14,28 +14,30 @@
  * @cfg {mw.Message} message Message to display
  */
 mw.TemplateWizard.DismissibleMessageWidget = function MWDismissibleMessageWidget( config ) {
+	var $label = config.message.parseDom();
+	$label.filter( 'a' ).attr( 'target', '_blank' );
+	// eslint-disable-next-line no-jquery/variable-pattern
+	config.label = $label;
+
 	// Parent constructor
 	mw.TemplateWizard.DismissibleMessageWidget.super.call( this, config );
 
 	// Properties
-	this.message = config.message;
-	this.dismissButton = new OO.ui.ButtonWidget( {
+	this.messageKey = config.message.key;
+	delete config.message;
+
+	var dismissButton = new OO.ui.ButtonWidget( {
 		icon: 'close',
 		framed: false
-	} );
-
-	// Initialization
-	this.dismissButton
+	} )
 		.connect( this, { click: 'onDismissClick' } );
+
 	this.$element
 		.addClass( 'ext-templatewizard-dismissibleMessageWidget' )
-		.prepend( this.dismissButton.$element );
+		.prepend( dismissButton.$element );
 
-	var $message = this.message.parseDom();
-	$message.filter( 'a' ).attr( 'target', '_blank' );
-	this.setLabel( $message );
-
-	this.toggle( !mw.storage.get( this.getStorageKey() ) );
+	var hidden = !!mw.storage.get( this.getStorageKey() );
+	this.toggle( !hidden );
 };
 
 /* Inheritance */
@@ -55,13 +57,15 @@ mw.TemplateWizard.DismissibleMessageWidget.static.storageKeyPrefix = 'mwe-templa
  * @return {string} The local storage key
  */
 mw.TemplateWizard.DismissibleMessageWidget.prototype.getStorageKey = function () {
-	return this.constructor.static.storageKeyPrefix + this.message.key;
+	return this.constructor.static.storageKeyPrefix + this.messageKey;
 };
 
 /**
  * Respond to dismiss button click event.
+ * @fires close
  */
 mw.TemplateWizard.DismissibleMessageWidget.prototype.onDismissClick = function () {
 	mw.storage.set( this.getStorageKey(), '1' );
 	this.toggle( false );
+	this.emit( 'close' );
 };
