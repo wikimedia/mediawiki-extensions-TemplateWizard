@@ -19,7 +19,7 @@ mw.TemplateWizard.SearchResult = function MWTemplateWizardSearchResult( config )
 		$( '<div>' )
 			.addClass( 'ext-templatewizard-redirectedfrom' )
 			.text( mw.msg( 'redirectedfrom', redirecttitle ) )
-			.appendTo( $description );
+			.prependTo( $description );
 	}
 
 	this.$element.append( $description );
