@@ -168,10 +168,21 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 		};
 	} );
 
-	// Force exact matches to be at the top
 	var lowerQuery = this.getValue().trim().toLowerCase();
-	searchResults.sort( function ( a ) {
-		return a.label.toLowerCase() === lowerQuery ? -1 : 0;
+	searchResults.sort( function ( a, b ) {
+		// Force exact matches to be at the top
+		if ( a.label.toLowerCase() === lowerQuery ) {
+			return -1;
+		} else if ( b.label.toLowerCase() === lowerQuery ) {
+			return 1;
+		}
+
+		// Restore original (prefix)search order, possibly messed up because of the generator
+		if ( 'index' in a.data && 'index' in b.data ) {
+			return a.data.index - b.data.index;
+		}
+
+		return 0;
 	} );
 
 	// Might be to many results because of the additional exact match search above
