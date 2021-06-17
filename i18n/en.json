@@ -12,6 +12,7 @@
 	"templatewizard-default": "Default: $1",
 	"templatewizard-desc": "A WikiEditor add-on that provides a template-insertion wizard",
 	"templatewizard-dialog-title": "Insert a template",
+	"templatewizard-dismissible-message-close": "Close message and do not show again",
 	"templatewizard-help": "Learn more about TemplateWizard",
 	"templatewizard-help-title": "Read the TemplateWizard help pages on MediaWiki.org",
 	"templatewizard-insert": "Insert",

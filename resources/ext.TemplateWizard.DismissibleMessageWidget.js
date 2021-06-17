@@ -28,7 +28,8 @@ mw.TemplateWizard.DismissibleMessageWidget = function MWDismissibleMessageWidget
 
 	var dismissButton = new OO.ui.ButtonWidget( {
 		icon: 'close',
-		framed: false
+		framed: false,
+		title: mw.msg( 'templatewizard-dismissible-message-close' )
 	} )
 		.connect( this, { click: 'onDismissClick' } );
 

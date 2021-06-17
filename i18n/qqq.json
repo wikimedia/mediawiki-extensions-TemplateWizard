@@ -15,6 +15,7 @@
 	"templatewizard-default": "Text appended to a parameter field's help text to show the parameter's default value. Parameter $1 is the default value.\n{{Identical|Default}}",
 	"templatewizard-desc": "{{desc|name=TemplateWizard|url=https://www.mediawiki.org/wiki/Extension:TemplateWizard}}",
 	"templatewizard-dialog-title": "A tooltip on a toolbar button that starts the TemplateWizard.\n\nAppears in the same section with the following:\n* {{msg-mw|wikieditor-toolbar-tool-link}}\n* {{msg-mw|wikieditor-toolbar-tool-file}}\n* {{msg-mw|wikieditor-toolbar-tool-reference}}\n* {{msg-mw|templatewizard-dialog-title}} (on wikis where the TemplateWizard extension is installed)\n\nTitle of the TemplateWizard dialog window.",
+	"templatewizard-dismissible-message-close": "Tooltip for the close button that closes an info message so it's never shown again.",
 	"templatewizard-help": "Text for the help link in the dialog footer.",
 	"templatewizard-help-title": "Tooltip text for the help link.",
 	"templatewizard-insert": "Text for the main template-insertion button.\n{{Identical|Insert}}",
