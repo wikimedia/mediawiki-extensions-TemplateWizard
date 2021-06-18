@@ -63,6 +63,7 @@ mw.TemplateWizard.DismissibleMessageWidget.prototype.getStorageKey = function ()
 
 /**
  * Respond to dismiss button click event.
+ *
  * @fires close
  */
 mw.TemplateWizard.DismissibleMessageWidget.prototype.onDismissClick = function () {
