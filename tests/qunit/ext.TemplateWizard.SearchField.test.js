@@ -74,7 +74,67 @@
 			},
 			{
 				query: '!!',
-				expected: '!!*'
+				expected: '!!'
+			},
+			{
+				query: 'Foo:',
+				expected: 'Foo:'
+			},
+			{
+				query: 'Foo:Bar',
+				expected: 'Foo:Bar*'
+			},
+			{
+				query: 'foo_',
+				expected: 'foo_'
+			},
+			{
+				query: 'foo-',
+				expected: 'foo-'
+			},
+			{
+				query: 'foo+',
+				expected: 'foo+'
+			},
+			{
+				query: 'foo/',
+				expected: 'foo/'
+			},
+			{
+				query: 'foo~',
+				expected: 'foo~'
+			},
+			{
+				query: 'foo*',
+				expected: 'foo*'
+			},
+			{
+				query: '(foo)',
+				expected: '(foo)'
+			},
+			{
+				query: '[foo]',
+				expected: '[foo]'
+			},
+			{
+				query: '{foo}',
+				expected: '{foo}'
+			},
+			{
+				query: '"foo"',
+				expected: '"foo"'
+			},
+			{
+				query: 'foß',
+				expected: 'foß*'
+			},
+			{
+				query: '中文字',
+				expected: '中文字*'
+			},
+			{
+				query: 'zhōngwénzì',
+				expected: 'zhōngwénzì*'
 			}
 		].forEach( function ( data ) {
 			const apiParams = widget.getApiParams( data.query );
