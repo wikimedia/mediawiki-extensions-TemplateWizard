@@ -13,6 +13,7 @@
 	"templatewizard-default": "Padrão: $1",
 	"templatewizard-desc": "Um suplemento para o WikiEditor que fornece um assistente de inserção de predefinições",
 	"templatewizard-dialog-title": "Inserir uma predefinição",
+	"templatewizard-dismissible-message-close": "Feche a mensagem e não mostre novamente",
 	"templatewizard-help": "Saiba mais sobre o Assistente de Predefinições",
 	"templatewizard-help-title": "Leia as páginas de ajuda do Assistente de Predefinições em MediaWiki.org",
 	"templatewizard-insert": "Inserir",

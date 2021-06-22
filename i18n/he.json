@@ -13,6 +13,7 @@
 	"templatewizard-default": "ברירת המחדל: $1",
 	"templatewizard-desc": "תוסף להרחבה WikiEditor המספק אשף להוספת תבניות",
 	"templatewizard-dialog-title": "הוספת תבנית",
+	"templatewizard-dismissible-message-close": "לסגור את ההודעה ולא להציג שוב",
 	"templatewizard-help": "מידע נוסף על אשף התבניות",
 	"templatewizard-help-title": "לקרוא את דפי העזרה של אשף התבניות באתר mediawiki.org",
 	"templatewizard-insert": "הוספה",

@@ -13,6 +13,7 @@
 	"templatewizard-default": "পূর্বনির্ধারিত: $1",
 	"templatewizard-desc": "একটি উইকিসম্পাদক অ্যাড-অন যা একটি টেমপ্লেট-সন্নিবেশ করার উইজার্ড প্রদান করে",
 	"templatewizard-dialog-title": "একটি টেমপ্লেট যোগ করুন",
+	"templatewizard-dismissible-message-close": "বার্তা বন্ধ করুন ও পুনরায় দেখাবেন না",
 	"templatewizard-help": "টেমপ্লেট উইজার্ড সম্পর্কে আরও জানুন",
 	"templatewizard-help-title": "MediaWiki.org সাইটে টেমপ্লেট উইজার্ডের সাহায্য পাতা পড়ুন",
 	"templatewizard-insert": "যোগ করুন",
