@@ -105,6 +105,9 @@ mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
 mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 	var query = this.getValue(),
 		lowerQuery = query.trim().toLowerCase();
+	if ( !response.query || !lowerQuery ) {
+		return response;
+	}
 
 	var containsExactMatch = Object.keys( response.pages ).some( function ( pageId ) {
 		var page = response.pages[ pageId ],
@@ -119,6 +122,7 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		action: 'templatedata',
 		includeMissingTitles: 1,
 		lang: mw.config.get( 'wgUserLanguage' ),
+		// Can't use a direct lookup by title because we need this to be case-insensitive
 		generator: 'prefixsearch',
 		gpssearch: query,
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
