@@ -3,7 +3,8 @@
 		"authors": [
 			"-jem-",
 			"Ciencia Al Poder",
-			"Fitoschido"
+			"Fitoschido",
+			"Jackiezelaya"
 		]
 	},
 	"templatewizard-add-all": "Añadir todos los parámetros",
@@ -14,6 +15,7 @@
 	"templatewizard-default": "Predeterminado: $1",
 	"templatewizard-desc": "Un complemento para WikiEditor que brinda un asistente de inserción de plantillas",
 	"templatewizard-dialog-title": "Insertar una plantilla",
+	"templatewizard-dismissible-message-close": "Mensaje cercano y no muestra otra vez",
 	"templatewizard-help": "Conoce más acerca de TemplateWizard",
 	"templatewizard-help-title": "Lee las páginas de ayuda de TemplateWizard en MediaWiki.org",
 	"templatewizard-insert": "Insertar",
@@ -36,6 +38,7 @@
 	"templatewizard-remove-template-body": "Has introducido datos en la plantilla que vas a eliminar. Al eliminar la plantilla, también se eliminarán los datos que has introducido en ella. Esta acción no se podrá deshacer.",
 	"templatewizard-remove-template-retry": "Quitar plantilla",
 	"templatewizard-search-placeholder": "Buscar una plantilla",
+	"templatewizard-search-feedback-message": "Se completó el trabajo reciente para mejorar los resultados de búsqueda de plantillas. Para obtener más información sobre los cambios o dejar comentarios, vaya a la página [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates del proyecto].",
 	"templatewizard-parambutton-add-title": "Añadir el parámetro «$1»",
 	"templatewizard-parambutton-remove-title": "Borra el parámetro '$1'",
 	"templatewizard-parambutton-required-title": "El parámetro «$1» es obligatorio",
