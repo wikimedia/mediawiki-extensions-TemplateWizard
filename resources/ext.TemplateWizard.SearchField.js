@@ -33,13 +33,13 @@ OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
 mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 	var params = {
 		action: 'templatedata',
+		includeMissingTitles: 1,
+		lang: mw.config.get( 'wgUserLanguage' ),
 		generator: 'prefixsearch',
 		gpssearch: query,
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
 		gpslimit: this.limit,
-		redirects: 1,
-		includeMissingTitles: 1,
-		lang: mw.config.get( 'wgUserLanguage' )
+		redirects: 1
 	};
 
 	if ( mw.config.get( 'wgTemplateWizardConfig' ).cirrusSearchLookup ) {
@@ -127,10 +127,14 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		gpssearch: query,
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
 		gpslimit: 1
-	} ).then( function ( exactMatch ) {
-		var pageId = ( Object.keys( exactMatch.pages ) )[ 0 ];
-		if ( pageId && !( pageId in response.pages ) ) {
-			response.pages[ pageId ] = exactMatch.pages[ pageId ];
+	} ).then( function ( prefixMatches ) {
+		// action=templatedata returns page objects in `{ pages: {} }`, keyed by page id
+		for ( var pageId in prefixMatches.pages ) {
+			if ( !( pageId in response.pages ) ) {
+				var prefixMatch = prefixMatches.pages[ pageId ];
+				prefixMatch.index = 0;
+				response.pages[ pageId ] = prefixMatch;
+			}
 		}
 		return response;
 	}, function () {
@@ -203,7 +207,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 
 	// Might be to many results because of the additional exact match search above
 	if ( searchResults.length > this.limit ) {
-		searchResults = searchResults.slice( 0, this.limit );
+		searchResults.splice( this.limit );
 	}
 
 	return searchResults;
