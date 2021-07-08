@@ -2,6 +2,11 @@
  * @class
  * @constructor
  * @param {Object} templateData
+ * @param {string|boolean} [templateData.notemplatedata]
+ * @param {string} templateData.title
+ * @param {string} [templateData.description]
+ * @param {string} [templateData.format]
+ * @param {Object<string,Object>} [templateData.params]
  * @param {Object} [config] Configuration options
  */
 mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( templateData, config ) {
@@ -64,6 +69,9 @@ mw.TemplateWizard.TemplateForm.prototype.getFormat = function () {
  * (both the field-list left menu and the right-hand form panel).
  *
  * @param {Object} templateData
+ * @param {string|boolean} [templateData.notemplatedata]
+ * @param {string} [templateData.description]
+ * @param {Object<string,Object>} [templateData.params]
  * @return {OO.ui.StackLayout}
  */
 mw.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
@@ -206,7 +214,7 @@ mw.TemplateWizard.TemplateForm.prototype.focusTopmostField = function () {
 /**
  * Get the parameter menu and fields list.
  *
- * @param {Object} groupedParams
+ * @param {{required:Object<string,Object>,suggested:Object<string,Object>,optional:Object<string,Object>}} groupedParams
  * @return {{menu: jQuery, fields: jQuery}}
  */
 mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( groupedParams ) {
@@ -437,6 +445,10 @@ mw.TemplateWizard.TemplateForm.prototype.getFieldsValidity = function () {
 	return $.when.apply( $, validityPromises );
 };
 
+/**
+ * @param {Object<string,Object>} params
+ * @return {{required:Object<string,Object>,suggested:Object<string,Object>,optional:Object<string,Object>}}
+ */
 mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
 	var groupedParams = {
 		required: {},
