@@ -4,6 +4,9 @@
  * @param {mw.TemplateWizard.TemplateForm} templateForm
  * @param {mw.Title} title
  * @param {Object} templateData
+ * @param {string|boolean} [templateData.notemplatedata]
+ * @param {string} [templateData.description]
+ * @param {Object<string,Object>} [templateData.params]
  */
 mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	templateForm, title, templateData
@@ -58,6 +61,9 @@ OO.inheritClass( mw.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
  * Get the description div element, which may contain zero to two paragraphs.
  *
  * @param {Object} templateData
+ * @param {string|boolean} [templateData.notemplatedata]
+ * @param {string} [templateData.description]
+ * @param {Object<string,Object>} [templateData.params]
  * @return {jQuery}
  */
 mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( templateData ) {
