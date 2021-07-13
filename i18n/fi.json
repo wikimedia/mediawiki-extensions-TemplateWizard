@@ -26,6 +26,7 @@
 	"templatewizard-remove-template": "Poista malline?",
 	"templatewizard-remove-template-retry": "Poista malline",
 	"templatewizard-search-placeholder": "Hae mallinetta",
+	"templatewizard-search-feedback-message": "Viimeaikainen työ saatiin päätökseen mallineiden hakemisen parantamiseksi. Jos haluat lisätietoja muutoksista tai antaa palautetta, siirry [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates projektin sivulle].",
 	"templatewizard-parambutton-add-title": "Lisää parametri '$1'",
 	"templatewizard-parambutton-remove-title": "Poista parametri '$1'",
 	"templatewizard-parambutton-required-title": "Tarvittava parametri '$1'",
