@@ -7,6 +7,7 @@
 			"Klaas van Buiten",
 			"KlaasZ4usV",
 			"Mainframe98",
+			"McDutchie",
 			"Ndecouck",
 			"Patio",
 			"SPQRobin"
@@ -25,7 +26,7 @@
 	"templatewizard-invalid-values-edit": "Sjabloon bewerken",
 	"templatewizard-invalid-values-insert": "Sjabloon invoegen",
 	"templatewizard-no-description": "Er bestaat geen beschrijving voor dit sjabloon.",
-	"templatewizard-no-templatedata": "[[Template:$1|$1]] kan niet worden gebruikt in Template Wizard, omdat het <strong>geen [$2 TemplateData] etiketten</strong> heeft. Repareer dat alstublieft en probeer opnieuw. Als u een bug vermoedt, graag aan ons melden op de [$3 help page].",
+	"templatewizard-no-templatedata": "Vanwege het ontbreken van [$1 TemplateData] zijn de parameters voor dit sjabloon automatisch gegenereerd. Houd er rekening mee dat ze mogelijk niet kloppen.",
 	"templatewizard-opens-in-new-tab": "In nieuw tabblad openen",
 	"templatewizard-parameters-optional": "Optionele parameters",
 	"templatewizard-parameters-required": "Verplichte parameters",
