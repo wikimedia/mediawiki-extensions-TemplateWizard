@@ -11,11 +11,12 @@
  *
  * @constructor
  * @param {Object} config Configuration options
- * @cfg {mw.Message} message Message to display
+ * @cfg {string} messageKey
  */
 mw.TemplateWizard.DismissibleMessageWidget = function MWDismissibleMessageWidget( config ) {
-	var $label = config.message.parseDom();
-	$label.filter( 'a' ).attr( 'target', '_blank' );
+	// eslint-disable-next-line mediawiki/msg-doc
+	var $label = mw.message( config.messageKey ).parseDom();
+	$label.filter( 'a[href]' ).attr( 'target', '_blank' );
 	// eslint-disable-next-line no-jquery/variable-pattern
 	config.label = $label;
 
@@ -23,8 +24,7 @@ mw.TemplateWizard.DismissibleMessageWidget = function MWDismissibleMessageWidget
 	mw.TemplateWizard.DismissibleMessageWidget.super.call( this, config );
 
 	// Properties
-	this.messageKey = config.message.key;
-	delete config.message;
+	this.messageKey = config.messageKey;
 
 	var dismissButton = new OO.ui.ButtonWidget( {
 		icon: 'close',
