@@ -5,5 +5,11 @@
 		]
 	},
 	"templatewizard-cancel": "Annulla",
-	"templatewizard-insert": "Nzirisci"
+	"templatewizard-dialog-title": "Nzirisci nu template",
+	"templatewizard-help": "Àutri nfurmazzioni supra TemplateWizard",
+	"templatewizard-insert": "Nzirisci",
+	"templatewizard-invalid-title": "Tìtulu nun vàliddu",
+	"templatewizard-invalid-values-edit": "Cancia template",
+	"templatewizard-invalid-values-insert": "Nzirisci template",
+	"templatewizard-link-to-template-title": "Talìa lu template"
 }
