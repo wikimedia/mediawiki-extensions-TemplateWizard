@@ -7,7 +7,7 @@ class UseTemplatePage extends Page {
 	get twButton() { return $( '[rel="template-wizard"] a[role="button"]' ); }
 	get dialog() { return $( '#ext-templatewizard-dialog' ); }
 	get searchInput() { return $( '.oo-ui-comboBoxInputWidget-field' ); }
-	get searchResultMenu() { return $( '.oo-ui-lookupElement-menu' ); }
+	get searchResultMenu() { return $( '.oo-ui-menuOptionWidget' ); }
 	get testTemplateTitle() { return $( '.ext-templatewizard-templatetitlebar' ); }
 	get addAllFields() { return $( '.ext-templatewizard-add-remove-all a' ); }
 	get usernameField() { return $( '=Username' ); }

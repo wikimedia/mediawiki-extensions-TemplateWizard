@@ -26,7 +26,7 @@ describe( 'TemplateWizard', function () {
 		UseTemplatePage.searchInput.click();
 		$( '.ext-templatewizard-searchform input' ).setValue( testTemplateName );
 		// Wait for the search results to appear.
-		UseTemplatePage.searchResultMenu.waitForDisplayed( 35000 );
+		UseTemplatePage.searchResultMenu.waitForDisplayed( { timeout: 35000 } );
 
 		// Select the template.
 		$( `.oo-ui-labelElement-label=${testTemplateName}` ).click();
