@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Hannarosendeloitte"
 		]
 	},
 	"templatewizard-add-all": "Lägg till alla parametrar",
@@ -12,6 +13,7 @@
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-desc": "Ett tillägg för WikiEditor som tillhandahåller en guide för att infoga mallar",
 	"templatewizard-dialog-title": "Infoga en mall",
+	"templatewizard-dismissible-message-close": "Stäng meddelandet och visa inte igen",
 	"templatewizard-help": "Läs mer om TemplateWizard",
 	"templatewizard-help-title": "Läs hjälpsidorna för TemplateWizard på MediaWiki.org",
 	"templatewizard-insert": "Infoga",
@@ -34,6 +36,7 @@
 	"templatewizard-remove-template-body": "Mallen du försöker ta bort innehåller data som du har lagt till. När du tar bort mallen kommer även informationen du lade till i mallen att tas bort. Denna handling kan inte ångras.",
 	"templatewizard-remove-template-retry": "Ta bort mall",
 	"templatewizard-search-placeholder": "Sök efter en mall",
+	"templatewizard-search-feedback-message": "Det senaste arbetet har slutförts för att förbättra mallens sökresultat. Om du vill veta mer om ändringarna eller lämna feedback, gå till [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates project's page].",
 	"templatewizard-parambutton-add-title": "Lägg till parametern \"$1\"",
 	"templatewizard-parambutton-remove-title": "Ta bort parametern \"$1\"",
 	"templatewizard-parambutton-required-title": "Parametern \"$1\" är nödvändig",

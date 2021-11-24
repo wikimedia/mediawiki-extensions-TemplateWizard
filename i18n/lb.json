@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Soued031"
 		]
 	},
 	"templatewizard-add-all": "All Parameteren derbäisetzen",
@@ -19,7 +20,7 @@
 	"templatewizard-parameters-required": "Obligatoresch Parameteren",
 	"templatewizard-parameters-suggested": "Virgeschloe Parameteren",
 	"templatewizard-placeholder-default": "Standard: $1",
-	"templatewizard-placeholder-example": "z. Bsp. $1",
+	"templatewizard-placeholder-example": "z. B. $1",
 	"templatewizard-remove-all": "All Parameteren ewechhuelen",
 	"templatewizard-remove-template": "Schabloun ewechhuelen?",
 	"templatewizard-remove-template-retry": "Schabloun ewechhuelen",

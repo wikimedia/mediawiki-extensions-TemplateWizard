@@ -13,6 +13,7 @@
 	"templatewizard-default": "Predodređeno: $1",
 	"templatewizard-desc": "Dodatak Wikiuređivaču koji omogućava čarobnjak za umetanje predložaka",
 	"templatewizard-dialog-title": "Umetni predložak",
+	"templatewizard-dismissible-message-close": "Zatvori poruku i ne prikazuj ponovno",
 	"templatewizard-help": "Saznajte više o »Čarobnjaku za predloške«",
 	"templatewizard-help-title": "Pročitajte stranice pomoći »Čarobnjaka za predloške« na MediaWiki.org",
 	"templatewizard-insert": "Umetni",
