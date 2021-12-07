@@ -3,7 +3,9 @@
 		"authors": [
 			"A Chinese Wikipedian",
 			"Liuxinyu970226",
-			"VulpesVulpes825"
+			"VulpesVulpes825",
+			"Shizhao",
+			"Tranve"
 		]
 	},
 	"templatewizard-add-all": "添加所有参数",
@@ -14,7 +16,7 @@
 	"templatewizard-default": "默认：$1",
 	"templatewizard-desc": "提供模板插入助手的Wiki编辑器插件",
 	"templatewizard-dialog-title": "插入模板",
-	"templatewizard-help": "了解更多有关模板助手",
+	"templatewizard-help": "了解有关模板助手的更多信息",
 	"templatewizard-help-title": "阅读MediaWiki.org上的模板助手帮助页面",
 	"templatewizard-insert": "插入",
 	"templatewizard-invalid-title": "无效标题",
