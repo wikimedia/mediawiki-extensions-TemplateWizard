@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Piramidion",
-			"Vlad5250"
+			"Vlad5250",
+			"DDPAT"
 		]
 	},
 	"templatewizard-add-all": "Додати всі параметри",
@@ -10,7 +11,7 @@
 	"templatewizard-close-dialog": "Покинути майстер шаблонів?",
 	"templatewizard-close-dialog-body": "Якщо Ви покинете майстер шаблонів, то втратите будь-які дані, якими Ви вже заповнили цей шаблон.",
 	"templatewizard-close-dialog-retry": "Відхилити зміни",
-	"templatewizard-default": "Стандартно: $1",
+	"templatewizard-default": "За замовчуванням: $1",
 	"templatewizard-desc": "Доповнення до вікіредактора, яке надає кнопку для запуску майстра шаблонів",
 	"templatewizard-dialog-title": "Вставити шаблон",
 	"templatewizard-help": "Дізнатись більше про Майстер шаблонів",
@@ -28,7 +29,7 @@
 	"templatewizard-parameters-optional": "Необов'язкові параметри",
 	"templatewizard-parameters-required": "Обов'язкові параметри",
 	"templatewizard-parameters-suggested": "Пропоновані параметри",
-	"templatewizard-placeholder-default": "Стандартно: $1",
+	"templatewizard-placeholder-default": "За замовчуванням: $1",
 	"templatewizard-placeholder-example": "напр., $1",
 	"templatewizard-remove-all": "Прибрати всі параметри",
 	"templatewizard-remove-template": "Вилучити шаблон?",

@@ -1,9 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
-			"David1010"
+			"David1010",
+			"Გიო ოქრო",
+			"Იო ოქრო"
 		]
 	},
+	"templatewizard-add-all": "ყველა პარამეტრის დამატება",
+	"templatewizard-cancel": "გაუქმება",
+	"templatewizard-close-dialog": "ტოვებთ ასისტენტს?",
+	"templatewizard-close-dialog-body": "ასისტენტის დატოვება გამოიწვევს ბევრი მონაცემის დაკარგვას, რაც თქვენ თარგს დაუმატეთ.",
+	"templatewizard-close-dialog-retry": "ცვლილებების უარყოფა",
+	"templatewizard-default": "საწყისი: $1",
+	"templatewizard-desc": "ვიკირედაქტორი ხელსაწყო, რომელიც ეხმარება თარგის ჩასმაში",
+	"templatewizard-dialog-title": "თარგის ჩასმა",
 	"templatewizard-help": "გაიგეთ მეტი თარგის ოსტატის შესახებ",
-	"templatewizard-invalid-values-insert": "თარგის ჩასმა"
+	"templatewizard-help-title": "წაიკითხეთ თარგის ოსტატის დახმარების გვერდები MediaWiki.org-ზე",
+	"templatewizard-insert": "ჩასმა",
+	"templatewizard-invalid-title": "არასწორი სახელი",
+	"templatewizard-invalid-values-edit": "თარგის რედაქტირება",
+	"templatewizard-invalid-values-insert": "თარგის ჩასმა",
+	"templatewizard-no-description": "არ არსებობს ამ თარგის აღწერა.",
+	"templatewizard-search-placeholder": "თარგის მოძებნა"
 }

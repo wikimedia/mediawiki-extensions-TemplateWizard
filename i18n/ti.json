@@ -5,5 +5,16 @@
 		]
 	},
 	"templatewizard-cancel": "ኣትርፍ",
-	"templatewizard-insert": "ኣእተወ"
+	"templatewizard-close-dialog-retry": "ለውጥታት ኣወግድ",
+	"templatewizard-default": "ንቡር፦ $1",
+	"templatewizard-dialog-title": "ሞደል ኣእትው",
+	"templatewizard-insert": "ኣእትው",
+	"templatewizard-invalid-values-edit": "ሞደል ኣመዓራርይ",
+	"templatewizard-invalid-values-insert": "ሞደል ኣእትው",
+	"templatewizard-placeholder-default": "ንቡር፦ $1",
+	"templatewizard-remove-template": "ሞደል ሰርዝ?",
+	"templatewizard-remove-template-retry": "ሞደል ሰርዝ",
+	"templatewizard-remove-template-title": "ሞደል ሰርዝ",
+	"templatewizard-link-to-template-title": "ሞደል ርኣይ",
+	"templatewizard-use": "ኣጠቓቕማ"
 }

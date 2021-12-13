@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Seipinne"
+		]
+	},
+	"templatewizard-add-all": "Lasseet puoh parameetterijd",
+	"templatewizard-cancel": "Jooskâ",
+	"templatewizard-dialog-title": "Lasseet myenster",
+	"templatewizard-insert": "Lasseet",
+	"templatewizard-invalid-values-edit": "Mute myenster",
+	"templatewizard-invalid-values-insert": "Lasseet myenster",
+	"templatewizard-parameters-required": "Páguliih parameettereh",
+	"templatewizard-parameters-suggested": "Avžuuttum parameettereh",
+	"templatewizard-placeholder-example": "om. $1",
+	"templatewizard-remove-all": "Siho puoh parameetterijd",
+	"templatewizard-remove-template": "Meddâlist myenster?",
+	"templatewizard-remove-template-retry": "Meddâlist myenster",
+	"templatewizard-search-placeholder": "Uusâ myenster",
+	"templatewizard-parambutton-add-title": "Lasseet parameetter '$1'",
+	"templatewizard-parambutton-remove-title": "Meddâlist parameetter '$1'",
+	"templatewizard-parambutton-required-title": "Págulâš parameetter '$1'",
+	"templatewizard-remove-template-title": "Meddâlist myenster",
+	"templatewizard-link-to-template-title": "Čääiti myenster",
+	"templatewizard-use": "Keevti"
+}

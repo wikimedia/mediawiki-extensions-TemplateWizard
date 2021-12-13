@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ruthven"
+		]
+	},
+	"templatewizard-add-all": "Azzecca tutt’’e parametri",
+	"templatewizard-cancel": "Scancella",
+	"templatewizard-close-dialog": "Lassa ’o Wizard",
+	"templatewizard-close-dialog-body": "Si se lassa ’o wizard, se ponno perdere ’e dati azzeccati int’’o modello.",
+	"templatewizard-close-dialog-retry": "Sfàjere 'e cagnamiénte",
+	"templatewizard-dialog-title": "Nzèrta nu modello",
+	"templatewizard-insert": "Nzèrta",
+	"templatewizard-invalid-values-insert": "Nzèrta modello",
+	"templatewizard-no-description": "Nun ce sta na descrizione p’’o modello",
+	"templatewizard-no-params-with-td": "Nun ce stanno parametri int’’o [$1 TemplateData] ’e sto modello. Può nzertà ’o modello senza parametri.",
+	"templatewizard-no-params-without-td": "Nun se truovano parametri pe sto modello, pecché ’o [$1 TemplateData] è mancante. Può nzertà ’o modello senza parametri.",
+	"templatewizard-no-templatedata": "’O [$1 TemplateData] ’e sto modello è avvacante. ’E parametri s'hanno crite automaticamente. Statt’accuorto.",
+	"templatewizard-placeholder-example": "es: $1",
+	"templatewizard-remove-all": "Leva tutt’’e parametri",
+	"templatewizard-remove-template-retry": "Lèva modello",
+	"templatewizard-remove-template-title": "Lèva modello",
+	"templatewizard-link-to-template-title": "Vire 'o modello",
+	"templatewizard-use": "Ausa"
+}
