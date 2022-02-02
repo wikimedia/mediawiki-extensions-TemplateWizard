@@ -10,7 +10,8 @@
 			"McDutchie",
 			"Ndecouck",
 			"Patio",
-			"SPQRobin"
+			"SPQRobin",
+			"Romaine"
 		]
 	},
 	"templatewizard-add-all": "Alle parameters toevoegen",
@@ -19,6 +20,7 @@
 	"templatewizard-default": "Standaard: $1",
 	"templatewizard-desc": "Een invoegtoepassing voor WikiEditor dat helpt met sjablonen invoegen",
 	"templatewizard-dialog-title": "Sjabloon invoegen",
+	"templatewizard-dismissible-message-close": "Bericht sluiten en niet meer weergeven",
 	"templatewizard-help": "Meer leren over TemplateWizard",
 	"templatewizard-help-title": "Lees de TemplateWizard-hulppagina's op MediaWiki.org",
 	"templatewizard-insert": "Invoegen",
