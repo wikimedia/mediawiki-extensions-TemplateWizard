@@ -6,6 +6,8 @@
  * @cfg {string} [contentDir] The direction of the page content
  */
 mw.TemplateWizard.SearchForm = function MWTemplateWizardSearchForm( dialog, config ) {
+	var searchForm = this;
+
 	config = $.extend( {
 		padded: true,
 		expanded: true
@@ -33,12 +35,21 @@ mw.TemplateWizard.SearchForm = function MWTemplateWizardSearchForm( dialog, conf
 
 	// Temporary feedback message when templateSearchImprovements is true T284560
 	// TODO: remove when templateSearchImprovements are out of beta
-	if ( mw.config.get( 'wgTemplateWizardConfig' ).cirrusSearchLookup ) {
-		new mw.TemplateWizard.DismissibleMessageWidget( {
-			messageKey: 'templatewizard-search-feedback-message',
-			classes: [ 'ext-templatewizard-feedback-message' ]
+	// TODO: once removed, leave behind `mw.storage.remove( key )` for a while
+	var key = 'mwe-templatewizard-hide-templatewizard-search-feedback-message';
+	if ( mw.config.get( 'wgTemplateWizardConfig' ).cirrusSearchLookup && !mw.storage.get( key ) ) {
+		var $label = mw.message( 'templatewizard-search-feedback-message' ).parseDom();
+		$label.filter( 'a[href]' ).attr( 'target', '_blank' );
+
+		new OO.ui.MessageWidget( {
+			label: $label,
+			classes: [ 'ext-templatewizard-feedback-message' ],
+			showClose: true
 		} )
-			.connect( this, { close: 'focus' } )
+			.on( 'close', function () {
+				mw.storage.set( key, '1' );
+				searchForm.focus();
+			} )
 			.$element.prependTo( this.$element );
 	}
 };
