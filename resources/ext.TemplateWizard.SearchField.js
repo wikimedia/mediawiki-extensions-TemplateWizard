@@ -105,7 +105,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
 mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 	var query = this.getValue(),
 		lowerQuery = query.trim().toLowerCase();
-	if ( !response.query || !lowerQuery ) {
+	if ( !response.pages || !lowerQuery ) {
 		return response;
 	}
 
