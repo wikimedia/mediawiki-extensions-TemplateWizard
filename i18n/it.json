@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Pierpao",
 			"Sakretsu",
 			"Sarah Bernabei",
 			"Valepert"
@@ -33,6 +34,7 @@
 	"templatewizard-remove-template-body": "Il template che stai per rimuovere contiene dati da te inseriti. La rimozione del template comporterà la perdita delle informazioni che hai aggiunto. Questa azione è irreversibile.",
 	"templatewizard-remove-template-retry": "Rimuovi template",
 	"templatewizard-search-placeholder": "Cerca un template",
+	"templatewizard-search-feedback-message": "Recentemente sono stati completati degli aggiornamenti per migliorare i risultati della ricerca di template. Per saperne di più o lasciare un feedback andare sulla [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates pagina ufficiale del progetto].",
 	"templatewizard-parambutton-add-title": "Aggiungi il parametro '$1'",
 	"templatewizard-parambutton-remove-title": "Rimuovi il parametro '$1'",
 	"templatewizard-parambutton-required-title": "Parametro obbligatorio '$1'",
