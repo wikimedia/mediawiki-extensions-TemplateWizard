@@ -14,7 +14,6 @@
 	"templatewizard-default": "Par défaut : $1",
 	"templatewizard-desc": "Un module de WikiEditor qui fournit un assistant d’insertion de modèle",
 	"templatewizard-dialog-title": "Insérer un modèle",
-	"templatewizard-dismissible-message-close": "Fermer le message et ne plus l’afficher",
 	"templatewizard-help": "En savoir plus sur TemplateWizard",
 	"templatewizard-help-title": "Lire les pages d’aide de TemplateWizard sur MediaWiki.org",
 	"templatewizard-insert": "Insérer",

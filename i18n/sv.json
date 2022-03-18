@@ -13,7 +13,6 @@
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-desc": "Ett tillägg för WikiEditor som tillhandahåller en guide för att infoga mallar",
 	"templatewizard-dialog-title": "Infoga en mall",
-	"templatewizard-dismissible-message-close": "Stäng meddelandet och visa inte igen",
 	"templatewizard-help": "Läs mer om TemplateWizard",
 	"templatewizard-help-title": "Läs hjälpsidorna för TemplateWizard på MediaWiki.org",
 	"templatewizard-insert": "Infoga",

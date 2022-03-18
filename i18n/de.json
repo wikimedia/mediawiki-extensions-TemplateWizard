@@ -14,7 +14,6 @@
 	"templatewizard-default": "Standard: $1",
 	"templatewizard-desc": "Ergänzt die Erweiterung „WikiEditor“ um ein Hilfsprogramm zum Einfügen von Vorlagen",
 	"templatewizard-dialog-title": "Eine Vorlage einfügen",
-	"templatewizard-dismissible-message-close": "Meldung schließen und nicht mehr anzeigen",
 	"templatewizard-help": "Mehr über den Vorlagenassistenten erfahren",
 	"templatewizard-help-title": "Die Hilfeseiten über den Vorlagenassistenten auf MediaWiki.org lesen",
 	"templatewizard-insert": "Einfügen",
