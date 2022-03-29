@@ -118,6 +118,9 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		return response;
 	}
 
+	var numberOfCirrusSearchResults = Object.keys( response.pages ).length;
+	var fullFallbackNeeded = !numberOfCirrusSearchResults;
+
 	return this.api.get( {
 		action: 'templatedata',
 		includeMissingTitles: 1,
@@ -126,13 +129,17 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		generator: 'prefixsearch',
 		gpssearch: query,
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
-		gpslimit: 1
+		// Fall back to prefixsearch when CirrusSearch failed, otherwise just the top-1 prefix match
+		gpslimit: fullFallbackNeeded ? this.limit : 1
 	} ).then( function ( prefixMatches ) {
 		// action=templatedata returns page objects in `{ pages: {} }`, keyed by page id
 		for ( var pageId in prefixMatches.pages ) {
 			if ( !( pageId in response.pages ) ) {
 				var prefixMatch = prefixMatches.pages[ pageId ];
-				prefixMatch.index = 0;
+				if ( !fullFallbackNeeded ) {
+					// Move the top-1 prefix match to the top, releant for e.g. {{!!}}
+					prefixMatch.index = 0;
+				}
 				response.pages[ pageId ] = prefixMatch;
 			}
 		}
