@@ -3,16 +3,17 @@
 		"authors": [
 			"Huji",
 			"Ladsgroup",
-			"Reza1615"
+			"Reza1615",
+			"Beginneruser"
 		]
 	},
 	"templatewizard-add-all": "افزودن همهٔ پارامترها",
 	"templatewizard-cancel": "لغو",
-	"templatewizard-close-dialog": "خروج از ابزار؟",
-	"templatewizard-close-dialog-body": "با خروج از ابزار اطلاعاتی را که ثبت کرده‌اید از دست می‌روند.",
+	"templatewizard-close-dialog": "خروج از برنامۀ جادویی؟",
+	"templatewizard-close-dialog-body": "با ترک برنامۀ جادویی هر داده‌ای که شما به الگو اضافه کردید از دست خواهد رفت",
 	"templatewizard-close-dialog-retry": "دور ریختن تغییرات",
 	"templatewizard-default": "پیش‌فرض: $1",
-	"templatewizard-desc": "جادوگر الگو ابزاری برای افزودن الگوهاست",
+	"templatewizard-desc": "برنامۀ جادویی الگو ابزاری برای افزودن الگوهاست",
 	"templatewizard-dialog-title": "افزودن الگو",
 	"templatewizard-help": "درباره جادوگر الگو بیشتر بدانید",
 	"templatewizard-help-title": "صفحهٔ راهنمای جادوگر الگو را در MediaWiki.org مطالعه کنید",

@@ -34,6 +34,7 @@
 	"templatewizard-remove-template-body": "It berjocht dat jo besykje te wiskjen, befettet gegevens dy't jo ynfierd hawwe. Mei it wiskjen fan 't berjocht, wurdt ek de ynformaasje wiske dy't jo oan 't berjocht tafoege hawwe. Dizze hanneling is net omkearber.",
 	"templatewizard-remove-template-retry": "Berjocht wiskje",
 	"templatewizard-search-placeholder": "Berjocht sykje",
+	"templatewizard-search-feedback-message": "It lêste wurk is ôfrûne om 'e sykresultaten foar berjochten te ferbetterjen. Gean nei de [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates projektside] om mear te witten oer de feroarings, of om weromkeppeling te jaan.",
 	"templatewizard-parambutton-add-title": "Parameter '$1' tafoegje",
 	"templatewizard-parambutton-remove-title": "Parameter '$1' wiskje",
 	"templatewizard-parambutton-required-title": "Ferplichte parameter '$1'",
