@@ -118,9 +118,7 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		return response;
 	}
 
-	var numberOfCirrusSearchResults = Object.keys( response.pages ).length;
-	var fullFallbackNeeded = !numberOfCirrusSearchResults;
-
+	var limit = this.limit;
 	return this.api.get( {
 		action: 'templatedata',
 		includeMissingTitles: 1,
@@ -129,18 +127,21 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		generator: 'prefixsearch',
 		gpssearch: query,
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
-		// Fall back to prefixsearch when CirrusSearch failed, otherwise just the top-1 prefix match
-		gpslimit: fullFallbackNeeded ? this.limit : 1
+		// Try to fill with prefix matches, otherwise just the top-1 prefix match
+		gpslimit: limit
 	} ).then( function ( prefixMatches ) {
 		// action=templatedata returns page objects in `{ pages: {} }`, keyed by page id
 		for ( var pageId in prefixMatches.pages ) {
 			if ( !( pageId in response.pages ) ) {
 				var prefixMatch = prefixMatches.pages[ pageId ];
-				if ( !fullFallbackNeeded ) {
-					// Move the top-1 prefix match to the top, releant for e.g. {{!!}}
-					prefixMatch.index = 0;
-				}
+				// Move prefix matches to the top, indexed from -9 to 0, releant for e.g. {{!!}}
+				prefixMatch.index -= limit;
 				response.pages[ pageId ] = prefixMatch;
+			}
+			// Check only after the top-1 prefix match is guaranteed to be present
+			// Note: Might be 11 at this point, truncated in getLookupCacheDataFromResponse()
+			if ( Object.keys( response.pages ).length >= limit ) {
+				break;
 			}
 		}
 		return response;
