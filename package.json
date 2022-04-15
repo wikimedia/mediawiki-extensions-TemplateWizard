@@ -1,4 +1,5 @@
 {
+	"name": "TemplateWizard",
 	"private": true,
 	"scripts": {
 		"selenium-daily": "npm run selenium-test",
