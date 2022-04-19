@@ -131,12 +131,21 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		gpslimit: limit
 	} ).then( function ( prefixMatches ) {
 		// action=templatedata returns page objects in `{ pages: {} }`, keyed by page id
+		// Copy keys because the loop below needs an ordered array, not an object
 		for ( var pageId in prefixMatches.pages ) {
-			if ( !( pageId in response.pages ) ) {
-				var prefixMatch = prefixMatches.pages[ pageId ];
-				// Move prefix matches to the top, indexed from -9 to 0, releant for e.g. {{!!}}
+			prefixMatches.pages[ pageId ].pageid = pageId;
+		}
+		// Make sure the loop below processes the results by relevance
+		var pages = OO.getObjectValues( prefixMatches.pages ).sort( function ( a, b ) {
+			return a.index - b.index;
+		} );
+		for ( var i in pages ) {
+			var prefixMatch = pages[ i ];
+			if ( !( prefixMatch.pageid in response.pages ) ) {
+				// Move prefix matches to the top, indexed from -9 to 0, relevant for e.g. {{!!}}
+				// Note: Sorting happens down in getLookupCacheDataFromResponse()
 				prefixMatch.index -= limit;
-				response.pages[ pageId ] = prefixMatch;
+				response.pages[ prefixMatch.pageid ] = prefixMatch;
 			}
 			// Check only after the top-1 prefix match is guaranteed to be present
 			// Note: Might be 11 at this point, truncated in getLookupCacheDataFromResponse()
