@@ -26,7 +26,6 @@
 	"templatewizard-no-params-with-td": "Information message shown when TemplateData exists and there are no parameters defined in it. Parameter $1 is the URL of the TemplateData help page on MediaWiki.org.",
 	"templatewizard-no-params-without-td": "Information message shown when there is no TemplateData and no raw parameters could be determined. Parameter $1 is the URL of the TemplateData help page on MediaWiki.org.",
 	"templatewizard-no-templatedata": "Information message shown when the requested template does not have TemplateData, and the template's raw parameters are shown. Parameter $1 is the URL of the TemplateData help page on MediaWiki.org.",
-	"templatewizard-opens-in-new-tab": "Tooltip shown for the template name link.",
 	"templatewizard-parameters-optional": "Fieldset legend for the set of optional template parameters.",
 	"templatewizard-parameters-required": "Fieldset legend for the set of required template parameters.",
 	"templatewizard-parameters-suggested": "Fieldset legend for the set of suggested template parameters.",

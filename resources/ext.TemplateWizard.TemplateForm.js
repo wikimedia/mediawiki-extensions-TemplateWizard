@@ -148,16 +148,6 @@ mw.TemplateWizard.TemplateForm.prototype.closeForm = function () {
 	this.emit( 'close' );
 };
 
-mw.TemplateWizard.TemplateForm.prototype.getHeader = function () {
-	var $link;
-	$link = $( '<a>' )
-		.attr( 'target', '_blank' )
-		.attr( 'title', mw.message( 'templatewizard-opens-in-new-tab' ) )
-		.attr( 'href', this.title.getUrl() )
-		.text( this.title.getMainText() );
-	return $( '<h2>' ).html( $link );
-};
-
 mw.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
 	var i, field;
 	for ( i = 0; i < this.fields.length; i++ ) {

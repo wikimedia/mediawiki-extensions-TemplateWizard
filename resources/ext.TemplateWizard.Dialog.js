@@ -228,7 +228,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 			var templateFormatter, textSelectionOpts, templateName;
 			if ( action === 'insert' ) {
 				templateFormatter = new mw.TemplateWizard.TemplateFormatter();
-				templateName = dialog.templateForm.getTitle().getMainText();
+				templateName = dialog.templateForm.getTitle().getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
 				templateFormatter.setTemplateName( templateName );
 				templateFormatter.setFormat( dialog.templateForm.getFormat() );
 				templateFormatter.setParameters( dialog.templateForm.getParameters() );

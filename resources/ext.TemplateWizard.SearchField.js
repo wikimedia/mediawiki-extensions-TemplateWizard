@@ -200,7 +200,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 		 */
 		return {
 			data: page,
-			label: mw.Title.newFromText( page.title ).getMainText(),
+			label: mw.Title.newFromText( page.title ).getRelativeText( mw.config.get( 'wgNamespaceIds' ).template ),
 			description: page.description
 		};
 	} );

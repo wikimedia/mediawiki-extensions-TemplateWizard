@@ -41,7 +41,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	this.buttons.$element.addClass( 'ext-templatewizard-buttons' );
 
 	// Template title.
-	$templateTitle = $( '<p>' ).addClass( 'ext-templatewizard-title' ).append( title.getMainText() );
+	$templateTitle = $( '<p>' ).addClass( 'ext-templatewizard-title' ).append( title.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template ) );
 
 	// Put them all together.
 	this.$element

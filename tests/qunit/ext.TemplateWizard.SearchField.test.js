@@ -156,7 +156,7 @@
 			},
 			widget = new mw.TemplateWizard.SearchField( { api } );
 		widget.getLookupRequest();
-		assert.strictEqual( 1, callCount );
+		assert.strictEqual( callCount, 1 );
 	} );
 
 	QUnit.test( 'getLookupRequest() when exact match was already found', ( assert ) => {
@@ -182,7 +182,7 @@
 		widget.setValue( 'de' );
 		widget.getLookupRequest();
 
-		assert.strictEqual( 1, callCount );
+		assert.strictEqual( callCount, 1 );
 	} );
 
 	QUnit.test( 'getLookupCacheDataFromResponse() API result conversion', ( assert ) => {
@@ -221,20 +221,20 @@
 
 		const searchResult = widget.getLookupCacheDataFromResponse( apiResult );
 
-		assert.strictEqual( 10, searchResult.length );
+		assert.strictEqual( searchResult.length, 10 );
 	} );
 
 	QUnit.test( 'getLookupCacheDataFromResponse() exact match first', ( assert ) => {
 		const widget = new mw.TemplateWizard.SearchField(),
 			apiResult = { pages: {
-				1: { title: 'Deutschland' },
-				2: { title: 'DE' }
+				1: { title: 'Template:Deutschland' },
+				2: { title: 'Template:DE' }
 			} };
 
 		widget.setValue( 'de' );
 		const searchResult = widget.getLookupCacheDataFromResponse( apiResult );
 
-		assert.strictEqual( 'DE', searchResult[ 0 ].label );
+		assert.strictEqual( searchResult[ 0 ].label, 'DE' );
 	} );
 
 }() );
