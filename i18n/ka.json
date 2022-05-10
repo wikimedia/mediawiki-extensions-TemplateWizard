@@ -36,7 +36,7 @@
 	"templatewizard-remove-template-body": "თარგი, რომლის წაშლაც გსურთ, შეიცავს თქვენ მიერ შეყვანილ მონაცემებს. თარგის წაშლით წაიშლება ასევე დამატებული ინფორმაცია და ამ მოქმედებას უკან ვეღარ დააბრუნებთ.",
 	"templatewizard-remove-template-retry": "თარგის წაშლა",
 	"templatewizard-search-placeholder": "თარგის მოძებნა",
-	"templatewizard-parambutton-add-title": "პარამეტრს „$1“-ის დამატება",
+	"templatewizard-parambutton-add-title": "პარამეტრ „$1“-ის დამატება",
 	"templatewizard-parambutton-remove-title": "პარამეტრ „$1“-ის წაშლა",
 	"templatewizard-parambutton-required-title": "სავალდებულოა პარამეტრი „$1“",
 	"templatewizard-remove-template-title": "თარგის წაშლა",
