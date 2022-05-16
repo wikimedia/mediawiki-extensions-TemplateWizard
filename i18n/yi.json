@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"פוילישער"
+		]
+	},
+	"templatewizard-add-all": "צולייגן אלע פאראמעטערס",
+	"templatewizard-cancel": "אַנולירן",
+	"templatewizard-close-dialog-retry": "אוועקווארפן ענדערונגען",
+	"templatewizard-dialog-title": "אַרײַנלייגן אַ מוסטער",
+	"templatewizard-insert": "צולייגן",
+	"templatewizard-invalid-title": "אומגילטיקער טיטל",
+	"templatewizard-invalid-values": "איינער אדער מער ווי איינער פון אייערע איינגאבן שטימען נישט מיטן פֿארלאנגטן פֿארמאט. צי ווילט איר רעדאקטירן זיי?",
+	"templatewizard-invalid-values-edit": "רעדאקטירן מוסטער",
+	"templatewizard-invalid-values-insert": "אַרײַנלייגן מוסטער",
+	"templatewizard-no-description": "ס׳איז נישט פֿאראן קיין באשרייבונג פֿארן דאזיקן מוסטער.",
+	"templatewizard-search-feedback-message": "מ׳האט לעצטנס געקאנטשעט די ארבעט צו פארבעסערן די רעזולטאטן פון מוסטערן־זוען. כדי צו לערנען נאך וועגן די ענדערונגען אדער איבערצולאזן פֿידבעק, גייט צום \n[//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates פראיעקט־בלאט]."
+}
