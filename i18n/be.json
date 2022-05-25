@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Artsiom91"
+			"Artsiom91",
+			"Chadyka"
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
 	"templatewizard-cancel": "Адмена",
+	"templatewizard-close-dialog": "Выйсці з майстра?",
 	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
 	"templatewizard-close-dialog-retry": "Адмяніць змяненні",
 	"templatewizard-default": "Па змоўчанні: $1",
@@ -33,6 +35,7 @@
 	"templatewizard-remove-template-body": "Шаблон, які Вы хочаце выдаліць, змяшчае ўведзеныя Вамі звесткі. Выдаленне шаблона таксама выдаліць інфармацыю, якую Вы дадалі ў яго. Гэта дзеянне нельга будзе адмяніць.",
 	"templatewizard-remove-template-retry": "Выдаліць шаблон",
 	"templatewizard-search-placeholder": "Шукаць шаблон",
+	"templatewizard-search-feedback-message": "Апошнім часам была завершана праца па паляпшэнні вынікаў пошуку шаблонаў. Каб даведацца больш пра змены або пакінуць водгук, перайдзіце на [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates старонку праекта].",
 	"templatewizard-parambutton-add-title": "Дадаць параметр '$1'",
 	"templatewizard-parambutton-remove-title": "Выдаліць параметр '$1'",
 	"templatewizard-parambutton-required-title": "Патрабуецца параметр '$1'",
