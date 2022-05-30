@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Artsiom91"
+			"Artsiom91",
+			"Chadyka"
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
 	"templatewizard-cancel": "Адмена",
+	"templatewizard-close-dialog": "Выйсці з майстра?",
 	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
 	"templatewizard-close-dialog-retry": "Адмяніць змяненні",
 	"templatewizard-default": "Па змоўчанні: $1",
