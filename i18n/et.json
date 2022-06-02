@@ -34,6 +34,7 @@
 	"templatewizard-remove-template-body": "Üritad eemaldada malli, millesse oled andmeid sisestanud. Malli eemaldamisega lähevad kaotsi ka andmed. Seda toimingut ei saa tagasi võtta.",
 	"templatewizard-remove-template-retry": "Eemalda mall",
 	"templatewizard-search-placeholder": "Otsi malli",
+	"templatewizard-search-feedback-message": "Hiljutise töö tulemusel on mallid nüüd paremini leitavad. Et saada muudatuste kohta lisateavet ja andmaks tagasisidet, mine [//meta.wikimedia.org/wiki/Special:MyLanguage/WMDE_Technical_Wishes/Finding_and_inserting_templates projekti leheküljele].",
 	"templatewizard-parambutton-add-title": "Lisa parameeter \"$1\"",
 	"templatewizard-parambutton-remove-title": "Eemalda parameeter \"$1\"",
 	"templatewizard-parambutton-required-title": "Nõutav parameeter \"$1\"",
