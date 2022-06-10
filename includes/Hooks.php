@@ -7,7 +7,6 @@ namespace MediaWiki\Extension\TemplateWizard;
 
 use EditPage;
 use ExtensionRegistry;
-use MediaWiki\MediaWikiServices;
 use OutputPage;
 
 /**
@@ -34,16 +33,10 @@ class Hooks {
 	 * @param array &$vars Global variables object
 	 */
 	public static function onResourceLoaderGetConfigVars( array &$vars ) {
-		$config = MediaWikiServices::getInstance()->getConfigFactory()
-			->makeConfig( 'templatewizard' );
 		$extensionRegistry = ExtensionRegistry::getInstance();
 
-		// TODO: Remove the temporary feature flag, but keep the ExtensionRegistry check for
-		//  installations without CirrusSearch (T274907).
-		$enableImprovements = $config->get( 'TemplateWizardTemplateSearchImprovements' );
 		$vars['wgTemplateWizardConfig'] = [
-			'cirrusSearchLookup' => $enableImprovements &&
-				$extensionRegistry->isLoaded( 'CirrusSearch' ),
+			'cirrusSearchLookup' => $extensionRegistry->isLoaded( 'CirrusSearch' ),
 		];
 	}
 }

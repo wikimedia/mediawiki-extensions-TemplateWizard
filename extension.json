@@ -15,12 +15,6 @@
 			"WikiEditor": ">= 0.5.3"
 		}
 	},
-	"config": {
-		"TemplateWizardTemplateSearchImprovements": {
-			"description": "Temporary feature flag to enable various changes around searching for template names. (T271802)",
-			"value": false
-		}
-	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\TemplateWizard\\": "includes/"
 	},
@@ -95,7 +89,6 @@
 				"templatewizard-remove-template-body",
 				"templatewizard-remove-template-retry",
 				"templatewizard-search-placeholder",
-				"templatewizard-search-feedback-message",
 				"templatewizard-parambutton-add-title",
 				"templatewizard-parambutton-remove-title",
 				"templatewizard-parambutton-required-title",
