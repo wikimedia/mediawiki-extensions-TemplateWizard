@@ -36,7 +36,6 @@
 	"templatewizard-remove-template-body": "Kaldırmaya çalıştığınız şablon, girdiğiniz verileri içermektedir. Şablonu kaldırmak, şablona eklediğiniz bilgileri de kaldıracaktır. Bu eylem geri alınamaz.",
 	"templatewizard-remove-template-retry": "Şablonu kaldır",
 	"templatewizard-search-placeholder": "Bir şablon ara",
-	"templatewizard-search-feedback-message": "Şablon arama sonuçlarını geliştirmek amacıyla yakın zamanda bir çalışma tamamlandı. Değişiklikler hakkında daha fazla bilgi edinmek ve geri dönüş bırakmak için [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates proje sayfasına] gidin.",
 	"templatewizard-parambutton-add-title": "'$1' parametresini ekle",
 	"templatewizard-parambutton-remove-title": "'$1' parametresini kaldır",
 	"templatewizard-parambutton-required-title": "'$1' parametresi zorunludur",

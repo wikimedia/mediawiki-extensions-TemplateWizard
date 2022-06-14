@@ -36,7 +36,6 @@
 	"templatewizard-remove-template-body": "Mallen du försöker ta bort innehåller data som du har lagt till. När du tar bort mallen kommer även informationen du lade till i mallen att tas bort. Denna handling kan inte ångras.",
 	"templatewizard-remove-template-retry": "Ta bort mall",
 	"templatewizard-search-placeholder": "Sök efter en mall",
-	"templatewizard-search-feedback-message": "Det senaste arbetet för att förbättra mallens sökresultat har slutförts. Om du vill veta mer om ändringarna eller lämna feedback, gå till [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates project's page].",
 	"templatewizard-parambutton-add-title": "Lägg till parametern \"$1\"",
 	"templatewizard-parambutton-remove-title": "Ta bort parametern \"$1\"",
 	"templatewizard-parambutton-required-title": "Parametern \"$1\" är nödvändig",

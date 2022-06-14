@@ -36,7 +36,6 @@
 	"templatewizard-remove-template-body": "თარგი, რომლის წაშლაც გსურთ, შეიცავს თქვენ მიერ შეყვანილ მონაცემებს. თარგის წაშლით წაიშლება ასევე დამატებული ინფორმაცია და ამ მოქმედებას უკან ვეღარ დააბრუნებთ.",
 	"templatewizard-remove-template-retry": "თარგის წაშლა",
 	"templatewizard-search-placeholder": "თარგის მოძებნა",
-	"templatewizard-search-feedback-message": "ბოლო სამუშაოები თარგის ძიების შედეგების გასაუჯობესებლად ჩატარდა. ცვლილებების შესახებ მეტის გასაგებად ან უკუკავშირის მისაცემად, გადადით [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates პროექტის გვერდზე].",
 	"templatewizard-parambutton-add-title": "პარამეტრ „$1“-ის დამატება",
 	"templatewizard-parambutton-remove-title": "პარამეტრ „$1“-ის წაშლა",
 	"templatewizard-parambutton-required-title": "სავალდებულოა პარამეტრი „$1“",

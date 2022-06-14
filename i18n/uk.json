@@ -37,7 +37,6 @@
 	"templatewizard-remove-template-body": "Шаблон, який Ви збираєтесь вилучити, містить дані, які Ви ввели. Вилучення шаблону вилучить також всю інформацію, яку Ви до нього додали. Цю дію скасувати неможливо.",
 	"templatewizard-remove-template-retry": "Вилучити шаблон",
 	"templatewizard-search-placeholder": "Знайти шаблон",
-	"templatewizard-search-feedback-message": "Останні роботи були завершені для покращення результатів пошуку шаблонів. Щоб дізнатися більше про зміни або залишити відгук, перейдіть на [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates сторінку проєкту].",
 	"templatewizard-parambutton-add-title": "Додати параметр «$1»",
 	"templatewizard-parambutton-remove-title": "Вилучити параметр «$1»",
 	"templatewizard-parambutton-required-title": "Обов'язковий параметр «$1»",
