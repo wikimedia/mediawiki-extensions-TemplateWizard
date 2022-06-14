@@ -34,7 +34,6 @@
 	"templatewizard-remove-template-body": "Formatul pe care sunteți pe cale să îl eliminați conține date pe care dvs. le-ați introdus. Eliminarea formatului va elimina și informațiile pe care le-ați adăugat formatului. Această acțiune nu este reversibilă.",
 	"templatewizard-remove-template-retry": "Elimină formatul",
 	"templatewizard-search-placeholder": "Căutare după un format",
-	"templatewizard-search-feedback-message": "Muncă recentă a fost efectuată pentru a îmbunătăți rezultatele căutării după formate. Pentru a afla mai mult despre schimbări sau pentru a lăsa feedback, mergeți la [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates pagina proiectului].",
 	"templatewizard-parambutton-add-title": "Adăugați parametrul '$1'",
 	"templatewizard-parambutton-remove-title": "Eliminați parametrul '$1'",
 	"templatewizard-parambutton-required-title": "Parametrul necesar '$1'",

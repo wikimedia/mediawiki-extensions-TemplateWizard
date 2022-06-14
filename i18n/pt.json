@@ -35,7 +35,6 @@
 	"templatewizard-remove-template-body": "A predefinição que está a tentar remover contém dados que você introduziu. Remover a predefinição também removerá a informação que adicionou à predefinição. Esta operação é irreversível.",
 	"templatewizard-remove-template-retry": "Remover predefinição",
 	"templatewizard-search-placeholder": "Procurar uma predefinição",
-	"templatewizard-search-feedback-message": "Foi concluída recentemente uma iniciativa de melhoramento dos resultados de pesquisas de predefinições. Para saber mais sobre as alterações ou para deixar comentários, visite a [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates página do projeto].",
 	"templatewizard-parambutton-add-title": "Acrescentar o parâmetro '$1'",
 	"templatewizard-parambutton-remove-title": "Remover o parâmetro '$1'",
 	"templatewizard-parambutton-required-title": "Parâmetro obrigatório '$1'",

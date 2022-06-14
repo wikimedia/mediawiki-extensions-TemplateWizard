@@ -35,7 +35,6 @@
 	"templatewizard-remove-template-body": "Šablon koji želite ukloniti sadrži podatke koje ste unijeli. Uklanjanjem šablona uklonit će se i podaci koje ste dodali. Ovu radnju nije moguće opozvati.",
 	"templatewizard-remove-template-retry": "Ukloni šablon",
 	"templatewizard-search-placeholder": "Pronađi šablon",
-	"templatewizard-search-feedback-message": "Nedavno smo završili radove na poboljšanju pretrage šablona. Da biste saznali više o izmjenama ili dali svoje mišljenje, posjetite [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates projektnu stranicu].",
 	"templatewizard-parambutton-add-title": "Dodaj parametar '$1'",
 	"templatewizard-parambutton-remove-title": "Ukloni parametar '$1'",
 	"templatewizard-parambutton-required-title": "Obavezni parametar '$1'",

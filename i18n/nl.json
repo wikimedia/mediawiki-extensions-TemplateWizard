@@ -38,7 +38,6 @@
 	"templatewizard-remove-template": "Sjabloon verwijderen?",
 	"templatewizard-remove-template-retry": "Sjabloon verwijderen",
 	"templatewizard-search-placeholder": "Zoeken naar een sjabloon",
-	"templatewizard-search-feedback-message": "Onlangs zijn er werkzaamheden afgerond om de zoekresultaten van sjablonen te verbeteren. Ga naar de [//meta.wikimedia.org/wiki/WMDE_Technical_Wishes/Finding_and_inserting_templates projectpagina] voor meer informatie over de veranderingen of om feedback te geven.",
 	"templatewizard-parambutton-add-title": "De parameter '$1' toevoegen",
 	"templatewizard-parambutton-remove-title": "De parameter '$1' verwijderen",
 	"templatewizard-remove-template-title": "verwijder template",

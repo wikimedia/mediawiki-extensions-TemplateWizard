@@ -34,7 +34,6 @@
 	"templatewizard-remove-template-body": "Templat yang Anda ingin hapus mengandung data yang telah Anda masukkan. Menghapus templat juga berarti menghapus informasi yang telah Anda tambahkan ke templat. Tindakan ini tidak bisa dikembalikan.",
 	"templatewizard-remove-template-retry": "Hapus templat",
 	"templatewizard-search-placeholder": "Cari templat",
-	"templatewizard-search-feedback-message": "Akhir-akhir ini, perbaikan hasil pencarian templat telah selesai dilakukan. Untuk mempelajari lebih banyak tentang perubahannya atau memberikan saran, pergilah ke [//meta.wikimedia.org/wiki/Special:MyLanguage/WMDE_Technical_Wishes/Finding_and_inserting_templates halaman proyek].",
 	"templatewizard-parambutton-add-title": "Tambahkan parameter '$1'",
 	"templatewizard-parambutton-remove-title": "Hapus parameter '$1'",
 	"templatewizard-parambutton-required-title": "Parameter wajib '$1'",
