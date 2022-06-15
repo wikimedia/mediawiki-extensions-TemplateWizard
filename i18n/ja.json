@@ -25,7 +25,6 @@
 	"templatewizard-no-params-with-td": "このテンプレートの[$1 テンプレートデータ] (TemplateData) には引数の設定がありません。引数がないままテンプレートを挿入できます。",
 	"templatewizard-no-params-without-td": "このテンプレートには[$1 テンプレートデータ]説明文書が存在しないため、引数を設定できません。引数がないままテンプレートを挿入できます。",
 	"templatewizard-no-templatedata": "[$1 テンプレートデータ]が見つからないため、このテンプレートの引数は自動的に生成されました。必ずしも正確ではない点にご注意くだい。",
-	"templatewizard-opens-in-new-tab": "新しいタブで開く",
 	"templatewizard-parameters-optional": "オプションの引数",
 	"templatewizard-parameters-required": "必須の引数",
 	"templatewizard-parameters-suggested": "推奨される引数",

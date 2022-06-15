@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "Det er ingen parametere definert i denne malens [$1 TemplateData]-dokumentasjon. Du kan sette inn malen uten parametere.",
 	"templatewizard-no-params-without-td": "Ingen parametere ble funnet for denne malen på grunn av manglende [$1 TemplateData]-dokumentasjon. Du kan sette inn malen uten parametere.",
 	"templatewizard-no-templatedata": "På grunn av manglende [$1 TemplateData] ble parameterne for denne malen generert automatisk. Merk at de kan være unøyaktige.",
-	"templatewizard-opens-in-new-tab": "Åpnes i en ny fane",
 	"templatewizard-parameters-optional": "Valgfrie parametere",
 	"templatewizard-parameters-required": "Påkrevde parametere",
 	"templatewizard-parameters-suggested": "Foreslåtte parametere",

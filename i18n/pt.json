@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "Não foi definido nenhum parâmetro na documentação [$1 TemplateData] desta predefinição. Pode inserir a predefinição sem parâmetros.",
 	"templatewizard-no-params-without-td": "Não foi possível determinar se esta predefinição tem parâmetros, devido à ausência de documentação [$1 TemplateData]. Pode inserir a predefinição sem parâmetros.",
 	"templatewizard-no-templatedata": "Devido à ausência de [$1 TemplateData], os parâmetros desta predefinição foram gerados automaticamente. Por favor, esteja ciente que eles podem não ser precisos.",
-	"templatewizard-opens-in-new-tab": "Abre num separador novo",
 	"templatewizard-parameters-optional": "Parâmetros opcionais",
 	"templatewizard-parameters-required": "Parâmetros obrigatórios",
 	"templatewizard-parameters-suggested": "Parâmetros sugeridos",

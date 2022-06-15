@@ -28,7 +28,6 @@
 	"templatewizard-invalid-values-insert": "Sjabloon invoegen",
 	"templatewizard-no-description": "Er bestaat geen beschrijving voor dit sjabloon.",
 	"templatewizard-no-templatedata": "Vanwege het ontbreken van [$1 TemplateData] zijn de parameters voor dit sjabloon automatisch gegenereerd. Houd er rekening mee dat ze mogelijk niet kloppen.",
-	"templatewizard-opens-in-new-tab": "In nieuw tabblad openen",
 	"templatewizard-parameters-optional": "Optionele parameters",
 	"templatewizard-parameters-required": "Verplichte parameters",
 	"templatewizard-parameters-suggested": "Voorkeursvariabelen",

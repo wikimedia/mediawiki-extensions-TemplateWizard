@@ -23,7 +23,6 @@
 	"templatewizard-no-params-with-td": "Non ge stonne parametre definite jndr'à documendazione de [$1 TemplateData] de stu template. Puè 'nzerì 'u template senza parametre.",
 	"templatewizard-no-params-without-td": "Non g'è possibbele individuà parametre pe stu template pu fatte ca manghe 'a documendazione de [$1 TemplateData]. Puè 'nzerì template senza parametre.",
 	"templatewizard-no-templatedata": "Siccome ca manghe [$1 TemplateData], le parametre de stu template onne state generate automatecamende. Pe piacere, tìne presende ca ponne no essere satte-satte.",
-	"templatewizard-opens-in-new-tab": "Iapre jndr'à na scheda nove",
 	"templatewizard-parameters-optional": "Parametre facoltative",
 	"templatewizard-parameters-required": "Parametre obbligatorije",
 	"templatewizard-parameters-suggested": "Parametre suggerite",

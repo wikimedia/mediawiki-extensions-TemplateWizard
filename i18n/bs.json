@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "Nema definiranih parametara za [$1 TemplateDatu] u dokumentaciji šablona. Možete ga umetnuti bez parametara.",
 	"templatewizard-no-params-without-td": "Ne mogu utvrditi parametra šablona zbog nedostatka dokumentacije [$1 TemplateData]. Možete ga umetnuti bez parametara.",
 	"templatewizard-no-templatedata": "Budući da nema [$1 TemplateDate] parametri ovog šablona automatski su generirani. Imajte na umu da možda nisu tačni.",
-	"templatewizard-opens-in-new-tab": "Otvara se u novoj kartici",
 	"templatewizard-parameters-optional": "Neobavezni parametri",
 	"templatewizard-parameters-required": "Obavezni parametri",
 	"templatewizard-parameters-suggested": "Predloženi parametri",

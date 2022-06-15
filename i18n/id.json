@@ -23,7 +23,6 @@
 	"templatewizard-no-params-with-td": "Tidak ada parameter yang didefinisikan di dokumentasi [$1 Data Templat] templat ini. Anda bisa menyisipkan templat tanpa parameter.",
 	"templatewizard-no-params-without-td": "Tidak ada parameter yang bisa ditentukan untuk templat ini karena tidak ada dokumentasi [$1 Data Templat]. Anda bisa menyisipkan templat tanpa parameter.",
 	"templatewizard-no-templatedata": "Dikarenakan [$1 Data Templat] tidak ada, parameter untuk tempat ini dibuat secara otomatis. Tolong perhatikan bahwa parameter tersebut belum tentu akurat.",
-	"templatewizard-opens-in-new-tab": "Buka di tab baru",
 	"templatewizard-parameters-optional": "Parameter opsional",
 	"templatewizard-parameters-required": "Parameter yang diwajibkan",
 	"templatewizard-parameters-suggested": "Parameter yang disarankan",

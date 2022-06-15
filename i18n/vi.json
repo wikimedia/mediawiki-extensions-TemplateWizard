@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "[$1 Tài liệu bản mẫu] của bản mẫu này thiếu tham số. Bạn có thể chèn bản mẫu mà không cần ghi tham số nào.",
 	"templatewizard-no-params-without-td": "Bản mẫu này thiếu [$1 Dữ liệu bản mẫu], nên không thể xác định được tham số. Bạn có thể chèn bản mẫu mà không ghi tham số nào.",
 	"templatewizard-no-templatedata": "Bản mẫu này thiếu [$1 Dữ liệu bản mẫu] nên các tham số của bản mẫu này được tạo ra tự động. Chú ý rằng các tham số này có thể không chính xác.",
-	"templatewizard-opens-in-new-tab": "Mở trong thẻ mới",
 	"templatewizard-parameters-optional": "Tham số tùy chọn",
 	"templatewizard-parameters-required": "Tham số bắt buộc",
 	"templatewizard-parameters-suggested": "Tham số khuyên dùng",

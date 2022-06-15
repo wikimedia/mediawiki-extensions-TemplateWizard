@@ -26,7 +26,6 @@
 	"templatewizard-no-params-with-td": "No se han definido parámetros para esta plantilla en su [$1 documentación de TemplateData]. Puedes insertar la plantilla sin parámetros.",
 	"templatewizard-no-params-without-td": "No se han podido determinar los parámetros para esta plantilla debido a la falta de [$1 documentación de TemplateData]. Puedes insertar la plantilla sin parámetros.",
 	"templatewizard-no-templatedata": "Los parámetros de esta plantilla se han generado automáticamente debido a la falta de [$1 información de TemplateData]. Ten en cuenta que los parámetros podrían no ser precisos.",
-	"templatewizard-opens-in-new-tab": "Se abre en una pestaña nueva",
 	"templatewizard-parameters-optional": "Parámetros opcionales",
 	"templatewizard-parameters-required": "Parámetros obligatorios",
 	"templatewizard-parameters-suggested": "Parámetros sugeridos",

@@ -25,7 +25,6 @@
 	"templatewizard-no-params-with-td": "Bu şablonun [$1 TemplateData] belgesinde tanımlanan hiçbir parametre yok. Şablonu parametreler olmadan ekleyebilirsiniz.",
 	"templatewizard-no-params-without-td": "[$1 TemplateData] belgelerinin olmaması nedeniyle bu şablon için herhangi bir parametre belirlenemedi. Şablonu parametreler olmadan ekleyebilirsiniz.",
 	"templatewizard-no-templatedata": "[$1 TemplateData] eksik olduğundan, bu şablon için parametreler otomatik olarak oluşturulmuştur. Bu parametreler doğru olmayabilir.",
-	"templatewizard-opens-in-new-tab": "Yeni sekmede aç",
 	"templatewizard-parameters-optional": "İsteğe bağlı parametreler",
 	"templatewizard-parameters-required": "Zorunlu parametreler",
 	"templatewizard-parameters-suggested": "Önerilen parametreler",

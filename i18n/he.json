@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "אין פרמטרים מוגדרים בתיעוד [$1 נתוני התבנית] של התבנית הזאת. באפשרותך להוסיף את התבנית ללא פרמטרים.",
 	"templatewizard-no-params-without-td": "לא היה אפשר להבין מה הפרמטרים של התבנית הזאת בגלל מחסור בתיעוד [$1 נתוני תבנית]. באפשרותך להוסיף את התבנית ללא פרמטרים.",
 	"templatewizard-no-templatedata": "בגלל מחסור ב[$1 נתוני תבנית], הפרמטרים עבור התבנית הזאת נוצרו באופן אוטומטי. נא לשים לב לכך שהפרמטרים עשויים להיות לא מדויקים.",
-	"templatewizard-opens-in-new-tab": "ייפתח בלשונית חדשה",
 	"templatewizard-parameters-optional": "פרמטרים אופציונליים",
 	"templatewizard-parameters-required": "פרמטרים נדרשים",
 	"templatewizard-parameters-suggested": "פרמטרים מוצעים",

@@ -27,7 +27,6 @@
 	"templatewizard-no-params-with-td": "Nie ma żadnych parametrów zdefiniowanych w dokumentacji szablonu [$1 TemplateData]. Możesz wstawić szablon bez parametrów.",
 	"templatewizard-no-params-without-td": "Dla tego szablonu nie można określić parametrów z powodu braku dokumentacji [$1 TemplateData]. Możesz wstawić szablon bez parametrów.",
 	"templatewizard-no-templatedata": "Z powodu brakującego [$1 TemplateData] parametry dla tego szablonu zostały wygenerowane automatycznie, przez co mogą nie być dokładne.",
-	"templatewizard-opens-in-new-tab": "Otwiera w nowej karcie",
 	"templatewizard-parameters-optional": "Parametry opcjonalne",
 	"templatewizard-parameters-required": "Wymagane parametry",
 	"templatewizard-parameters-suggested": "Sugerowane parametry",

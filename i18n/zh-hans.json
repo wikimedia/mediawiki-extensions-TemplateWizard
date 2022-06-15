@@ -28,7 +28,6 @@
 	"templatewizard-no-params-with-td": "此模板的[$1 模板数据]文档没有定义参数。您可以插入没有参数的模板。",
 	"templatewizard-no-params-without-td": "由于缺少[$1 模板数据]文档，此模板没有可以确定的参数。您可以插入没有参数的模板。",
 	"templatewizard-no-templatedata": "由于缺少[$1 模板数据]，此模板的参数已被自动生成。请注意其并非准确。",
-	"templatewizard-opens-in-new-tab": "在新标签打开",
 	"templatewizard-parameters-optional": "可选参数",
 	"templatewizard-parameters-required": "必需参数",
 	"templatewizard-parameters-suggested": "推荐参数",

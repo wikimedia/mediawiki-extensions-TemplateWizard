@@ -33,7 +33,6 @@
 	"templatewizard-no-params-with-td": "Нет параметров в этой документации [$1 TemplateData]. Вы можете использовать шаблон без параметров.",
 	"templatewizard-no-params-without-td": "Не удалось определить параметры для шаблона, поскольку отсутствует документация [$1 TemplateData]. Вы можете использовать шаблон без параметров.",
 	"templatewizard-no-templatedata": "В связи с отсутствием у этого шаблона тегов [$1 TemplateData], таблица параметров для него была сгенерирована автоматически. Пожалуйста, примите во внимание, что информация по параметрам может быть неточной.",
-	"templatewizard-opens-in-new-tab": "Открывается в новой вкладке",
 	"templatewizard-parameters-optional": "Необязательные параметры",
 	"templatewizard-parameters-required": "Обязательные параметры",
 	"templatewizard-parameters-suggested": "Предложенные параметры",

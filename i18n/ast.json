@@ -23,7 +23,6 @@
 	"templatewizard-no-params-with-td": "Nun hai parámetros definíos en la documentación de [$1 TemplateData] d'esta plantía. Puedes insertar la plantía ensin parámetros.",
 	"templatewizard-no-params-without-td": "Nun pudieron determinase los parámetros d'esta plantía pola ausencia de documentación de [$1 TemplateData]. Puedes insertar la plantía ensin parámetros.",
 	"templatewizard-no-templatedata": "Por falta de [$1 TemplateData], los parámetros d'esta plantía xeneráronse automáticamente. Ten en cuenta que podríen tener imprecisiones.",
-	"templatewizard-opens-in-new-tab": "Ábrese nuna llingüeta nueva",
 	"templatewizard-parameters-optional": "Parámetros opcionales",
 	"templatewizard-parameters-required": "Parámetros riquíos",
 	"templatewizard-parameters-suggested": "Parámetros suxeríos",

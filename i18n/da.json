@@ -23,7 +23,6 @@
 	"templatewizard-no-description": "Der findes ikke nogen beskrivelse til denne skabelon.",
 	"templatewizard-no-params-with-td": "Det er ingen parametre defineret i denne skabelons [$1 TemplateData]-dokumentation. Du kan indsætte skabelonen uden parametre.",
 	"templatewizard-no-params-without-td": "Ingen parametre blev fundet for denne skabelon på grund af manglende [$1 TemplateData]-dokumentation. Du kan indsætte skabelonen uden parametre.",
-	"templatewizard-opens-in-new-tab": "Åbnes i en ny fane",
 	"templatewizard-parameters-optional": "Valgfri parametre",
 	"templatewizard-parameters-suggested": "Foreslåede parametre",
 	"templatewizard-placeholder-default": "Standard: $1",

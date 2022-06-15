@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "Nincsenek paraméterek megadva a sablon [$1 TemplateData]-dokumentációjában. Beillesztheted a sablont paraméterek nélkül.",
 	"templatewizard-no-params-without-td": "Nem állapíthatók meg a sablon paraméterei a [$1 TemplateData]-dokumentáció hiánya miatt. Beillesztheted a sablont paraméterek nélkül.",
 	"templatewizard-no-templatedata": "A [$1 TemplateData] hiánya miatt a varázsló automatikusan generálta a sablon paramétereinek listáját, így nem biztos, hogy pontos.",
-	"templatewizard-opens-in-new-tab": "Új fülön nyílik meg",
 	"templatewizard-parameters-optional": "Opcionális paraméterek",
 	"templatewizard-parameters-required": "Kötelező paraméterek",
 	"templatewizard-parameters-suggested": "Ajánlott paraméterek",

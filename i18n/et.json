@@ -23,7 +23,6 @@
 	"templatewizard-no-params-with-td": "Selle malli dokumentatsioonis pole esitatud parameetreid [$1 malliandmetena]. Võid sisestada malli ilma parameetriteta.",
 	"templatewizard-no-params-without-td": "Parameetreid ei leitud, kuna malli dokumentatsioonis puuduvad [$1 malliandmed]. Võid sisestada malli ilma parameetriteta.",
 	"templatewizard-no-templatedata": "[$1 Malliandmete] puudumise tõttu hangiti selle malli parameetrid automaatselt. Palun pea silmas, et need võivad olla ebatäpsed.",
-	"templatewizard-opens-in-new-tab": "Avaneb uuel kaardil",
 	"templatewizard-parameters-optional": "Valikulised parameetrid",
 	"templatewizard-parameters-required": "Nõutavad parameetrid",
 	"templatewizard-parameters-suggested": "Soovitatavad parameetrid",

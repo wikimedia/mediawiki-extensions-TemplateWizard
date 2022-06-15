@@ -27,7 +27,6 @@
 	"templatewizard-no-params-with-td": "Ve [$1 Strojovém popisu šablony] nejsou definovány žádné parametry. Můžete vložit šablonu bez parametrů.",
 	"templatewizard-no-params-without-td": "Kvůli chybějícím [$1 Strojovým popisům šablony] nelze nalézt parametry této šablony. Můžete vložit šablonu bez parametrů.",
 	"templatewizard-no-templatedata": "Kvůli chybějícím [$1 Strojovým popisům šablony] byly parametry této šablony automaticky vygenerovány. Mějte prosím na paměti, že mohou být nesprávné.",
-	"templatewizard-opens-in-new-tab": "Otevře se v nové záložce",
 	"templatewizard-parameters-optional": "Doplňkové parametry",
 	"templatewizard-parameters-required": "Povinné parametry",
 	"templatewizard-parameters-suggested": "Doporučené parametry",

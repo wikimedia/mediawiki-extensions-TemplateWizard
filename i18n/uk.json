@@ -26,7 +26,6 @@
 	"templatewizard-no-params-with-td": "В документації [$1 TemplateData] цього шаблону немає визначених параметрів. Ви можете вставити шаблон без параметрів.",
 	"templatewizard-no-params-without-td": "Не вдалося визначити параметри цього шаблону через відсутність документації [$1 TemplateData]. Ви можете вставити шаблон без параметрів.",
 	"templatewizard-no-templatedata": "Через відсутність [$1 TemplateData], параметри для цього шаблону згенеровано автоматично. Будь ласка, майте на увазі, що вони можуть бути неточними.",
-	"templatewizard-opens-in-new-tab": "Відкривається в новій вкладці",
 	"templatewizard-parameters-optional": "Необов'язкові параметри",
 	"templatewizard-parameters-required": "Обов'язкові параметри",
 	"templatewizard-parameters-suggested": "Пропоновані параметри",

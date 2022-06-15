@@ -24,7 +24,6 @@
 	"templatewizard-no-params-with-td": "Nema definiranih parametara u dokumentaciji ovog predloška [$1 TemplateData podatci o predlošku]. Možete umetnuti predložak bez parametara.",
 	"templatewizard-no-params-without-td": "Parametri ovog predloška ne mogu biti određeni zbog nedostatka [$1 TemplateData] dokumentacije. Možete unijeti predložak bez parametara.",
 	"templatewizard-no-templatedata": "Zbog nedostajućeg [$1 TemplateData], parametri ovog predloška su automatski generirani. Vodite računa da možda nisu točni.",
-	"templatewizard-opens-in-new-tab": "Otvora se u novoj kartici",
 	"templatewizard-parameters-optional": "Neobvezni parametri",
 	"templatewizard-parameters-required": "Obvezni parametri",
 	"templatewizard-parameters-suggested": "Predloženi parametri",

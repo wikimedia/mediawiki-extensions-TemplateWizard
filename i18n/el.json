@@ -26,7 +26,6 @@
 	"templatewizard-no-params-with-td": "Δεν υπάρχουν παράμετροι ορισμένοι στην τεκμηρίωση [$1 TemplateData] του προτύπου. Μπορείτε να εισαγάγετε το πρότυπο χωρίς παραμέτρους.",
 	"templatewizard-no-params-without-td": "Δεν μπόρεσαν να καθοριστούν πρότυπα λόγω της απουσίας τεκμηρίωσης [$1 TemplateData]. Μπορείτε να εισαγάγετε το πρότυπο χωρίς παραμέτρους.",
 	"templatewizard-no-templatedata": "Λόγω της απουσίας [$1 TemplateData], οι παράμετροι για αυτό το πρότυπο έχουν παραχθεί αυτόματα. Παρακαλούμε να έχετε υπόψη ότι μπορεί να μην είναι ακριβείς.",
-	"templatewizard-opens-in-new-tab": "Ανοίγει σε νέα καρτέλα",
 	"templatewizard-parameters-optional": "Προαιρετικές παράμετροι",
 	"templatewizard-parameters-required": "Απαιτούμενες παράμετροι",
 	"templatewizard-parameters-suggested": "Προτεινόμενες παράμετροι",

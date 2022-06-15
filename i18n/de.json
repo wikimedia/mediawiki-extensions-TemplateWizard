@@ -25,7 +25,6 @@
 	"templatewizard-no-params-with-td": "Es gibt keine definierten Parameter in der [$1 TemplateData]-Dokumentation dieser Vorlage. Du kannst die Vorlage ohne Parameter einfügen.",
 	"templatewizard-no-params-without-td": "Aufgrund des Fehlens der [$1 TemplateData]-Dokumentation konnten keine Parameter für diese Vorlage bestimmt werden. Du kannst die Vorlage ohne Parameter einfügen.",
 	"templatewizard-no-templatedata": "Aufgrund fehlender [$1 Vorlagendaten] wurden Parameter für diese Vorlage automatisch erzeugt. Beachte bitte, dass sie nicht genau sein könnten.",
-	"templatewizard-opens-in-new-tab": "Wird in einer neuen Registerkarte geöffnet",
 	"templatewizard-parameters-optional": "Optionale Parameter",
 	"templatewizard-parameters-required": "Erforderliche Parameter",
 	"templatewizard-parameters-suggested": "Vorgeschlagene Parameter",
