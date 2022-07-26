@@ -70,6 +70,9 @@ describe( 'TemplateWizard', function () {
 		UseTemplatePage.dialogErrorCancelButton.click();
 		UseTemplatePage.insertField.click();
 		$( '#wpTextbox1' ).waitForDisplayed();
+		browser.waitUntil( function () {
+			return !UseTemplatePage.dialog.isDisplayed();
+		} );
 		assert.equal( $( '#wpTextbox1' ).getValue(), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 
