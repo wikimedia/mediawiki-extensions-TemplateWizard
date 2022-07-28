@@ -237,15 +237,18 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 					replace: true,
 					selectPeri: false
 				};
-				// eslint-disable-next-line no-jquery/no-global-selector
-				$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
 				// Log this insertion, and store the template name
 				// for future logging when the page is saved.
 				mw.TemplateWizard.logEvent( 'insert-template', [ templateName ] );
 				mw.TemplateWizard.insertedTemplates.push( templateName );
 				// Close dialog.
 				dialog.ignoreParamValues = false;
-				dialog.close();
+				dialog.close().then( function () {
+					// Delay this until the dialog has closed, because modal dialogs make the rest of the page
+					// unfocusable, and textSelection needs to focus the field to do its job (T33780#8106393).
+					// eslint-disable-next-line no-jquery/no-global-selector
+					$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
+				} );
 			}
 		} );
 };
