@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ranveig"
+			"Ranveig",
+			"Njardarlogar"
 		]
 	},
-	"templatewizard-help": "Les meir om TemplateWizard"
+	"templatewizard-dialog-title": "Set inn ein mal",
+	"templatewizard-help": "Les meir om TemplateWizard",
+	"templatewizard-insert": "Set inn"
 }
