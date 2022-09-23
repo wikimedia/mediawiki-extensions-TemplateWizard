@@ -4,6 +4,29 @@
 			"Malikxan"
 		]
 	},
+	"templatewizard-add-all": "Barcha parametrlarni qoʻshish",
+	"templatewizard-cancel": "Bekor qilish",
+	"templatewizard-close-dialog-retry": "Oʻzgarishlarni bekor qilish",
+	"templatewizard-default": "Sukut boʻyicha: $1",
 	"templatewizard-dialog-title": "Andozani joylash",
-	"templatewizard-invalid-values-insert": "Andozani joylash"
+	"templatewizard-help": "TemplateWizard haqida koʻproq bilib olish",
+	"templatewizard-help-title": "MediaWiki.org saytida TemplateWizard haqida yordam sahifalarini oʻqish",
+	"templatewizard-insert": "Qoʻyish",
+	"templatewizard-invalid-title": "Yaroqsiz nom",
+	"templatewizard-invalid-values-edit": "Andozani tahrirlash",
+	"templatewizard-invalid-values-insert": "Andozani joylash",
+	"templatewizard-no-description": "Ushbu andoza uchun tavsif yoʻq.",
+	"templatewizard-parameters-optional": "Ixtiyoriy parametrlar",
+	"templatewizard-parameters-required": "Zaruriy parametrlar",
+	"templatewizard-parameters-suggested": "Taklif etilgan parametrlar",
+	"templatewizard-placeholder-default": "Sukut boʻyicha: $1",
+	"templatewizard-placeholder-example": "masalan, $1",
+	"templatewizard-remove-all": "Barcha parametrlarni olib tashlash",
+	"templatewizard-remove-template": "Andoza olib tashlansinmi?",
+	"templatewizard-remove-template-retry": "Andozani olib tashlash",
+	"templatewizard-search-placeholder": "Andoza qidirish",
+	"templatewizard-parambutton-add-title": "'$1' parametrini qoʻshish",
+	"templatewizard-parambutton-remove-title": "'$1' parametrini olib tashlash",
+	"templatewizard-remove-template-title": "Andozani olib tashlash",
+	"templatewizard-link-to-template-title": "Andozani koʻrish"
 }
