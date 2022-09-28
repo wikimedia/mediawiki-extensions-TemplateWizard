@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eleassar",
 			"Janezdrilc"
 		]
 	},
@@ -10,7 +11,7 @@
 	"templatewizard-close-dialog-body": "Zaprtje čarovnika bo povzročilo izgubo vseh vnešenih podatkov.",
 	"templatewizard-close-dialog-retry": "Zavrzi spremembe",
 	"templatewizard-default": "Privzeto: $1",
-	"templatewizard-desc": "Dodatek Wikiurejevalnika, pri katerem gre za čarovnika za vstavljanje predlog.",
+	"templatewizard-desc": "Dodatek Wikiurejevalnika za preprosto vstavljanje predlog",
 	"templatewizard-dialog-title": "Vstavi predlogo",
 	"templatewizard-help": "Več o Čarovniku za predloge",
 	"templatewizard-help-title": "Pojdi na strani za pomoč na MediaWiki.org",
