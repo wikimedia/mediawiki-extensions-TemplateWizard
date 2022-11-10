@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Սերգեյ Սաֆարյան"
 		]
 	},
-	"templatewizard-cancel": "Չեղարկել"
+	"templatewizard-cancel": "Չեղարկել",
+	"templatewizard-close-dialog-retry": "Չեղարկել փոփոխությունները"
 }
