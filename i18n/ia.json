@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"templatewizard-add-all": "Adder tote le parametros",
+	"templatewizard-cancel": "Cancellar",
+	"templatewizard-close-dialog": "Quitar le assistente?",
+	"templatewizard-close-dialog-body": "Exir del assistente resultara in le perdita del datos que tu ha addite al patrono.",
+	"templatewizard-close-dialog-retry": "Abandonar modificationes",
+	"templatewizard-default": "Predefinite: $1",
+	"templatewizard-desc": "Un additivo pro WikiEditor que forni un assistente pro le insertion de patronos",
+	"templatewizard-dialog-title": "Inserer un patrono",
+	"templatewizard-help": "Saper plus sur TemplateWizard",
+	"templatewizard-help-title": "Leger le paginas de adjuta de TemplateWizard sur MediaWiki.org",
+	"templatewizard-insert": "Inserer",
+	"templatewizard-invalid-title": "Titulo invalide",
+	"templatewizard-invalid-values": "Un o plus de tu entratas non es conforme al formato expectate. Vole tu modificar lo?",
+	"templatewizard-invalid-values-edit": "Modificar patrono",
+	"templatewizard-invalid-values-insert": "Inserer patrono",
+	"templatewizard-no-description": "Necun description existe pro iste patrono.",
+	"templatewizard-no-params-with-td": "Il non ha parametros definite in le documentation [$1 TemplateData] de iste patrono. Tu pote inserer le patrono sin parametros.",
+	"templatewizard-no-params-without-td": "Non es possibile determinar le parametros de iste patrono a causa del absentia de documentation [$1 TemplateData]. Tu pote inserer le patrono sin parametros.",
+	"templatewizard-no-templatedata": "A causa del mancantia de [$1 TemplateData], le parametros de iste patrono ha essite generate automaticamente. Nota ben que illos pote esser incorrecte.",
+	"templatewizard-parameters-optional": "Parametros optional",
+	"templatewizard-parameters-required": "Parametros obligatori",
+	"templatewizard-parameters-suggested": "Parametros suggerite",
+	"templatewizard-placeholder-default": "Predefinite: $1",
+	"templatewizard-placeholder-example": "p.ex. $1",
+	"templatewizard-remove-all": "Remover tote le parametros",
+	"templatewizard-remove-template": "Remover patrono?",
+	"templatewizard-remove-template-body": "Le patrono que tu tenta remover contine datos que tu ha entrate. Remover le patrono removera equalmente le information que tu ha addite al patrono. Iste action es irreversibile.",
+	"templatewizard-remove-template-retry": "Remover patrono",
+	"templatewizard-search-placeholder": "Cercar un patrono",
+	"templatewizard-parambutton-add-title": "Adder le parametro '$1'",
+	"templatewizard-parambutton-remove-title": "Remover le parametro '$1'",
+	"templatewizard-parambutton-required-title": "Parametro obligatori '$1'",
+	"templatewizard-remove-template-title": "Remover patrono",
+	"templatewizard-link-to-template-title": "Vider patrono",
+	"templatewizard-use": "Usar"
+}
