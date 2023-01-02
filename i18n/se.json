@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
+	"templatewizard-dialog-title": "Lasit málle",
 	"templatewizard-remove-template": "Sihko málle?",
 	"templatewizard-remove-template-retry": "Sihko málle",
 	"templatewizard-remove-template-title": "Sihko málle"
