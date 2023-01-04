@@ -39,6 +39,7 @@
 	},
 	"ResourceModules": {
 		"ext.TemplateWizard": {
+			"targets": [ "desktop", "mobile" ],
 			"scripts": [
 				"ext.TemplateWizard.js",
 				"ext.TemplateWizard.AddRemoveAllButton.js",
