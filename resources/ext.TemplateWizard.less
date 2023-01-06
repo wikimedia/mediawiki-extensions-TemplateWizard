@@ -3,6 +3,28 @@
 
 @description-font-size: 12px;
 
+// When space doesn't allow, stack the parameters form and parameters list
+// using a fixed height for the parameters form.
+@media ( max-width: @width-breakpoint-tablet ) {
+	.ext-templatewizard-menu {
+		// Use extra-specific CSS rule to override OOUI rule which uses !important.
+		.oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-before {
+			> .oo-ui-menuLayout-menu {
+				// stylelint-disable-next-line declaration-no-important
+				height: 200px !important;
+				width: 100%;
+				overflow: scroll;
+			}
+
+			> .oo-ui-menuLayout-content {
+				left: 0;
+				// stylelint-disable-next-line declaration-no-important
+				top: 200px !important;
+			}
+		}
+	}
+}
+
 .ext-templatewizard-searchform {
 	@description-line-height: 1.2em;
 
