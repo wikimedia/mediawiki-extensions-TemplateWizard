@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Afalau"
+		]
+	},
+	"templatewizard-add-all": "Ychwanegu'r holl baramedrau",
+	"templatewizard-cancel": "Canslo",
+	"templatewizard-close-dialog": "Gadael y dewin?",
+	"templatewizard-close-dialog-retry": "Canslo newidiadau",
+	"templatewizard-default": "Rhagosodedig: $1",
+	"templatewizard-dialog-title": "Mewnosod nodyn",
+	"templatewizard-insert": "Mewnosod",
+	"templatewizard-invalid-title": "Teitl annilys",
+	"templatewizard-invalid-values-edit": "Golygu nodyn",
+	"templatewizard-invalid-values-insert": "Mewnosod nodyn",
+	"templatewizard-parameters-optional": "Paramedrau dewisol",
+	"templatewizard-parameters-required": "Paramedrau gofynnol",
+	"templatewizard-placeholder-default": "Rhagosodedig: $1",
+	"templatewizard-placeholder-example": "e.e. $1",
+	"templatewizard-remove-template-retry": "Dileu'r nodyn",
+	"templatewizard-search-placeholder": "Chwilio am nodyn",
+	"templatewizard-remove-template-title": "Dileu'r nodyn",
+	"templatewizard-link-to-template-title": "Gweld y nodyn"
+}
