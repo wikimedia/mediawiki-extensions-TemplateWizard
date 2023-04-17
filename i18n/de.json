@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Kghbln",
-			"Metalhead64"
+			"Metalhead64",
+			"Brettchenweber",
+			"ThePiscin"
 		]
 	},
 	"templatewizard-add-all": "Alle Parameter hinzufügen",
@@ -23,7 +25,7 @@
 	"templatewizard-no-description": "Für diese Vorlage ist keine Beschreibung vorhanden.",
 	"templatewizard-no-params-with-td": "Es gibt keine definierten Parameter in der [$1 TemplateData]-Dokumentation dieser Vorlage. Du kannst die Vorlage ohne Parameter einfügen.",
 	"templatewizard-no-params-without-td": "Aufgrund des Fehlens der [$1 TemplateData]-Dokumentation konnten keine Parameter für diese Vorlage bestimmt werden. Du kannst die Vorlage ohne Parameter einfügen.",
-	"templatewizard-no-templatedata": "Aufgrund fehlender [$1 Vorlagendaten] wurden Parameter für diese Vorlage automatisch erzeugt. Beachte bitte, dass sie nicht genau sein könnten.",
+	"templatewizard-no-templatedata": "Aufgrund fehlender [$1 Vorlagendaten] wurden Parameter für diese Vorlage automatisch erzeugt. Beachte bitte, dass sie ungenau sein könnten.",
 	"templatewizard-opens-in-new-tab": "Wird in einer neuen Registerkarte geöffnet",
 	"templatewizard-parameters-optional": "Optionale Parameter",
 	"templatewizard-parameters-required": "Erforderliche Parameter",
