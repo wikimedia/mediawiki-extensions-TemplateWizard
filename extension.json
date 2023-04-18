@@ -9,7 +9,7 @@
 	"license-name": "MIT",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.40.0",
+		"MediaWiki": ">= 1.41.0",
 		"extensions": {
 			"TemplateData": "*",
 			"WikiEditor": ">= 0.5.3"
