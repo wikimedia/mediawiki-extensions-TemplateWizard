@@ -5,8 +5,8 @@
 
 namespace MediaWiki\Extension\TemplateWizard;
 
-use EditPage;
 use ExtensionRegistry;
+use MediaWiki\EditPage\EditPage;
 use OutputPage;
 
 /**
