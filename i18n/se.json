@@ -5,10 +5,20 @@
 			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
+	"templatewizard-add-all": "Lasit buot paramehteriid",
 	"templatewizard-cancel": "Šluhtte",
 	"templatewizard-dialog-title": "Lasit málle",
 	"templatewizard-insert": "Lasit",
+	"templatewizard-invalid-values-edit": "Rievdat málle",
+	"templatewizard-invalid-values-insert": "Lasit málle",
+	"templatewizard-parameters-suggested": "Evttohuvvon paramehterat",
+	"templatewizard-remove-all": "Sihko buot paramehteriid",
 	"templatewizard-remove-template": "Sihko málle?",
 	"templatewizard-remove-template-retry": "Sihko málle",
-	"templatewizard-remove-template-title": "Sihko málle"
+	"templatewizard-search-placeholder": "Oza málle",
+	"templatewizard-parambutton-add-title": "Lasit paramehtera '$1'",
+	"templatewizard-parambutton-remove-title": "Sihko paramehtera '$1'",
+	"templatewizard-remove-template-title": "Sihko málle",
+	"templatewizard-link-to-template-title": "Čájet málle",
+	"templatewizard-use": "Geavat"
 }
