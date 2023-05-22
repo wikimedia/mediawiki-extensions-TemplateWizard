@@ -3,7 +3,8 @@
 		"authors": [
 			"Aefgh39622",
 			"Omotecho",
-			"Suyama"
+			"Suyama",
+			"Kokage si"
 		]
 	},
 	"templatewizard-add-all": "全てのパラメーターを追加",
@@ -21,7 +22,7 @@
 	"templatewizard-invalid-values": "最低1ヶ所の入力が既定の形式ではありません。修正しますか？",
 	"templatewizard-invalid-values-edit": "テンプレートの編集",
 	"templatewizard-invalid-values-insert": "テンプレートを挿入",
-	"templatewizard-no-description": "このテンプレートには説明文書がありません。",
+	"templatewizard-no-description": "このテンプレートには説明がありません。",
 	"templatewizard-no-params-with-td": "このテンプレートの[$1 テンプレートデータ] (TemplateData) には引数の設定がありません。引数がないままテンプレートを挿入できます。",
 	"templatewizard-no-params-without-td": "このテンプレートには[$1 テンプレートデータ]説明文書が存在しないため、引数を設定できません。引数がないままテンプレートを挿入できます。",
 	"templatewizard-no-templatedata": "[$1 テンプレートデータ]が見つからないため、このテンプレートの引数は自動的に生成されました。必ずしも正確ではない点にご注意くだい。",
