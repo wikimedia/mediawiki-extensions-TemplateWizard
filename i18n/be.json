@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Artsiom91",
-			"Chadyka"
+			"Chadyka",
+			"Plaga med"
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
@@ -10,7 +11,7 @@
 	"templatewizard-close-dialog": "Выйсці з майстра?",
 	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
 	"templatewizard-close-dialog-retry": "Адмяніць змяненні",
-	"templatewizard-default": "Па змоўчанні: $1",
+	"templatewizard-default": "Прадвызначана: $1",
 	"templatewizard-desc": "Дадатак WikiEditor, якая прадастаўляе майстар устаўкі шаблонаў",
 	"templatewizard-dialog-title": "Уставіць шаблон",
 	"templatewizard-help": "Даведацца больш пра Майстар шаблонаў",
@@ -28,7 +29,7 @@
 	"templatewizard-parameters-optional": "Неабавязковыя параметры",
 	"templatewizard-parameters-required": "Абавязковыя параметры",
 	"templatewizard-parameters-suggested": "Прапанаваныя параметры",
-	"templatewizard-placeholder-default": "Па змоўчанні: $1",
+	"templatewizard-placeholder-default": "Прадвызначана: $1",
 	"templatewizard-placeholder-example": "Напрыклад: $1",
 	"templatewizard-remove-all": "Выдаліць усе параметры",
 	"templatewizard-remove-template": "Выдаліць шаблон?",
