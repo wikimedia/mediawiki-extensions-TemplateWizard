@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"BadDog"
+			"BadDog",
+			"Сербијана"
 		]
 	},
 	"templatewizard-add-all": "Додај све параметре",
@@ -11,7 +12,7 @@
 	"templatewizard-close-dialog-retry": "Одбаци измене",
 	"templatewizard-default": "Подразумевано: $1",
 	"templatewizard-desc": "Додатак Викиуређивача који пружа чаробњак за уметање шаблона",
-	"templatewizard-dialog-title": "Уметање шаблона",
+	"templatewizard-dialog-title": "Уметни шаблон",
 	"templatewizard-help": "Детаљније о Чаробњаку за шаблоне",
 	"templatewizard-help-title": "Прочитајте странице помоћи Чаробњака за шаблоне на сајту MediaWiki.org",
 	"templatewizard-insert": "Уметни",
