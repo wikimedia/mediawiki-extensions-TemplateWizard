@@ -16,7 +16,7 @@ $( function () {
 			group: 'insert',
 			tools: {
 				'template-wizard': {
-					labelMsg: 'templatewizard-dialog-title',
+					label: mw.msg( 'templatewizard-dialog-title' ),
 					oouiIcon: 'puzzle',
 					type: 'button',
 					action: {
