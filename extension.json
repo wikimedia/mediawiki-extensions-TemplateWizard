@@ -19,8 +19,13 @@
 		"MediaWiki\\Extension\\TemplateWizard\\": "includes/"
 	},
 	"Hooks": {
-		"EditPage::showEditForm:initial": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onEditPageShowEditFormInitial",
-		"ResourceLoaderGetConfigVars": "MediaWiki\\Extension\\TemplateWizard\\Hooks::onResourceLoaderGetConfigVars"
+		"EditPage::showEditForm:initial": "main",
+		"ResourceLoaderGetConfigVars": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\TemplateWizard\\Hooks"
+		}
 	},
 	"ConfigRegistry": {
 		"templatewizard": "GlobalVarConfig::newInstance"
