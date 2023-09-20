@@ -55,11 +55,11 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 		// character.
 		var endsWithAlpha;
 		try {
-			// TODO: Convert to literal when IE11 compatibility was dropped
-			// eslint-disable-next-line prefer-regex-literals
+			// TODO: Convert to literal now IE11 compatibility is dropped
+			// eslint-disable-next-line es-x/no-regexp-u-flag, es-x/no-regexp-unicode-property-escapes, prefer-regex-literals
 			endsWithAlpha = new RegExp( '[0-9a-z\\p{L}\\p{N}]$', 'iu' );
 		} catch ( e ) {
-			// TODO: Remove when IE11 compatibility was dropped
+			// TODO: Remove now IE11 compatibility is dropped
 			endsWithAlpha = /[0-9a-z\xC0-\uFFFF]$/i;
 		}
 		if ( endsWithAlpha.test( params.gsrsearch ) ) {
