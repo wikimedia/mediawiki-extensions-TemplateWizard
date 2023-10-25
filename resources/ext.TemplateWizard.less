@@ -1,11 +1,12 @@
 @import 'mediawiki.skin.variables.less';
-@import 'mediawiki.mixins';
+@import 'mediawiki.mixins.less';
 
-@description-font-size: 12px;
+@font-size-description: 12px;
+@line-height-description: 1.2;
 
 // When space doesn't allow, stack the parameters form and parameters list
 // using a fixed height for the parameters form.
-@media ( max-width: @width-breakpoint-tablet ) {
+@media ( max-width: @max-width-breakpoint-mobile ) {
 	.ext-templatewizard-menu {
 		// Use extra-specific CSS rule to override OOUI rule which uses !important.
 		.oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-before {
@@ -26,14 +27,12 @@
 }
 
 .ext-templatewizard-searchform {
-	@description-line-height: 1.2em;
-
 	.ext-templatewizard-description,
 	.ext-templatewizard-redirectedfrom {
-		color: @color-base--subtle;
+		color: @color-subtle;
 		display: block;
-		font-size: @description-font-size;
-		line-height: @description-line-height;
+		font-size: @font-size-description;
+		line-height: @line-height-description;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
@@ -41,7 +40,7 @@
 	.ext-templatewizard-description {
 		@max-lines: 2;
 		display: -webkit-box;
-		max-height: @max-lines * @description-line-height;
+		max-height: @max-lines * unit( @line-height-description, em );
 		-webkit-line-clamp: @max-lines;
 		-webkit-box-orient: vertical;
 	}
@@ -90,7 +89,7 @@
 
 	.ext-templatewizard-description {
 		margin: 0 7px 7px 7px;
-		font-size: @description-font-size;
+		font-size: @font-size-description;
 		overflow: auto;
 		max-height: 65px;
 		overflow-wrap: break-word;
