@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"templatewizard-add-all": "Añadir tolos parámetros",
-	"templatewizard-cancel": "Encaboxar",
+	"templatewizard-cancel": "Zarrar",
 	"templatewizard-close-dialog": "¿Abandonar l'asistente?",
 	"templatewizard-close-dialog-body": "Si abandones l'asistente perderáse cualquier datu qu'añadisti a la plantía.",
 	"templatewizard-close-dialog-retry": "Descartar los cambios",
