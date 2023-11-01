@@ -31,7 +31,7 @@
 	"templatewizard-placeholder-example": "p.ex. $1",
 	"templatewizard-remove-all": "Quitar tolos parámetros",
 	"templatewizard-remove-template": "¿Desaniciar plantía?",
-	"templatewizard-remove-template-body": "La plantía que tas tentando desaniciar contien datos qu'añadisti. Si desanicies la plantía desaniciaráse tamién la información qu'añadisti a la plantía. Esta aición nun ye reversible.",
+	"templatewizard-remove-template-body": "La plantía que tas tentando desaniciar contién datos qu'añadisti. Si desanicies la plantía desaniciaráse tamién la información qu'añadisti a la plantía. Esta aición nun ye reversible.",
 	"templatewizard-remove-template-retry": "Desaniciar plantía",
 	"templatewizard-search-placeholder": "Buscar una plantía",
 	"templatewizard-parambutton-add-title": "Añadir el parámetru '$1'",
