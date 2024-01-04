@@ -7,12 +7,12 @@
 
 namespace MediaWiki\Extension\TemplateWizard;
 
-use Config;
 use ExtensionRegistry;
+use MediaWiki\Config\Config;
 use MediaWiki\EditPage\EditPage;
 use MediaWiki\Hook\EditPage__showEditForm_initialHook;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
-use OutputPage;
 
 /**
  * Hooks for the TemplateWizard extension.
