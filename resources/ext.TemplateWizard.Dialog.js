@@ -243,7 +243,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				mw.TemplateWizard.insertedTemplates.push( templateName );
 				// Close dialog.
 				dialog.ignoreParamValues = false;
-				dialog.close().then( function () {
+				dialog.close().closed.then( function () {
 					// Delay this until the dialog has closed, because modal dialogs make the rest of the page
 					// unfocusable, and textSelection needs to focus the field to do its job (T33780#8106393).
 					// eslint-disable-next-line no-jquery/no-global-selector
