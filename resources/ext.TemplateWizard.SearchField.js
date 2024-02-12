@@ -53,15 +53,8 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 		// Adding the asterisk to emulate a prefix search behavior. It does not make sense in all
 		// cases though. We're limiting it to be add only of the term ends with a letter or numeric
 		// character.
-		let endsWithAlpha;
-		try {
-			// TODO: Convert to literal now IE11 compatibility is dropped
-			// eslint-disable-next-line es-x/no-regexp-unicode-property-escapes, prefer-regex-literals
-			endsWithAlpha = new RegExp( '[0-9a-z\\p{L}\\p{N}]$', 'iu' );
-		} catch ( e ) {
-			// TODO: Remove now IE11 compatibility is dropped
-			endsWithAlpha = /[0-9a-z\xC0-\uFFFF]$/i;
-		}
+		// eslint-disable-next-line es-x/no-regexp-unicode-property-escapes, prefer-regex-literals
+		const endsWithAlpha = new RegExp( '[\\p{L}\\p{N}]$', 'u' );
 		if ( endsWithAlpha.test( params.gsrsearch ) ) {
 			params.gsrsearch += '*';
 		}
