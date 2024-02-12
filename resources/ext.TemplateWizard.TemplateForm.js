@@ -155,8 +155,8 @@ mw.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
 };
 
 mw.TemplateWizard.TemplateForm.prototype.showField = function ( paramName ) {
-	this.findField( paramName ).toggle( true );
-	this.findField( paramName ).getField().focus();
+	this.findField( paramName ).toggle( true )
+		.getField().focus();
 };
 
 /**
@@ -363,7 +363,7 @@ mw.TemplateWizard.TemplateForm.prototype.findField = function ( fieldName ) {
 	for ( let i = 0; i < this.fields.length; i++ ) {
 		const field = this.fields[ i ];
 		// The 'name' data key is set in TemplateForm.getParamsAndFields().
-		if ( field.getData().name !== undefined && field.getData().name === fieldName ) {
+		if ( field.getData().name === fieldName ) {
 			return field;
 		}
 	}
@@ -409,18 +409,15 @@ mw.TemplateWizard.TemplateForm.prototype.getInvalidField = function () {
  * @return {jQuery.Promise[]}
  */
 mw.TemplateWizard.TemplateForm.prototype.getFieldsValidity = function () {
-	let field;
-	const templateForm = this,
-		validityPromises = [],
-		recordInvalidField = function () {
-			// Record this field as being the invalid one.
-			templateForm.invalidField = field;
-		};
+	const validityPromises = [];
 	// Go through the fields from bottom to top.
-	for ( let i = templateForm.fields.length - 1; i >= 0; i-- ) {
-		field = templateForm.fields[ i ].getField();
+	for ( let i = this.fields.length; i--; ) {
+		const field = this.fields[ i ].getField();
 		const validity = field.getValidity();
-		validity.fail( recordInvalidField );
+		// Record this field as being the invalid one.
+		validity.fail( () => {
+			this.invalidField = field;
+		} );
 		validityPromises.push( validity );
 	}
 	return $.when.apply( $, validityPromises );

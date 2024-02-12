@@ -45,13 +45,8 @@ mw.TemplateWizard.AddRemoveAllButton.prototype.toggleAction = function () {
  * @param {boolean} allEnabled
  */
 mw.TemplateWizard.AddRemoveAllButton.prototype.setState = function ( allEnabled ) {
-	if ( allEnabled ) {
-		this.allEnabled = true;
-		this.setLabel( mw.message( 'templatewizard-remove-all' ).text() );
-	} else {
-		this.allEnabled = false;
-		this.setLabel( mw.message( 'templatewizard-add-all' ).text() );
-	}
+	this.allEnabled = allEnabled;
+	this.setLabel( mw.msg( allEnabled ? 'templatewizard-remove-all' : 'templatewizard-add-all' ) );
 };
 
 /**

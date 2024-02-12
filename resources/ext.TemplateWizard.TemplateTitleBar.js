@@ -68,7 +68,7 @@ OO.inheritClass( mw.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
  * @return {jQuery}
  */
 mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( templateData ) {
-	let message, messageClass;
+	let message;
 
 	// Description div (may contain multiple paragraphs).
 	const $description = $( '<div>' ).addClass( 'ext-templatewizard-description' );
@@ -83,18 +83,14 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 	// Add notice message where applicable. Note that a template that
 	// doesn't have templatedata may still have parameters because they're
 	// being guessed from the template wikitext.
-	messageClass = 'ext-templatewizard-notice';
 	const hasTemplateData = ( templateData.notemplatedata === undefined );
 	const hasParams = (
 		templateData.params !== undefined &&
 		Object.keys( templateData.params ).length > 0
 	);
-	if ( !hasTemplateData && !hasParams ) {
-		message = 'templatewizard-no-params-without-td';
-	} else if ( hasTemplateData && !hasParams ) {
-		message = 'templatewizard-no-params-with-td';
-		messageClass = '';
-	} else if ( !hasTemplateData && hasParams ) {
+	if ( !hasParams ) {
+		message = hasTemplateData ? 'templatewizard-no-params-with-td' : 'templatewizard-no-params-without-td';
+	} else if ( !hasTemplateData ) {
 		message = 'templatewizard-no-templatedata';
 	}
 	// Add the message if required. If no message is defined,
@@ -102,7 +98,7 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 	if ( message ) {
 		$description.append(
 			$( '<p>' )
-				.addClass( messageClass )
+				.addClass( !hasTemplateData ? 'ext-templatewizard-notice' : '' )
 				.html(
 					// The following messages are used here:
 					// * templatewizard-no-params-without-td
