@@ -25,7 +25,7 @@ mw.TemplateWizard.logEvent = function ( action, templateNames ) {
 			/* eslint-enable camelcase */
 		};
 
-	if ( !mw.user.isAnon() ) {
+	if ( mw.user.isNamed() ) {
 		performer = {
 			// eslint-disable-next-line camelcase
 			user_id: mw.user.getId()
