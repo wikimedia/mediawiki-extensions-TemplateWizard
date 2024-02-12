@@ -4,7 +4,7 @@ $( function () {
 	 */
 	mw.hook( 'wikiEditor.toolbarReady' ).add( function ( $textarea ) {
 		// Take the content direction from the edit textarea
-		var contentDir = $textarea.css( 'direction' ),
+		const contentDir = $textarea.css( 'direction' ),
 			// Set up the TemplateWizard dialog window.
 			templateWizard = new mw.TemplateWizard.Dialog();
 

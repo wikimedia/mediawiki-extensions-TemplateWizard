@@ -106,7 +106,7 @@ mw.TemplateWizard.Dialog.prototype.closeTemplate = function () {
  * @return {OO.ui.Process}
  */
 mw.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
-	var dialog = this;
+	const dialog = this;
 	return mw.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
 		.next( function () {
 			dialog.contentDir = data.contentDir || 'ltr';
@@ -190,7 +190,7 @@ mw.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function ( data )
 };
 
 mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
-	var dialog = this;
+	const dialog = this;
 	return mw.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
 		.next( function () {
 			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && dialog.templateForm ) {
@@ -225,14 +225,14 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 			}
 		} )
 		.next( function () {
-			var templateFormatter, textSelectionOpts, templateName;
 			if ( action === 'insert' ) {
-				templateFormatter = new mw.TemplateWizard.TemplateFormatter();
-				templateName = dialog.templateForm.getTitle().getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
+				const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
+				const templateName = dialog.templateForm.getTitle()
+					.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
 				templateFormatter.setTemplateName( templateName );
 				templateFormatter.setFormat( dialog.templateForm.getFormat() );
 				templateFormatter.setParameters( dialog.templateForm.getParameters() );
-				textSelectionOpts = {
+				const textSelectionOpts = {
 					peri: templateFormatter.getTemplate(),
 					replace: true,
 					selectPeri: false
@@ -244,8 +244,9 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				// Close dialog.
 				dialog.ignoreParamValues = false;
 				dialog.close().closed.then( function () {
-					// Delay this until the dialog has closed, because modal dialogs make the rest of the page
-					// unfocusable, and textSelection needs to focus the field to do its job (T33780#8106393).
+					// Delay this until the dialog has closed, because modal dialogs make the rest
+					// of the page unfocusable, and textSelection needs to focus the field to do its
+					// job (T33780#8106393).
 					// eslint-disable-next-line no-jquery/no-global-selector
 					$( '#wpTextbox1' ).textSelection( 'encapsulateSelection', textSelectionOpts );
 				} );

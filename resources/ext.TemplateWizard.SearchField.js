@@ -31,7 +31,7 @@ OO.mixinClass( mw.TemplateWizard.SearchField, OO.ui.mixin.LookupElement );
  * @return {Object} Parameters for the MediaWiki action API
  */
 mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
-	var params = {
+	const params = {
 		action: 'templatedata',
 		includeMissingTitles: 1,
 		lang: mw.config.get( 'wgUserLanguage' ),
@@ -53,10 +53,10 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 		// Adding the asterisk to emulate a prefix search behavior. It does not make sense in all
 		// cases though. We're limiting it to be add only of the term ends with a letter or numeric
 		// character.
-		var endsWithAlpha;
+		let endsWithAlpha;
 		try {
 			// TODO: Convert to literal now IE11 compatibility is dropped
-			// eslint-disable-next-line es-x/no-regexp-u-flag, es-x/no-regexp-unicode-property-escapes, prefer-regex-literals
+			// eslint-disable-next-line es-x/no-regexp-unicode-property-escapes, prefer-regex-literals
 			endsWithAlpha = new RegExp( '[0-9a-z\\p{L}\\p{N}]$', 'iu' );
 		} catch ( e ) {
 			// TODO: Remove now IE11 compatibility is dropped
@@ -82,9 +82,9 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
  * @return {jQuery.Promise} jQuery AJAX object, or promise object with an .abort() method
  */
 mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
-	var query = this.getValue(),
-		params = this.getApiParams( query ),
-		promise = this.api.get( params );
+	const query = this.getValue(),
+		params = this.getApiParams( query );
+	let promise = this.api.get( params );
 
 	// No point in running prefix search a second time
 	if ( params.generator !== 'prefixsearch' ) {
@@ -103,14 +103,14 @@ mw.TemplateWizard.SearchField.prototype.getLookupRequest = function () {
  * @return {Object} Modified response
  */
 mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
-	var query = this.getValue(),
+	const query = this.getValue(),
 		lowerQuery = query.trim().toLowerCase();
 	if ( !response.pages || !lowerQuery ) {
 		return response;
 	}
 
-	var containsExactMatch = Object.keys( response.pages ).some( function ( pageId ) {
-		var page = response.pages[ pageId ],
+	const containsExactMatch = Object.keys( response.pages ).some( function ( pageId ) {
+		const page = response.pages[ pageId ],
 			title = mw.Title.newFromText( page.title );
 		return title.getMainText().toLowerCase() === lowerQuery;
 	} );
@@ -118,7 +118,7 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		return response;
 	}
 
-	var limit = this.limit;
+	const limit = this.limit;
 	return this.api.get( {
 		action: 'templatedata',
 		includeMissingTitles: 1,
@@ -132,15 +132,15 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 	} ).then( function ( prefixMatches ) {
 		// action=templatedata returns page objects in `{ pages: {} }`, keyed by page id
 		// Copy keys because the loop below needs an ordered array, not an object
-		for ( var pageId in prefixMatches.pages ) {
+		for ( const pageId in prefixMatches.pages ) {
 			prefixMatches.pages[ pageId ].pageid = pageId;
 		}
 		// Make sure the loop below processes the results by relevance
-		var pages = OO.getObjectValues( prefixMatches.pages ).sort( function ( a, b ) {
+		const pages = OO.getObjectValues( prefixMatches.pages ).sort( function ( a, b ) {
 			return a.index - b.index;
 		} );
-		for ( var i in pages ) {
-			var prefixMatch = pages[ i ];
+		for ( const i in pages ) {
+			const prefixMatch = pages[ i ];
 			if ( !( prefixMatch.pageid in response.pages ) ) {
 				// Move prefix matches to the top, indexed from -9 to 0, relevant for e.g. {{!!}}
 				// Note: Sorting happens down in getLookupCacheDataFromResponse()
@@ -173,20 +173,19 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
  * @return {Object[]} Config for {@see mw.TemplateWizard.SearchResult} widgets
  */
 mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = function ( response ) {
-	var searchResults,
-		templateData = response.pages;
+	const templateData = response.pages;
 
 	// Prepare the separate "redirects" structure to be converted to the CirrusSearch
 	// "redirecttitle" field
-	var redirectedFrom = {};
+	const redirectedFrom = {};
 	if ( response.redirects ) {
 		response.redirects.forEach( function ( redirect ) {
 			redirectedFrom[ redirect.to ] = redirect.from;
 		} );
 	}
 
-	searchResults = Object.keys( templateData ).map( function ( pageId ) {
-		var page = templateData[ pageId ];
+	const searchResults = Object.keys( templateData ).map( function ( pageId ) {
+		const page = templateData[ pageId ];
 
 		if ( !page.redirecttitle && page.title in redirectedFrom ) {
 			page.redirecttitle = redirectedFrom[ page.title ];
@@ -205,7 +204,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 		};
 	} );
 
-	var lowerQuery = this.getValue().trim().toLowerCase();
+	const lowerQuery = this.getValue().trim().toLowerCase();
 	searchResults.sort( function ( a, b ) {
 		// Force exact matches to be at the top
 		if ( a.label.toLowerCase() === lowerQuery ) {

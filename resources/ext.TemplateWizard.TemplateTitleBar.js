@@ -11,11 +11,10 @@
 mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	templateForm, title, templateData
 ) {
-	var $templateTitle, linkButton, trashButton;
 	mw.TemplateWizard.TemplateTitleBar.parent.call( this );
 
 	// Link button.
-	linkButton = new OO.ui.ButtonWidget( {
+	const linkButton = new OO.ui.ButtonWidget( {
 		label: '',
 		title: mw.msg( 'templatewizard-link-to-template-title' ),
 		flags: 'progressive',
@@ -26,7 +25,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	} );
 
 	// Close button.
-	trashButton = new OO.ui.ButtonWidget( {
+	const trashButton = new OO.ui.ButtonWidget( {
 		id: 'ext-templatewizard-close-template-button',
 		label: '',
 		flags: 'destructive',
@@ -41,7 +40,9 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	this.buttons.$element.addClass( 'ext-templatewizard-buttons' );
 
 	// Template title.
-	$templateTitle = $( '<p>' ).addClass( 'ext-templatewizard-title' ).append( title.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template ) );
+	const $templateTitle = $( '<p>' )
+		.addClass( 'ext-templatewizard-title' )
+		.append( title.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template ) );
 
 	// Put them all together.
 	this.$element
@@ -67,10 +68,10 @@ OO.inheritClass( mw.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
  * @return {jQuery}
  */
 mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( templateData ) {
-	var $description, message, messageClass, hasTemplateData, hasParams;
+	let message, messageClass;
 
 	// Description div (may contain multiple paragraphs).
-	$description = $( '<div>' ).addClass( 'ext-templatewizard-description' );
+	const $description = $( '<div>' ).addClass( 'ext-templatewizard-description' );
 	if ( templateData.description ) {
 		// Normal description, from TemplateData.
 		$description.append( $( '<p>' ).wrapInner( '<bdi>' ).text( templateData.description ) );
@@ -83,8 +84,8 @@ mw.TemplateWizard.TemplateTitleBar.prototype.getDescriptionElement = function ( 
 	// doesn't have templatedata may still have parameters because they're
 	// being guessed from the template wikitext.
 	messageClass = 'ext-templatewizard-notice';
-	hasTemplateData = ( templateData.notemplatedata === undefined );
-	hasParams = (
+	const hasTemplateData = ( templateData.notemplatedata === undefined );
+	const hasParams = (
 		templateData.params !== undefined &&
 		Object.keys( templateData.params ).length > 0
 	);

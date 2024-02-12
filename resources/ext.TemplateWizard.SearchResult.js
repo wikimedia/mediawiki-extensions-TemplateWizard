@@ -9,7 +9,8 @@ mw.TemplateWizard.SearchResult = function MWTemplateWizardSearchResult( config )
 	mw.TemplateWizard.SearchResult.super.call( this, config );
 
 	if ( config.data.redirecttitle ) {
-		var redirecttitle = new mw.Title( config.data.redirecttitle ).getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
+		const redirecttitle = new mw.Title( config.data.redirecttitle )
+			.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
 		$( '<div>' )
 			.addClass( 'ext-templatewizard-redirectedfrom' )
 			.text( mw.msg( 'redirectedfrom', redirecttitle ) )

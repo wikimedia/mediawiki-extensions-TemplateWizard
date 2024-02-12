@@ -7,13 +7,12 @@
  * @param {Object<string,Object>} parameters The initial set of parameters.
  */
 mw.TemplateWizard.Model.Parameters = function MWTemplateWizardModelParameters( parameters ) {
-	var name;
 	// Mixin constructor
 	OO.EventEmitter.call( this );
 
 	// Attributes (set all to false to start with).
 	this.parameters = parameters || {};
-	for ( name in this.parameters ) {
+	for ( const name in this.parameters ) {
 		this.parameters[ name ] = false;
 	}
 };
@@ -57,14 +56,13 @@ OO.mixinClass( mw.TemplateWizard.Model.Parameters, OO.EventEmitter );
  * @param {boolean} state The state to set it to.
  */
 mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
-	var allEnabled,
-		parameters = this.parameters;
+	const parameters = this.parameters;
 	// Don't do anything if the parameter is already in this state.
 	if ( parameters[ name ] === state ) {
 		return;
 	}
 	parameters[ name ] = state;
-	allEnabled = Object.keys( parameters ).every( function ( n ) {
+	const allEnabled = Object.keys( parameters ).every( function ( n ) {
 		return parameters[ n ];
 	} );
 	this.emit( 'changeOne', allEnabled );
@@ -76,8 +74,7 @@ mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
  * @param {boolean} newState
  */
 mw.TemplateWizard.Model.Parameters.prototype.setAll = function ( newState ) {
-	var name;
-	for ( name in this.parameters ) {
+	for ( const name in this.parameters ) {
 		this.parameters[ name ] = newState;
 	}
 	this.emit( 'changeAll', newState );

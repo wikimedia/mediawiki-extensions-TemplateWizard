@@ -33,10 +33,8 @@ mw.TemplateWizard.AddRemoveAllButton.prototype.onParametersChangeOne = function 
  * Toggle all parameters on or off and change the button's label.
  */
 mw.TemplateWizard.AddRemoveAllButton.prototype.toggleAction = function () {
-	var newState;
-
 	// Change state.
-	newState = !this.allEnabled;
+	const newState = !this.allEnabled;
 	this.setState( newState );
 	this.model.setAll( newState );
 };

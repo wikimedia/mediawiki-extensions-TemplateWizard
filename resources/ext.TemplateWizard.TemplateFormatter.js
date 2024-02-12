@@ -16,9 +16,8 @@ mw.TemplateWizard.TemplateFormatter.prototype.setTemplateName = function ( newNa
 mw.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params ) {
 	// If any numbered parameters are set, all lower-numbered ones should be set as well (to blank).
 	Object.keys( params ).forEach( function ( key ) {
-		var paramNum;
 		if ( !isNaN( key ) ) {
-			for ( paramNum = 1; paramNum < key; paramNum++ ) {
+			for ( let paramNum = 1; paramNum < key; paramNum++ ) {
 				if ( params[ paramNum ] === undefined ) {
 					params[ paramNum ] = '';
 				}
@@ -28,8 +27,7 @@ mw.TemplateWizard.TemplateFormatter.prototype.setParameters = function ( params 
 	this.params = params;
 };
 mw.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( format ) {
-	var parsedFormat,
-		inlineFormat = '{{_|_=_}}';
+	const inlineFormat = '{{_|_=_}}';
 	if ( format === 'inline' ) {
 		format = inlineFormat;
 	}
@@ -37,7 +35,7 @@ mw.TemplateWizard.TemplateFormatter.prototype.setFormat = function ( format ) {
 		format = '{{_\n| _ = _\n}}';
 	}
 	// Check format string for validity, and fall back to 'inline' if it's not.
-	parsedFormat = format.match( this.constructor.static.FORMATSTRING_REGEXP );
+	let parsedFormat = format.match( this.constructor.static.FORMATSTRING_REGEXP );
 	if ( !parsedFormat ) {
 		parsedFormat = inlineFormat.match( this.constructor.static.FORMATSTRING_REGEXP );
 	}
@@ -57,18 +55,17 @@ mw.TemplateWizard.TemplateFormatter.prototype.getFormat = function () {
 	return this.format;
 };
 mw.TemplateWizard.TemplateFormatter.prototype.getTemplate = function () {
-	var template, format,
-		formatter = this;
+	const formatter = this;
 
 	// Before building the template, fall back to inline format
 	// if there are no parameters (T190123).
 	if ( $.isEmptyObject( this.params ) ) {
 		this.setFormat( 'inline' );
 	}
-	format = this.getFormat();
+	const format = this.getFormat();
 
 	// Start building the template.
-	template = '';
+	let template = '';
 	if ( format.startOfLine ) {
 		template += '\n';
 	}

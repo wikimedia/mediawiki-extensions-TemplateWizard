@@ -59,10 +59,8 @@ mw.TemplateWizard.ParamButton.prototype.onParametersChangeAll = function ( newSt
  * and tell the add/remove all button to update itself accordingly.
  */
 mw.TemplateWizard.ParamButton.prototype.toggleAction = function () {
-	var newState;
-
 	// Update the model, this button's state (including the associated field's visibility).
-	newState = !this.isEnabled;
+	const newState = !this.isEnabled;
 	this.model.setOne( this.param, newState );
 	this.setParamState( newState );
 };
