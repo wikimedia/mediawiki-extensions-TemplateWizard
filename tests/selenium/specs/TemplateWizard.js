@@ -29,7 +29,7 @@ describe( 'TemplateWizard', function () {
 		await UseTemplatePage.searchResultMenu.waitForDisplayed( { timeout: 35000 } );
 
 		// Select the template.
-		await $( `.oo-ui-labelElement-label=${testTemplateName}` ).click();
+		await $( `.oo-ui-labelElement-label=${ testTemplateName }` ).click();
 		await UseTemplatePage.testTemplateTitle.isExisting();
 	} );
 
@@ -73,7 +73,7 @@ describe( 'TemplateWizard', function () {
 		await browser.waitUntil( async function () {
 			return !( await UseTemplatePage.dialog.isDisplayed() );
 		} );
-		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
+		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${ testTemplateName }|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 
 } );
