@@ -171,7 +171,9 @@
 								1: { title: 'DE' }
 							} } );
 							return {
-								promise: function () { return undefined; }
+								promise: function () {
+									return undefined;
+								}
 							};
 						}
 					};
