@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bashkorttan"
+		]
+	},
+	"templatewizard-add-all": "Бөтә параметрҙарҙы өҫтәргә",
+	"templatewizard-cancel": "Кире алырға",
+	"templatewizard-close-dialog": "Ҡалып оҫтаһын ябырғамы?",
+	"templatewizard-close-dialog-body": "Оҫтанан сығыу ҡалыпҡа өҫтәлгән бөтә мәғлүмәттәрҙе юғалтыуға килтерә.",
+	"templatewizard-close-dialog-retry": "Үҙгәртеүҙәрҙән баш тартырға",
+	"templatewizard-default": "Белдерелмәһә: $1",
+	"templatewizard-desc": "Ҡалып өҫтәү оҫтаһын тәьмин иткән WikiEditor өҫтәмәһе",
+	"templatewizard-dialog-title": "Ҡалып өҫтәү",
+	"templatewizard-help": "TemplateWizard тураһында күберәк өйрәнеү",
+	"templatewizard-help-title": "MediaWiki.org сайтында TemplateWizard тураһында ярҙам биттәрен уҡығыҙ",
+	"templatewizard-insert": "Өҫтәргә",
+	"templatewizard-invalid-title": "Яраҡһыҙ атама",
+	"templatewizard-invalid-values": "Бер йәки бер нисә ерлек ҡиммәте көтөлгән форматҡа тап килмәй. Уны төҙәтергә теләйһегеҙме?",
+	"templatewizard-invalid-values-edit": "Ҡалыпты мөхәррирләргә",
+	"templatewizard-invalid-values-insert": "Ҡалып өҫтәргә",
+	"templatewizard-no-description": "Был ҡалып өсөн бер ниндәй ҙә тасуирлама юҡ.",
+	"templatewizard-no-params-with-td": "Был ҡалыптың [$1 TemplateData] документтарында билдәләнгән параметрҙар юҡ. Ҡалыпты параметрҙарһыҙ өҫтәргә була.",
+	"templatewizard-no-params-without-td": "[$1 TemplateData] документтары булмағанлыҡтан, был ҡалып өсөн бер параметрҙы ла билдәләп булманы. Ҡалыпты параметрҙарһыҙ өҫтәргә була.",
+	"templatewizard-no-templatedata": "[$1 TemplateData] булмағанлыҡтан, был ҡалып өсөн параметрҙар автоматик рәүештә булдырылды. Уларҙың дөрөҫ булмауы ихтималын иҫтә тотоғоҙ.",
+	"templatewizard-parameters-optional": "Теләккә бәйле параметрҙар",
+	"templatewizard-parameters-required": "Кәрәкле параметрҙар",
+	"templatewizard-parameters-suggested": "Тәҡдим ителгән параметрҙар",
+	"templatewizard-placeholder-default": "Белдерелмәһә: $1",
+	"templatewizard-placeholder-example": "Мәҫәлән, $1",
+	"templatewizard-remove-all": "Бөтә параметрҙарҙы алып ташларға",
+	"templatewizard-remove-template": "Ҡалыпты алып ташларғамы?",
+	"templatewizard-remove-template-body": "Алып ташларға теләгән ҡалыпта һеҙ өҫтәгән мәғлүмәт бар. Ҡалыпты алып ташлау, ҡалыпҡа өҫтәлгән мәғлүмәтте лә алып ташлай. Был ғәмәл кире ҡайтарып булмай.",
+	"templatewizard-remove-template-retry": "Ҡалыпты алып ташларға",
+	"templatewizard-search-placeholder": "Ҡалып эҙләү",
+	"templatewizard-parambutton-add-title": "\"$1\" параметрын өҫтәргә",
+	"templatewizard-parambutton-remove-title": "\"$1\" параметрын алып ташларға",
+	"templatewizard-parambutton-required-title": "\"$1\" кәрәкле параметр",
+	"templatewizard-remove-template-title": "Ҡалыпты алып ташларға",
+	"templatewizard-link-to-template-title": "Ҡалыпты ҡарарға",
+	"templatewizard-use": "Ҡулланырға"
+}
