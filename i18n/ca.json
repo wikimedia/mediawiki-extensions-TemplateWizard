@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Lluis Cat"
 		]
 	},
 	"templatewizard-add-all": "Afegeix tots els paràmetres",
@@ -16,6 +17,8 @@
 	"templatewizard-invalid-values-edit": "Modifica la plantilla",
 	"templatewizard-invalid-values-insert": "Insereix una plantilla",
 	"templatewizard-no-description": "No existeix cap descripció per a aquesta plantilla.",
+	"templatewizard-no-params-without-td": "No s'ha pogut determinar cap paràmetre per a aquesta plantilla a causa de l'absència de documentació [$1 TemplateData]. Podeu inserir la plantilla sense paràmetres.",
+	"templatewizard-no-templatedata": "A causa de la manca de [$1 TemplateData], els paràmetres d'aquesta plantilla s'han generat automàticament. Tingueu en compte que poden no ser exactes.",
 	"templatewizard-parameters-optional": "Paràmetres opcionals",
 	"templatewizard-parameters-required": "Paràmetres obligatoris",
 	"templatewizard-parameters-suggested": "Paràmetres suggerits",
