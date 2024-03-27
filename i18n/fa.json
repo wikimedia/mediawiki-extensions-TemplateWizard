@@ -4,7 +4,8 @@
 			"Beginneruser",
 			"Huji",
 			"Ladsgroup",
-			"Reza1615"
+			"Reza1615",
+			"Ebraminio"
 		]
 	},
 	"templatewizard-add-all": "افزودن همهٔ پارامترها",
@@ -23,8 +24,8 @@
 	"templatewizard-invalid-values-edit": "ویرایش الگو",
 	"templatewizard-invalid-values-insert": "افزودن الگو",
 	"templatewizard-no-description": "توضیحی برای این الگو وجود ندارد.",
-	"templatewizard-no-params-with-td": "متغیری برای [$1 TemplateData]  تعریف نشده‌است. آیا قصد دارید الگو بدون متغیر تعریف کنید.",
-	"templatewizard-no-params-without-td": "به علت نبود اطلاعات  [$1 TemplateData]  متغیری تعریف نشده‌است. امکان افزودن الگو بدون متغیر وجود دارد",
+	"templatewizard-no-params-with-td": "متغیری برای [$1 TemplateData]  تعریف نشده است. آیا قصد دارید الگو بدون متغیر تعریف کنید.",
+	"templatewizard-no-params-without-td": "به علت نبود اطلاعات  [$1 TemplateData]  متغیری تعریف نشده است. امکان افزودن الگو بدون متغیر وجود دارد",
 	"templatewizard-no-templatedata": "به علت نبود [$1 TemplateData]، پارمترهای الگو به صورت خودکار تولید شده‌اند که ممکن است دقیق نباشد.",
 	"templatewizard-parameters-optional": "پارامترهای اختیاری",
 	"templatewizard-parameters-required": "پارامترهای اجباری",
