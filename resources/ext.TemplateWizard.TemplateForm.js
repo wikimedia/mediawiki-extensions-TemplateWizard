@@ -10,7 +10,7 @@
  * @param {Object} [config] Configuration options
  */
 mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( templateData, config ) {
-	mw.TemplateWizard.TemplateForm.parent.call( this );
+	mw.TemplateWizard.TemplateForm.super.call( this );
 	this.title = mw.Title.newFromText( templateData.title, mw.config.get( 'wgNamespaceIds' ).template );
 	if ( !this.title ) {
 		throw new Error( mw.message( 'templatewizard-invalid-title' ) );
