@@ -11,7 +11,7 @@
 mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	templateForm, title, templateData
 ) {
-	mw.TemplateWizard.TemplateTitleBar.parent.call( this );
+	mw.TemplateWizard.TemplateTitleBar.super.call( this );
 
 	// Link button.
 	const linkButton = new OO.ui.ButtonWidget( {
