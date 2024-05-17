@@ -7,18 +7,19 @@ const Page = require( 'wdio-mediawiki/Page' ),
 
 class CreateTemplate extends Page {
 
-	get testTemplate() { return $( '.mw-templatedata-doc-wrap' ); }
-
-	create( testTemplateName ) {
-		browser.call( async () => {
-			const bot = await Api.bot();
-			const templateWikitext = fs.readFileSync( `${path.dirname( __dirname )}/fixtures/en.Example.wikitext` );
-			await bot.edit( `Template:${testTemplateName}`, templateWikitext );
-		} );
+	get testTemplate() {
+		return $( '.mw-templatedata-doc-wrap' );
 	}
-	open( testTemplateName ) {
-		super.openTitle( `Template:${testTemplateName}` );
-		this.testTemplate.waitForDisplayed();
+
+	async create( testTemplateName ) {
+		const bot = await Api.bot();
+		const templateWikitext = fs.readFileSync( `${path.dirname( __dirname )}/fixtures/en.Example.wikitext` );
+		await bot.edit( `Template:${testTemplateName}`, templateWikitext );
+	}
+
+	async open( testTemplateName ) {
+		await super.openTitle( `Template:${testTemplateName}` );
+		await this.testTemplate.waitForDisplayed();
 	}
 
 }

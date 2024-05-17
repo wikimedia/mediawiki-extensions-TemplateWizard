@@ -8,45 +8,45 @@ const assert = require( 'assert' ),
 describe( 'TemplateWizard', function () {
 	let testTemplateName;
 
-	beforeEach( function () {
+	beforeEach( async function () {
 		// Create a test template
 		testTemplateName = Util.getTestString( 'Example ' );
-		CreateTemplate.create( testTemplateName );
+		await CreateTemplate.create( testTemplateName );
 		// Open the template page, to confirm that it's what we expect.
-		CreateTemplate.open( testTemplateName );
+		await CreateTemplate.open( testTemplateName );
 
 		// Open an edit page.
-		UseTemplatePage.openEdit();
+		await UseTemplatePage.openEdit();
 		// Wait for the toolbar to load, then click the TemplateWizard button.
-		UseTemplatePage.twButton.waitForDisplayed();
-		UseTemplatePage.twButton.click();
+		await UseTemplatePage.twButton.waitForDisplayed();
+		await UseTemplatePage.twButton.click();
 
 		// Wait for the dialog to open, and enter a search term.
-		UseTemplatePage.dialog.waitForDisplayed();
-		UseTemplatePage.searchInput.click();
-		$( '.ext-templatewizard-searchform input' ).setValue( testTemplateName );
+		await UseTemplatePage.dialog.waitForDisplayed();
+		await UseTemplatePage.searchInput.click();
+		await $( '.ext-templatewizard-searchform input' ).setValue( testTemplateName );
 		// Wait for the search results to appear.
-		UseTemplatePage.searchResultMenu.waitForDisplayed( { timeout: 35000 } );
+		await UseTemplatePage.searchResultMenu.waitForDisplayed( { timeout: 35000 } );
 
 		// Select the template.
-		$( `.oo-ui-labelElement-label=${testTemplateName}` ).click();
-		UseTemplatePage.testTemplateTitle.isExisting();
+		await $( `.oo-ui-labelElement-label=${testTemplateName}` ).click();
+		await UseTemplatePage.testTemplateTitle.isExisting();
 	} );
 
-	it( 'has 1 (required) field visible', function () {
+	it( 'has 1 (required) field visible', async function () {
 		// Test that there is 1 (required) field already visible.
-		assert.strictEqual( UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 1 );
+		assert.strictEqual( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 1 );
 	} );
 
-	it( 'has 5 fields visible', function () {
+	it( 'has 5 fields visible', async function () {
 		// Click "Add all fields", test that there are now 5 fields visible.
-		UseTemplatePage.addAllFields.click();
-		assert.strictEqual( UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 5 );
+		await UseTemplatePage.addAllFields.click();
+		assert.strictEqual( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 5 );
 	} );
 
-	it( 'has template inserted', function () {
+	it( 'has template inserted', async function () {
 
-		UseTemplatePage.addAllFields.click();
+		await UseTemplatePage.addAllFields.click();
 
 		// Add a value for Date of Birth (use 'keys()' because OOUI).
 		// We don't need to click in the field first because it's the only
@@ -54,26 +54,26 @@ describe( 'TemplateWizard', function () {
 		browser.keys( '2018-08-22' );
 
 		// Remove Username, test that focus is now on Date of Death.
-		UseTemplatePage.usernameField.click();
-		UseTemplatePage.deathDate.isFocused();
+		await UseTemplatePage.usernameField.click();
+		await UseTemplatePage.deathDate.isFocused();
 		// Try to close the dialog, test that an error is shown.
-		UseTemplatePage.cancelField.click();
-		UseTemplatePage.dialogError.waitForDisplayed();
+		await UseTemplatePage.cancelField.click();
+		await UseTemplatePage.dialogError.waitForDisplayed();
 
 		// Cancel that, and try to close the template, and test that an error is shown.
-		UseTemplatePage.dialogErrorCancelButton.click();
-		UseTemplatePage.closeTemplateButton.waitForDisplayed();
-		UseTemplatePage.closeTemplateButton.click();
-		UseTemplatePage.dialogError.waitForDisplayed();
+		await UseTemplatePage.dialogErrorCancelButton.click();
+		await UseTemplatePage.closeTemplateButton.waitForDisplayed();
+		await UseTemplatePage.closeTemplateButton.click();
+		await UseTemplatePage.dialogError.waitForDisplayed();
 
 		// Cancel that, and insert the template, and test that it was inserted.
-		UseTemplatePage.dialogErrorCancelButton.click();
-		UseTemplatePage.insertField.click();
-		$( '#wpTextbox1' ).waitForDisplayed();
-		browser.waitUntil( function () {
-			return !UseTemplatePage.dialog.isDisplayed();
+		await UseTemplatePage.dialogErrorCancelButton.click();
+		await UseTemplatePage.insertField.click();
+		await $( '#wpTextbox1' ).waitForDisplayed();
+		await browser.waitUntil( async function () {
+			return !( await UseTemplatePage.dialog.isDisplayed() );
 		} );
-		assert.equal( $( '#wpTextbox1' ).getValue(), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
+		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${testTemplateName}|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 
 } );
