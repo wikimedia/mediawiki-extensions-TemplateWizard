@@ -1,9 +1,11 @@
 /**
  * @class
+ * @extends OO.ui.MenuOptionWidget
+ *
  * @constructor
- * @param {Object} [config] Configuration options.
- * @cfg {jQuery|string} [description=''] Search result description
- * @cfg {string} [data.redirecttitle] Page title for the "redirected from" message
+ * @param {Object} config
+ * @param {jQuery|string} [config.description=''] Search result description
+ * @param {string} [config.data.redirecttitle] Page title for the "redirected from" message
  */
 mw.TemplateWizard.SearchResult = function MWTemplateWizardSearchResult( config ) {
 	mw.TemplateWizard.SearchResult.super.call( this, config );

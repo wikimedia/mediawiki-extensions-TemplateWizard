@@ -1,8 +1,11 @@
 /**
  * @class
+ * @extends OO.ui.ComboBoxInputWidget
+ *
  * @constructor
  * @param {Object} [config] Configuration options.
- * @cfg {mw.Api} [api] Optional MediaWiki API, for testing
+ * @param {number} [config.limit=10]
+ * @param {mw.Api} [config.api] Optional MediaWiki API, for testing
  * @param {mw.TemplateWizard.SearchForm} searchForm The form that this field is attached to.
  */
 mw.TemplateWizard.SearchField = function MWTemplateWizardSearchField( config, searchForm ) {

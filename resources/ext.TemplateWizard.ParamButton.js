@@ -1,12 +1,13 @@
 /**
  * @class
- * @constructor
  * @extends OO.ui.ButtonWidget
+ *
+ * @constructor
  * @param {mw.TemplateWizard.TemplateForm} templateForm
  * @param {string} param
  * @param {mw.TemplateWizard.Model.Parameters} model
- * @param {Object} config
- * @cfg {boolean} [required] Parameter is required
+ * @param {Object} [config]
+ * @param {boolean} [config.required=false] Parameter is required
  */
 mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton(
 	templateForm, param, model, config

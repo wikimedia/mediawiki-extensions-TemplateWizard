@@ -2,11 +2,12 @@
  * A ParamField is a FieldLayout for a template parameter's form field.
  *
  * @class
- * @constructor
  * @extends OO.ui.FieldLayout
+ *
+ * @constructor
  * @param {OO.ui.Widget} fieldWidget
- * @param {Object} config
- * @cfg {boolean} [required] Field is required
+ * @param {Object} [config]
+ * @param {boolean} [config.required=false] Field is required
  */
 mw.TemplateWizard.ParamField = function MWTemplateWizardParamField( fieldWidget, config ) {
 	config = $.extend( {

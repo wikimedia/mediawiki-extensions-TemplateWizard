@@ -1,9 +1,11 @@
 /**
  * @class
+ * @extends OO.ui.PanelLayout
+ *
  * @constructor
  * @param {OO.ui.ProcessDialog} dialog The dialog to attach the form to.
  * @param {Object} [config] Configuration options.
- * @cfg {string} [contentDir] The direction of the page content
+ * @param {string} [config.contentDir="ltr"] The direction of the page content
  */
 mw.TemplateWizard.SearchForm = function MWTemplateWizardSearchForm( dialog, config ) {
 	config = $.extend( {
