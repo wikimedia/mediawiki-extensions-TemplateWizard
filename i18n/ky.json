@@ -4,8 +4,14 @@
 			"Bosogo"
 		]
 	},
+	"templatewizard-add-all": "Бардык параметрлерди кошуу",
 	"templatewizard-cancel": "Жокко чыгаруу",
+	"templatewizard-close-dialog-retry": "Өзгөртүүлөрдү жокко чыгаруу",
 	"templatewizard-dialog-title": "Калыпты кошуу",
 	"templatewizard-insert": "Кошуу",
-	"templatewizard-invalid-title": "Жараксыз аталыш"
+	"templatewizard-invalid-title": "Жараксыз аталыш",
+	"templatewizard-invalid-values-edit": "Калыпты түзөтүү",
+	"templatewizard-search-placeholder": "Калып издөө",
+	"templatewizard-link-to-template-title": "Калыпты көрүү",
+	"templatewizard-use": "Колдонуу"
 }
