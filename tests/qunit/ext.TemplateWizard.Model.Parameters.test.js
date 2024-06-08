@@ -1,11 +1,11 @@
 ( function () {
 	QUnit.module( 'TemplateWizard.Model.Parameters' );
 
-	QUnit.test( 'setting states', function ( assert ) {
+	QUnit.test( 'setting states', ( assert ) => {
 		const parameters = new mw.TemplateWizard.Model.Parameters();
 		let result = null;
 		// Register event handler for testing purposes.
-		parameters.on( 'changeOne', function ( allEnabled ) {
+		parameters.on( 'changeOne', ( allEnabled ) => {
 			result = allEnabled;
 		} );
 
@@ -30,16 +30,16 @@
 		assert.strictEqual( result, false );
 	} );
 
-	QUnit.test( 'able to do something after changing all', function ( assert ) {
+	QUnit.test( 'able to do something after changing all', ( assert ) => {
 		const parameters = new mw.TemplateWizard.Model.Parameters(),
 			events = [];
 		// Register event handlers for testing purposes.
-		parameters.on( 'changeAll', function ( newState ) {
+		parameters.on( 'changeAll', ( newState ) => {
 			// Change the result here to something different to below in afterChangeAll,
 			// so we can make sure the latter takes precedence.
 			events.push( 'changeAll: ' + newState );
 		} );
-		parameters.on( 'afterChangeAll', function () {
+		parameters.on( 'afterChangeAll', () => {
 			events.push( 'afterChangeAll' );
 		} );
 

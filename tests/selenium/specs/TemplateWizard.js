@@ -5,10 +5,10 @@ const assert = require( 'assert' ),
 	CreateTemplate = require( '../pageobjects/CreateTemplate.page' ),
 	UseTemplatePage = require( '../pageobjects/UseTemplatePage.page' );
 
-describe( 'TemplateWizard', function () {
+describe( 'TemplateWizard', () => {
 	let testTemplateName;
 
-	beforeEach( async function () {
+	beforeEach( async () => {
 		// Create a test template
 		testTemplateName = Util.getTestString( 'Example ' );
 		await CreateTemplate.create( testTemplateName );
@@ -33,18 +33,18 @@ describe( 'TemplateWizard', function () {
 		await UseTemplatePage.testTemplateTitle.isExisting();
 	} );
 
-	it( 'has 1 (required) field visible', async function () {
+	it( 'has 1 (required) field visible', async () => {
 		// Test that there is 1 (required) field already visible.
 		assert.strictEqual( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 1 );
 	} );
 
-	it( 'has 5 fields visible', async function () {
+	it( 'has 5 fields visible', async () => {
 		// Click "Add all fields", test that there are now 5 fields visible.
 		await UseTemplatePage.addAllFields.click();
 		assert.strictEqual( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 5 );
 	} );
 
-	it( 'has template inserted', async function () {
+	it( 'has template inserted', async () => {
 
 		await UseTemplatePage.addAllFields.click();
 
@@ -70,9 +70,7 @@ describe( 'TemplateWizard', function () {
 		await UseTemplatePage.dialogErrorCancelButton.click();
 		await UseTemplatePage.insertField.click();
 		await $( '#wpTextbox1' ).waitForDisplayed();
-		await browser.waitUntil( async function () {
-			return !( await UseTemplatePage.dialog.isDisplayed() );
-		} );
+		await browser.waitUntil( async () => !( await UseTemplatePage.dialog.isDisplayed() ) );
 		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${ testTemplateName }|dob=2018-08-22|photo=|dod=|citizenship=}}` );
 	} );
 

@@ -62,9 +62,7 @@ mw.TemplateWizard.Model.Parameters.prototype.setOne = function ( name, state ) {
 		return;
 	}
 	parameters[ name ] = state;
-	const allEnabled = Object.keys( parameters ).every( function ( n ) {
-		return parameters[ n ];
-	} );
+	const allEnabled = Object.keys( parameters ).every( ( n ) => parameters[ n ] );
 	this.emit( 'changeOne', allEnabled );
 };
 

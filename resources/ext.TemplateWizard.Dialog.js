@@ -108,7 +108,7 @@ mw.TemplateWizard.Dialog.prototype.closeTemplate = function () {
 mw.TemplateWizard.Dialog.prototype.getSetupProcess = function ( data ) {
 	const dialog = this;
 	return mw.TemplateWizard.Dialog.super.prototype.getSetupProcess.call( this, data )
-		.next( function () {
+		.next( () => {
 			dialog.contentDir = data.contentDir || 'ltr';
 			dialog.showSearchForm();
 			dialog.$element.attr( 'id', 'ext-templatewizard-dialog' );
@@ -217,14 +217,14 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				window.open( mw.TemplateWizard.Dialog.static.helpUrl );
 			}
 		} )
-		.next( function () {
+		.next( () => {
 			if ( action === 'insert' && dialog.templateForm && !dialog.ignoreParamValues ) {
-				return dialog.templateForm.getFieldsValidity().fail( function () {
+				return dialog.templateForm.getFieldsValidity().fail( () => {
 					dialog.invalidField = dialog.templateForm.getInvalidField();
 				} );
 			}
 		} )
-		.next( function () {
+		.next( () => {
 			if ( action === 'insert' ) {
 				const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
 				const templateName = dialog.templateForm.getTitle()
@@ -243,7 +243,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				mw.TemplateWizard.insertedTemplates.push( templateName );
 				// Close dialog.
 				dialog.ignoreParamValues = false;
-				dialog.close().closed.then( function () {
+				dialog.close().closed.then( () => {
 					// Delay this until the dialog has closed, because modal dialogs make the rest
 					// of the page unfocusable, and textSelection needs to focus the field to do its
 					// job (T33780#8106393).

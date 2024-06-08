@@ -105,7 +105,7 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		return response;
 	}
 
-	const containsExactMatch = Object.keys( response.pages ).some( function ( pageId ) {
+	const containsExactMatch = Object.keys( response.pages ).some( ( pageId ) => {
 		const page = response.pages[ pageId ],
 			title = mw.Title.newFromText( page.title );
 		return title.getMainText().toLowerCase() === lowerQuery;
@@ -125,16 +125,14 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 		gpsnamespace: mw.config.get( 'wgNamespaceIds' ).template,
 		// Try to fill with prefix matches, otherwise just the top-1 prefix match
 		gpslimit: limit
-	} ).then( function ( prefixMatches ) {
+	} ).then( ( prefixMatches ) => {
 		// action=templatedata returns page objects in `{ pages: {} }`, keyed by page id
 		// Copy keys because the loop below needs an ordered array, not an object
 		for ( const pageId in prefixMatches.pages ) {
 			prefixMatches.pages[ pageId ].pageid = pageId;
 		}
 		// Make sure the loop below processes the results by relevance
-		const pages = OO.getObjectValues( prefixMatches.pages ).sort( function ( a, b ) {
-			return a.index - b.index;
-		} );
+		const pages = OO.getObjectValues( prefixMatches.pages ).sort( ( a, b ) => a.index - b.index );
 		for ( const i in pages ) {
 			const prefixMatch = pages[ i ];
 			if ( !( prefixMatch.pageid in response.pages ) ) {
@@ -150,10 +148,10 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 			}
 		}
 		return response;
-	}, function () {
+	}, () =>
 		// Proceed with the unmodified response in case the additional API request failed
-		return response;
-	} )
+		 response
+	 )
 		.promise( { abort: function () {} } );
 };
 
@@ -175,12 +173,12 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	// "redirecttitle" field
 	const redirectedFrom = {};
 	if ( response.redirects ) {
-		response.redirects.forEach( function ( redirect ) {
+		response.redirects.forEach( ( redirect ) => {
 			redirectedFrom[ redirect.to ] = redirect.from;
 		} );
 	}
 
-	const searchResults = Object.keys( templateData ).map( function ( pageId ) {
+	const searchResults = Object.keys( templateData ).map( ( pageId ) => {
 		const page = templateData[ pageId ];
 
 		if ( !page.redirecttitle && page.title in redirectedFrom ) {
@@ -201,7 +199,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
 	} );
 
 	const lowerQuery = this.getValue().trim().toLowerCase();
-	searchResults.sort( function ( a, b ) {
+	searchResults.sort( ( a, b ) => {
 		// Force exact matches to be at the top
 		if ( a.label.toLowerCase() === lowerQuery ) {
 			return -1;
@@ -235,9 +233,7 @@ mw.TemplateWizard.SearchField.prototype.getLookupCacheDataFromResponse = functio
  * @return {OO.ui.MenuOptionWidget[]}
  */
 mw.TemplateWizard.SearchField.prototype.getLookupMenuOptionsFromData = function ( data ) {
-	return data.map( function ( config ) {
-		return new mw.TemplateWizard.SearchResult( config );
-	} );
+	return data.map( ( config ) => new mw.TemplateWizard.SearchResult( config ) );
 };
 
 /**

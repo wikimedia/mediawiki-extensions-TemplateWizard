@@ -2,7 +2,7 @@ $( function () {
 	/*
 	 * Add the TemplateWizard button to the WikiEditor toolbar.
 	 */
-	mw.hook( 'wikiEditor.toolbarReady' ).add( function ( $textarea ) {
+	mw.hook( 'wikiEditor.toolbarReady' ).add( ( $textarea ) => {
 		// Take the content direction from the edit textarea
 		const contentDir = $textarea.css( 'direction' ),
 			// Set up the TemplateWizard dialog window.
@@ -35,7 +35,7 @@ $( function () {
 	 * to log the previously-saved list of inserted template names.
 	 */
 	// eslint-disable-next-line no-jquery/no-global-selector
-	$( '#wpSave' ).on( 'click', function () {
+	$( '#wpSave' ).on( 'click', () => {
 		if ( mw.TemplateWizard.insertedTemplates.length ) {
 			mw.TemplateWizard.logEvent( 'save-page', mw.TemplateWizard.insertedTemplates );
 		}

@@ -15,7 +15,7 @@
 		}
 	} );
 
-	QUnit.test( 'default prefixsearch', function ( assert ) {
+	QUnit.test( 'default prefixsearch', ( assert ) => {
 		const widget = new mw.TemplateWizard.SearchField(),
 			query = 'a',
 			apiParams = widget.getApiParams( query );
@@ -32,7 +32,7 @@
 		} );
 	} );
 
-	QUnit.test( 'CirrusSearch: all API parameters', function ( assert ) {
+	QUnit.test( 'CirrusSearch: all API parameters', ( assert ) => {
 		enableCirrusSearchLookup( true );
 		const widget = new mw.TemplateWizard.SearchField(),
 			query = 'a',
@@ -51,7 +51,7 @@
 		} );
 	} );
 
-	QUnit.test( 'CirrusSearch: prefixsearch behavior', function ( assert ) {
+	QUnit.test( 'CirrusSearch: prefixsearch behavior', ( assert ) => {
 		enableCirrusSearchLookup( true );
 		const widget = new mw.TemplateWizard.SearchField();
 
@@ -136,7 +136,7 @@
 				query: 'zhōngwénzì',
 				expected: 'zhōngwénzì*'
 			}
-		].forEach( function ( data ) {
+		].forEach( ( data ) => {
 			const apiParams = widget.getApiParams( data.query );
 
 			assert.strictEqual(
@@ -147,7 +147,7 @@
 		} );
 	} );
 
-	QUnit.test( 'getLookupRequest() when CirrusSearch is not available', function ( assert ) {
+	QUnit.test( 'getLookupRequest() when CirrusSearch is not available', ( assert ) => {
 		let callCount = 0;
 		const api = {
 				get: function () {
@@ -159,7 +159,7 @@
 		assert.strictEqual( callCount, 1 );
 	} );
 
-	QUnit.test( 'getLookupRequest() when exact match was already found', function ( assert ) {
+	QUnit.test( 'getLookupRequest() when exact match was already found', ( assert ) => {
 		enableCirrusSearchLookup( true );
 		let callCount = 0;
 		const api = {
@@ -187,7 +187,7 @@
 		assert.strictEqual( callCount, 1 );
 	} );
 
-	QUnit.test( 'getLookupCacheDataFromResponse() API result conversion', function ( assert ) {
+	QUnit.test( 'getLookupCacheDataFromResponse() API result conversion', ( assert ) => {
 		const widget = new mw.TemplateWizard.SearchField(),
 			apiResult = {
 				pages: {
@@ -213,7 +213,7 @@
 		] );
 	} );
 
-	QUnit.test( 'getLookupCacheDataFromResponse() limit', function ( assert ) {
+	QUnit.test( 'getLookupCacheDataFromResponse() limit', ( assert ) => {
 		const widget = new mw.TemplateWizard.SearchField(),
 			apiResult = { pages: {} };
 
@@ -226,7 +226,7 @@
 		assert.strictEqual( searchResult.length, 10 );
 	} );
 
-	QUnit.test( 'getLookupCacheDataFromResponse() exact match first', function ( assert ) {
+	QUnit.test( 'getLookupCacheDataFromResponse() exact match first', ( assert ) => {
 		const widget = new mw.TemplateWizard.SearchField(),
 			apiResult = { pages: {
 				1: { title: 'Template:Deutschland' },
