@@ -8,7 +8,7 @@
  * @param {string} [config.contentDir="ltr"] The direction of the page content
  */
 mw.TemplateWizard.SearchForm = function MWTemplateWizardSearchForm( dialog, config ) {
-	config = $.extend( {
+	config = Object.assign( {
 		padded: true,
 		expanded: true
 	}, config );

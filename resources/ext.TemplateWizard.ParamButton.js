@@ -13,7 +13,7 @@ mw.TemplateWizard.ParamButton = function MWTemplateWizardParamButton(
 	templateForm, param, model, config
 ) {
 	// Config.
-	config = $.extend( {
+	config = Object.assign( {
 		icon: 'add',
 		framed: false,
 		flags: 'progressive'

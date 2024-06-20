@@ -208,7 +208,7 @@ mw.TemplateWizard.TemplateForm.prototype.getParamsAndFields = function ( grouped
 		$fields = $( '<div>' ).addClass( 'ext-templatewizard-fields' );
 	let hasSuggestedOrOptional = false;
 	const parametersModel = new mw.TemplateWizard.Model.Parameters(
-		$.extend( {}, groupedParams.suggested, groupedParams.optional )
+		Object.assign( {}, groupedParams.suggested, groupedParams.optional )
 	);
 	parametersModel.connect( templateForm, { afterChangeAll: 'attemptFocus' } );
 	Object.keys( groupedParams ).forEach( ( groupName ) => {

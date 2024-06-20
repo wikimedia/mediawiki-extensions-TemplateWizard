@@ -9,7 +9,7 @@
  * @param {mw.TemplateWizard.SearchForm} searchForm The form that this field is attached to.
  */
 mw.TemplateWizard.SearchField = function MWTemplateWizardSearchField( config, searchForm ) {
-	config = $.extend( {
+	config = Object.assign( {
 		placeholder: OO.ui.deferMsg( 'templatewizard-search-placeholder' ),
 		icon: 'search'
 	}, config );
@@ -46,7 +46,7 @@ mw.TemplateWizard.SearchField.prototype.getApiParams = function ( query ) {
 	};
 
 	if ( mw.config.get( 'wgTemplateWizardConfig' ).cirrusSearchLookup ) {
-		$.extend( params, {
+		Object.assign( params, {
 			generator: 'search',
 			gsrsearch: params.gpssearch,
 			gsrnamespace: params.gpsnamespace,

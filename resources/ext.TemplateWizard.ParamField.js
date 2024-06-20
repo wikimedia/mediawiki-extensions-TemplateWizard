@@ -10,7 +10,7 @@
  * @param {boolean} [config.required=false] Field is required
  */
 mw.TemplateWizard.ParamField = function MWTemplateWizardParamField( fieldWidget, config ) {
-	config = $.extend( {
+	config = Object.assign( {
 		align: 'top',
 		required: false
 	}, config );
