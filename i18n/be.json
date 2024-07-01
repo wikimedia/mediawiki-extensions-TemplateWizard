@@ -3,7 +3,8 @@
 		"authors": [
 			"Artsiom91",
 			"Chadyka",
-			"Plaga med"
+			"Plaga med",
+			"Kapatych"
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
@@ -12,7 +13,7 @@
 	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
 	"templatewizard-close-dialog-retry": "Адмяніць змяненні",
 	"templatewizard-default": "Прадвызначана: $1",
-	"templatewizard-desc": "Дадатак WikiEditor, якая прадастаўляе майстар устаўкі шаблонаў",
+	"templatewizard-desc": "Праграма WikiEditor, якая прадастаўляе майстар устаўкі шаблонаў",
 	"templatewizard-dialog-title": "Уставіць шаблон",
 	"templatewizard-help": "Даведацца больш пра Майстар шаблонаў",
 	"templatewizard-help-title": "Дапамогу па Майстру шаблонаў можна прачытаць на MediaWiki.org",
