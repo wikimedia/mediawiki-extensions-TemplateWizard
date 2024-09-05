@@ -190,12 +190,11 @@ mw.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function ( data )
 };
 
 mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
-	const dialog = this;
 	return mw.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
-		.next( function () {
-			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && dialog.templateForm ) {
-				dialog.firstFieldWithValue = dialog.templateForm.getFirstFieldWithValue();
-				if ( dialog.firstFieldWithValue && !this.ignoreParamValues ) {
+		.next( () => {
+			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && this.templateForm ) {
+				this.firstFieldWithValue = this.templateForm.getFirstFieldWithValue();
+				if ( this.firstFieldWithValue && !this.ignoreParamValues ) {
 					return new OO.ui.Error( mw.msg(
 						action === 'closeTemplate' ?
 							'templatewizard-remove-template-body' :
@@ -203,35 +202,35 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 					) );
 				}
 				if ( action === 'closeTemplate' ) {
-					mw.TemplateWizard.logEvent( 'remove-template', [ dialog.templateForm.getTitle().getMainText() ] );
-					dialog.showSearchForm();
+					mw.TemplateWizard.logEvent( 'remove-template', [ this.templateForm.getTitle().getMainText() ] );
+					this.showSearchForm();
 				} else {
-					mw.TemplateWizard.logEvent( 'cancel-dialog', [ dialog.templateForm.getTitle().getMainText() ] );
+					mw.TemplateWizard.logEvent( 'cancel-dialog', [ this.templateForm.getTitle().getMainText() ] );
 				}
 			}
 			if ( action === 'closeDialog' ) {
 				mw.TemplateWizard.logEvent( 'cancel-dialog', [] );
-				dialog.close();
+				this.close();
 			}
 			if ( action === 'help' ) {
 				window.open( mw.TemplateWizard.Dialog.static.helpUrl );
 			}
 		} )
 		.next( () => {
-			if ( action === 'insert' && dialog.templateForm && !dialog.ignoreParamValues ) {
-				return dialog.templateForm.getFieldsValidity().fail( () => {
-					dialog.invalidField = dialog.templateForm.getInvalidField();
+			if ( action === 'insert' && this.templateForm && !this.ignoreParamValues ) {
+				return this.templateForm.getFieldsValidity().fail( () => {
+					this.invalidField = this.templateForm.getInvalidField();
 				} );
 			}
 		} )
 		.next( () => {
 			if ( action === 'insert' ) {
 				const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
-				const templateName = dialog.templateForm.getTitle()
+				const templateName = this.templateForm.getTitle()
 					.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
 				templateFormatter.setTemplateName( templateName );
-				templateFormatter.setFormat( dialog.templateForm.getFormat() );
-				templateFormatter.setParameters( dialog.templateForm.getParameters() );
+				templateFormatter.setFormat( this.templateForm.getFormat() );
+				templateFormatter.setParameters( this.templateForm.getParameters() );
 				const textSelectionOpts = {
 					peri: templateFormatter.getTemplate(),
 					replace: true,
@@ -242,8 +241,8 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				mw.TemplateWizard.logEvent( 'insert-template', [ templateName ] );
 				mw.TemplateWizard.insertedTemplates.push( templateName );
 				// Close dialog.
-				dialog.ignoreParamValues = false;
-				dialog.close().closed.then( () => {
+				this.ignoreParamValues = false;
+				this.close().closed.then( () => {
 					// Delay this until the dialog has closed, because modal dialogs make the rest
 					// of the page unfocusable, and textSelection needs to focus the field to do its
 					// job (T33780#8106393).
