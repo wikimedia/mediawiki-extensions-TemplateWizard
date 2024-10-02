@@ -1,4 +1,4 @@
-$( function () {
+$( () => {
 	/*
 	 * Add the TemplateWizard button to the WikiEditor toolbar.
 	 */
@@ -41,4 +41,4 @@ $( function () {
 		}
 	} );
 
-}() );
+} );
