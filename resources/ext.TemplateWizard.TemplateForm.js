@@ -84,7 +84,7 @@ mw.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
 
 	// Menu area (two side-by-side panels).
 	const menuLayout = new OO.ui.MenuLayout();
-	const groupedParams = this.processParameters( templateData.params );
+	const groupedParams = this.processParameters( templateData );
 	const paramsAndFields = this.getParamsAndFields( groupedParams );
 	menuLayout.$menu.append( paramsAndFields.menu );
 	menuLayout.$content.append( paramsAndFields.fields );
@@ -424,16 +424,19 @@ mw.TemplateWizard.TemplateForm.prototype.getFieldsValidity = function () {
 };
 
 /**
- * @param {Object<string,Object>} params
+ * @param {Object} templateData
  * @return {{required:Object<string,Object>,suggested:Object<string,Object>,optional:Object<string,Object>}}
  */
-mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( params ) {
+mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( templateData ) {
+	const params = templateData.params;
 	const groupedParams = {
 		required: {},
 		suggested: {},
 		optional: {}
 	};
-	Object.keys( params ).forEach( ( param ) => {
+	// Optionally use paramOrder (which if present and not null must contain all params).
+	const paramNames = templateData.paramOrder || Object.keys( params );
+	paramNames.forEach( ( param ) => {
 		const details = params[ param ];
 		if ( details.deprecated ) {
 			// Don't include even a mention of a deprecated parameter.

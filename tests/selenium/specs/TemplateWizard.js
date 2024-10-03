@@ -71,7 +71,7 @@ describe( 'TemplateWizard', () => {
 		await UseTemplatePage.insertField.click();
 		await $( '#wpTextbox1' ).waitForDisplayed();
 		await browser.waitUntil( async () => !( await UseTemplatePage.dialog.isDisplayed() ) );
-		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${ testTemplateName }|dob=2018-08-22|photo=|dod=|citizenship=}}` );
+		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${ testTemplateName }|dob=2018-08-22|dod=|photo=|citizenship=}}` );
 	} );
 
 } );
