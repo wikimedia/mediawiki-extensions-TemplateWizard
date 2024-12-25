@@ -5,7 +5,9 @@
 		]
 	},
 	"templatewizard-add-all": "ਸਾਰੇ ਮਾਪਦੰਡ ਸ਼ਾਮਲ ਕਰੋ",
+	"templatewizard-dialog-title": "ਇੱਕ ਫਰਮਾ ਪਾਓ",
 	"templatewizard-parameters-required": "ਲੋੜੀਂਦੇ ਮਾਪਦੰਡ",
 	"templatewizard-parameters-suggested": "ਸੁਝਾਏ ਗਏ ਮਾਪਦੰਡ",
-	"templatewizard-remove-all": "ਸਾਰੇ ਮਾਪਦੰਡ ਹਟਾਓ"
+	"templatewizard-remove-all": "ਸਾਰੇ ਮਾਪਦੰਡ ਹਟਾਓ",
+	"templatewizard-link-to-template-title": "ਫਰਮਾ ਵੇਖੋ"
 }
