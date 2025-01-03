@@ -148,10 +148,10 @@ mw.TemplateWizard.SearchField.prototype.addExactMatch = function ( response ) {
 			}
 		}
 		return response;
-	}, () =>
-		// Proceed with the unmodified response in case the additional API request failed
-		 response
-	 )
+	},
+	// Proceed with the unmodified response in case the additional API request failed
+	() => response
+	)
 		.promise( { abort: function () {} } );
 };
 

@@ -1,13 +1,11 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"no-jquery/no-extend": "warn",
-		"implicit-arrow-linebreak": "warn",
-		"no-mixed-spaces-and-tabs": "warn"
+		"no-jquery/no-extend": "warn"
 	}
 }
