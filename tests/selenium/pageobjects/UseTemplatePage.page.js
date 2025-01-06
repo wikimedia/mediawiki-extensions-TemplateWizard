@@ -13,11 +13,11 @@ class UseTemplatePage extends Page {
 	}
 
 	get searchInput() {
-		return $( '.oo-ui-comboBoxInputWidget-field' );
+		return $( '.ext-templatewizard-dialog .oo-ui-comboBoxInputWidget-field' );
 	}
 
 	get searchResultMenu() {
-		return $( '.oo-ui-menuOptionWidget' );
+		return $( '.ext-templatewizard-dialog .oo-ui-menuOptionWidget' );
 	}
 
 	get testTemplateTitle() {
@@ -33,15 +33,15 @@ class UseTemplatePage extends Page {
 	}
 
 	get deathDate() {
-		return $( 'input[name="dod"]' );
+		return $( '.ext-templatewizard-dialog input[name="dod"]' );
 	}
 
 	get cancelField() {
-		return $( '.oo-ui-icon-close' );
+		return $( '.ext-templatewizard-dialog .oo-ui-icon-close' );
 	}
 
 	get dialogError() {
-		return $( '.oo-ui-processDialog-errors-title' );
+		return $( '.ext-templatewizard-dialog .oo-ui-processDialog-errors-title' );
 	}
 
 	get dialogErrorCancelButton() {
@@ -57,7 +57,15 @@ class UseTemplatePage extends Page {
 	}
 
 	openEdit() {
-		super.openTitle( 'TemplateWizard_test', { action: 'edit' } );
+		super.openTitle(
+			'TemplateWizard_test',
+			{
+				action: 'edit',
+				cxhidebetapopup: 1,
+				hidewelcomedialog: 1,
+				vehidebetadialog: 1
+			}
+		);
 	}
 
 	visibleElementCount( selector ) {
