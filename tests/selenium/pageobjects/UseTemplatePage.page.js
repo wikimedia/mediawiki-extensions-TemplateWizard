@@ -56,8 +56,8 @@ class UseTemplatePage extends Page {
 		return $( '=Insert' );
 	}
 
-	openEdit() {
-		super.openTitle(
+	async openEdit() {
+		return super.openTitle(
 			'TemplateWizard_test',
 			{
 				action: 'edit',
