@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\TemplateWizard\Test\Unit;
 
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\TemplateWizard\Hooks;
 use MediaWiki\Output\OutputPage;
 use MediaWikiUnitTestCase;
@@ -18,6 +19,9 @@ class HooksTest extends MediaWikiUnitTestCase {
 		$outputPageMock = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
 			->getMock();
+		$outputPageMock->expects( $this->once() )
+			->method( 'getConfig' )
+			->willReturn( new HashConfig( [ 'TemplateDataEnableDiscovery' => false ] ) );
 		$outputPageMock->expects( $this->once() )
 			->method( 'addModules' )
 			->with( 'ext.TemplateWizard' );

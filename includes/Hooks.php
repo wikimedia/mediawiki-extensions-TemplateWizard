@@ -32,6 +32,9 @@ class Hooks implements
 		$editPage,
 		$output
 	) {
+		if ( $output->getConfig()->get( 'TemplateDataEnableDiscovery' ) ) {
+			$output->addModules( 'ext.templateData.templateDiscovery' );
+		}
 		$output->addModules( 'ext.TemplateWizard' );
 	}
 
