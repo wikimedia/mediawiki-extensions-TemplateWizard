@@ -37,6 +37,13 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 
 	// Button group.
 	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ linkButton, trashButton ] } );
+
+	// Favorite button.
+	if ( mw.templateData !== undefined && mw.templateData.FavoriteButton !== undefined ) {
+		const favoriteButton = new mw.templateData.FavoriteButton( { pageId: templateData.pageId } );
+		this.buttons.addItems( [ favoriteButton ], 0 );
+	}
+
 	this.buttons.$element.addClass( 'ext-templatewizard-buttons' );
 
 	// Template title.
