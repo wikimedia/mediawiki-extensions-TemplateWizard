@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\TemplateWizard\Test\Unit;
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\TemplateWizard\Hooks;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWikiUnitTestCase;
 
 /**
@@ -25,6 +26,7 @@ class HooksTest extends MediaWikiUnitTestCase {
 		$outputPageMock->expects( $this->once() )
 			->method( 'addModules' )
 			->with( 'ext.TemplateWizard' );
-		( new Hooks )->onEditPage__showEditForm_initial( null, $outputPageMock );
+		ExtensionRegistry::enableForTest();
+		( new Hooks( ExtensionRegistry::getInstance() ) )->onEditPage__showEditForm_initial( null, $outputPageMock );
 	}
 }

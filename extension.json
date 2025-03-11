@@ -24,7 +24,10 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\Extension\\TemplateWizard\\Hooks"
+			"class": "MediaWiki\\Extension\\TemplateWizard\\Hooks",
+			"services": [
+				"ExtensionRegistry"
+			]
 		}
 	},
 	"ConfigRegistry": {
