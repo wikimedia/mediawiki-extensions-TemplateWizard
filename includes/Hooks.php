@@ -22,6 +22,12 @@ class Hooks implements
 	ResourceLoaderGetConfigVarsHook
 {
 
+	private ExtensionRegistry $extensionRegistry;
+
+	public function __construct( ExtensionRegistry $extensionRegistry ) {
+		$this->extensionRegistry = $extensionRegistry;
+	}
+
 	/**
 	 * Add the extension's module.
 	 * @link https://www.mediawiki.org/wiki/Manual:Hooks/EditPage::showEditForm:initial
@@ -46,10 +52,8 @@ class Hooks implements
 	 * @param Config $config
 	 */
 	public function onResourceLoaderGetConfigVars( array &$vars, $skin, Config $config ): void {
-		$extensionRegistry = ExtensionRegistry::getInstance();
-
 		$vars['wgTemplateWizardConfig'] = [
-			'cirrusSearchLookup' => $extensionRegistry->isLoaded( 'CirrusSearch' ),
+			'cirrusSearchLookup' => $this->extensionRegistry->isLoaded( 'CirrusSearch' ),
 		];
 	}
 }
