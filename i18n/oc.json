@@ -2,11 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Guilhelma",
-			"Unuaiga"
+			"Unuaiga",
+			"Lhanars"
 		]
 	},
 	"templatewizard-close-dialog-body": "Quitar l'assistent causarà la pèrda de las donadas qu'avètz ajustadas al modèle",
+	"templatewizard-dialog-title": "Inserir un modèl",
+	"templatewizard-invalid-values-insert": "Inserir un modèl",
 	"templatewizard-placeholder-default": "Per defauta: $1",
 	"templatewizard-remove-template-body": "Lo modèle qu'ensajatz de suprimir conten de donadas qu'i avètz dintradas. Suprimir lo modèle suprimirà tanben las informacions qu'i avètz ajustadas. L'accion es pas reversibla.",
-	"templatewizard-remove-template-retry": "Suprimir lo modèle"
+	"templatewizard-remove-template-retry": "Suprimir lo modèle",
+	"templatewizard-search-placeholder": "Trobatz un modèl"
 }
