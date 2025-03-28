@@ -29,7 +29,13 @@ mw.TemplateWizard.Dialog.static.actions = [
 		label: OO.ui.deferMsg( 'templatewizard-cancel' ),
 		flags: [ 'safe', 'close' ],
 		action: 'closeDialog',
-		modes: [ 'choose', 'insert' ]
+		modes: [ 'choose' ]
+	},
+	{
+		label: OO.ui.deferMsg( 'templatewizard-remove-template-title' ),
+		flags: [ 'safe', 'back' ],
+		action: 'closeTemplate',
+		modes: [ 'insert' ]
 	},
 	{
 		action: 'help',
@@ -90,18 +96,10 @@ mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 	this.templateForm = new mw.TemplateWizard.TemplateForm(
 		templateData, { $overlay: this.$overlay }
 	);
-	this.templateForm.connect( this, { close: 'closeTemplate' } );
 
 	this.$body.html( this.templateForm.$element );
 	this.templateForm.afterAttached();
 	this.actions.get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( false );
-};
-
-/**
- * Event handler for the 'close' event of TemplateForm.
- */
-mw.TemplateWizard.Dialog.prototype.closeTemplate = function () {
-	this.executeAction( 'closeTemplate' );
 };
 
 /**
@@ -142,7 +140,7 @@ mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
 	if ( this.firstFieldWithValue && this.currentAction === 'closeTemplate' ) {
 		this.$errorsTitle.text( mw.msg( 'templatewizard-remove-template' ) );
 		this.retryButton.setLabel( mw.msg( 'templatewizard-remove-template-retry' ) );
-		this.dismissButton.setLabel( mw.msg( 'templatewizard-cancel' ) );
+		this.dismissButton.setLabel( mw.msg( 'templatewizard-remove-template-cancel' ) );
 	} else if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
 		this.$errorsTitle.text( mw.msg( 'templatewizard-close-dialog' ) );
 		this.retryButton.setLabel( mw.msg( 'templatewizard-close-dialog-retry' ) );
