@@ -41,14 +41,6 @@ mw.TemplateWizard.TemplateForm = function MWTemplateWizardTemplateForm( template
 
 OO.inheritClass( mw.TemplateWizard.TemplateForm, OO.ui.Widget );
 
-/* Events */
-
-/**
- * @event close
- *
- * A 'close' event is emitted when closing the template form and returning to the search form.
- */
-
 /* Methods */
 
 /**
@@ -77,7 +69,6 @@ mw.TemplateWizard.TemplateForm.prototype.getFormat = function () {
 mw.TemplateWizard.TemplateForm.prototype.getForm = function ( templateData ) {
 	// Title bar.
 	this.templateTitleBar = new mw.TemplateWizard.TemplateTitleBar(
-		this,
 		this.title,
 		templateData
 	);
@@ -135,13 +126,6 @@ mw.TemplateWizard.TemplateForm.prototype.attemptFocus = function () {
 		}
 	}
 
-};
-/**
- * Event handler for the 'click' event of the trashButton in TemplateTitleBar.
- * This propagates the event upwards as a 'close' event.
- */
-mw.TemplateWizard.TemplateForm.prototype.closeForm = function () {
-	this.emit( 'close' );
 };
 
 mw.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {

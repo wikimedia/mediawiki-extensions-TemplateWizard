@@ -56,11 +56,11 @@ describe( 'TemplateWizard', () => {
 		// Remove Username, test that focus is now on Date of Death.
 		await UseTemplatePage.usernameField.click();
 		await UseTemplatePage.deathDate.isFocused();
-		// Try to close the dialog, test that an error is shown.
-		await UseTemplatePage.cancelField.click();
+
+		// Try to return to search, and test that an error is shown.
+		await UseTemplatePage.closeTemplateButton.click();
 		await UseTemplatePage.dialogError.waitForDisplayed();
 
-		// Cancel that, and try to close the template, and test that an error is shown.
 		await UseTemplatePage.dialogErrorCancelButton.click();
 		await UseTemplatePage.closeTemplateButton.waitForDisplayed();
 		await UseTemplatePage.closeTemplateButton.click();
@@ -72,6 +72,13 @@ describe( 'TemplateWizard', () => {
 		await $( '#wpTextbox1' ).waitForDisplayed();
 		await browser.waitUntil( async () => !( await UseTemplatePage.dialog.isDisplayed() ) );
 		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${ testTemplateName }|dob=2018-08-22|dod=|photo=|citizenship=}}` );
+
+		// Reset the textbox, to avoid the unsaved-edit confirmation.
+		await $( '#wpTextbox1' ).setValue( '' );
 	} );
 
+	it( 'can be closed from search', async () => {
+		await UseTemplatePage.closeTemplateButton.click();
+		await UseTemplatePage.closeDialogButton.click();
+	} );
 } );

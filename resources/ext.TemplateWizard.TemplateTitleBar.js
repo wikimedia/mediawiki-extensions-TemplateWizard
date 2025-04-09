@@ -1,7 +1,6 @@
 /**
  * @class
  * @constructor
- * @param {mw.TemplateWizard.TemplateForm} templateForm
  * @param {mw.Title} title
  * @param {Object} templateData
  * @param {string|boolean} [templateData.notemplatedata]
@@ -9,7 +8,7 @@
  * @param {Object<string,Object>} [templateData.params]
  */
 mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
-	templateForm, title, templateData
+	title, templateData
 ) {
 	mw.TemplateWizard.TemplateTitleBar.super.call( this );
 
@@ -24,19 +23,8 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 		target: '_blank'
 	} );
 
-	// Close button.
-	const trashButton = new OO.ui.ButtonWidget( {
-		id: 'ext-templatewizard-close-template-button',
-		label: '',
-		flags: 'destructive',
-		framed: false,
-		icon: 'trash',
-		title: mw.msg( 'templatewizard-remove-template-title' )
-	} );
-	trashButton.connect( templateForm, { click: 'closeForm' } );
-
 	// Button group.
-	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ linkButton, trashButton ] } );
+	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ linkButton ] } );
 
 	// Favorite button.
 	if ( mw.templateData !== undefined && mw.templateData.FavoriteButton !== undefined ) {
