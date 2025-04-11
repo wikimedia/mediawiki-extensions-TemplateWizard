@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"templatewizard-add-all": "All Parameteren derbäisetzen",
@@ -20,12 +21,14 @@
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "z. B. $1",
 	"templatewizard-remove-all": "All Parameteren ewechhuelen",
-	"templatewizard-remove-template": "Schabloun ewechhuelen?",
-	"templatewizard-remove-template-retry": "Schabloun ewechhuelen",
+	"templatewizard-remove-template": "Ännerunge verwerfen?",
+	"templatewizard-remove-template-body": "Zréck bei d'Sich goen? Är Ännerunge gi verluer an dat kann net réckgängeg gemaach ginn.",
+	"templatewizard-remove-template-cancel": "Virufuere mat Änneren",
+	"templatewizard-remove-template-retry": "Ännerunge verwerfen",
 	"templatewizard-search-placeholder": "No enger Schabloun sichen",
 	"templatewizard-parambutton-remove-title": "De Parameter '$1' ewechhuelen",
 	"templatewizard-parambutton-required-title": "Obligatoresche Parameter '$1'",
-	"templatewizard-remove-template-title": "Schabloun ewechhuelen",
+	"templatewizard-remove-template-title": "Zréck bei d'Sich",
 	"templatewizard-link-to-template-title": "Schabloun weisen",
 	"templatewizard-use": "Benotzen"
 }

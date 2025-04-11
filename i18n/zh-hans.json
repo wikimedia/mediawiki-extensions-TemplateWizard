@@ -3,6 +3,7 @@
 		"authors": [
 			"A Chinese Wikipedian",
 			"Diskdance",
+			"GuoPC",
 			"Liuxinyu970226",
 			"Shizhao",
 			"Tranve",
@@ -34,14 +35,15 @@
 	"templatewizard-placeholder-default": "默认：$1",
 	"templatewizard-placeholder-example": "例如$1",
 	"templatewizard-remove-all": "移除所有参数",
-	"templatewizard-remove-template": "移除模板么？",
-	"templatewizard-remove-template-body": "您尝试移除的模板包含您已输入的数据。移除模板也将移除您添加到模板的信息。此操作不可撤销。",
-	"templatewizard-remove-template-retry": "移除模板",
+	"templatewizard-remove-template": "要放弃编辑吗？",
+	"templatewizard-remove-template-body": "确认返回搜索页？您的修改将丢失，并且无法被找回。",
+	"templatewizard-remove-template-cancel": "继续编辑",
+	"templatewizard-remove-template-retry": "放弃编辑",
 	"templatewizard-search-placeholder": "搜索一个模板",
 	"templatewizard-parambutton-add-title": "添加参数“$1”",
 	"templatewizard-parambutton-remove-title": "移除参数“$1”",
 	"templatewizard-parambutton-required-title": "需要参数“$1”",
-	"templatewizard-remove-template-title": "删除模板",
+	"templatewizard-remove-template-title": "返回搜索页",
 	"templatewizard-link-to-template-title": "查看模板",
 	"templatewizard-use": "使用"
 }

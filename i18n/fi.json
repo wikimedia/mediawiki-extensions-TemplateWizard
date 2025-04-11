@@ -3,6 +3,7 @@
 		"authors": [
 			"Nike",
 			"Pyscowicz",
+			"Samoasambia",
 			"Stryn"
 		]
 	},
@@ -22,13 +23,14 @@
 	"templatewizard-placeholder-default": "Oletus: $1",
 	"templatewizard-placeholder-example": "Esim. $1",
 	"templatewizard-remove-all": "Poista kaikki parametrit",
-	"templatewizard-remove-template": "Poista malline?",
-	"templatewizard-remove-template-retry": "Poista malline",
+	"templatewizard-remove-template": "Hylätäänkö muokkaukset?",
+	"templatewizard-remove-template-cancel": "Jatka muokkaamista",
+	"templatewizard-remove-template-retry": "Hylkää muutokset",
 	"templatewizard-search-placeholder": "Hae mallinetta",
 	"templatewizard-parambutton-add-title": "Lisää parametri '$1'",
 	"templatewizard-parambutton-remove-title": "Poista parametri '$1'",
 	"templatewizard-parambutton-required-title": "Tarvittava parametri '$1'",
-	"templatewizard-remove-template-title": "Poista malline",
+	"templatewizard-remove-template-title": "Palaa hakuun",
 	"templatewizard-link-to-template-title": "Näytä malline",
 	"templatewizard-use": "Käytä"
 }
