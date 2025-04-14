@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Milicevic01",
 			"Сербијана"
 		]
 	},
@@ -30,14 +31,14 @@
 	"templatewizard-placeholder-default": "Подразумевано: $1",
 	"templatewizard-placeholder-example": "нпр. $1",
 	"templatewizard-remove-all": "Уклони све параметре",
-	"templatewizard-remove-template": "Уклонити шаблон?",
-	"templatewizard-remove-template-body": "Шаблон који покушавате да уклоните садржи податке које сте унели. Уклањање шаблона ће такође уклонити информације које сте додали у шаблон. Ова радња не може да се опозове.",
-	"templatewizard-remove-template-retry": "Уклони шаблон",
+	"templatewizard-remove-template": "Одбаци измене?",
+	"templatewizard-remove-template-body": "Назад на претрагу? Ваше измене ће бити изгубљене, и ово не може бити опозвано.",
+	"templatewizard-remove-template-retry": "Одбаци измене",
 	"templatewizard-search-placeholder": "Претражите шаблоне",
 	"templatewizard-parambutton-add-title": "Додајте параметар „$1”",
 	"templatewizard-parambutton-remove-title": "Уклоните параметар „$1”",
 	"templatewizard-parambutton-required-title": "Неопходан параметар „$1”",
-	"templatewizard-remove-template-title": "Уклоните шаблон",
+	"templatewizard-remove-template-title": "Назад на претрагу",
 	"templatewizard-link-to-template-title": "Погледајте шаблон",
 	"templatewizard-use": "Употреби"
 }
