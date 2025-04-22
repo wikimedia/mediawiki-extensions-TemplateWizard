@@ -3,7 +3,8 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Hedda",
-			"Joseph"
+			"Joseph",
+			"Slickdaddy"
 		]
 	},
 	"templatewizard-add-all": "Tüm parametreleri ekle",
@@ -38,7 +39,7 @@
 	"templatewizard-parambutton-add-title": "'$1' parametresini ekle",
 	"templatewizard-parambutton-remove-title": "'$1' parametresini kaldır",
 	"templatewizard-parambutton-required-title": "'$1' parametresi zorunludur",
-	"templatewizard-remove-template-title": "Şablonu kaldır",
+	"templatewizard-remove-template-title": "Aramaya geri dön",
 	"templatewizard-link-to-template-title": "Şablonu görüntüle",
 	"templatewizard-use": "Kullan"
 }

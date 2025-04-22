@@ -39,14 +39,14 @@
 	"templatewizard-placeholder-default": "По умолчанию: $1",
 	"templatewizard-placeholder-example": "Например: $1",
 	"templatewizard-remove-all": "Убрать все параметры",
-	"templatewizard-remove-template": "Удалить шаблон?",
+	"templatewizard-remove-template": "Отменить правки?",
 	"templatewizard-remove-template-body": "Шаблон, который вы хотите удалить, содержит введённые вами данные. Удаление шаблона также удалит информацию, которую вы добавили в него. Это действие нельзя будет отменить.",
-	"templatewizard-remove-template-retry": "Удалить шаблон",
+	"templatewizard-remove-template-retry": "Отменить правки",
 	"templatewizard-search-placeholder": "Искать шаблон",
 	"templatewizard-parambutton-add-title": "Добавить параметр '$1'",
 	"templatewizard-parambutton-remove-title": "Удалить параметр '$1'",
 	"templatewizard-parambutton-required-title": "Требуется параметр '$1'",
-	"templatewizard-remove-template-title": "Удалить шаблон",
+	"templatewizard-remove-template-title": "Вернуться к поиску",
 	"templatewizard-link-to-template-title": "Просмотр шаблона",
 	"templatewizard-use": "Использовать"
 }
