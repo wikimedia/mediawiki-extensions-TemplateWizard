@@ -141,11 +141,6 @@ mw.TemplateWizard.Dialog.prototype.showErrors = function ( data ) {
 		this.$errorsTitle.text( mw.msg( 'templatewizard-remove-template' ) );
 		this.retryButton.setLabel( mw.msg( 'templatewizard-remove-template-retry' ) );
 		this.dismissButton.setLabel( mw.msg( 'templatewizard-remove-template-cancel' ) );
-	} else if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
-		this.$errorsTitle.text( mw.msg( 'templatewizard-close-dialog' ) );
-		this.retryButton.setLabel( mw.msg( 'templatewizard-close-dialog-retry' ) );
-		this.retryButton.setFlags( 'destructive' );
-		this.dismissButton.setLabel( mw.msg( 'templatewizard-cancel' ) );
 	} else {
 		this.$errorsTitle.text( mw.msg( 'ooui-dialog-process-error' ) );
 		this.retryButton.setLabel( mw.msg( 'templatewizard-invalid-values-insert' ) );
@@ -165,8 +160,6 @@ mw.TemplateWizard.Dialog.prototype.onRetryButtonClick = function ( data ) {
 		// won't execute the insert action.
 		this.currentAction = 'search';
 		this.showSearchForm();
-	} else if ( this.firstFieldWithValue && this.currentAction === 'closeDialog' ) {
-		this.close();
 	}
 	mw.TemplateWizard.Dialog.super.prototype.onRetryButtonClick.call( this, data );
 	this.ignoreParamValues = true;
@@ -195,21 +188,13 @@ mw.TemplateWizard.Dialog.prototype.onDismissErrorButtonClick = function ( data )
 mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 	return mw.TemplateWizard.Dialog.super.prototype.getActionProcess.call( this, action )
 		.next( () => {
-			if ( ( action === 'closeTemplate' || action === 'closeDialog' ) && this.templateForm ) {
+			if ( action === 'closeTemplate' && this.templateForm ) {
 				this.firstFieldWithValue = this.templateForm.getFirstFieldWithValue();
 				if ( this.firstFieldWithValue && !this.ignoreParamValues ) {
-					return new OO.ui.Error( mw.msg(
-						action === 'closeTemplate' ?
-							'templatewizard-remove-template-body' :
-							'templatewizard-close-dialog-body'
-					), { warning: true } );
+					return new OO.ui.Error( mw.msg( 'templatewizard-remove-template-body' ), { warning: true } );
 				}
-				if ( action === 'closeTemplate' ) {
-					mw.TemplateWizard.logEvent( 'remove-template', [ this.templateForm.getTitle().getMainText() ] );
-					this.showSearchForm();
-				} else {
-					mw.TemplateWizard.logEvent( 'cancel-dialog', [ this.templateForm.getTitle().getMainText() ] );
-				}
+				mw.TemplateWizard.logEvent( 'remove-template', [ this.templateForm.getTitle().getMainText() ] );
+				this.showSearchForm();
 			}
 			if ( action === 'closeDialog' ) {
 				mw.TemplateWizard.logEvent( 'cancel-dialog', [] );
