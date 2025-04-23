@@ -70,6 +70,7 @@ mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 	this.ignoreParamValues = false;
 	this.invalidField = false;
 	this.firstFieldWithValue = false;
+	this.templateForm = null;
 
 	// Show the search form.
 	if ( mw.templateData !== undefined && mw.templateData.TemplateSearchLayout !== undefined ) {
@@ -100,6 +101,12 @@ mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 	this.$body.html( this.templateForm.$element );
 	this.templateForm.afterAttached();
 	this.actions.get( { actions: [ 'insert' ] } )[ 0 ].setDisabled( false );
+	this.ignoreParamValues = false;
+};
+
+/** @inheritDoc */
+OO.ui.Dialog.prototype.getEscapeAction = function () {
+	return this.templateForm ? 'closeTemplate' : '';
 };
 
 /**
