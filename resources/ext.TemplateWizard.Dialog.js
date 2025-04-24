@@ -73,7 +73,7 @@ mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 
 	// Show the search form.
 	if ( mw.templateData !== undefined && mw.templateData.TemplateSearchLayout !== undefined ) {
-		this.searchForm = new mw.templateData.TemplateSearchLayout();
+		this.searchForm = new mw.templateData.TemplateSearchLayout( { expanded: true } );
 		this.searchForm.connect( this, { choose: this.showTemplate } );
 	} else {
 		this.searchForm = new mw.TemplateWizard.SearchForm( this, { contentDir: this.contentDir } );
