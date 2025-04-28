@@ -5,6 +5,6 @@
 		]
 	},
 	"templatewizard-default": "Дапомна: $1",
-	"templatewizard-remove-template": "Выдаліць шаблён?",
-	"templatewizard-remove-template-body": "У шаблёне, які вы спрабуеце выдаліць, знаходзяцца ўведзеныя вамі зьвесткі. Выдаліўшы шаблён, вы выдаліце і сваю інфармацыю, дададзеную ў гэты шаблён. Гэтае дзеяньне незваротнае."
+	"templatewizard-remove-template": "Скасаваць зьмены?",
+	"templatewizard-remove-template-body": "Вярнуцца да пошуку? Вашыя зьмены будуць страчаныя, і вярнуць іх немагчыма."
 }
