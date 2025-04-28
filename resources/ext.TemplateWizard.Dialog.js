@@ -202,7 +202,7 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 						action === 'closeTemplate' ?
 							'templatewizard-remove-template-body' :
 							'templatewizard-close-dialog-body'
-					) );
+					), { warning: true } );
 				}
 				if ( action === 'closeTemplate' ) {
 					mw.TemplateWizard.logEvent( 'remove-template', [ this.templateForm.getTitle().getMainText() ] );
