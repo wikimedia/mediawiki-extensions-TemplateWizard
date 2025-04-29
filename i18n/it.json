@@ -5,14 +5,12 @@
 			"Pierpao",
 			"Sakretsu",
 			"Sarah Bernabei",
+			"Titore",
 			"Valepert"
 		]
 	},
 	"templatewizard-add-all": "Aggiungi tutti i parametri",
 	"templatewizard-cancel": "Annulla",
-	"templatewizard-close-dialog": "Abbandonare la procedura guidata?",
-	"templatewizard-close-dialog-body": "Abbandonando la procedura guidata perderai tutti i dati che hai aggiunto nel template.",
-	"templatewizard-close-dialog-retry": "Ignora modifiche",
 	"templatewizard-default": "Predefinito: $1",
 	"templatewizard-dialog-title": "Inserisci un template",
 	"templatewizard-help": "Scopri di più su TemplateWizard",
@@ -27,6 +25,7 @@
 	"templatewizard-no-templatedata": "A causa della mancanza di [$1 TemplateData], i parametri di questo template sono stati generati automaticamente. Per favore, sii consapevole che potrebbero non essere accurati.",
 	"templatewizard-parameters-optional": "Parametri opzionali",
 	"templatewizard-parameters-required": "Parametri obbligatori",
+	"templatewizard-parameters-suggested": "Parametri consigliati",
 	"templatewizard-placeholder-default": "Predefinito: $1",
 	"templatewizard-placeholder-example": "Esempio: $1",
 	"templatewizard-remove-all": "Rimuovi tutti i parametri",
