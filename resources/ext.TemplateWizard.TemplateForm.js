@@ -314,6 +314,13 @@ mw.TemplateWizard.TemplateForm.prototype.getInputWidgetForParam = function (
 		config.autosize = true;
 		config.maxRows = 10;
 		widget = new OO.ui.MultilineTextInputWidget( config );
+	} else if ( paramDefinition.suggestedvalues !== undefined ) {
+		// The handlng of suggestedvalues here matches what VisualEditor does in ve.ui.MWParameterPage.
+		config.menu = { filterFromInput: true, highlightOnFilter: true };
+		config.options = paramDefinition.suggestedvalues
+			.filter( ( suggestedValue ) => typeof suggestedValue === 'string' )
+			.map( ( suggestedValue ) => ( { data: suggestedValue, label: suggestedValue || '\xA0' } ) );
+		widget = new OO.ui.ComboBoxInputWidget( config );
 	} else {
 		widget = new OO.ui.TextInputWidget( config );
 	}
