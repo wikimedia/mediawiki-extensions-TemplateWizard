@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hakimi97"
+		]
+	},
+	"templatewizard-add-all": "Tambah semua parameter",
+	"templatewizard-cancel": "Batalkan",
+	"templatewizard-default": "Asali: $1",
+	"templatewizard-desc": "Alat tambahan WikiEditor yang menyediakan alat penyelitan templat",
+	"templatewizard-dialog-title": "Masukkan templat",
+	"templatewizard-help": "Ketahui lebih lanjut mengenai TemplateWizard",
+	"templatewizard-help-title": "Baca laman bantuan TemplateWizard di MediaWiki.org",
+	"templatewizard-insert": "Sisipkan",
+	"templatewizard-invalid-title": "Tajuk tidak sah",
+	"templatewizard-invalid-values": "Satu atau lebih banyak input anda tidak sepadan dengan format yang dijangkakan. Adakah anda ingin menyuntingnya?",
+	"templatewizard-invalid-values-edit": "Sunting templat",
+	"templatewizard-invalid-values-insert": "Sisipkan templat",
+	"templatewizard-no-description": "Tiada perihalan wujud untuk templat ini.",
+	"templatewizard-no-params-with-td": "Tiada parameter yang ditakrifkan dalam pendokumenan [$1 TemplateData] templat ini. Anda boleh memasukkan templat tanpa parameter.",
+	"templatewizard-no-params-without-td": "Tiada parameter boleh ditentukan untuk templat ini kerana ketiadaan pendokumenan [$1 TemplateData]. Anda boleh memasukkan templat tanpa parameter.",
+	"templatewizard-no-templatedata": "Disebabkan tiada [$1 TemplateData], parameter untuk templat ini telah dijana secara automatik. Harap maklum bahawa parameter janaan tersebut mungkin tidak tepat.",
+	"templatewizard-parameters-optional": "Parameter pilihan",
+	"templatewizard-parameters-required": "Parameter yang diperlukan",
+	"templatewizard-parameters-suggested": "Parameter yang dicadangkan",
+	"templatewizard-placeholder-default": "Asali: $1",
+	"templatewizard-placeholder-example": "contoh $1",
+	"templatewizard-remove-all": "Alih keluar semua parameter",
+	"templatewizard-search-placeholder": "Cari templat:",
+	"templatewizard-parambutton-add-title": "Tambah parameter '$1'",
+	"templatewizard-parambutton-remove-title": "Alih keluar parameter '$1'",
+	"templatewizard-parambutton-required-title": "Parameter yang diperlukan '$1'",
+	"templatewizard-link-to-template-title": "Lihat templat",
+	"templatewizard-use": "Gunakan"
+}
