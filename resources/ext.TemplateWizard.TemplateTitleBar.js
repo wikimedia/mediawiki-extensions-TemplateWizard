@@ -13,7 +13,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	mw.TemplateWizard.TemplateTitleBar.super.call( this );
 
 	// Link button.
-	const linkButton = new OO.ui.ButtonWidget( {
+	this.linkButton = new OO.ui.ButtonWidget( {
 		label: '',
 		title: mw.msg( 'templatewizard-link-to-template-title' ),
 		flags: 'progressive',
@@ -24,7 +24,7 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	} );
 
 	// Button group.
-	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ linkButton ] } );
+	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ this.linkButton ] } );
 
 	// Favorite button.
 	if ( mw.templateData !== undefined && mw.templateData.FavoriteButton !== undefined ) {
@@ -52,6 +52,13 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 };
 
 OO.inheritClass( mw.TemplateWizard.TemplateTitleBar, OO.ui.PanelLayout );
+
+/**
+ * Give focus to the link button.
+ */
+mw.TemplateWizard.TemplateTitleBar.prototype.focus = function () {
+	this.linkButton.focus();
+};
 
 /**
  * Get the description div element, which may contain zero to two paragraphs.

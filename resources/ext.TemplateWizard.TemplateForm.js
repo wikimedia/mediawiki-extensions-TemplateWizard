@@ -123,9 +123,11 @@ mw.TemplateWizard.TemplateForm.prototype.attemptFocus = function () {
 		// are required.
 		if ( this.addRemoveAllButton && this.addRemoveAllButton.isVisible() ) {
 			this.addRemoveAllButton.focus();
+		} else {
+			// Fall back to giving focus to the title bar if there's nothing else.
+			this.templateTitleBar.focus();
 		}
 	}
-
 };
 
 mw.TemplateWizard.TemplateForm.prototype.toggleFields = function ( show ) {
