@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Balyozxane",
-			"Ghybu"
+			"Ghybu",
+			"Guherto"
 		]
 	},
 	"templatewizard-add-all": "Hemû parametreyan tevlî bike",
@@ -12,7 +13,7 @@
 	"templatewizard-insert": "Tevlî bike",
 	"templatewizard-no-description": "Ji bo vê şablonê danasîn tune ye.",
 	"templatewizard-parameters-optional": "Parametreyên nepêwîst",
-	"templatewizard-parameters-required": "Parametreyên pêwîst",
+	"templatewizard-parameters-required": "Parametreyên mecbûrî",
 	"templatewizard-parameters-suggested": "Parametreyên pêşniyazkirî",
 	"templatewizard-placeholder-example": "w.m. $1",
 	"templatewizard-remove-all": "Hemû parametreyan jê bibe",
