@@ -27,8 +27,13 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 	this.buttons = new OO.ui.ButtonGroupWidget( { items: [ this.linkButton ] } );
 
 	// Favorite button.
-	if ( mw.templateData !== undefined && mw.templateData.FavoriteButton !== undefined ) {
-		const favoriteButton = new mw.templateData.FavoriteButton( { pageId: templateData.pageId } );
+	if ( mw.templateData !== undefined &&
+		mw.templateData.FavoriteButton !== undefined &&
+		templateData.pageId
+	) {
+		const favoriteButton = new mw.templateData.FavoriteButton( {
+			pageId: templateData.pageId
+		} );
 		this.buttons.addItems( [ favoriteButton ], 0 );
 	}
 

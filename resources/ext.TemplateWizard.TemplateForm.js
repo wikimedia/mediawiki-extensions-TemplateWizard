@@ -427,6 +427,9 @@ mw.TemplateWizard.TemplateForm.prototype.processParameters = function ( template
 		suggested: {},
 		optional: {}
 	};
+	if ( !params || params.length === 0 ) {
+		return groupedParams;
+	}
 	// Optionally use paramOrder (which if present and not null must contain all params).
 	const paramNames = templateData.paramOrder || Object.keys( params );
 	paramNames.forEach( ( param ) => {
