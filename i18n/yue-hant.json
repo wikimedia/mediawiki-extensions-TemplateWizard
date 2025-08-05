@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"JeffreyKim",
+			"Ktchankt",
 			"Winston Sung"
 		]
 	},
@@ -20,7 +21,7 @@
 	"templatewizard-no-description": "呢個範本冇任何描述。",
 	"templatewizard-no-params-with-td": "呢個範本嘅[$1 範本數據]文件入面冇定義任何參數。你可以插入冇參數嘅範本。",
 	"templatewizard-no-params-without-td": "由於冇 [$1 範本數據] 文件，所以冇辦法確定呢個範本嘅參數。你可以插入冇參數嘅範本。",
-	"templatewizard-no-templatedata": "由於缺少[$1 模板數據]，呢個模板嘅參數已經自動生成。 請注意，佢哋可能唔準確。",
+	"templatewizard-no-templatedata": "由於缺少[$1 模數據]，呢個模嘅參數已經自動生成。請注意，佢哋可能唔準確。",
 	"templatewizard-parameters-optional": "額外參數",
 	"templatewizard-parameters-required": "所需參數",
 	"templatewizard-parameters-suggested": "建議嘅參數",
