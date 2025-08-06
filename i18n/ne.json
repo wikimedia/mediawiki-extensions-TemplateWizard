@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"पर्वत सुबेदी"
+			"पर्वत सुबेदी",
+			"Nirajan pant"
 		]
 	},
 	"templatewizard-cancel": "रद्द गर्नुहोस्",
@@ -14,10 +15,10 @@
 	"templatewizard-invalid-values-insert": "ढाँचा घुसाउनुहाेस्",
 	"templatewizard-placeholder-default": "पुनर्निधारित: $1",
 	"templatewizard-placeholder-example": "उदाहरण $1",
-	"templatewizard-remove-template": "ढाँचा हटाउनुहाेस्",
-	"templatewizard-remove-template-retry": "ढाँचा हटाउनुहाेस्",
+	"templatewizard-remove-template": "सम्पादनहरू त्याग्ने?",
+	"templatewizard-remove-template-retry": "सम्पादनहरू त्याग्नुहोस्",
 	"templatewizard-search-placeholder": "ढाँचाका लागि खाेज्नुहाेस्",
-	"templatewizard-remove-template-title": "ढाँचा हटाउनुहाेस्",
+	"templatewizard-remove-template-title": "खोजीमा फर्किनुहोस्",
 	"templatewizard-link-to-template-title": "ढाँचा हेर्नुहोस्",
 	"templatewizard-use": "प्रयोग"
 }
