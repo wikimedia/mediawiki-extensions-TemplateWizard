@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chinamoonroll"
+		]
+	},
+	"templatewizard-add-all": "Wewehin paraméter makasami",
+	"templatewizard-cancel": "Wangdé",
+	"templatewizard-default": "Baku: $1",
+	"templatewizard-desc": "Paweweh WikiEditor sané ngicénin wisaya antuk nyisipanh mal",
+	"templatewizard-dialog-title": "Sisipang mal",
+	"templatewizard-help": "Pelajahin malih indik TemplateWizard",
+	"templatewizard-help-title": "Wacén kaca wantuan TemplateWizard ring MediaWiki.org",
+	"templatewizard-insert": "Sisipang",
+	"templatewizard-invalid-title": "Murda nénten patut",
+	"templatewizard-invalid-values": "Asiki utawi langkung manjingan ragané nénten manut sareng format sané kaaptiang. Napiké ragané jagi nguahin?",
+	"templatewizard-invalid-values-edit": "Uah mal",
+	"templatewizard-invalid-values-insert": "Sisipang mal",
+	"templatewizard-no-description": "Nénten wénten deskripsi anggén mal puniki.",
+	"templatewizard-no-params-with-td": "Nénten wénten paraméter sané sampun kategesang ring dokuméntasi [$1 TemplateData] mal puniki. Ragané dados nyisipang mal tanpa paraméter.",
+	"templatewizard-no-params-without-td": "Nénten wénten paraméter sané prasida katentuang anggén cetakan puniki santukan nénten wénten dokumentasi [$1 TemolateData]. Ragané dados nyisipang mal tanpa paraméter.",
+	"templatewizard-no-templatedata": "Mawinan kirang [ $1 TemplateData], paraméter mal puniki sampun kakaryanin otomatis. Ngiring uratiang, minab nénten patut.",
+	"templatewizard-parameters-optional": "Paraméter opsional",
+	"templatewizard-parameters-required": "Paraméter wajib",
+	"templatewizard-parameters-suggested": "Paraméter kasaranang",
+	"templatewizard-placeholder-default": "Baku: $1",
+	"templatewizard-placeholder-example": "minak. $1",
+	"templatewizard-remove-all": "Icalang samian paraméter",
+	"templatewizard-remove-template": "Kutang uahan?",
+	"templatewizard-remove-template-body": "Mawali nuju selehan? Pagentosan ragané pacang ical, miwah nénten prasida kaulihang.",
+	"templatewizard-remove-template-cancel": "Lanturang nguah",
+	"templatewizard-remove-template-retry": "Kutang uahan",
+	"templatewizard-search-placeholder": "Rereh antuk satunggil mal",
+	"templatewizard-parambutton-add-title": "Wewehin paraméter '$1'",
+	"templatewizard-parambutton-remove-title": "Icalang paraméter '$1'",
+	"templatewizard-parambutton-required-title": "Paraméter wajib '$1'",
+	"templatewizard-remove-template-title": "Mawali nuju rerehan",
+	"templatewizard-link-to-template-title": "Cingak mal",
+	"templatewizard-use": "Anggén"
+}
