@@ -3,7 +3,8 @@
 		"authors": [
 			"JeffreyKim",
 			"Ktchankt",
-			"Winston Sung"
+			"Winston Sung",
+			"Yueman"
 		]
 	},
 	"templatewizard-add-all": "加入晒所有參數",
@@ -33,9 +34,9 @@
 	"templatewizard-remove-template-cancel": "繼續編輯",
 	"templatewizard-remove-template-retry": "棄置啲編輯",
 	"templatewizard-search-placeholder": "搵個範本",
-	"templatewizard-parambutton-add-title": "加入參數'$1'",
+	"templatewizard-parambutton-add-title": "加入參數「$1」",
 	"templatewizard-parambutton-remove-title": "移除參數'$1'",
-	"templatewizard-parambutton-required-title": "所需參數'$1'",
+	"templatewizard-parambutton-required-title": "所需參數「$1」",
 	"templatewizard-remove-template-title": "返去搜尋度",
 	"templatewizard-link-to-template-title": "睇返範本",
 	"templatewizard-use": "用"
