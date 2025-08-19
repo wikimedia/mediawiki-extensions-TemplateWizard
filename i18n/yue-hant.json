@@ -3,7 +3,8 @@
 		"authors": [
 			"Winston Sung",
 			"JeffreyKim",
-			"Ktchankt"
+			"Ktchankt",
+			"Yueman"
 		]
 	},
 	"templatewizard-add-all": "加入晒所有參數",
@@ -27,11 +28,11 @@
 	"templatewizard-parameters-suggested": "建議嘅參數",
 	"templatewizard-placeholder-default": "預設：$1",
 	"templatewizard-placeholder-example": "例如 $1",
-	"templatewizard-remove-all": "移除晒所有參數",
+	"templatewizard-remove-all": "剷走晒所有參數",
 	"templatewizard-search-placeholder": "搵個範本",
-	"templatewizard-parambutton-add-title": "加入參數'$1'",
-	"templatewizard-parambutton-remove-title": "移除參數'$1'",
-	"templatewizard-parambutton-required-title": "所需參數'$1'",
+	"templatewizard-parambutton-add-title": "加入參數「$1」",
+	"templatewizard-parambutton-remove-title": "剷走參數「$1」",
+	"templatewizard-parambutton-required-title": "所需參數「$1」",
 	"templatewizard-link-to-template-title": "睇返範本",
-	"templatewizard-use": "使用"
+	"templatewizard-use": "用"
 }
