@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Minh Nguyen",
-			"Vinhtantran"
+			"Vinhtantran",
+			"Nvdtn19"
 		]
 	},
 	"templatewizard-add-all": "Thêm tất cả các tham số",
@@ -27,14 +28,15 @@
 	"templatewizard-placeholder-default": "Mặc định: $1",
 	"templatewizard-placeholder-example": "ví dụ $1",
 	"templatewizard-remove-all": "Xóa tất cả các tham số",
-	"templatewizard-remove-template": "Xóa bản mẫu?",
-	"templatewizard-remove-template-body": "Bản mẫu bạn đang xóa chứa dữ liệu bạn đã nhập. Xóa bản mẫu cũng sẽ xóa các thông tin bạn đã nhập vào bản mẫu. Tác vụ này không thể hoàn tác.",
-	"templatewizard-remove-template-retry": "Xóa bản mẫu",
+	"templatewizard-remove-template": "Từ bỏ các sửa đổi?",
+	"templatewizard-remove-template-body": "Có chắc chắn muốn quay lại tìm kiếm? Những thay đổi của bạn sẽ bị mất và không thể hoàn tác.",
+	"templatewizard-remove-template-cancel": "Sửa tiếp",
+	"templatewizard-remove-template-retry": "Từ bỏ các sửa đổi",
 	"templatewizard-search-placeholder": "Tìm bản mẫu",
 	"templatewizard-parambutton-add-title": "Thêm thông số ‘$1’",
 	"templatewizard-parambutton-remove-title": "Bỏ thông số ‘$1’",
 	"templatewizard-parambutton-required-title": "Cần có thông số ‘$1’",
-	"templatewizard-remove-template-title": "Bỏ bản mẫu",
+	"templatewizard-remove-template-title": "Trở lại tìm kiếm",
 	"templatewizard-link-to-template-title": "Xem bản mẫu",
 	"templatewizard-use": "Sử dụng"
 }
