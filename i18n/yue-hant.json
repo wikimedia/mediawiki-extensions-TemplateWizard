@@ -4,7 +4,8 @@
 			"Winston Sung",
 			"JeffreyKim",
 			"Ktchankt",
-			"Yueman"
+			"Yueman",
+			"H78c67c"
 		]
 	},
 	"templatewizard-add-all": "加入晒所有參數",
@@ -17,9 +18,9 @@
 	"templatewizard-insert": "插入",
 	"templatewizard-invalid-title": "無效嘅標題",
 	"templatewizard-invalid-values": "你嘅一個或者多個輸入唔啱預期嘅格式。你想唔想編輯佢？",
-	"templatewizard-invalid-values-edit": "加範本",
-	"templatewizard-invalid-values-insert": "插入範本",
-	"templatewizard-no-description": "呢個範本冇任何描述。",
+	"templatewizard-invalid-values-edit": "改個模",
+	"templatewizard-invalid-values-insert": "加個模",
+	"templatewizard-no-description": "呢個模冇任何描述。",
 	"templatewizard-no-params-with-td": "呢個範本嘅[$1 範本數據]文件入面冇定義任何參數。你可以插入冇參數嘅範本。",
 	"templatewizard-no-params-without-td": "由於冇 [$1 範本數據] 文件，所以冇辦法確定呢個範本嘅參數。你可以插入冇參數嘅範本。",
 	"templatewizard-no-templatedata": "由於缺少[$1 模數據]，呢個模嘅參數已經自動生成。請注意，佢哋可能唔準確。",
@@ -29,10 +30,10 @@
 	"templatewizard-placeholder-default": "預設：$1",
 	"templatewizard-placeholder-example": "例如 $1",
 	"templatewizard-remove-all": "剷走晒所有參數",
-	"templatewizard-search-placeholder": "搵個範本",
+	"templatewizard-search-placeholder": "搵個模",
 	"templatewizard-parambutton-add-title": "加入參數「$1」",
 	"templatewizard-parambutton-remove-title": "剷走參數「$1」",
 	"templatewizard-parambutton-required-title": "所需參數「$1」",
-	"templatewizard-link-to-template-title": "睇返範本",
+	"templatewizard-link-to-template-title": "睇個模",
 	"templatewizard-use": "用"
 }
