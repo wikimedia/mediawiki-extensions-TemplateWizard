@@ -13,7 +13,7 @@ class UseTemplatePage extends Page {
 	}
 
 	get searchInput() {
-		return $( '.ext-templatewizard-dialog .oo-ui-comboBoxInputWidget-field' );
+		return $( '.ext-templatewizard-dialog .oo-ui-comboBoxInputWidget-field input' );
 	}
 
 	get searchResultMenu() {

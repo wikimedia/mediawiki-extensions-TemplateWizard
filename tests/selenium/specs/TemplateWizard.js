@@ -24,7 +24,7 @@ describe( 'TemplateWizard', () => {
 		// Wait for the dialog to open, and enter a search term.
 		await UseTemplatePage.dialog.waitForDisplayed();
 		await UseTemplatePage.searchInput.click();
-		await $( '.ext-templatewizard-searchform input' ).setValue( testTemplateName );
+		await UseTemplatePage.searchInput.setValue( testTemplateName );
 		// Wait for the search results to appear.
 		await UseTemplatePage.searchResultMenu.waitForDisplayed( { timeout: 35000 } );
 
