@@ -6,8 +6,6 @@
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"no-jquery/no-extend": "warn",
-		"no-jquery/no-done-fail": "warn",
 		"mediawiki/no-unlabeled-buttonwidget": "warn"
 	}
 }

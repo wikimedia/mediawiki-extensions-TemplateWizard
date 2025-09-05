@@ -213,9 +213,11 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 		} )
 		.next( () => {
 			if ( action === 'insert' && this.templateForm && !this.ignoreParamValues ) {
-				return this.templateForm.getFieldsValidity().fail( () => {
+				const deferred = this.templateForm.getFieldsValidity();
+				deferred.catch( () => {
 					this.invalidField = this.templateForm.getInvalidField();
 				} );
+				return deferred;
 			}
 		} )
 		.next( () => {

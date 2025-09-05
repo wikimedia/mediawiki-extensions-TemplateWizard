@@ -408,7 +408,7 @@ mw.TemplateWizard.TemplateForm.prototype.getFieldsValidity = function () {
 		const field = this.fields[ i ].getField();
 		const validity = field.getValidity();
 		// Record this field as being the invalid one.
-		validity.fail( () => {
+		validity.catch( () => {
 			this.invalidField = field;
 		} );
 		validityPromises.push( validity );
