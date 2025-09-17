@@ -1,9 +1,4 @@
 <?php
-/**
- * @file
- */
-
-// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 
 namespace MediaWiki\Extension\TemplateWizard;
 
