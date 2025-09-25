@@ -8,7 +8,7 @@
 		]
 	},
 	"templatewizard-add-all": "Label of button that enables all inactive parameters.",
-	"templatewizard-cancel": "Text for the cancel button that closes the dialogue window.\n{{Identical|Cancel}}",
+	"templatewizard-cancel": "Text for the cancel button that closes the dialog window.\n{{Identical|Cancel}}",
 	"templatewizard-default": "Text appended to a parameter field's help text to show the parameter's default value. Parameter $1 is the default value.\n{{Identical|Default}}",
 	"templatewizard-desc": "{{desc|name=TemplateWizard|url=https://www.mediawiki.org/wiki/Extension:TemplateWizard}}",
 	"templatewizard-dialog-title": "A tooltip on a toolbar button that starts the TemplateWizard.\n\nAppears in the same section with the following:\n* {{msg-mw|wikieditor-toolbar-tool-link}}\n* {{msg-mw|wikieditor-toolbar-tool-file}}\n* {{msg-mw|wikieditor-toolbar-tool-reference}}\n* {{msg-mw|templatewizard-dialog-title}} (on wikis where the TemplateWizard extension is installed)\n\nTitle of the TemplateWizard dialog window.",
