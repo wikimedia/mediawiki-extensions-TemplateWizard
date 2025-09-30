@@ -8,7 +8,7 @@
 		]
 	},
 	"templatewizard-add-all": "Label of button that enables all inactive parameters.",
-	"templatewizard-cancel": "Text for the cancel button that closes the dialogue window.\n{{Identical|Cancel}}",
+	"templatewizard-cancel": "Text for the cancel button that closes the dialog window.\n{{Identical|Cancel}}",
 	"templatewizard-close-dialog": "Title for the warning shown when closing the dialog when there are values in a field.",
 	"templatewizard-close-dialog-body": "Explanatory text shown under {{msg-mw|templatewizard-close-dialog}}.",
 	"templatewizard-close-dialog-retry": "Label for the button with which to discard any values that have been entered and close the TemplateWizard dialog.",
