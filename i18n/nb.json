@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"EdoAug",
 			"Imre Eilertsen",
 			"Jon Harald Søby"
 		]
@@ -27,14 +28,15 @@
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "f.eks. $1",
 	"templatewizard-remove-all": "Fjern alle parametere",
-	"templatewizard-remove-template": "Fjerne mal?",
-	"templatewizard-remove-template-body": "Malen du prøver å fjerne har data du har lagt inn. Ved å fjerne malen vil du også fjerne informasjon du har lagt inn i den. Denne handlingen kan ikke angres.",
-	"templatewizard-remove-template-retry": "Fjern mal",
+	"templatewizard-remove-template": "Forkaste redigeringer?",
+	"templatewizard-remove-template-body": "Gå tilbake til søk? Endringene dine vil gå tapt og kan ikke hentes tilbake igjen.",
+	"templatewizard-remove-template-cancel": "Fortsett å redigere",
+	"templatewizard-remove-template-retry": "Forkast endringer",
 	"templatewizard-search-placeholder": "Søk etter mal",
 	"templatewizard-parambutton-add-title": "Legg til parameteren «$1»",
 	"templatewizard-parambutton-remove-title": "Fjern parameteren «$1»",
 	"templatewizard-parambutton-required-title": "Påkrevd parameter «$1»",
-	"templatewizard-remove-template-title": "Fjern mal",
+	"templatewizard-remove-template-title": "Tilbake til søk",
 	"templatewizard-link-to-template-title": "Vis mal",
 	"templatewizard-use": "Bruk"
 }
