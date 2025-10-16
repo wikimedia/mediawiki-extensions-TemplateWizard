@@ -1,6 +1,4 @@
-'use strict';
-
-const Page = require( 'wdio-mediawiki/Page' );
+import Page from 'wdio-mediawiki/Page';
 
 class UseTemplatePage extends Page {
 
@@ -76,4 +74,4 @@ class UseTemplatePage extends Page {
 
 }
 
-module.exports = new UseTemplatePage();
+export default new UseTemplatePage();

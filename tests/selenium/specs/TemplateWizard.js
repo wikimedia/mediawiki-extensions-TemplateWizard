@@ -1,16 +1,14 @@
-'use strict';
-
-const assert = require( 'assert' ),
-	Util = require( 'wdio-mediawiki/Util' ),
-	CreateTemplate = require( '../pageobjects/CreateTemplate.page' ),
-	UseTemplatePage = require( '../pageobjects/UseTemplatePage.page' );
+import assert from 'assert';
+import { getTestString } from 'wdio-mediawiki/Util';
+import CreateTemplate from '../pageobjects/CreateTemplate.page.js';
+import UseTemplatePage from '../pageobjects/UseTemplatePage.page.js';
 
 describe( 'TemplateWizard', () => {
 	let testTemplateName;
 
 	beforeEach( async () => {
 		// Create a test template
-		testTemplateName = Util.getTestString( 'Example ' );
+		testTemplateName = getTestString( 'Example ' );
 		await CreateTemplate.create( testTemplateName );
 		// Open the template page, to confirm that it's what we expect.
 		await CreateTemplate.open( testTemplateName );

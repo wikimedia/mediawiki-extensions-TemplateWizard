@@ -1,9 +1,7 @@
-'use strict';
-
-const Page = require( 'wdio-mediawiki/Page' ),
-	Api = require( 'wdio-mediawiki/Api' ),
-	fs = require( 'fs' ),
-	path = require( 'path' );
+import Page from 'wdio-mediawiki/Page';
+import { mwbot } from 'wdio-mediawiki/Api';
+import fs from 'fs';
+import path from 'path';
 
 class CreateTemplate extends Page {
 
@@ -12,8 +10,11 @@ class CreateTemplate extends Page {
 	}
 
 	async create( testTemplateName ) {
-		const bot = await Api.bot();
+		const bot = await mwbot();
+		/* eslint-disable no-underscore-dangle */
+		const __dirname = path.dirname( new URL( import.meta.url ).pathname );
 		const templateWikitext = fs.readFileSync( `${ path.dirname( __dirname ) }/fixtures/en.Example.wikitext` );
+		/* eslint-enable no-underscore-dangle */
 		await bot.edit( `Template:${ testTemplateName }`, templateWikitext );
 	}
 
@@ -24,4 +25,4 @@ class CreateTemplate extends Page {
 
 }
 
-module.exports = new CreateTemplate();
+export default new CreateTemplate();
