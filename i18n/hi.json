@@ -1,11 +1,41 @@
 {
 	"@metadata": {
 		"authors": [
-			"Smtchahal"
+			"Smtchahal",
+			"Saurmandal"
 		]
 	},
+	"templatewizard-add-all": "सभी पैरामीटर्स जोड़ें",
 	"templatewizard-cancel": "रद्द करें",
-	"templatewizard-insert": "सम्मिलित करें",
-	"templatewizard-invalid-title": "अवैध शीर्षक",
+	"templatewizard-default": "डिफ़ॉल्ट: $1",
+	"templatewizard-desc": "एक विकिएडिटर ऐड-ऑन जो साँचे जोड़ने का एक विज़ार्ड प्रदान करता है",
+	"templatewizard-dialog-title": "साँचा जोड़ें",
+	"templatewizard-help": "साँचा विज़ार्ड के बारे में अधिक जानें",
+	"templatewizard-help-title": "MediaWiki.org पर साँचा विज़ार्ड के सहायता पृष्ठ पढ़ें",
+	"templatewizard-insert": "जोड़ें",
+	"templatewizard-invalid-title": "अमान्य शीर्षक",
+	"templatewizard-invalid-values": "आपके इनपुट्स में से एक या अधिक, अपेक्षित प्रारूप से मेल नहीं खाते हैं। क्या आप उसे सम्पादित करना चाहेंगे?",
+	"templatewizard-invalid-values-edit": "साँचा सम्पादित करें",
+	"templatewizard-invalid-values-insert": "साँचा जोड़ें",
+	"templatewizard-no-description": "इस साँचे के लिए कोई विवरण मौजूद नहीं है।",
+	"templatewizard-no-params-with-td": "इस साँचे के [$1 TemplateData] प्रलेख में कोई पैरामीटर परिभाषित नहीं है। आप यह साँचा बिना पैरामीटर्स के जोड़ सकते हैं।",
+	"templatewizard-no-params-without-td": "[$1 TemplateData] प्रलेख की अनुपस्थिति के कारण इस साँचे के लिए कोई भी पैरामीटर निर्धारित नहीं किया जा सका। आप यह साँचा बिना पैरामीटर्स के जोड़ सकते हैं।",
+	"templatewizard-no-templatedata": "अनुपलब्ध [$1 TemplateData] के कारण इस साँचे के पैरामीटर्स स्वचालित रूप से उत्पन्न किए गए हैं। कृपया ध्यान रखें कि ये सटीक न भी हो सकते हैं।",
+	"templatewizard-parameters-optional": "वैकल्पिक पैरामीटर्स",
+	"templatewizard-parameters-required": "अनिवार्य पैरामीटर्स",
+	"templatewizard-parameters-suggested": "सुझावित पैरामीटर्स",
+	"templatewizard-placeholder-default": "डिफ़ॉल्ट: $1",
+	"templatewizard-placeholder-example": "जैसे $1",
+	"templatewizard-remove-all": "सभी पैरामीटर्स हटाएँ",
+	"templatewizard-remove-template": "सम्पादन त्यागें?",
+	"templatewizard-remove-template-body": "खोज पर वापस जाएँ? आपके बदलाव रद्द कर दिए जाएँगे और इसे पूर्ववत नहीं किया जा सकता।",
+	"templatewizard-remove-template-cancel": "सम्पादन जारी रखें",
+	"templatewizard-remove-template-retry": "सम्पादन त्यागें",
+	"templatewizard-search-placeholder": "साँचा खोजें",
+	"templatewizard-parambutton-add-title": "'$1' पैरामीटर जोड़ें",
+	"templatewizard-parambutton-remove-title": "'$1' पैरामीटर हटाएँ",
+	"templatewizard-parambutton-required-title": "'$1' पैरामीटर आवश्यक",
+	"templatewizard-remove-template-title": "खोज पर लौटें",
+	"templatewizard-link-to-template-title": "साँचा देखें",
 	"templatewizard-use": "प्रयोग करें"
 }
