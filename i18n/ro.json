@@ -23,7 +23,7 @@
 	"templatewizard-no-description": "Nu există nicio descriere pentru acest format.",
 	"templatewizard-no-params-with-td": "Niciun parametru nu este definit în documentația [$1 TemplateData] a acestui format. Puteți insera formatul fără parametri.",
 	"templatewizard-no-params-without-td": "Niciun parametru nu a putut fi determinat pentru acest format din cauza absenței documentației [$1 TemplateData]. Puteți insera formatul fără parametri.",
-	"templatewizard-no-templatedata": "Pentru că [$1 TemplateData] lipsește, parametrii pentru acest format au fost generați automat. Vă rugăm să fiți {{:GENDER|conștient|conștientă}} că ar putea să nu fie acurați.",
+	"templatewizard-no-templatedata": "Pentru că [$1 TemplateData] lipsește, parametrii pentru acest format au fost generați automat. Vă rugăm să fiți {{GENDER:|conștient|conștientă}} că ar putea să nu fie acurați.",
 	"templatewizard-parameters-optional": "Parametri opționali",
 	"templatewizard-parameters-required": "Parametri necesari",
 	"templatewizard-parameters-suggested": "Parametri sugerați",
