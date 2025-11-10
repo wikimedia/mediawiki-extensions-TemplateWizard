@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Athena in Wonderland",
+			"BraunOBruno",
 			"Hamilton Abreu",
 			"Mansil alfalb"
 		]
@@ -32,7 +33,7 @@
 	"templatewizard-remove-template-body": "Voltar para a procura? As suas alterações estarão perdidas, e isto não pode ser anulado.",
 	"templatewizard-remove-template-cancel": "Continuar a editar",
 	"templatewizard-remove-template-retry": "Ignorar edições",
-	"templatewizard-search-placeholder": "Procurar por um modelo",
+	"templatewizard-search-placeholder": "Procurar uma predefinição",
 	"templatewizard-parambutton-add-title": "Acrescentar o parâmetro '$1'",
 	"templatewizard-parambutton-remove-title": "Remover o parâmetro '$1'",
 	"templatewizard-parambutton-required-title": "Parâmetro obrigatório '$1'",
