@@ -4,7 +4,8 @@
 			"BaRaN6161 TURK",
 			"Hedda",
 			"Joseph",
-			"Slickdaddy"
+			"Slickdaddy",
+			"SaldırganSincap"
 		]
 	},
 	"templatewizard-add-all": "Tüm parametreleri ekle",
@@ -29,9 +30,9 @@
 	"templatewizard-placeholder-default": "Varsayılan: $1",
 	"templatewizard-placeholder-example": "ör. $1",
 	"templatewizard-remove-all": "Tüm parametreleri kaldır",
-	"templatewizard-remove-template": "Şablon kaldırılsın mı?",
-	"templatewizard-remove-template-body": "Kaldırmaya çalıştığınız şablon, girdiğiniz verileri içermektedir. Şablonu kaldırmak, şablona eklediğiniz bilgileri de kaldıracaktır. Bu eylem geri alınamaz.",
-	"templatewizard-remove-template-retry": "Şablonu kaldır",
+	"templatewizard-remove-template": "Değişiklikler silinsin mi?",
+	"templatewizard-remove-template-body": "Aramaya geri dönmek istiyor musunuz? Değişiklikleriniz kaybolacak ve bu işlem geri alınamaz.",
+	"templatewizard-remove-template-retry": "Değişiklikleri sil",
 	"templatewizard-search-placeholder": "Bir şablon ara",
 	"templatewizard-parambutton-add-title": "'$1' parametresini ekle",
 	"templatewizard-parambutton-remove-title": "'$1' parametresini kaldır",

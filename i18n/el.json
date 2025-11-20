@@ -4,7 +4,8 @@
 			"Geraki",
 			"Giannaras99",
 			"NikosLikomitros",
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Jimkats"
 		]
 	},
 	"templatewizard-add-all": "Προσθήκη όλων των παραμέτρων",
@@ -29,14 +30,14 @@
 	"templatewizard-placeholder-default": "Προεπιλεγμένο: $1",
 	"templatewizard-placeholder-example": "π.χ. $1",
 	"templatewizard-remove-all": "Αφαίρεση όλων των παραμέτρων",
-	"templatewizard-remove-template": "Αφαίρεση προτύπου;",
+	"templatewizard-remove-template": "Απόρριψη επεξεργασιών;",
 	"templatewizard-remove-template-body": "Το πρότυπο που επιχειρείτε να αφαιρέσετε περιέχει δεδομένα που εισαγάγατε. Η αφαίρεση του προτύπου θα αφαιρέσει επίσης και τις πληροφορίες που προσθέσατε στο πρότυπο. Η ενέργεια δεν είναι αναστρέψιμη.",
-	"templatewizard-remove-template-retry": "Αφαίρεση προτύπου",
+	"templatewizard-remove-template-retry": "Απόρριψη επεξεργασιών",
 	"templatewizard-search-placeholder": "Αναζητήστε για ένα πρότυπο",
 	"templatewizard-parambutton-add-title": "Προσθήκη της παραμέτρου «$1»",
 	"templatewizard-parambutton-remove-title": "Αφαίρεση της παραμέτρου «$1»",
 	"templatewizard-parambutton-required-title": "Απαιτούμενη παράμετρος «$1»",
-	"templatewizard-remove-template-title": "Αφαίρεση προτύπου",
+	"templatewizard-remove-template-title": "Επιστροφή στην αναζήτηση",
 	"templatewizard-link-to-template-title": "Προβολή προτύπου",
 	"templatewizard-use": "Χρήση"
 }
