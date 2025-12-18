@@ -10,6 +10,7 @@
 	"templatewizard-add-all": "Lisää kaikki parametrit",
 	"templatewizard-cancel": "Peruuta",
 	"templatewizard-default": "Oletus: $1",
+	"templatewizard-desc": "Wikimuokkaimen lisäosa, joka tarjoaa mallineen lisäystyökalun",
 	"templatewizard-dialog-title": "Lisää malline",
 	"templatewizard-help": "Lisätietoja Mallinevelhosta",
 	"templatewizard-insert": "Lisää",
