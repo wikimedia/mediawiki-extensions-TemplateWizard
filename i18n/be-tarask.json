@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Red Winged Duck",
 			"Renessaince"
 		]
 	},
-	"templatewizard-default": "Дапомна: $1",
+	"templatewizard-add-all": "Дадаць усе парамэтры",
+	"templatewizard-default": "Перадвызначана: $1",
 	"templatewizard-remove-template": "Скасаваць зьмены?",
 	"templatewizard-remove-template-body": "Вярнуцца да пошуку? Вашыя зьмены будуць страчаныя, і вярнуць іх немагчыма."
 }
