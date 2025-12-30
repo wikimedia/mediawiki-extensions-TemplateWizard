@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Renessaince"
+			"Renessaince",
+			"Red Winged Duck"
 		]
 	},
-	"templatewizard-default": "Дапомна: $1",
+	"templatewizard-add-all": "Дадаць усе парамэтры",
+	"templatewizard-default": "Перадвызначана: $1",
 	"templatewizard-remove-template": "Выдаліць шаблён?",
 	"templatewizard-remove-template-body": "У шаблёне, які вы спрабуеце выдаліць, знаходзяцца ўведзеныя вамі зьвесткі. Выдаліўшы шаблён, вы выдаліце і сваю інфармацыю, дададзеную ў гэты шаблён. Гэтае дзеяньне незваротнае."
 }
