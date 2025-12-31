@@ -3,6 +3,7 @@
 		"authors": [
 			"Hannarosendeloitte",
 			"Sabelöga",
+			"Stefan2255",
 			"WikiPhoenix"
 		]
 	},
@@ -28,14 +29,14 @@
 	"templatewizard-placeholder-default": "Standard: $1",
 	"templatewizard-placeholder-example": "t.ex. $1",
 	"templatewizard-remove-all": "Ta bort alla parametrar",
-	"templatewizard-remove-template": "Ta bort mallen?",
-	"templatewizard-remove-template-body": "Mallen du försöker ta bort innehåller data som du har lagt till. När du tar bort mallen kommer även informationen du lade till i mallen att tas bort. Denna handling kan inte ångras.",
-	"templatewizard-remove-template-retry": "Ta bort mall",
+	"templatewizard-remove-template": "Släng redigeringar",
+	"templatewizard-remove-template-body": "Gå tillbaka till sök? Dina ändringar kommer gå förlorade och detta kan inte återställas.",
+	"templatewizard-remove-template-retry": "Släng redigeringar",
 	"templatewizard-search-placeholder": "Sök efter en mall",
 	"templatewizard-parambutton-add-title": "Lägg till parametern \"$1\"",
 	"templatewizard-parambutton-remove-title": "Ta bort parametern \"$1\"",
 	"templatewizard-parambutton-required-title": "Parametern \"$1\" är nödvändig",
-	"templatewizard-remove-template-title": "Ta bort mall",
+	"templatewizard-remove-template-title": "Tillbaka till sök",
 	"templatewizard-link-to-template-title": "Visa mall",
 	"templatewizard-use": "Använd"
 }
