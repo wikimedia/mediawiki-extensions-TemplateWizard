@@ -4,7 +4,8 @@
 			"Amire80",
 			"Liuxinyu970226",
 			"Robby",
-			"Sam Wilson"
+			"Sam Wilson",
+			"Woytecr"
 		]
 	},
 	"templatewizard-add-all": "Label of button that enables all inactive parameters.",
@@ -31,7 +32,7 @@
 	"templatewizard-remove-all": "Label of button that removes all active and non-required parameter fields.",
 	"templatewizard-remove-template": "Title of error message displayed when the user navigates away from the template form when there's still a value in one of its fields.",
 	"templatewizard-remove-template-body": "Message shown below {{msg-mw|templatewizard-remove-template}}.",
-	"templatewizard-remove-template-cancel": "Text for button that closes the close-template error to stay on the tempalte form.",
+	"templatewizard-remove-template-cancel": "Text for button that closes the close-template error to stay on the template form.",
 	"templatewizard-remove-template-retry": "Text for button that closes the close-template error and closes the template, returning to the search form.",
 	"templatewizard-search-placeholder": "Placeholder text in the template search field.",
 	"templatewizard-parambutton-add-title": "Tooltip for the button to add a field into the template editor.\n\nParameters:\n* $1 - Parameter name",
