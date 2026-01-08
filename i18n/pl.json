@@ -31,13 +31,14 @@
 	"templatewizard-placeholder-example": "np. $1",
 	"templatewizard-remove-all": "Usuń wszystkie parametry",
 	"templatewizard-remove-template": "Porzucić zmiany?",
-	"templatewizard-remove-template-body": "Szablon, który próbujesz usunąć, zawiera wprowadzone przez Ciebie dane. Usunięcie szablonu spowoduje również usunięcie informacji dodanych do szablonu. To działanie jest nieodwracalne.",
+	"templatewizard-remove-template-body": "Wrócić do wyszukiwania? Twoje zmiany zostaną utracone, nie można będzie tego cofnąć.",
+	"templatewizard-remove-template-cancel": "Kontynuuj edycję",
 	"templatewizard-remove-template-retry": "Porzuć zmiany",
 	"templatewizard-search-placeholder": "Wyszukaj szablon",
 	"templatewizard-parambutton-add-title": "Dodaj parametr „$1”",
 	"templatewizard-parambutton-remove-title": "Usuń parametr „$1”",
 	"templatewizard-parambutton-required-title": "Wymagany parametr „$1”",
-	"templatewizard-remove-template-title": "Usuń szablon",
+	"templatewizard-remove-template-title": "Wróć do wyszukiwania",
 	"templatewizard-link-to-template-title": "Zobacz szablon",
 	"templatewizard-use": "Użyj"
 }
