@@ -26,14 +26,14 @@
 	"templatewizard-placeholder-default": "ڏنل قدر: $1",
 	"templatewizard-placeholder-example": "مثال طور $1",
 	"templatewizard-remove-all": "سڀئي پيراميٽر ھٽايو",
-	"templatewizard-remove-template": "سانچو ھٽايو؟",
+	"templatewizard-remove-template": "سنوارون ڦٽو ڪجن؟",
 	"templatewizard-remove-template-body": "سانچو جنھن کي توهان هٽائڻ جي ڪوشش ڪري رهيا آهيو ان ۾ ڊيٽا شامل آهي جيڪا توهان داخل ڪئي آهي. سانچي کي هٽائڻ سان پڻ اها معلومات ختم ٿي ويندي جيڪا توهان سانچي ۾ شامل ڪئي آهي. هي عمل ورائڻ جوڳو نہ آهي.",
-	"templatewizard-remove-template-retry": "سانچو ھٽايو",
+	"templatewizard-remove-template-retry": "سنوارون ڦٽو ڪريو",
 	"templatewizard-search-placeholder": "ڪو سانچو ڳوليو",
 	"templatewizard-parambutton-add-title": "'$1' پيراميٽر شامل ڪريو",
 	"templatewizard-parambutton-remove-title": "'$1' پيراميٽر ھٽايو",
 	"templatewizard-parambutton-required-title": "گهربل پيراميٽر '$1'",
-	"templatewizard-remove-template-title": "سانچو ھٽايو",
+	"templatewizard-remove-template-title": "ڳولا ڏانهن واپس وڃو",
 	"templatewizard-link-to-template-title": "سانچو ڏسو",
 	"templatewizard-use": "استعمال ڪريو"
 }
