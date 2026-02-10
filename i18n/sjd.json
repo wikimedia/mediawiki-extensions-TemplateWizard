@@ -4,5 +4,9 @@
 			"Merrahtar"
 		]
 	},
-	"templatewizard-help": "Е̄намп тӣдҍсэ TemplateWizard баяс"
+	"templatewizard-dialog-title": "Пыйе коа̄вь",
+	"templatewizard-help": "Е̄намп тӣдҍсэ TemplateWizard баяс",
+	"templatewizard-insert": "Пыйе",
+	"templatewizard-invalid-values-insert": "Пыйе коа̄вь",
+	"templatewizard-parambutton-add-title": "Лажьхэ параметэр '$1'"
 }
