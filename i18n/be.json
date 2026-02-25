@@ -4,11 +4,12 @@
 			"Artsiom91",
 			"Chadyka",
 			"Kapatych",
-			"Plaga med"
+			"Plaga med",
+			"Ucukor"
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
-	"templatewizard-cancel": "Адмена",
+	"templatewizard-cancel": "Скасаваць",
 	"templatewizard-default": "Прадвызначана: $1",
 	"templatewizard-desc": "Праграма WikiEditor, якая прадастаўляе майстар устаўкі шаблонаў",
 	"templatewizard-dialog-title": "Уставіць шаблон",
