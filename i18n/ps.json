@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"templatewizard-add-all": "ټول ارزښتونه ورگډول",
+	"templatewizard-cancel": "ناگارل",
+	"templatewizard-default": "تلواليز: $1",
+	"templatewizard-desc": "ويکي‌سمونگر ورگډون چې د کينډۍ ورټومبلو کوډگر چمتو کوي",
+	"templatewizard-dialog-title": "کينډۍ ورټومبل",
+	"templatewizard-help": "د کينډۍ‌کوډگر په اړه نور مالومات ترلاسه کړئ",
+	"templatewizard-help-title": "په MediaWiki.org کې د کينډۍ‌کوډگر په اړه لارښود مخونه ولولئ",
+	"templatewizard-insert": "ورټومبل",
+	"templatewizard-invalid-title": "ناباوره سرليک",
+	"templatewizard-invalid-values": "ستاسو يو يا ډېر مالومات د تمې وړ بڼې سره سمون نه خوري. ايا تاسو غواړئ دا سم کړئ؟",
+	"templatewizard-invalid-values-edit": "کينډۍ سمول",
+	"templatewizard-invalid-values-insert": "کينډۍ ټومبل",
+	"templatewizard-no-description": "د دې کينډۍ هېڅ څرگنداوی نشته.",
+	"templatewizard-no-params-with-td": "د دې کينډۍ په[$1 کينډۍ‌اومتوک] لاسوند کې هېڅ ارزښتونه تعريف شوې نه دي. تاسو کولی شئ دا کينډۍ پرته له ارزښتونو راوټومبئ.",
+	"templatewizard-no-params-without-td": "د [$1 کينډۍ‌اومتوک] لاسوند د نشتوالي له کبله د دې کيڼډۍ لپاره هېڅ ارزښتونه نه دي ټاکل شوي. تاسو کولی شئ دا کينډۍ پرته له ارزښتونو راوټومبئ.",
+	"templatewizard-no-templatedata": "د [$1 کينډۍ‌اومتوک] نشتوالي له کبله د دې کينډۍ لپاره ارزښتونه په خپلکاري ډول جوړ شوي دي. مهرباني وکړئ په ياد ولرئ چې دا ښايي دقيق نه وي.",
+	"templatewizard-parameters-optional": "خپل‌خوښي ارزښتونه",
+	"templatewizard-parameters-required": "اړين ارزښتونه",
+	"templatewizard-parameters-suggested": "وړانديز‌شوي ارزښتونه",
+	"templatewizard-placeholder-default": "تلواليز: $1",
+	"templatewizard-placeholder-example": "بېلگې په توگه $1",
+	"templatewizard-remove-all": "ټول ارزښتونه لرې‌کول",
+	"templatewizard-remove-template": "سمونونه پرېږدي؟",
+	"templatewizard-remove-template-body": "بېرته پلټلو ته ورشي؟ ستاسو بدلونونه به ورک شي او دا بېرته نه راگرځېدونکې چاره ده.",
+	"templatewizard-remove-template-cancel": "سمون ته دوام ورکول",
+	"templatewizard-remove-template-retry": "سمونونه پرېښودل",
+	"templatewizard-search-placeholder": "کينډۍ پلټل",
+	"templatewizard-parambutton-add-title": "'$1' ارزښت ورگډول",
+	"templatewizard-parambutton-remove-title": "'$1' ارزښت لرې‌کول",
+	"templatewizard-parambutton-required-title": "'$1' اړين ارزښت",
+	"templatewizard-remove-template-title": "پلټلو ته ورتلل",
+	"templatewizard-link-to-template-title": "کينډۍ کتل",
+	"templatewizard-use": "کارول"
+}
