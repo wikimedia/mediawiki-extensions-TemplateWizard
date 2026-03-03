@@ -4,11 +4,12 @@
 			"Artsiom91",
 			"Chadyka",
 			"Kapatych",
-			"Plaga med"
+			"Plaga med",
+			"Ucukor"
 		]
 	},
 	"templatewizard-add-all": "Дадаць усе параметры",
-	"templatewizard-cancel": "Адмена",
+	"templatewizard-cancel": "Скасаваць",
 	"templatewizard-close-dialog": "Выйсці з майстра?",
 	"templatewizard-close-dialog-body": "Выхад з Майстру шаблонаў прывядзе да страты ўсіх звестак, якія былі дададзены ў шаблон.",
 	"templatewizard-close-dialog-retry": "Адмяніць змяненні",
