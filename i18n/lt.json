@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Manvydasz"
+			"Manvydasz",
+			"Tomasdd"
 		]
 	},
 	"templatewizard-add-all": "Pridėti visus laukus",
@@ -21,8 +22,8 @@
 	"templatewizard-placeholder-default": "Numatytasis: $1",
 	"templatewizard-placeholder-example": "pvz., $1",
 	"templatewizard-remove-all": "Pašalinti visus laukus",
-	"templatewizard-remove-template": "Pašalinti šabloną?",
-	"templatewizard-remove-template-retry": "Pašalinti šabloną",
+	"templatewizard-remove-template": "Atsisakyti pakeitimų?",
+	"templatewizard-remove-template-retry": "Atsisakyti pakeitimų",
 	"templatewizard-search-placeholder": "Ieškoti šablono",
 	"templatewizard-parambutton-add-title": "Pridėti lauką '$1'",
 	"templatewizard-parambutton-remove-title": "Pašalinti lauką '$1'",
