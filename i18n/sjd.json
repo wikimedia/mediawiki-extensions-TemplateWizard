@@ -4,10 +4,16 @@
 			"Merrahtar"
 		]
 	},
+	"templatewizard-add-all": "Лажьхэ пугк параметрэтҍ",
 	"templatewizard-dialog-title": "Пыйе коа̄вь",
 	"templatewizard-help": "Е̄намп тӣдҍсэ TemplateWizard баяс",
 	"templatewizard-insert": "Пыйе",
 	"templatewizard-invalid-values-insert": "Пыйе коа̄вь",
+	"templatewizard-no-description": "Тэнн коа̄вь баяс элля нимӣ кырьйха.",
 	"templatewizard-parameters-optional": "Опциональнэ параметэр",
-	"templatewizard-parambutton-add-title": "Лажьхэ параметэр '$1'"
+	"templatewizard-parameters-required": "Па̄һкма параметэр",
+	"templatewizard-placeholder-example": "Ва̄лльтэ, $1",
+	"templatewizard-parambutton-add-title": "Лажьхэ параметэр '$1'",
+	"templatewizard-parambutton-remove-title": "Вэ̄цксэ параметэр '$1'",
+	"templatewizard-link-to-template-title": "Коа̄вь кӣһче"
 }
