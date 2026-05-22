@@ -14,6 +14,8 @@
 	"templatewizard-parameters-required": "Па̄һкма параметэр",
 	"templatewizard-parameters-suggested": "Этткма параметэр",
 	"templatewizard-placeholder-example": "Ва̄лльтэ, $1",
+	"templatewizard-remove-template": "Вуэлльктэ-гэ воа̄йхэзэтҍ?",
+	"templatewizard-remove-template-retry": "Вуэлльктэ воа̄йхэзэтҍ",
 	"templatewizard-parambutton-add-title": "Лажьхэ параметэр '$1'",
 	"templatewizard-parambutton-remove-title": "Вэ̄цксэ параметэр '$1'",
 	"templatewizard-link-to-template-title": "Коа̄вь кӣһче"
