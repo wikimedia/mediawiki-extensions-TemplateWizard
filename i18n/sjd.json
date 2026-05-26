@@ -10,9 +10,12 @@
 	"templatewizard-insert": "Пыйе",
 	"templatewizard-invalid-values-insert": "Пыйе коа̄вь",
 	"templatewizard-no-description": "Тэнн коа̄вь баяс элля нимӣ кырьйха.",
+	"templatewizard-no-templatedata": "Тэннгуэйкэ тэнн коа̄весьт [$1 TemplateData] тэ̄г евла, параметэр таблэһць со̄н гуэйкэ ля̄йй ӣженэсь оа̄сслуввма. Ля̄гка пӯррь, тӯллей мӣлэсьт, те̄д параметрэ мӣлльтэ вуэйев ев о̄ммпан вӯййк лӣйе.",
 	"templatewizard-parameters-optional": "Опциональнэ параметэр",
 	"templatewizard-parameters-required": "Па̄һкма параметэр",
+	"templatewizard-parameters-suggested": "Этткма параметэр",
 	"templatewizard-placeholder-example": "Ва̄лльтэ, $1",
+	"templatewizard-remove-all": "Ко̄пчсэ пугк параметрэтҍ",
 	"templatewizard-parambutton-add-title": "Лажьхэ параметэр '$1'",
 	"templatewizard-parambutton-remove-title": "Вэ̄цксэ параметэр '$1'",
 	"templatewizard-link-to-template-title": "Коа̄вь кӣһче"
