@@ -3,6 +3,7 @@
 		"authors": [
 			"DDPAT",
 			"Ice bulldog",
+			"Movses",
 			"Piramidion",
 			"Vlad5250",
 			"Ата"
@@ -32,6 +33,7 @@
 	"templatewizard-remove-all": "Прибрати всі параметри",
 	"templatewizard-remove-template": "Відхилити зміни?",
 	"templatewizard-remove-template-body": "Повернутися до пошуку? Ваші зміни буде втрачено й це неможливо скасувати.",
+	"templatewizard-remove-template-cancel": "Продовжити редагування",
 	"templatewizard-remove-template-retry": "Відхилити зміни",
 	"templatewizard-search-placeholder": "Знайти шаблон",
 	"templatewizard-parambutton-add-title": "Додати параметр «$1»",
