@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"templatewizard-add-all": "Ku dar dhammaan cabbirrada",
+	"templatewizard-cancel": "Jooji",
+	"templatewizard-default": "Caadi: $1",
+	"templatewizard-desc": "Ku dar WikiEditor oo bixiya saaxir gelinta tusmooyinka",
+	"templatewizard-dialog-title": "Geli tusmo",
+	"templatewizard-help": "Wax badan ka baro TemplateWizard",
+	"templatewizard-help-title": "Akhriso bogagga caawinta TemplateWizard ee MediaWiki.org",
+	"templatewizard-insert": "Rog",
+	"templatewizard-invalid-title": "Cinwaan aan sax ahayn",
+	"templatewizard-invalid-values": "Mid ama in ka badan oo gelintaada ah ma waafaqsana qaabka la filayo. Ma rabtaa inaad wax ka beddesho?",
+	"templatewizard-invalid-values-edit": "Wax ka beddel tusmada",
+	"templatewizard-invalid-values-insert": "Geli tusmo",
+	"templatewizard-no-description": "Sharaxaad ma jiro oo loogu talagalay tusmadan.",
+	"templatewizard-no-params-with-td": "Ma jiraan cabbirro lagu qeexay [$1 TemplateData] ee tusmadan. Waxaad geli kartaa tusmada iyada oo aan cabbirro lahayn.",
+	"templatewizard-no-params-without-td": "Lama go’aamin karin cabbirro tusmadan maadaama aysan jirin [$1 TemplateData] dokumenti. Waxaad geli kartaa tusmada iyada oo aan cabbirro lahayn.",
+	"templatewizard-no-templatedata": "Maadaama [$1 TemplateData] maqan yahay, cabbirrada tusmadan si otomaatig ah ayaa loo sameeyay. Fadlan ogow in aysan sax ahayn.",
+	"templatewizard-parameters-optional": "Cabbirro ikhtiyaari ah",
+	"templatewizard-parameters-required": "Cabbirrada loo baahan yahay",
+	"templatewizard-parameters-suggested": "Cabbirrada la soo jeediyay",
+	"templatewizard-placeholder-default": "Caadi: $1",
+	"templatewizard-placeholder-example": "tusaale ahaan $1",
+	"templatewizard-remove-all": "Ka saar dhammaan cabbirrada",
+	"templatewizard-remove-template": "Ma tuuraysaa isbeddellada?",
+	"templatewizard-remove-template-body": "Ma ku noqotaa raadinta? Isbeddelladaada waa lumi doonaan, lamana soo celin karo.",
+	"templatewizard-remove-template-cancel": "Sii wad tafatirka",
+	"templatewizard-remove-template-retry": "Iska tuur waxkabedellada",
+	"templatewizard-search-placeholder": "Raadi tusmo",
+	"templatewizard-parambutton-add-title": "Ku dar cabbirka '$1'",
+	"templatewizard-parambutton-remove-title": "Ka saar cabbirka '$1'",
+	"templatewizard-parambutton-required-title": "Cabbirka loo baahan yahay '$1'",
+	"templatewizard-remove-template-title": "Ku noqo raadinta",
+	"templatewizard-link-to-template-title": "Eeg tusmada",
+	"templatewizard-use": "Isticmaal"
+}
