@@ -31,7 +31,7 @@
 	"templatewizard-placeholder-example": "Напрыклад: $1",
 	"templatewizard-remove-all": "Выдаліць усе параметры",
 	"templatewizard-remove-template": "Выдаліць шаблон?",
-	"templatewizard-remove-template-body": "Шаблон, які Вы хочаце выдаліць, змяшчае ўведзеныя Вамі звесткі. Выдаленне шаблона таксама выдаліць інфармацыю, якую Вы дадалі ў яго. Гэта дзеянне нельга будзе адмяніць.",
+	"templatewizard-remove-template-body": "Шаблон, які Вы хочаце выдаліць, змяшчае ўведзеныя Вамі звесткі. Выдаленне шаблона таксама выдаліць інфармацыю, якую Вы дадалі ў яго. Гэта дзеянне нельга будзе адрабіць.",
 	"templatewizard-remove-template-retry": "Выдаліць шаблон",
 	"templatewizard-search-placeholder": "Шукаць шаблон",
 	"templatewizard-parambutton-add-title": "Дадаць параметр '$1'",
