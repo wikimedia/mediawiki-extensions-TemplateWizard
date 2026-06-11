@@ -5,6 +5,7 @@
 		]
 	},
 	"templatewizard-add-all": "Лажьхэ пугк параметрэтҍ",
+	"templatewizard-default": "Ӣженэсь пыййма: $1",
 	"templatewizard-dialog-title": "Пыйе коа̄вь",
 	"templatewizard-help": "Е̄намп тӣдҍсэ TemplateWizard баяс",
 	"templatewizard-insert": "Пыйе",
@@ -14,6 +15,7 @@
 	"templatewizard-parameters-optional": "Опциональнэ параметэр",
 	"templatewizard-parameters-required": "Па̄һкма параметэр",
 	"templatewizard-parameters-suggested": "Этткма параметэр",
+	"templatewizard-placeholder-default": "Ӣженэсь пыййма: $1",
 	"templatewizard-placeholder-example": "Ва̄лльтэ, $1",
 	"templatewizard-remove-all": "Ко̄пчсэ пугк параметрэтҍ",
 	"templatewizard-remove-template": "Вуэлльктэ-гэ воа̄йхэзэтҍ?",
