@@ -12,7 +12,8 @@
 			"Patio",
 			"Romaine",
 			"SPQRobin",
-			"Erik Baas"
+			"Erik Baas",
+			"Siebrand"
 		]
 	},
 	"templatewizard-add-all": "Alle parameters toevoegen",
@@ -23,7 +24,7 @@
 	"templatewizard-help": "Meer leren over TemplateWizard",
 	"templatewizard-help-title": "Lees de TemplateWizard-hulppagina's op MediaWiki.org",
 	"templatewizard-insert": "Invoegen",
-	"templatewizard-invalid-title": "Ongeldige titel",
+	"templatewizard-invalid-title": "Incorrecte titel",
 	"templatewizard-invalid-values": "Een of meer van uw ingevoerde gegevens volgen niet de verwachte indeling. Wilt u deze bewerken?",
 	"templatewizard-invalid-values-edit": "Sjabloon bewerken",
 	"templatewizard-invalid-values-insert": "Sjabloon invoegen",
