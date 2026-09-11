@@ -30,9 +30,6 @@
 			]
 		}
 	},
-	"ConfigRegistry": {
-		"templatewizard": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
-	},
 	"attributes": {
 		"EventLogging": {
 			"Schemas": {
