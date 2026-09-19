@@ -12,6 +12,7 @@ mw.TemplateWizard.Dialog = function MWTemplateWizardDialog( config ) {
 
 	// Instantiate with default value
 	this.contentDir = 'ltr';
+	this.substPrefix = '';
 };
 OO.inheritClass( mw.TemplateWizard.Dialog, OO.ui.ProcessDialog );
 mw.TemplateWizard.Dialog.static.name = 'templateWizard';
@@ -87,10 +88,12 @@ mw.TemplateWizard.Dialog.prototype.showSearchForm = function () {
 /**
  * Show the template form for the given templatedata.
  *
- * @param {Object} templateData
+ * @param {Object} templateData The chosen template's data. The optional substPrefix
+ *  property holds a {{subst:...}} magic word the user typed.
  */
 mw.TemplateWizard.Dialog.prototype.showTemplate = function ( templateData ) {
 	this.actions.setMode( 'insert' );
+	this.substPrefix = templateData.substPrefix || '';
 	if ( this.templateForm ) {
 		this.templateForm.disconnect( this );
 	}
@@ -225,7 +228,9 @@ mw.TemplateWizard.Dialog.prototype.getActionProcess = function ( action ) {
 				const templateFormatter = new mw.TemplateWizard.TemplateFormatter();
 				const templateName = this.templateForm.getTitle()
 					.getRelativeText( mw.config.get( 'wgNamespaceIds' ).template );
-				templateFormatter.setTemplateName( templateName );
+				// Search results have no {{subst:...}} magic word. The wikitext needs it, so
+				// put it back in front of the name.
+				templateFormatter.setTemplateName( this.substPrefix + templateName );
 				templateFormatter.setFormat( this.templateForm.getFormat() );
 				templateFormatter.setParameters( this.templateForm.getParameters() );
 				const textSelectionOpts = {
