@@ -6,6 +6,5 @@
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"mediawiki/no-unlabeled-buttonwidget": "warn"
 	}
 }

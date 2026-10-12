@@ -14,8 +14,8 @@ mw.TemplateWizard.TemplateTitleBar = function MWTemplateWizardTemplateTitleBar(
 
 	// Link button.
 	this.linkButton = new OO.ui.ButtonWidget( {
-		label: '',
-		title: mw.msg( 'templatewizard-link-to-template-title' ),
+		label: mw.msg( 'templatewizard-link-to-template-title' ),
+		invisibleLabel: true,
 		flags: 'progressive',
 		framed: false,
 		icon: 'link',
