@@ -1,4 +1,3 @@
-import assert from 'assert';
 import { getTestString } from 'wdio-mediawiki/Util';
 import CreateTemplate from '../pageobjects/CreateTemplate.page.js';
 import UseTemplatePage from '../pageobjects/UseTemplatePage.page.js';
@@ -33,13 +32,13 @@ describe( 'TemplateWizard', () => {
 
 	it( 'has 1 (required) field visible', async () => {
 		// Test that there is 1 (required) field already visible.
-		assert.strictEqual( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 1 );
+		expect( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ) ).toBe( 1 );
 	} );
 
 	it( 'has 5 fields visible', async () => {
 		// Click "Add all fields", test that there are now 5 fields visible.
 		await UseTemplatePage.addAllFields.click();
-		assert.strictEqual( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ), 5 );
+		expect( await UseTemplatePage.visibleElementCount( '.ext-templatewizard-templateform .ext-templatewizard-fields .oo-ui-fieldLayout' ) ).toBe( 5 );
 	} );
 
 	it( 'has template inserted', async () => {
@@ -69,7 +68,7 @@ describe( 'TemplateWizard', () => {
 		await UseTemplatePage.insertField.click();
 		await $( '#wpTextbox1' ).waitForDisplayed();
 		await browser.waitUntil( async () => !( await UseTemplatePage.dialog.isDisplayed() ) );
-		assert.equal( await $( '#wpTextbox1' ).getValue(), `{{${ testTemplateName }|dob=2018-08-22|dod=|photo=|citizenship=}}` );
+		expect( await $( '#wpTextbox1' ).getValue() ).toBe( `{{${ testTemplateName }|dob=2018-08-22|dod=|photo=|citizenship=}}` );
 
 		// Reset the textbox, to avoid the unsaved-edit confirmation.
 		await $( '#wpTextbox1' ).setValue( '' );
