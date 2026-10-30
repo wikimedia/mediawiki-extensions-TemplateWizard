@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Albinfo"
+		]
+	},
+	"templatewizard-add-all": "Agiuntar tut ils parameters",
+	"templatewizard-cancel": "Interrumper",
+	"templatewizard-default": "Standard: $1",
+	"templatewizard-dialog-title": "Inserir un model",
+	"templatewizard-help": "Enconuscher dapli davart TemplateData",
+	"templatewizard-insert": "Inserir",
+	"templatewizard-invalid-title": "Titel nunvalaivel",
+	"templatewizard-invalid-values-edit": "Modifitgar il model",
+	"templatewizard-invalid-values-insert": "Inserir il model",
+	"templatewizard-no-description": "Per quest model n'è avant maun nagina descripziun.",
+	"templatewizard-parameters-optional": "Parameters opziunals",
+	"templatewizard-parameters-required": "Parameters necessaris",
+	"templatewizard-parameters-suggested": "Parameters recumandads",
+	"templatewizard-placeholder-default": "Standard: $1",
+	"templatewizard-placeholder-example": "p.ex. $1",
+	"templatewizard-remove-all": "Stizzar tut ils parameters",
+	"templatewizard-remove-template": "Refusar l'elavuraziuns?",
+	"templatewizard-remove-template-cancel": "Cuntinuar cun l'elavuraziun",
+	"templatewizard-remove-template-retry": "Refusar l'elavuraziuns",
+	"templatewizard-search-placeholder": "Tschertgar in model",
+	"templatewizard-parambutton-add-title": "Integrar il parameter '$1'",
+	"templatewizard-parambutton-remove-title": "Stizzar il parameter '$1'",
+	"templatewizard-parambutton-required-title": "Parameter necessari  '$1'",
+	"templatewizard-remove-template-title": "Enavos a la retschertga",
+	"templatewizard-link-to-template-title": "Mussar il model",
+	"templatewizard-use": "Utilisar"
+}
